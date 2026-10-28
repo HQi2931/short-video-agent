@@ -1,0 +1,21 @@
+{
+  "recorded_at_utc": "2026-10-28T03:35:59.516111+00:00",
+  "python": "3.13.12",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "dependencies": {
+    "pydantic": "2.14.1",
+    "httpx": "0.28.1",
+    "python-dotenv": "1.2.4",
+    "pytest": "9.2.0"
+  },
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests/",
+    "-v",
+    "--junitxml=examples/test-results.xml"
+  ],
+  "exit_code": 0,
+  "notice": "All model HTTP requests in pytest use transport doubles; no live LLM validation."
+}

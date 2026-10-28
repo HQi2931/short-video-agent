@@ -1,0 +1,107 @@
+{
+  "run_id": "mock_max_steps",
+  "mode": "mock",
+  "model": "deterministic-fixture",
+  "status": "incomplete",
+  "reason": "Reached max_steps=3 without a verified result",
+  "title": null,
+  "topic": "轻剪字幕",
+  "audience": "新手创作者",
+  "platform": "抖音",
+  "style": "简洁",
+  "target_duration_seconds": 30.0,
+  "script_version": null,
+  "script_revision": 0,
+  "storyboard": [],
+  "total_estimated_seconds": null,
+  "used_asset_ids": [],
+  "sources": [],
+  "duration_check": null,
+  "brand_rule_check": null,
+  "risk_flags": [],
+  "missing_information": [],
+  "question": null,
+  "errors": [],
+  "completed_steps": [
+    {
+      "step": 1,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "action": "search_assets",
+      "ok": true
+    }
+  ],
+  "last_observation": {
+    "ok": true,
+    "retrieval_status": "found",
+    "query": "轻剪字幕",
+    "assets": [
+      {
+        "asset_id": "P01",
+        "name": "轻剪基础功能（合成产品）",
+        "keywords": [
+          "轻剪",
+          "剪辑",
+          "字幕",
+          "短视频",
+          "竖屏"
+        ],
+        "facts": [
+          {
+            "fact_id": "F01",
+            "text": "轻剪支持自动字幕。"
+          },
+          {
+            "fact_id": "F02",
+            "text": "轻剪支持时间线剪辑。"
+          },
+          {
+            "fact_id": "F03",
+            "text": "轻剪支持竖屏视频导出。"
+          }
+        ],
+        "source_text": "轻剪支持自动字幕。轻剪支持时间线剪辑。轻剪支持竖屏视频导出。此为合成素材，未提供效率、准确率或收益数据。",
+        "matched_keywords": [
+          "轻剪",
+          "字幕"
+        ],
+        "score": 2
+      },
+      {
+        "asset_id": "P02",
+        "name": "轻剪音乐功能（少量事实）",
+        "keywords": [
+          "轻剪",
+          "音乐",
+          "配乐"
+        ],
+        "facts": [
+          {
+            "fact_id": "F01",
+            "text": "轻剪支持添加背景音乐。"
+          }
+        ],
+        "source_text": "轻剪支持添加背景音乐。此为合成素材，没有曲库数量、版权范围或效率数据。",
+        "matched_keywords": [
+          "轻剪"
+        ],
+        "score": 1
+      }
+    ],
+    "error": null,
+    "method": "case-insensitive catalog keyword containment; score=matched keyword count"
+  },
+  "limitations": [
+    "合成素材，仅用于工程验证。",
+    "时长是工程估算，需要真人口播复核。",
+    "仅通过原文和批准文案核验，未知改写会被阻断。"
+  ]
+}

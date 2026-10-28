@@ -1,0 +1,46 @@
+{
+  "run_id": "mock_missing_info",
+  "mode": "mock",
+  "model": "deterministic-fixture",
+  "status": "needs_info",
+  "reason": "User input or reliable evidence is required",
+  "title": null,
+  "topic": "轻剪字幕",
+  "audience": "大学生",
+  "platform": "抖音",
+  "style": "清晰",
+  "target_duration_seconds": null,
+  "script_version": null,
+  "script_revision": 0,
+  "storyboard": [],
+  "total_estimated_seconds": null,
+  "used_asset_ids": [],
+  "sources": [],
+  "duration_check": null,
+  "brand_rule_check": null,
+  "risk_flags": [],
+  "missing_information": [
+    "duration_seconds"
+  ],
+  "question": "请补充：duration_seconds",
+  "errors": [],
+  "completed_steps": [
+    {
+      "step": 1,
+      "action": "request_info",
+      "ok": true
+    }
+  ],
+  "last_observation": {
+    "ok": true,
+    "fields": [
+      "duration_seconds"
+    ],
+    "question": "请补充：duration_seconds"
+  },
+  "limitations": [
+    "合成素材，仅用于工程验证。",
+    "时长是工程估算，需要真人口播复核。",
+    "仅通过原文和批准文案核验，未知改写会被阻断。"
+  ]
+}

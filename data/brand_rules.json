@@ -1,0 +1,19 @@
+{
+  "brand": "合成产品演示品牌",
+  "banned_phrases": ["全网第一", "百分之百", "保证涨粉", "永久免费", "绝对安全", "零风险"],
+  "approved_nonfactual_copy": [
+    "把灵感剪成短视频", "用画面讲述灵感", "记录此刻", "一起看看", "从一个想法开始",
+    "今天，试着记录一个灵感。", "打开你的创作灵感。", "试着开始创作吧。",
+    "镜头推近手机屏幕。", "手机屏幕展示产品界面。", "画面切换到字幕区域。",
+    "画面切换到时间线区域。", "画面展示竖屏预览。", "画面展示配乐区域。",
+    "镜头展示杯身。", "镜头展示产品。", "画面切换到笔记界面。"
+  ],
+  "timing": {
+    "chinese_chars_per_second": 4.5,
+    "english_words_per_second": 2.5,
+    "number_groups_per_second": 2.0,
+    "punctuation_pause_seconds": 0.18,
+    "minimum_scene_seconds": 2.0,
+    "transition_seconds": 0.35
+  }
+}

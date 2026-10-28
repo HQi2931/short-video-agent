@@ -1,0 +1,576 @@
+{
+  "generated_at_utc": "2026-10-28T04:15:13.866768+00:00",
+  "offline_checks_passed": true,
+  "checks": [
+    {
+      "check": "required_files",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actual_pytest_result",
+      "passed": true,
+      "detail": {
+        "tests": 112,
+        "failures_or_errors": 0
+      }
+    },
+    {
+      "check": "at_least_three_actual_mock_runs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "normal: output_matches_trace",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "normal: honest_mock_mode",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "normal: expected_behavior",
+      "passed": true,
+      "detail": {
+        "behavior_verified": true,
+        "observed_adaptations": [],
+        "duration_estimates": [
+          7.64
+        ]
+      }
+    },
+    {
+      "check": "normal: expected_exit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "normal: event_log_and_chain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "normal: latest_passes_and_duration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "normal: authoritative_evidence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "missing_info: output_matches_trace",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "missing_info: honest_mock_mode",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "missing_info: expected_behavior",
+      "passed": true,
+      "detail": {
+        "behavior_verified": true,
+        "observed_adaptations": [],
+        "duration_estimates": []
+      }
+    },
+    {
+      "check": "missing_info: expected_exit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "missing_info: event_log_and_chain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_assets: output_matches_trace",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_assets: honest_mock_mode",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_assets: expected_behavior",
+      "passed": true,
+      "detail": {
+        "behavior_verified": true,
+        "observed_adaptations": [
+          "query_rewrite"
+        ],
+        "duration_estimates": []
+      }
+    },
+    {
+      "check": "no_assets: expected_exit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_assets: event_log_and_chain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "tool_failure: output_matches_trace",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "tool_failure: honest_mock_mode",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "tool_failure: expected_behavior",
+      "passed": true,
+      "detail": {
+        "behavior_verified": true,
+        "observed_adaptations": [
+          "tool_retry"
+        ],
+        "duration_estimates": [
+          7.64
+        ]
+      }
+    },
+    {
+      "check": "tool_failure: expected_exit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "tool_failure: event_log_and_chain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "tool_failure: latest_passes_and_duration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "tool_failure: authoritative_evidence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "overtime: output_matches_trace",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "overtime: honest_mock_mode",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "overtime: expected_behavior",
+      "passed": true,
+      "detail": {
+        "behavior_verified": true,
+        "observed_adaptations": [
+          "duration_revision"
+        ],
+        "duration_estimates": [
+          43.43,
+          7.64
+        ]
+      }
+    },
+    {
+      "check": "overtime: expected_exit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "overtime: event_log_and_chain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "overtime: latest_passes_and_duration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "overtime: authoritative_evidence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unsupported_claim: output_matches_trace",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unsupported_claim: honest_mock_mode",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unsupported_claim: expected_behavior",
+      "passed": true,
+      "detail": {
+        "behavior_verified": true,
+        "observed_adaptations": [],
+        "duration_estimates": [
+          9.17
+        ]
+      }
+    },
+    {
+      "check": "unsupported_claim: expected_exit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unsupported_claim: event_log_and_chain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "max_steps: output_matches_trace",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "max_steps: honest_mock_mode",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "max_steps: expected_behavior",
+      "passed": true,
+      "detail": {
+        "behavior_verified": true,
+        "observed_adaptations": [],
+        "duration_estimates": []
+      }
+    },
+    {
+      "check": "max_steps: expected_exit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "max_steps: event_log_and_chain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "changed_duration: output_matches_trace",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "changed_duration: honest_mock_mode",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "changed_duration: expected_behavior",
+      "passed": true,
+      "detail": {
+        "behavior_verified": true,
+        "observed_adaptations": [],
+        "duration_estimates": [
+          2.35
+        ]
+      }
+    },
+    {
+      "check": "changed_duration: expected_exit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "changed_duration: event_log_and_chain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "changed_duration: latest_passes_and_duration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "changed_duration: authoritative_evidence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "changed_assets: output_matches_trace",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "changed_assets: honest_mock_mode",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "changed_assets: expected_behavior",
+      "passed": true,
+      "detail": {
+        "behavior_verified": true,
+        "observed_adaptations": [],
+        "duration_estimates": [
+          6.68
+        ]
+      }
+    },
+    {
+      "check": "changed_assets: expected_exit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "changed_assets: event_log_and_chain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "changed_assets: latest_passes_and_duration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "changed_assets: authoritative_evidence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "sparse: output_matches_trace",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "sparse: honest_mock_mode",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "sparse: expected_behavior",
+      "passed": true,
+      "detail": {
+        "behavior_verified": true,
+        "observed_adaptations": [],
+        "duration_estimates": [
+          2.76
+        ]
+      }
+    },
+    {
+      "check": "sparse: expected_exit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "sparse: event_log_and_chain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "sparse: latest_passes_and_duration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "sparse: authoritative_evidence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_repair: output_matches_trace",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_repair: honest_mock_mode",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_repair: expected_behavior",
+      "passed": true,
+      "detail": {
+        "behavior_verified": true,
+        "observed_adaptations": [
+          "rule_revision"
+        ],
+        "duration_estimates": [
+          8.67,
+          7.64
+        ]
+      }
+    },
+    {
+      "check": "rule_repair: expected_exit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_repair: event_log_and_chain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_repair: latest_passes_and_duration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_repair: authoritative_evidence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_detected_keys_or_original_assignment_heading",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "local_git_initialized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "local_env_ignored",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "local_venv_ignored",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "mock_case_behaviors": [
+    {
+      "case": "normal",
+      "trace": "examples/traces/mock_normal_validated.json",
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        7.64
+      ]
+    },
+    {
+      "case": "missing_info",
+      "trace": "examples/traces/mock_missing_info_validated.json",
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": []
+    },
+    {
+      "case": "no_assets",
+      "trace": "examples/traces/mock_no_assets_validated.json",
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "query_rewrite"
+      ],
+      "duration_estimates": []
+    },
+    {
+      "case": "tool_failure",
+      "trace": "examples/traces/mock_tool_failure_validated.json",
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "tool_retry"
+      ],
+      "duration_estimates": [
+        7.64
+      ]
+    },
+    {
+      "case": "overtime",
+      "trace": "examples/traces/mock_overtime_validated.json",
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "duration_revision"
+      ],
+      "duration_estimates": [
+        43.43,
+        7.64
+      ]
+    },
+    {
+      "case": "unsupported_claim",
+      "trace": "examples/traces/mock_unsupported_claim_validated.json",
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        9.17
+      ]
+    },
+    {
+      "case": "max_steps",
+      "trace": "examples/traces/mock_max_steps_validated.json",
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": []
+    },
+    {
+      "case": "changed_duration",
+      "trace": "examples/traces/mock_changed_duration_validated.json",
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        2.35
+      ]
+    },
+    {
+      "case": "changed_assets",
+      "trace": "examples/traces/mock_changed_assets_validated.json",
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        6.68
+      ]
+    },
+    {
+      "case": "sparse",
+      "trace": "examples/traces/mock_sparse_validated.json",
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        2.76
+      ]
+    },
+    {
+      "case": "rule_repair",
+      "trace": "examples/traces/mock_rule_repair_validated.json",
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "rule_revision"
+      ],
+      "duration_estimates": [
+        8.67,
+        7.64
+      ]
+    }
+  ],
+  "live_validation": {
+    "verified": false,
+    "detail": "Not run: user chose offline delivery; no API configuration supplied."
+  },
+  "remote_configured": true,
+  "overall_delivery_complete": false,
+  "pending_human_items": [
+    "Candidate review and actual time confirmation",
+    "Confidentiality approval before publication",
+    "Reviewer access confirmation; repository visibility must remain private"
+  ],
+  "scan_limitations": "Pattern scan cannot guarantee discovery of every possible secret or confidential item; candidate review remains required."
+}
