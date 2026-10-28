@@ -1,0 +1,28 @@
+{
+  "created_at_utc": "2026-10-28T08:37:52.942227+00:00",
+  "verified": true,
+  "method": "isolated indexes and object storage; temporary checkout with core.autocrlf=true; no commit created",
+  "snapshot_tree": "cb25474a4af893e39d068bca0a0cd13f6cc5445f",
+  "proposed_changed_files": 999,
+  "explicit_raw_byte_reindex_paths": 972,
+  "checked_out_files": 1035,
+  "git_blob_mismatches": [],
+  "ordinary_text_line_ending_conversions": [
+    ".gitattributes",
+    ".gitignore"
+  ],
+  "immutable_evidence_files": 968,
+  "immutable_evidence_verified": true,
+  "candidate_b_source_files": 25,
+  "candidate_b_source_verified": true,
+  "pytest_exit_code": 0,
+  "audit_verified": true,
+  "trace_replays": 220,
+  "model_calls_made": 0,
+  "full_snapshot_pack_bytes": 2295273,
+  "pack_scope": "Full proposed current tree only, not a prediction of an actual remote push pack",
+  "temporary_audit_stdout": "{\"verified\": true, \"traces\": 220, \"replays_verified\": 220, \"historical_unchanged\": true, \"secret_scan_passed\": true, \"output\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\delivery\\\\review\\\\checkout-final-audit.json\"}",
+  "real_head_unchanged": true,
+  "real_index_entries_unchanged": true,
+  "scope_note": "Receipts produced by this check and the subsequently frozen final stage manifest are added after the checked snapshot."
+}

@@ -1,0 +1,30 @@
+{
+  "frozen_at_utc": "2026-10-28T07:18:19.274071+00:00",
+  "description": "Final runtime frozen before fresh held-out live outcomes; runtime will not be retuned on these outcomes.",
+  "files": {
+    "src/__init__.py": "488d7e28a8668bd27fd1ed6382985f35018065c55872c1a84ee8f65a7da4bdca",
+    "src/agent.py": "af23c2857683be8195102ed52da95a0836be39b4a22bab89d981fe5ba1ad871c",
+    "src/llm_adapter.py": "f80cde2936c73aa95eaf7592c742fcbe9b91167865ed4ff83b91b4f2c4241047",
+    "src/main.py": "0e3a4624248a7766fa5ed67d5b86ae17722abf7adc5ab0f02c8fce3a3585007e",
+    "src/mock_fixtures.py": "5b2fd3c5a04d7a4c79cf6f70de09a0f216d507082893d3c2ee5ef524e4da21cf",
+    "src/schemas.py": "f7878d1fac634acccdb58689a2e7e9a098b02dfecc91be187edaebfc32af5222",
+    "src/state.py": "57af770f55ab037d1c951c4d5b780f030db57ecdec72a6ca68ebfcb7e9e605ef",
+    "src/tools.py": "ee5528446dd93af68a193b1331fbfdc9fc45ab09889b0b844c4b0858d76eced8",
+    "src/tracing.py": "a4058fc008cfa5812d2184613326d225021f38e0304cc8074afde6d675675a6c",
+    "eval/__init__.py": "392676b8a4a765f61ea1152f296a60a2ea707581d789a848e9d95f5a6977c0f4",
+    "eval/audit.py": "c24ece23468d730762b43b22cb3be70ac8770641b2c4f7ee5bf021ed2d7aaf4e",
+    "eval/dataset.py": "af581294fc8cc275072c54ba0db1cafe7eb767e0c8fa8bbb9613af126784bacf",
+    "eval/decision_compare.py": "4f7d43373d2c5518e63f26270e13acbca3646499660df7d879d80b7dd49400a6",
+    "eval/metrics.py": "4db94243fdfdc9a9a5a247b5ef17c9b55048bd7839378f025f38235a46ba35dc",
+    "eval/report.py": "71f011441ba021a980a7a4b2630772e6f7b64a3c0b05751c6de4da172b1874aa",
+    "eval/rescore.py": "16ba2897108ed6e9bb83b7ed03b34b9d0280bf9df154b4983a03533b44f9e424",
+    "eval/run.py": "bf683ce412bdecdb30ba8a7a1b046dfd59aa1d52e4daa7217262e618e9c73b41",
+    "scripts/acceptance_audit.py": "c9234ce277676d46ebd7ded537b1d6676a8c2cc056e803b9ec451d8f08c8d5d7",
+    "scripts/audit.py": "1c22e05880c2c137fe8d42528ce3eea5c6436b1320ad97599f831f9e3ccdfe8b",
+    "scripts/evidence.py": "1b530ecf6a9fd4e33bc66d45ac1f988868c67f58c1d8b5545e0f94fd8fdf3f66",
+    "scripts/replay.py": "edd2a28aa6f4ac6910935fd29943f58a53903a22308394fe0b51edf4295a1801",
+    "scripts/run_examples.py": "23356141566840d68bfb0147b634fce72cf50a840ccdb8205df2540f0f40402a",
+    "scripts/summarize_live.py": "6a764104ea8a5682af9d896d543877dfde82f093a953d2dde23b8ccf4acf9367",
+    "scripts/verify.py": "0702090e5e99e4bc6d9dfadf5ffb2335c2ec55e21d05604865d8026cac964709"
+  }
+}

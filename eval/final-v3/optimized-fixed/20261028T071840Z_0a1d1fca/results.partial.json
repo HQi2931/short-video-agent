@@ -1,0 +1,3570 @@
+[
+  {
+    "case_id": "holdout-01",
+    "scenario": "normal",
+    "status": "completed",
+    "case_pass": true,
+    "task_completed": true,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 5,
+    "tool_calls": 3,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 3,
+    "total_refs": 3,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        8.28
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 5,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 5
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 5,
+      "observation_feedback_checks": 4,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "26f78d61720905d5090bb4c169edbd6b1d4da97f3e6046eeeb8aa949a39a37ba",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "26f78d61720905d5090bb4c169edbd6b1d4da97f3e6046eeeb8aa949a39a37ba",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 2.41,
+          "subtitle_reading_seconds": 2.41,
+          "estimated_seconds": 2.76
+        },
+        {
+          "scene_id": "S2",
+          "narration_seconds": 2.41,
+          "subtitle_reading_seconds": 2.41,
+          "estimated_seconds": 2.76
+        },
+        {
+          "scene_id": "S3",
+          "narration_seconds": 2.41,
+          "subtitle_reading_seconds": 2.41,
+          "estimated_seconds": 2.76
+        }
+      ],
+      "total_estimated_seconds": 8.28,
+      "target_duration_seconds": 22.0,
+      "is_overtime": false,
+      "passed": true,
+      "exceeded_seconds": 0,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 18.037722999999914,
+    "usage_records": [
+      {
+        "prompt_tokens": 2546,
+        "completion_tokens": 72,
+        "total_tokens": 2618,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 19
+        },
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 2034
+      },
+      {
+        "prompt_tokens": 3168,
+        "completion_tokens": 1682,
+        "total_tokens": 4850,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1354
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 2272
+      },
+      {
+        "prompt_tokens": 4527,
+        "completion_tokens": 75,
+        "total_tokens": 4602,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 41
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 3247
+      },
+      {
+        "prompt_tokens": 7361,
+        "completion_tokens": 37,
+        "total_tokens": 7398,
+        "prompt_tokens_details": {
+          "cached_tokens": 1664
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 1664,
+        "prompt_cache_miss_tokens": 5697
+      },
+      {
+        "prompt_tokens": 8900,
+        "completion_tokens": 119,
+        "total_tokens": 9019,
+        "prompt_tokens_details": {
+          "cached_tokens": 2432
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 52
+        },
+        "prompt_cache_hit_tokens": 2432,
+        "prompt_cache_miss_tokens": 6468
+      }
+    ],
+    "reported_total_tokens": 28487,
+    "usage_complete": true,
+    "trace": "traces/holdout-01.json",
+    "output": "holdout-01-output.json"
+  },
+  {
+    "case_id": "holdout-02",
+    "scenario": "normal",
+    "status": "completed",
+    "case_pass": true,
+    "task_completed": true,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 5,
+    "tool_calls": 3,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 2,
+    "total_refs": 2,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        8.53
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 5,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 5
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 5,
+      "observation_feedback_checks": 4,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "abd8c6fda5bc0787a94262d8a884a8bc503f81623b1fdd2811013007e812c6bd",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "abd8c6fda5bc0787a94262d8a884a8bc503f81623b1fdd2811013007e812c6bd",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 0.89,
+          "subtitle_reading_seconds": 0.89,
+          "estimated_seconds": 2.35
+        },
+        {
+          "scene_id": "S2",
+          "narration_seconds": 2.63,
+          "subtitle_reading_seconds": 2.63,
+          "estimated_seconds": 2.98
+        },
+        {
+          "scene_id": "S3",
+          "narration_seconds": 2.85,
+          "subtitle_reading_seconds": 2.85,
+          "estimated_seconds": 3.2
+        }
+      ],
+      "total_estimated_seconds": 8.53,
+      "target_duration_seconds": 22.0,
+      "is_overtime": false,
+      "passed": true,
+      "exceeded_seconds": 0,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 23.890384499999982,
+    "usage_records": [
+      {
+        "prompt_tokens": 2546,
+        "completion_tokens": 53,
+        "total_tokens": 2599,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 1778
+      },
+      {
+        "prompt_tokens": 3083,
+        "completion_tokens": 2325,
+        "total_tokens": 5408,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2037
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 2187
+      },
+      {
+        "prompt_tokens": 4268,
+        "completion_tokens": 443,
+        "total_tokens": 4711,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 405
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 2988
+      },
+      {
+        "prompt_tokens": 6909,
+        "completion_tokens": 55,
+        "total_tokens": 6964,
+        "prompt_tokens_details": {
+          "cached_tokens": 1536
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 15
+        },
+        "prompt_cache_hit_tokens": 1536,
+        "prompt_cache_miss_tokens": 5373
+      },
+      {
+        "prompt_tokens": 8265,
+        "completion_tokens": 66,
+        "total_tokens": 8331,
+        "prompt_tokens_details": {
+          "cached_tokens": 2304
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 21
+        },
+        "prompt_cache_hit_tokens": 2304,
+        "prompt_cache_miss_tokens": 5961
+      }
+    ],
+    "reported_total_tokens": 28013,
+    "usage_complete": true,
+    "trace": "traces/holdout-02.json",
+    "output": "holdout-02-output.json"
+  },
+  {
+    "case_id": "holdout-03",
+    "scenario": "normal",
+    "status": "completed",
+    "case_pass": true,
+    "task_completed": true,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 5,
+    "tool_calls": 3,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 2,
+    "total_refs": 2,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        10.44
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 5,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 5
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 5,
+      "observation_feedback_checks": 4,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "521f430905644f2a5eb0e3bac6c2a9891a968ef1289f395c75ad5bbd70c8186f",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "521f430905644f2a5eb0e3bac6c2a9891a968ef1289f395c75ad5bbd70c8186f",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 1.07,
+          "subtitle_reading_seconds": 1.07,
+          "estimated_seconds": 2.35
+        },
+        {
+          "scene_id": "S2",
+          "narration_seconds": 2.41,
+          "subtitle_reading_seconds": 2.41,
+          "estimated_seconds": 2.76
+        },
+        {
+          "scene_id": "S3",
+          "narration_seconds": 2.63,
+          "subtitle_reading_seconds": 2.63,
+          "estimated_seconds": 2.98
+        },
+        {
+          "scene_id": "S4",
+          "narration_seconds": 1.07,
+          "subtitle_reading_seconds": 1.07,
+          "estimated_seconds": 2.35
+        }
+      ],
+      "total_estimated_seconds": 10.44,
+      "target_duration_seconds": 22.0,
+      "is_overtime": false,
+      "passed": true,
+      "exceeded_seconds": 0,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 28.770715699999982,
+    "usage_records": [
+      {
+        "prompt_tokens": 2546,
+        "completion_tokens": 75,
+        "total_tokens": 2621,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 18
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 1778
+      },
+      {
+        "prompt_tokens": 3085,
+        "completion_tokens": 3838,
+        "total_tokens": 6923,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3510
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 2189
+      },
+      {
+        "prompt_tokens": 4421,
+        "completion_tokens": 91,
+        "total_tokens": 4512,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 54
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 3141
+      },
+      {
+        "prompt_tokens": 7388,
+        "completion_tokens": 62,
+        "total_tokens": 7450,
+        "prompt_tokens_details": {
+          "cached_tokens": 1664
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 19
+        },
+        "prompt_cache_hit_tokens": 1664,
+        "prompt_cache_miss_tokens": 5724
+      },
+      {
+        "prompt_tokens": 8849,
+        "completion_tokens": 63,
+        "total_tokens": 8912,
+        "prompt_tokens_details": {
+          "cached_tokens": 2432
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 12
+        },
+        "prompt_cache_hit_tokens": 2432,
+        "prompt_cache_miss_tokens": 6417
+      }
+    ],
+    "reported_total_tokens": 30418,
+    "usage_complete": true,
+    "trace": "traces/holdout-03.json",
+    "output": "holdout-03-output.json"
+  },
+  {
+    "case_id": "holdout-04",
+    "scenario": "normal",
+    "status": "needs_info",
+    "case_pass": false,
+    "task_completed": false,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 2,
+    "tool_calls": 1,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 0,
+    "total_refs": 0,
+    "final_script": false,
+    "unsupported_final": false,
+    "observed_categories": [
+      "B"
+    ],
+    "failure_categories": [
+      "B"
+    ],
+    "behavior": {
+      "behavior_verified": false,
+      "observed_adaptations": [],
+      "duration_estimates": []
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 2,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 2
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 2,
+      "observation_feedback_checks": 1,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": null,
+    "final_duration_recheck": null,
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 7.195757800000138,
+    "usage_records": [
+      {
+        "prompt_tokens": 2546,
+        "completion_tokens": 51,
+        "total_tokens": 2597,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 1778
+      },
+      {
+        "prompt_tokens": 2986,
+        "completion_tokens": 766,
+        "total_tokens": 3752,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 656
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 2090
+      }
+    ],
+    "reported_total_tokens": 6349,
+    "usage_complete": true,
+    "trace": "traces/holdout-04.json",
+    "output": "holdout-04-output.json"
+  },
+  {
+    "case_id": "holdout-05",
+    "scenario": "duration",
+    "status": "completed",
+    "case_pass": true,
+    "task_completed": true,
+    "duration_triggered": true,
+    "duration_corrected": true,
+    "steps": 7,
+    "tool_calls": 4,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 1,
+    "total_refs": 1,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "duration_revision"
+      ],
+      "duration_estimates": [
+        5.52,
+        2.76
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 7,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 7
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 7,
+      "observation_feedback_checks": 6,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "3e1a624c68ed5b5b957fe445bc9e7e7d1cd860cf45cf2c063453522554eb90ff",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "3e1a624c68ed5b5b957fe445bc9e7e7d1cd860cf45cf2c063453522554eb90ff",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 2.41,
+          "subtitle_reading_seconds": 2.41,
+          "estimated_seconds": 2.76
+        }
+      ],
+      "total_estimated_seconds": 2.76,
+      "target_duration_seconds": 3.5,
+      "is_overtime": false,
+      "passed": true,
+      "exceeded_seconds": 0,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 19.849937299999965,
+    "usage_records": [
+      {
+        "prompt_tokens": 2580,
+        "completion_tokens": 108,
+        "total_tokens": 2688,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 52
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 1812
+      },
+      {
+        "prompt_tokens": 3204,
+        "completion_tokens": 1141,
+        "total_tokens": 4345,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 891
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 2308
+      },
+      {
+        "prompt_tokens": 4153,
+        "completion_tokens": 235,
+        "total_tokens": 4388,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 193
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 2873
+      },
+      {
+        "prompt_tokens": 6547,
+        "completion_tokens": 432,
+        "total_tokens": 6979,
+        "prompt_tokens_details": {
+          "cached_tokens": 1536
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 249
+        },
+        "prompt_cache_hit_tokens": 1536,
+        "prompt_cache_miss_tokens": 5011
+      },
+      {
+        "prompt_tokens": 5655,
+        "completion_tokens": 57,
+        "total_tokens": 5712,
+        "prompt_tokens_details": {
+          "cached_tokens": 1408
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 18
+        },
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 4247
+      },
+      {
+        "prompt_tokens": 7509,
+        "completion_tokens": 56,
+        "total_tokens": 7565,
+        "prompt_tokens_details": {
+          "cached_tokens": 2176
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 17
+        },
+        "prompt_cache_hit_tokens": 2176,
+        "prompt_cache_miss_tokens": 5333
+      },
+      {
+        "prompt_tokens": 8490,
+        "completion_tokens": 110,
+        "total_tokens": 8600,
+        "prompt_tokens_details": {
+          "cached_tokens": 2688
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 38
+        },
+        "prompt_cache_hit_tokens": 2688,
+        "prompt_cache_miss_tokens": 5802
+      }
+    ],
+    "reported_total_tokens": 40277,
+    "usage_complete": true,
+    "trace": "traces/holdout-05.json",
+    "output": "holdout-05-output.json"
+  },
+  {
+    "case_id": "holdout-06",
+    "scenario": "duration",
+    "status": "completed",
+    "case_pass": true,
+    "task_completed": true,
+    "duration_triggered": true,
+    "duration_corrected": true,
+    "steps": 7,
+    "tool_calls": 4,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 1,
+    "total_refs": 1,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "duration_revision"
+      ],
+      "duration_estimates": [
+        6.18,
+        2.98
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 7,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 7
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 7,
+      "observation_feedback_checks": 6,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "f2659286c19ac0c11b76b9b00ff5c03b038f519836f27021f1993406be2ebd2e",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "f2659286c19ac0c11b76b9b00ff5c03b038f519836f27021f1993406be2ebd2e",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 2.63,
+          "subtitle_reading_seconds": 2.63,
+          "estimated_seconds": 2.98
+        }
+      ],
+      "total_estimated_seconds": 2.98,
+      "target_duration_seconds": 4.5,
+      "is_overtime": false,
+      "passed": true,
+      "exceeded_seconds": 0,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 18.97568050000018,
+    "usage_records": [
+      {
+        "prompt_tokens": 2580,
+        "completion_tokens": 73,
+        "total_tokens": 2653,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 18
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 1812
+      },
+      {
+        "prompt_tokens": 3119,
+        "completion_tokens": 977,
+        "total_tokens": 4096,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 717
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 2223
+      },
+      {
+        "prompt_tokens": 4124,
+        "completion_tokens": 110,
+        "total_tokens": 4234,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 72
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 2844
+      },
+      {
+        "prompt_tokens": 6488,
+        "completion_tokens": 578,
+        "total_tokens": 7066,
+        "prompt_tokens_details": {
+          "cached_tokens": 1536
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 374
+        },
+        "prompt_cache_hit_tokens": 1536,
+        "prompt_cache_miss_tokens": 4952
+      },
+      {
+        "prompt_tokens": 5605,
+        "completion_tokens": 212,
+        "total_tokens": 5817,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 168
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 4325
+      },
+      {
+        "prompt_tokens": 7466,
+        "completion_tokens": 69,
+        "total_tokens": 7535,
+        "prompt_tokens_details": {
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 21
+        },
+        "prompt_cache_hit_tokens": 2048,
+        "prompt_cache_miss_tokens": 5418
+      },
+      {
+        "prompt_tokens": 8453,
+        "completion_tokens": 140,
+        "total_tokens": 8593,
+        "prompt_tokens_details": {
+          "cached_tokens": 2688
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 72
+        },
+        "prompt_cache_hit_tokens": 2688,
+        "prompt_cache_miss_tokens": 5765
+      }
+    ],
+    "reported_total_tokens": 39994,
+    "usage_complete": true,
+    "trace": "traces/holdout-06.json",
+    "output": "holdout-06-output.json"
+  },
+  {
+    "case_id": "holdout-07",
+    "scenario": "duration",
+    "status": "completed",
+    "case_pass": true,
+    "task_completed": true,
+    "duration_triggered": true,
+    "duration_corrected": true,
+    "steps": 7,
+    "tool_calls": 4,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 1,
+    "total_refs": 1,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "duration_revision"
+      ],
+      "duration_estimates": [
+        5.74,
+        2.76
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 7,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 7
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 7,
+      "observation_feedback_checks": 6,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "03d29fd7734f11d897b753f8ec144fe780106f53768429bcc80b65a584ec6bf9",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "03d29fd7734f11d897b753f8ec144fe780106f53768429bcc80b65a584ec6bf9",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 2.41,
+          "subtitle_reading_seconds": 2.41,
+          "estimated_seconds": 2.76
+        }
+      ],
+      "total_estimated_seconds": 2.76,
+      "target_duration_seconds": 3.5,
+      "is_overtime": false,
+      "passed": true,
+      "exceeded_seconds": 0,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 17.434109799999987,
+    "usage_records": [
+      {
+        "prompt_tokens": 2580,
+        "completion_tokens": 95,
+        "total_tokens": 2675,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 36
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 1812
+      },
+      {
+        "prompt_tokens": 3113,
+        "completion_tokens": 441,
+        "total_tokens": 3554,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 186
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 2217
+      },
+      {
+        "prompt_tokens": 4110,
+        "completion_tokens": 656,
+        "total_tokens": 4766,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 615
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 2830
+      },
+      {
+        "prompt_tokens": 6480,
+        "completion_tokens": 410,
+        "total_tokens": 6890,
+        "prompt_tokens_details": {
+          "cached_tokens": 1536
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 241
+        },
+        "prompt_cache_hit_tokens": 1536,
+        "prompt_cache_miss_tokens": 4944
+      },
+      {
+        "prompt_tokens": 5565,
+        "completion_tokens": 127,
+        "total_tokens": 5692,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 72
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 4285
+      },
+      {
+        "prompt_tokens": 7387,
+        "completion_tokens": 69,
+        "total_tokens": 7456,
+        "prompt_tokens_details": {
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 23
+        },
+        "prompt_cache_hit_tokens": 2048,
+        "prompt_cache_miss_tokens": 5339
+      },
+      {
+        "prompt_tokens": 8338,
+        "completion_tokens": 150,
+        "total_tokens": 8488,
+        "prompt_tokens_details": {
+          "cached_tokens": 2560
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 72
+        },
+        "prompt_cache_hit_tokens": 2560,
+        "prompt_cache_miss_tokens": 5778
+      }
+    ],
+    "reported_total_tokens": 39521,
+    "usage_complete": true,
+    "trace": "traces/holdout-07.json",
+    "output": "holdout-07-output.json"
+  },
+  {
+    "case_id": "holdout-08",
+    "scenario": "duration",
+    "status": "completed",
+    "case_pass": true,
+    "task_completed": true,
+    "duration_triggered": true,
+    "duration_corrected": true,
+    "steps": 7,
+    "tool_calls": 4,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 1,
+    "total_refs": 1,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "duration_revision"
+      ],
+      "duration_estimates": [
+        5.52,
+        2.76
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 7,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 7
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 7,
+      "observation_feedback_checks": 6,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "fd50f45569986aabf6c31f0f73aeda2a8abccbb9d0d4fbe254a0cf5f2a4e3c24",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "fd50f45569986aabf6c31f0f73aeda2a8abccbb9d0d4fbe254a0cf5f2a4e3c24",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 2.41,
+          "subtitle_reading_seconds": 2.41,
+          "estimated_seconds": 2.76
+        }
+      ],
+      "total_estimated_seconds": 2.76,
+      "target_duration_seconds": 4.5,
+      "is_overtime": false,
+      "passed": true,
+      "exceeded_seconds": 0,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 16.83499830000028,
+    "usage_records": [
+      {
+        "prompt_tokens": 2580,
+        "completion_tokens": 83,
+        "total_tokens": 2663,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 28
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 1812
+      },
+      {
+        "prompt_tokens": 3202,
+        "completion_tokens": 733,
+        "total_tokens": 3935,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 462
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 2306
+      },
+      {
+        "prompt_tokens": 4163,
+        "completion_tokens": 142,
+        "total_tokens": 4305,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 102
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 2883
+      },
+      {
+        "prompt_tokens": 6492,
+        "completion_tokens": 532,
+        "total_tokens": 7024,
+        "prompt_tokens_details": {
+          "cached_tokens": 1536
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 370
+        },
+        "prompt_cache_hit_tokens": 1536,
+        "prompt_cache_miss_tokens": 4956
+      },
+      {
+        "prompt_tokens": 5649,
+        "completion_tokens": 90,
+        "total_tokens": 5739,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 49
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 4369
+      },
+      {
+        "prompt_tokens": 7545,
+        "completion_tokens": 57,
+        "total_tokens": 7602,
+        "prompt_tokens_details": {
+          "cached_tokens": 2176
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 25
+        },
+        "prompt_cache_hit_tokens": 2176,
+        "prompt_cache_miss_tokens": 5369
+      },
+      {
+        "prompt_tokens": 8562,
+        "completion_tokens": 70,
+        "total_tokens": 8632,
+        "prompt_tokens_details": {
+          "cached_tokens": 2688
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 17
+        },
+        "prompt_cache_hit_tokens": 2688,
+        "prompt_cache_miss_tokens": 5874
+      }
+    ],
+    "reported_total_tokens": 39900,
+    "usage_complete": true,
+    "trace": "traces/holdout-08.json",
+    "output": "holdout-08-output.json"
+  },
+  {
+    "case_id": "holdout-09",
+    "scenario": "no_assets",
+    "status": "needs_info",
+    "case_pass": true,
+    "task_completed": false,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 5,
+    "tool_calls": 4,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 0,
+    "total_refs": 0,
+    "final_script": false,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "query_rewrite"
+      ],
+      "duration_estimates": []
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 5,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 5
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 5,
+      "observation_feedback_checks": 4,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": null,
+    "final_duration_recheck": null,
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 10.67794640000011,
+    "usage_records": [
+      {
+        "prompt_tokens": 2555,
+        "completion_tokens": 81,
+        "total_tokens": 2636,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 33
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 1787
+      },
+      {
+        "prompt_tokens": 2700,
+        "completion_tokens": 159,
+        "total_tokens": 2859,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 101
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 1548
+      },
+      {
+        "prompt_tokens": 2789,
+        "completion_tokens": 153,
+        "total_tokens": 2942,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 82
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 1509
+      },
+      {
+        "prompt_tokens": 2893,
+        "completion_tokens": 158,
+        "total_tokens": 3051,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 95
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 1613
+      },
+      {
+        "prompt_tokens": 2997,
+        "completion_tokens": 277,
+        "total_tokens": 3274,
+        "prompt_tokens_details": {
+          "cached_tokens": 1408
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 103
+        },
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 1589
+      }
+    ],
+    "reported_total_tokens": 14762,
+    "usage_complete": true,
+    "trace": "traces/holdout-09.json",
+    "output": "holdout-09-output.json"
+  },
+  {
+    "case_id": "holdout-10",
+    "scenario": "no_assets",
+    "status": "needs_info",
+    "case_pass": true,
+    "task_completed": false,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 4,
+    "tool_calls": 3,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 0,
+    "total_refs": 0,
+    "final_script": false,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "query_rewrite"
+      ],
+      "duration_estimates": []
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 4,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 4
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 4,
+      "observation_feedback_checks": 3,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": null,
+    "final_duration_recheck": null,
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 11.641950700000052,
+    "usage_records": [
+      {
+        "prompt_tokens": 2555,
+        "completion_tokens": 87,
+        "total_tokens": 2642,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 33
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 1787
+      },
+      {
+        "prompt_tokens": 2704,
+        "completion_tokens": 101,
+        "total_tokens": 2805,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 43
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 1552
+      },
+      {
+        "prompt_tokens": 2795,
+        "completion_tokens": 495,
+        "total_tokens": 3290,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 431
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 1515
+      },
+      {
+        "prompt_tokens": 2896,
+        "completion_tokens": 421,
+        "total_tokens": 3317,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 259
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 1616
+      }
+    ],
+    "reported_total_tokens": 12054,
+    "usage_complete": true,
+    "trace": "traces/holdout-10.json",
+    "output": "holdout-10-output.json"
+  },
+  {
+    "case_id": "holdout-11",
+    "scenario": "no_assets",
+    "status": "needs_info",
+    "case_pass": true,
+    "task_completed": false,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 3,
+    "tool_calls": 2,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 0,
+    "total_refs": 0,
+    "final_script": false,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "query_rewrite"
+      ],
+      "duration_estimates": []
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 3,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 3
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 3,
+      "observation_feedback_checks": 2,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": null,
+    "final_duration_recheck": null,
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 6.633819499999845,
+    "usage_records": [
+      {
+        "prompt_tokens": 2555,
+        "completion_tokens": 119,
+        "total_tokens": 2674,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 62
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 1787
+      },
+      {
+        "prompt_tokens": 2704,
+        "completion_tokens": 119,
+        "total_tokens": 2823,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 62
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 1552
+      },
+      {
+        "prompt_tokens": 2797,
+        "completion_tokens": 304,
+        "total_tokens": 3101,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 166
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 1517
+      }
+    ],
+    "reported_total_tokens": 8598,
+    "usage_complete": true,
+    "trace": "traces/holdout-11.json",
+    "output": "holdout-11-output.json"
+  },
+  {
+    "case_id": "holdout-12",
+    "scenario": "tool_failure",
+    "status": "completed",
+    "case_pass": true,
+    "task_completed": true,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 6,
+    "tool_calls": 4,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 3,
+    "total_refs": 3,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "tool_retry"
+      ],
+      "duration_estimates": [
+        10.63
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 6,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 6
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 6,
+      "observation_feedback_checks": 5,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "54a60cd2c4c984f5a876fa3f88c8a067be6c2ce69d5ea1de66f6da42408a5e71",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "54a60cd2c4c984f5a876fa3f88c8a067be6c2ce69d5ea1de66f6da42408a5e71",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 1.07,
+          "subtitle_reading_seconds": 1.07,
+          "estimated_seconds": 2.35
+        },
+        {
+          "scene_id": "S2",
+          "narration_seconds": 2.41,
+          "subtitle_reading_seconds": 2.41,
+          "estimated_seconds": 2.76
+        },
+        {
+          "scene_id": "S3",
+          "narration_seconds": 2.41,
+          "subtitle_reading_seconds": 2.41,
+          "estimated_seconds": 2.76
+        },
+        {
+          "scene_id": "S4",
+          "narration_seconds": 2.41,
+          "subtitle_reading_seconds": 2.41,
+          "estimated_seconds": 2.76
+        }
+      ],
+      "total_estimated_seconds": 10.63,
+      "target_duration_seconds": 20.0,
+      "is_overtime": false,
+      "passed": true,
+      "exceeded_seconds": 0,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 21.750702999999703,
+    "usage_records": [
+      {
+        "prompt_tokens": 2551,
+        "completion_tokens": 79,
+        "total_tokens": 2630,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 17
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 1783
+      },
+      {
+        "prompt_tokens": 2706,
+        "completion_tokens": 89,
+        "total_tokens": 2795,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 26
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 1554
+      },
+      {
+        "prompt_tokens": 3303,
+        "completion_tokens": 1967,
+        "total_tokens": 5270,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1595
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 2407
+      },
+      {
+        "prompt_tokens": 4861,
+        "completion_tokens": 373,
+        "total_tokens": 5234,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 333
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 3581
+      },
+      {
+        "prompt_tokens": 8032,
+        "completion_tokens": 71,
+        "total_tokens": 8103,
+        "prompt_tokens_details": {
+          "cached_tokens": 1664
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 34
+        },
+        "prompt_cache_hit_tokens": 1664,
+        "prompt_cache_miss_tokens": 6368
+      },
+      {
+        "prompt_tokens": 9694,
+        "completion_tokens": 49,
+        "total_tokens": 9743,
+        "prompt_tokens_details": {
+          "cached_tokens": 2560
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 18
+        },
+        "prompt_cache_hit_tokens": 2560,
+        "prompt_cache_miss_tokens": 7134
+      }
+    ],
+    "reported_total_tokens": 33775,
+    "usage_complete": true,
+    "trace": "traces/holdout-12.json",
+    "output": "holdout-12-output.json"
+  },
+  {
+    "case_id": "holdout-13",
+    "scenario": "tool_failure",
+    "status": "completed",
+    "case_pass": true,
+    "task_completed": true,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 6,
+    "tool_calls": 4,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 2,
+    "total_refs": 2,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "tool_retry"
+      ],
+      "duration_estimates": [
+        10.88
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 6,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 6
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 6,
+      "observation_feedback_checks": 5,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "a9d0a55ad8a782fbf7cfbb3f6226f07f0aa6a928ab241b055f298975c60b5670",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "a9d0a55ad8a782fbf7cfbb3f6226f07f0aa6a928ab241b055f298975c60b5670",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 1.07,
+          "subtitle_reading_seconds": 1.07,
+          "estimated_seconds": 2.35
+        },
+        {
+          "scene_id": "S2",
+          "narration_seconds": 2.63,
+          "subtitle_reading_seconds": 2.63,
+          "estimated_seconds": 2.98
+        },
+        {
+          "scene_id": "S3",
+          "narration_seconds": 2.85,
+          "subtitle_reading_seconds": 2.85,
+          "estimated_seconds": 3.2
+        },
+        {
+          "scene_id": "S4",
+          "narration_seconds": 1.07,
+          "subtitle_reading_seconds": 1.07,
+          "estimated_seconds": 2.35
+        }
+      ],
+      "total_estimated_seconds": 10.88,
+      "target_duration_seconds": 20.0,
+      "is_overtime": false,
+      "passed": true,
+      "exceeded_seconds": 0,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 27.75570519999974,
+    "usage_records": [
+      {
+        "prompt_tokens": 2551,
+        "completion_tokens": 110,
+        "total_tokens": 2661,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 53
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 1783
+      },
+      {
+        "prompt_tokens": 3091,
+        "completion_tokens": 3141,
+        "total_tokens": 6232,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2782
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 2195
+      },
+      {
+        "prompt_tokens": 4526,
+        "completion_tokens": 112,
+        "total_tokens": 4638,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 71
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 3246
+      },
+      {
+        "prompt_tokens": 4226,
+        "completion_tokens": 310,
+        "total_tokens": 4536,
+        "prompt_tokens_details": {
+          "cached_tokens": 1664
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 268
+        },
+        "prompt_cache_hit_tokens": 1664,
+        "prompt_cache_miss_tokens": 2562
+      },
+      {
+        "prompt_tokens": 7649,
+        "completion_tokens": 55,
+        "total_tokens": 7704,
+        "prompt_tokens_details": {
+          "cached_tokens": 1664
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 15
+        },
+        "prompt_cache_hit_tokens": 1664,
+        "prompt_cache_miss_tokens": 5985
+      },
+      {
+        "prompt_tokens": 9176,
+        "completion_tokens": 65,
+        "total_tokens": 9241,
+        "prompt_tokens_details": {
+          "cached_tokens": 2560
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 21
+        },
+        "prompt_cache_hit_tokens": 2560,
+        "prompt_cache_miss_tokens": 6616
+      }
+    ],
+    "reported_total_tokens": 35012,
+    "usage_complete": true,
+    "trace": "traces/holdout-13.json",
+    "output": "holdout-13-output.json"
+  },
+  {
+    "case_id": "holdout-14",
+    "scenario": "tool_failure",
+    "status": "completed",
+    "case_pass": true,
+    "task_completed": true,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 7,
+    "tool_calls": 5,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [
+      6
+    ],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 2,
+    "total_refs": 2,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [
+      "C"
+    ],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "tool_retry"
+      ],
+      "duration_estimates": [
+        10.44,
+        10.44
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 7,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 7
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 7,
+      "observation_feedback_checks": 6,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "0e7073fb01fc73bd4a69e7c174ee869bf286871edae6ab4d7668f12dfe0a4062",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "0e7073fb01fc73bd4a69e7c174ee869bf286871edae6ab4d7668f12dfe0a4062",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 1.07,
+          "subtitle_reading_seconds": 1.07,
+          "estimated_seconds": 2.35
+        },
+        {
+          "scene_id": "S2",
+          "narration_seconds": 2.41,
+          "subtitle_reading_seconds": 2.41,
+          "estimated_seconds": 2.76
+        },
+        {
+          "scene_id": "S3",
+          "narration_seconds": 2.63,
+          "subtitle_reading_seconds": 2.63,
+          "estimated_seconds": 2.98
+        },
+        {
+          "scene_id": "S4",
+          "narration_seconds": 1.07,
+          "subtitle_reading_seconds": 1.07,
+          "estimated_seconds": 2.35
+        }
+      ],
+      "total_estimated_seconds": 10.44,
+      "target_duration_seconds": 20.0,
+      "is_overtime": false,
+      "passed": true,
+      "exceeded_seconds": 0,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 22.977030199999717,
+    "usage_records": [
+      {
+        "prompt_tokens": 2551,
+        "completion_tokens": 83,
+        "total_tokens": 2634,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 27
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 1783
+      },
+      {
+        "prompt_tokens": 3086,
+        "completion_tokens": 1878,
+        "total_tokens": 4964,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1556
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 2190
+      },
+      {
+        "prompt_tokens": 4428,
+        "completion_tokens": 126,
+        "total_tokens": 4554,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 90
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 3148
+      },
+      {
+        "prompt_tokens": 7394,
+        "completion_tokens": 80,
+        "total_tokens": 7474,
+        "prompt_tokens_details": {
+          "cached_tokens": 1664
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 43
+        },
+        "prompt_cache_hit_tokens": 1664,
+        "prompt_cache_miss_tokens": 5730
+      },
+      {
+        "prompt_tokens": 5859,
+        "completion_tokens": 95,
+        "total_tokens": 5954,
+        "prompt_tokens_details": {
+          "cached_tokens": 2432
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 49
+        },
+        "prompt_cache_hit_tokens": 2432,
+        "prompt_cache_miss_tokens": 3427
+      },
+      {
+        "prompt_tokens": 8102,
+        "completion_tokens": 270,
+        "total_tokens": 8372,
+        "prompt_tokens_details": {
+          "cached_tokens": 2432
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 225
+        },
+        "prompt_cache_hit_tokens": 2432,
+        "prompt_cache_miss_tokens": 5670
+      },
+      {
+        "prompt_tokens": 10909,
+        "completion_tokens": 59,
+        "total_tokens": 10968,
+        "prompt_tokens_details": {
+          "cached_tokens": 2432
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 15
+        },
+        "prompt_cache_hit_tokens": 2432,
+        "prompt_cache_miss_tokens": 8477
+      }
+    ],
+    "reported_total_tokens": 44920,
+    "usage_complete": true,
+    "trace": "traces/holdout-14.json",
+    "output": "holdout-14-output.json"
+  },
+  {
+    "case_id": "holdout-15",
+    "scenario": "unsupported",
+    "status": "completed",
+    "case_pass": true,
+    "task_completed": true,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 5,
+    "tool_calls": 3,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 3,
+    "total_refs": 3,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        8.81
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 5,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 5
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 5,
+      "observation_feedback_checks": 4,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "eed71cf5c41618d452198d8f735a74120574235868641345f6bbdba1d1ce2bd1",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "eed71cf5c41618d452198d8f735a74120574235868641345f6bbdba1d1ce2bd1",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 3.3,
+          "subtitle_reading_seconds": 3.3,
+          "estimated_seconds": 3.65
+        },
+        {
+          "scene_id": "S2",
+          "narration_seconds": 4.81,
+          "subtitle_reading_seconds": 4.81,
+          "estimated_seconds": 5.16
+        }
+      ],
+      "total_estimated_seconds": 8.81,
+      "target_duration_seconds": 20.0,
+      "is_overtime": false,
+      "passed": true,
+      "exceeded_seconds": 0,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 19.161619200000132,
+    "usage_records": [
+      {
+        "prompt_tokens": 2555,
+        "completion_tokens": 114,
+        "total_tokens": 2669,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 45
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 1787
+      },
+      {
+        "prompt_tokens": 3174,
+        "completion_tokens": 1495,
+        "total_tokens": 4669,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1184
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 2278
+      },
+      {
+        "prompt_tokens": 4363,
+        "completion_tokens": 476,
+        "total_tokens": 4839,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 444
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 3083
+      },
+      {
+        "prompt_tokens": 6881,
+        "completion_tokens": 59,
+        "total_tokens": 6940,
+        "prompt_tokens_details": {
+          "cached_tokens": 1664
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 16
+        },
+        "prompt_cache_hit_tokens": 1664,
+        "prompt_cache_miss_tokens": 5217
+      },
+      {
+        "prompt_tokens": 8318,
+        "completion_tokens": 319,
+        "total_tokens": 8637,
+        "prompt_tokens_details": {
+          "cached_tokens": 2304
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 242
+        },
+        "prompt_cache_hit_tokens": 2304,
+        "prompt_cache_miss_tokens": 6014
+      }
+    ],
+    "reported_total_tokens": 27754,
+    "usage_complete": true,
+    "trace": "traces/holdout-15.json",
+    "output": "holdout-15-output.json"
+  },
+  {
+    "case_id": "holdout-16",
+    "scenario": "unsupported",
+    "status": "completed",
+    "case_pass": true,
+    "task_completed": true,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 5,
+    "tool_calls": 3,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 2,
+    "total_refs": 2,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        7.25
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 5,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 5
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 5,
+      "observation_feedback_checks": 4,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "ae40a7e97f7c3c39a994aaa9b381820366dc8ad5a8eed0221032b10086594df9",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "ae40a7e97f7c3c39a994aaa9b381820366dc8ad5a8eed0221032b10086594df9",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 3.7,
+          "subtitle_reading_seconds": 3.7,
+          "estimated_seconds": 4.05
+        },
+        {
+          "scene_id": "S2",
+          "narration_seconds": 2.85,
+          "subtitle_reading_seconds": 2.85,
+          "estimated_seconds": 3.2
+        }
+      ],
+      "total_estimated_seconds": 7.25,
+      "target_duration_seconds": 20.0,
+      "is_overtime": false,
+      "passed": true,
+      "exceeded_seconds": 0,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 16.80791330000011,
+    "usage_records": [
+      {
+        "prompt_tokens": 2555,
+        "completion_tokens": 111,
+        "total_tokens": 2666,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 40
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 1787
+      },
+      {
+        "prompt_tokens": 3124,
+        "completion_tokens": 1140,
+        "total_tokens": 4264,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 868
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 2228
+      },
+      {
+        "prompt_tokens": 4104,
+        "completion_tokens": 92,
+        "total_tokens": 4196,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 58
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 2824
+      },
+      {
+        "prompt_tokens": 6462,
+        "completion_tokens": 236,
+        "total_tokens": 6698,
+        "prompt_tokens_details": {
+          "cached_tokens": 1536
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 176
+        },
+        "prompt_cache_hit_tokens": 1536,
+        "prompt_cache_miss_tokens": 4926
+      },
+      {
+        "prompt_tokens": 7737,
+        "completion_tokens": 342,
+        "total_tokens": 8079,
+        "prompt_tokens_details": {
+          "cached_tokens": 2176
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 268
+        },
+        "prompt_cache_hit_tokens": 2176,
+        "prompt_cache_miss_tokens": 5561
+      }
+    ],
+    "reported_total_tokens": 25903,
+    "usage_complete": true,
+    "trace": "traces/holdout-16.json",
+    "output": "holdout-16-output.json"
+  },
+  {
+    "case_id": "holdout-17",
+    "scenario": "unsupported",
+    "status": "completed",
+    "case_pass": true,
+    "task_completed": true,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 5,
+    "tool_calls": 3,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 4,
+    "total_refs": 4,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        13.26
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 5,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 5
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 5,
+      "observation_feedback_checks": 4,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "89e81e673e696ac8108a7d5b1fa8d8f5a574ec6bbf84c17e063c7315e2c4ffa7",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "89e81e673e696ac8108a7d5b1fa8d8f5a574ec6bbf84c17e063c7315e2c4ffa7",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 3.48,
+          "subtitle_reading_seconds": 3.48,
+          "estimated_seconds": 3.83
+        },
+        {
+          "scene_id": "S2",
+          "narration_seconds": 2.63,
+          "subtitle_reading_seconds": 2.63,
+          "estimated_seconds": 2.98
+        },
+        {
+          "scene_id": "S3",
+          "narration_seconds": 6.1,
+          "subtitle_reading_seconds": 6.1,
+          "estimated_seconds": 6.45
+        }
+      ],
+      "total_estimated_seconds": 13.26,
+      "target_duration_seconds": 20.0,
+      "is_overtime": false,
+      "passed": true,
+      "exceeded_seconds": 0,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 25.903549099999964,
+    "usage_records": [
+      {
+        "prompt_tokens": 2555,
+        "completion_tokens": 154,
+        "total_tokens": 2709,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 80
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 1787
+      },
+      {
+        "prompt_tokens": 3107,
+        "completion_tokens": 2200,
+        "total_tokens": 5307,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1787
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 2211
+      },
+      {
+        "prompt_tokens": 4848,
+        "completion_tokens": 774,
+        "total_tokens": 5622,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 736
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 3568
+      },
+      {
+        "prompt_tokens": 7928,
+        "completion_tokens": 264,
+        "total_tokens": 8192,
+        "prompt_tokens_details": {
+          "cached_tokens": 1664
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 200
+        },
+        "prompt_cache_hit_tokens": 1664,
+        "prompt_cache_miss_tokens": 6264
+      },
+      {
+        "prompt_tokens": 9719,
+        "completion_tokens": 256,
+        "total_tokens": 9975,
+        "prompt_tokens_details": {
+          "cached_tokens": 2560
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 192
+        },
+        "prompt_cache_hit_tokens": 2560,
+        "prompt_cache_miss_tokens": 7159
+      }
+    ],
+    "reported_total_tokens": 31805,
+    "usage_complete": true,
+    "trace": "traces/holdout-17.json",
+    "output": "holdout-17-output.json"
+  },
+  {
+    "case_id": "holdout-18",
+    "scenario": "brand",
+    "status": "completed",
+    "case_pass": true,
+    "task_completed": true,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 5,
+    "tool_calls": 3,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 1,
+    "total_refs": 1,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        5.7
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 5,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 5
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 5,
+      "observation_feedback_checks": 4,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "f57d3dbf2f45a3914738a10e281666dd11b12d325de0452b4600fa7e707faeb0",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "f57d3dbf2f45a3914738a10e281666dd11b12d325de0452b4600fa7e707faeb0",
+      "scenes": [
+        {
+          "scene_id": "s1",
+          "narration_seconds": 2.41,
+          "subtitle_reading_seconds": 2.41,
+          "estimated_seconds": 2.76
+        },
+        {
+          "scene_id": "s2",
+          "narration_seconds": 2.59,
+          "subtitle_reading_seconds": 2.59,
+          "estimated_seconds": 2.94
+        }
+      ],
+      "total_estimated_seconds": 5.7,
+      "target_duration_seconds": 20.0,
+      "is_overtime": false,
+      "passed": true,
+      "exceeded_seconds": 0,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 25.191308500000105,
+    "usage_records": [
+      {
+        "prompt_tokens": 2553,
+        "completion_tokens": 143,
+        "total_tokens": 2696,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 86
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 1785
+      },
+      {
+        "prompt_tokens": 2985,
+        "completion_tokens": 2089,
+        "total_tokens": 5074,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1876
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 2089
+      },
+      {
+        "prompt_tokens": 3761,
+        "completion_tokens": 407,
+        "total_tokens": 4168,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 372
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 2609
+      },
+      {
+        "prompt_tokens": 5941,
+        "completion_tokens": 280,
+        "total_tokens": 6221,
+        "prompt_tokens_details": {
+          "cached_tokens": 1408
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 233
+        },
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 4533
+      },
+      {
+        "prompt_tokens": 7036,
+        "completion_tokens": 501,
+        "total_tokens": 7537,
+        "prompt_tokens_details": {
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 387
+        },
+        "prompt_cache_hit_tokens": 2048,
+        "prompt_cache_miss_tokens": 4988
+      }
+    ],
+    "reported_total_tokens": 25696,
+    "usage_complete": true,
+    "trace": "traces/holdout-18.json",
+    "output": "holdout-18-output.json"
+  },
+  {
+    "case_id": "holdout-19",
+    "scenario": "brand",
+    "status": "completed",
+    "case_pass": true,
+    "task_completed": true,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 6,
+    "tool_calls": 3,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 3,
+    "total_refs": 3,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [
+      "H"
+    ],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        8.28
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_error_aware_replay_no_model_calls",
+      "model_calls_made": 0,
+      "issues": [],
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 6
+      }
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "method": "error_aware_request_response_audit",
+      "issues": []
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "ad2be311b90ec8b54b497d0a057f7ee267e5dcf7709c4599d25431a4482f1b9f",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "ad2be311b90ec8b54b497d0a057f7ee267e5dcf7709c4599d25431a4482f1b9f",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 2.41,
+          "subtitle_reading_seconds": 2.41,
+          "estimated_seconds": 2.76
+        },
+        {
+          "scene_id": "S2",
+          "narration_seconds": 2.41,
+          "subtitle_reading_seconds": 2.41,
+          "estimated_seconds": 2.76
+        },
+        {
+          "scene_id": "S3",
+          "narration_seconds": 2.41,
+          "subtitle_reading_seconds": 2.41,
+          "estimated_seconds": 2.76
+        }
+      ],
+      "total_estimated_seconds": 8.28,
+      "target_duration_seconds": 20.0,
+      "is_overtime": false,
+      "passed": true,
+      "exceeded_seconds": 0,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 30.19883600000003,
+    "usage_records": [
+      {
+        "prompt_tokens": 2553,
+        "completion_tokens": 163,
+        "total_tokens": 2716,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 54
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 1785
+      },
+      {
+        "prompt_tokens": 2677,
+        "completion_tokens": 133,
+        "total_tokens": 2810,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 68
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 1525
+      },
+      {
+        "prompt_tokens": 3269,
+        "completion_tokens": 3026,
+        "total_tokens": 6295,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2682
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 2373
+      },
+      {
+        "prompt_tokens": 4636,
+        "completion_tokens": 146,
+        "total_tokens": 4782,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 97
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 3356
+      },
+      {
+        "prompt_tokens": 7484,
+        "completion_tokens": 134,
+        "total_tokens": 7618,
+        "prompt_tokens_details": {
+          "cached_tokens": 1664
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 87
+        },
+        "prompt_cache_hit_tokens": 1664,
+        "prompt_cache_miss_tokens": 5820
+      },
+      {
+        "prompt_tokens": 9035,
+        "completion_tokens": 164,
+        "total_tokens": 9199,
+        "prompt_tokens_details": {
+          "cached_tokens": 2432
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 92
+        },
+        "prompt_cache_hit_tokens": 2432,
+        "prompt_cache_miss_tokens": 6603
+      }
+    ],
+    "reported_total_tokens": 33420,
+    "usage_complete": true,
+    "trace": "traces/holdout-19.json",
+    "output": "holdout-19-output.json"
+  },
+  {
+    "case_id": "holdout-20",
+    "scenario": "brand",
+    "status": "completed",
+    "case_pass": true,
+    "task_completed": true,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 5,
+    "tool_calls": 3,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 2,
+    "total_refs": 2,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        6.18
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 5,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 5
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 5,
+      "observation_feedback_checks": 4,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "7417951a305f8dac5dbfc94149ba6a6fd91fb3946f7815c1ef74d7c40d74dca2",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "7417951a305f8dac5dbfc94149ba6a6fd91fb3946f7815c1ef74d7c40d74dca2",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 2.63,
+          "subtitle_reading_seconds": 2.63,
+          "estimated_seconds": 2.98
+        },
+        {
+          "scene_id": "S2",
+          "narration_seconds": 2.85,
+          "subtitle_reading_seconds": 2.85,
+          "estimated_seconds": 3.2
+        }
+      ],
+      "total_estimated_seconds": 6.18,
+      "target_duration_seconds": 20.0,
+      "is_overtime": false,
+      "passed": true,
+      "exceeded_seconds": 0,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 15.233891500000027,
+    "usage_records": [
+      {
+        "prompt_tokens": 2553,
+        "completion_tokens": 126,
+        "total_tokens": 2679,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 67
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 1785
+      },
+      {
+        "prompt_tokens": 3081,
+        "completion_tokens": 932,
+        "total_tokens": 4013,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 674
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 2185
+      },
+      {
+        "prompt_tokens": 4061,
+        "completion_tokens": 225,
+        "total_tokens": 4286,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 194
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 2781
+      },
+      {
+        "prompt_tokens": 6429,
+        "completion_tokens": 114,
+        "total_tokens": 6543,
+        "prompt_tokens_details": {
+          "cached_tokens": 1536
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 71
+        },
+        "prompt_cache_hit_tokens": 1536,
+        "prompt_cache_miss_tokens": 4893
+      },
+      {
+        "prompt_tokens": 7710,
+        "completion_tokens": 124,
+        "total_tokens": 7834,
+        "prompt_tokens_details": {
+          "cached_tokens": 2176
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 80
+        },
+        "prompt_cache_hit_tokens": 2176,
+        "prompt_cache_miss_tokens": 5534
+      }
+    ],
+    "reported_total_tokens": 25355,
+    "usage_complete": true,
+    "trace": "traces/holdout-20.json",
+    "output": "holdout-20-output.json"
+  }
+]

@@ -1,0 +1,462 @@
+{
+  "created_at_utc": "2026-10-28T08:13:17.886313+00:00",
+  "scope": "Read-only evidence scope review. Existing files, index, refs, history, .gitattributes and .gitignore not modified. Only this new review JSON is written; no archive created or live API called.",
+  "snapshot_note": "Other delivery workers may add files after this snapshot; counts exclude this newly created review artifact.",
+  "git_head": "6ff258c0eef6c2d653ce15c022a35b1fd2f90832",
+  "tracked": {
+    "files": 224,
+    "bytes": 5413552,
+    "MiB": 5.162766
+  },
+  "untracked_nonignored": {
+    "files": 799,
+    "bytes": 57428129,
+    "MiB": 54.767732
+  },
+  "untracked_eval": {
+    "files": 787,
+    "bytes": 56969712,
+    "MiB": 54.330551
+  },
+  "eval_groups": {
+    "eval/README.md": {
+      "files": 1,
+      "bytes": 3879,
+      "MiB": 0.003699
+    },
+    "eval/__init__.py": {
+      "files": 1,
+      "bytes": 76,
+      "MiB": 7.2e-05
+    },
+    "eval/audit.py": {
+      "files": 1,
+      "bytes": 4252,
+      "MiB": 0.004055
+    },
+    "eval/dataset-v1.json": {
+      "files": 1,
+      "bytes": 15408,
+      "MiB": 0.014694
+    },
+    "eval/dataset.py": {
+      "files": 1,
+      "bytes": 1043,
+      "MiB": 0.000995
+    },
+    "eval/decision-v2": {
+      "files": 6,
+      "bytes": 42650,
+      "MiB": 0.040674
+    },
+    "eval/decision-v2/baseline-holdout": {
+      "files": 36,
+      "bytes": 2431870,
+      "MiB": 2.319212
+    },
+    "eval/decision-v2/baseline-source": {
+      "files": 36,
+      "bytes": 155243,
+      "MiB": 0.148051
+    },
+    "eval/decision-v2/optimized-fixed": {
+      "files": 66,
+      "bytes": 6049933,
+      "MiB": 5.769666
+    },
+    "eval/decision-v2/optimized-holdout": {
+      "files": 36,
+      "bytes": 2397223,
+      "MiB": 2.28617
+    },
+    "eval/decision_compare.py": {
+      "files": 1,
+      "bytes": 4095,
+      "MiB": 0.003905
+    },
+    "eval/evidence": {
+      "files": 12,
+      "bytes": 48332,
+      "MiB": 0.046093
+    },
+    "eval/final-v3": {
+      "files": 54,
+      "bytes": 2122036,
+      "MiB": 2.023731
+    },
+    "eval/final-v3/baseline-source": {
+      "files": 24,
+      "bytes": 146388,
+      "MiB": 0.139606
+    },
+    "eval/final-v3/candidate-a-source": {
+      "files": 26,
+      "bytes": 163488,
+      "MiB": 0.155914
+    },
+    "eval/final-v3/candidate-b-diagnostic-v2": {
+      "files": 36,
+      "bytes": 2576290,
+      "MiB": 2.456942
+    },
+    "eval/final-v3/candidate-b-fixed": {
+      "files": 66,
+      "bytes": 5811836,
+      "MiB": 5.542599
+    },
+    "eval/final-v3/confirmation-baseline": {
+      "files": 42,
+      "bytes": 3913636,
+      "MiB": 3.732334
+    },
+    "eval/final-v3/confirmation-optimized": {
+      "files": 42,
+      "bytes": 3472904,
+      "MiB": 3.312019
+    },
+    "eval/final-v3/confirmation-v4": {
+      "files": 5,
+      "bytes": 46646,
+      "MiB": 0.044485
+    },
+    "eval/final-v3/diagnostic-v2": {
+      "files": 36,
+      "bytes": 2922446,
+      "MiB": 2.787062
+    },
+    "eval/final-v3/fresh-baseline": {
+      "files": 51,
+      "bytes": 5936911,
+      "MiB": 5.66188
+    },
+    "eval/final-v3/fresh-optimized": {
+      "files": 51,
+      "bytes": 6139589,
+      "MiB": 5.855168
+    },
+    "eval/final-v3/optimized-fixed": {
+      "files": 66,
+      "bytes": 5452490,
+      "MiB": 5.1999
+    },
+    "eval/metrics.py": {
+      "files": 1,
+      "bytes": 10562,
+      "MiB": 0.010073
+    },
+    "eval/report.py": {
+      "files": 1,
+      "bytes": 7807,
+      "MiB": 0.007445
+    },
+    "eval/rescore.py": {
+      "files": 1,
+      "bytes": 2204,
+      "MiB": 0.002102
+    },
+    "eval/run.py": {
+      "files": 1,
+      "bytes": 6677,
+      "MiB": 0.006368
+    },
+    "eval/runs": {
+      "files": 86,
+      "bytes": 7083798,
+      "MiB": 6.755636
+    }
+  },
+  "largest_untracked_files": [
+    {
+      "path": "eval/final-v3/round3-all-live-ledger.json",
+      "bytes": 864770
+    },
+    {
+      "path": "eval/final-v3/fresh-optimized/20261028T072312Z_b3d74127/traces/fresh-06.json",
+      "bytes": 487890
+    },
+    {
+      "path": "eval/final-v3/fresh-optimized/20261028T072312Z_b3d74127/traces/fresh-06.jsonl",
+      "bytes": 467066
+    },
+    {
+      "path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-20.json",
+      "bytes": 420748
+    },
+    {
+      "path": "eval/final-v3/fresh-baseline/20261028T072312Z_5e7ad9f4/traces/fresh-04.json",
+      "bytes": 406482
+    },
+    {
+      "path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-20.jsonl",
+      "bytes": 395154
+    },
+    {
+      "path": "eval/final-v3/fresh-baseline/20261028T072312Z_5e7ad9f4/traces/fresh-04.jsonl",
+      "bytes": 371628
+    },
+    {
+      "path": "eval/final-v3/fresh-optimized/20261028T072312Z_b3d74127/traces/fresh-04.json",
+      "bytes": 358553
+    },
+    {
+      "path": "eval/final-v3/fresh-optimized/20261028T072312Z_b3d74127/traces/fresh-04.jsonl",
+      "bytes": 334283
+    },
+    {
+      "path": "eval/final-v3/fresh-baseline/20261028T072312Z_5e7ad9f4/traces/fresh-06.json",
+      "bytes": 320982
+    },
+    {
+      "path": "eval/final-v3/fresh-baseline/20261028T072312Z_5e7ad9f4/traces/fresh-06.jsonl",
+      "bytes": 302181
+    },
+    {
+      "path": "eval/final-v3/fresh-optimized/20261028T072312Z_b3d74127/traces/fresh-13.json",
+      "bytes": 299816
+    },
+    {
+      "path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-14.json",
+      "bytes": 291870
+    },
+    {
+      "path": "eval/final-v3/confirmation-optimized/20261028T073730Z_5cf3fdd6/traces/confirm-08.json",
+      "bytes": 286557
+    },
+    {
+      "path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-12.json",
+      "bytes": 286215
+    },
+    {
+      "path": "eval/final-v3/fresh-optimized/20261028T072312Z_b3d74127/traces/fresh-13.jsonl",
+      "bytes": 282753
+    },
+    {
+      "path": "delivery/review/starting-state.json",
+      "bytes": 279422
+    },
+    {
+      "path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-14.jsonl",
+      "bytes": 273739
+    },
+    {
+      "path": "eval/final-v3/confirmation-optimized/20261028T073730Z_5cf3fdd6/traces/confirm-08.jsonl",
+      "bytes": 273380
+    },
+    {
+      "path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-17.json",
+      "bytes": 268222
+    }
+  ],
+  "eval_extensions_and_line_endings": {
+    ".md": {
+      "files": 22,
+      "bytes": 158126,
+      "crlf_files": 19,
+      "crlf_lines": 1749
+    },
+    ".py": {
+      "files": 83,
+      "bytes": 523363,
+      "crlf_files": 0,
+      "crlf_lines": 0
+    },
+    ".json": {
+      "files": 475,
+      "bytes": 31966361,
+      "crlf_files": 463,
+      "crlf_lines": 366187
+    },
+    ".jsonl": {
+      "files": 174,
+      "bytes": 24195562,
+      "crlf_files": 174,
+      "crlf_lines": 2440
+    },
+    ".txt": {
+      "files": 29,
+      "bytes": 53155,
+      "crlf_files": 29,
+      "crlf_lines": 653
+    },
+    ".bin": {
+      "files": 1,
+      "bytes": 16073,
+      "crlf_files": 0,
+      "crlf_lines": 0
+    },
+    ".xml": {
+      "files": 3,
+      "bytes": 57072,
+      "crlf_files": 0,
+      "crlf_lines": 0
+    }
+  },
+  "partial_results": {
+    "files": [
+      {
+        "path": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/results.partial.json",
+        "bytes": 55642,
+        "identical_bytes_to_results_json": true,
+        "historical_hash_bound": true
+      },
+      {
+        "path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/results.partial.json",
+        "bytes": 112016,
+        "identical_bytes_to_results_json": true,
+        "historical_hash_bound": true
+      },
+      {
+        "path": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/results.partial.json",
+        "bytes": 53095,
+        "identical_bytes_to_results_json": true,
+        "historical_hash_bound": true
+      },
+      {
+        "path": "eval/final-v3/candidate-b-diagnostic-v2/20261028T073520Z_f0880670/results.partial.json",
+        "bytes": 52747,
+        "identical_bytes_to_results_json": true,
+        "historical_hash_bound": false
+      },
+      {
+        "path": "eval/final-v3/candidate-b-fixed/20261028T073520Z_5e8a2d91/results.partial.json",
+        "bytes": 109374,
+        "identical_bytes_to_results_json": true,
+        "historical_hash_bound": false
+      },
+      {
+        "path": "eval/final-v3/confirmation-baseline/20261028T073730Z_4f35c3e3/results.partial.json",
+        "bytes": 72277,
+        "identical_bytes_to_results_json": true,
+        "historical_hash_bound": false
+      },
+      {
+        "path": "eval/final-v3/confirmation-optimized/20261028T073730Z_5cf3fdd6/results.partial.json",
+        "bytes": 66745,
+        "identical_bytes_to_results_json": true,
+        "historical_hash_bound": false
+      },
+      {
+        "path": "eval/final-v3/diagnostic-v2/20261028T071840Z_db2115ca/results.partial.json",
+        "bytes": 55342,
+        "identical_bytes_to_results_json": true,
+        "historical_hash_bound": false
+      },
+      {
+        "path": "eval/final-v3/fresh-baseline/20261028T072312Z_5e7ad9f4/results.partial.json",
+        "bytes": 91906,
+        "identical_bytes_to_results_json": true,
+        "historical_hash_bound": false
+      },
+      {
+        "path": "eval/final-v3/fresh-optimized/20261028T072312Z_b3d74127/results.partial.json",
+        "bytes": 91502,
+        "identical_bytes_to_results_json": true,
+        "historical_hash_bound": false
+      },
+      {
+        "path": "eval/final-v3/optimized-fixed/20261028T071840Z_0a1d1fca/results.partial.json",
+        "bytes": 106467,
+        "identical_bytes_to_results_json": true,
+        "historical_hash_bound": false
+      },
+      {
+        "path": "eval/runs/20261028T052239Z_743fa464/results.partial.json",
+        "bytes": 124234,
+        "identical_bytes_to_results_json": true,
+        "historical_hash_bound": true
+      }
+    ],
+    "bytes": 991347,
+    "all_identical_to_final_results": true
+  },
+  "exact_duplicates": {
+    "groups": 55,
+    "redundant_files": 101,
+    "redundant_bytes": 1732619,
+    "meaning": "Byte-identical source snapshots, dataset snapshots, partials and repeated summaries have independent provenance paths; not automatically safe to omit."
+  },
+  "compression_estimate": {
+    "method": "In-memory independent zlib level 9 per existing eval file; no archive/object written. Estimate only, not an actual Git pack size.",
+    "raw_bytes": 56969712,
+    "sum_zlib9_bytes": 5033272
+  },
+  "dependency_review": {
+    "history_manifest": {
+      "files": 471,
+      "top_level_counts": {
+        "docs": 2,
+        "eval": 288,
+        "examples": 181
+      },
+      "bound_docs": [
+        "docs/08-agent-evaluation.md",
+        "docs/09-decision-optimization.md"
+      ]
+    },
+    "final_audit": "Discovers all canonical JSON/JSONL traces and fails for missing event streams, outputs or historical files; preserving full denominator is required to reproduce 220/220.",
+    "freeze_manifests": "Use raw SHA256 for dataset/plan/checker/source snapshots. Source snapshots permit prompt/version verification for old baseline and candidate A.",
+    "json_vs_jsonl": "Both are required: JSON is final snapshot, JSONL independently reconstructs append-only steps; dropping JSONL to save 23 MiB breaks current audit, not just convenience.",
+    "final_inventory": "The prior 508-file inventory is a historical round-three snapshot, not the upcoming delivery-preparation file list. Omitting bound files requires a documented byte-preserving restoration flow."
+  },
+  "delivery_integrity_issue": {
+    "severity": "High for reproducibility/delivery; no Agent runtime behavior defect identified.",
+    "cause": "Current .gitattributes applies text eol=lf to JSON/JSONL/MD/TXT. Most recorded evidence is CRLF; Git clean changes original bytes, so a clean checkout cannot satisfy raw historical/frozen SHA256 without an explicit preservation strategy.",
+    "git_filter_probes": [
+      {
+        "path": "eval/final-v3/final-audit.json",
+        "raw_blob_oid": "3cdd563c2a686c6cf33ff8402bad3ccaeef3a7a1",
+        "git_clean_blob_oid": "4a148e419c8f2674cd523709c0928cfc874c4fb2",
+        "normalization_changes_bytes": true,
+        "head_blob_oid": null
+      },
+      {
+        "path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-20.json",
+        "raw_blob_oid": "6865645c70129741a55ad9d071660823597a0b05",
+        "git_clean_blob_oid": "03c53167016a8fa505dfcd8440414411379f8c7d",
+        "normalization_changes_bytes": true,
+        "head_blob_oid": null
+      },
+      {
+        "path": "examples/traces/live_overtime_round1.json",
+        "raw_blob_oid": "21e286f77565ebfe1ccfc80fb3f0a641a1fe3f4e",
+        "git_clean_blob_oid": "5aa9531f6a67d6b6fcf2df2940e582bb7e70c0b1",
+        "normalization_changes_bytes": true,
+        "head_blob_oid": "5aa9531f6a67d6b6fcf2df2940e582bb7e70c0b1"
+      },
+      {
+        "path": "examples/outputs/live_overtime_round1.json",
+        "raw_blob_oid": "de00a8a970266afede0138ef9b2337e778e95975",
+        "git_clean_blob_oid": "67b54a61fdaacfbdd03fd850f6f9b77f95d7817f",
+        "normalization_changes_bytes": true,
+        "head_blob_oid": "67b54a61fdaacfbdd03fd850f6f9b77f95d7817f"
+      }
+    ],
+    "tracked_examples": {
+      "files": 181,
+      "crlf_files": 168
+    },
+    "recommended_fix_scope": [
+      "Preserve raw bytes for eval/** and examples/** using later .gitattributes -text overrides; unset inherited eol if desired for clarity.",
+      "Preserve raw bytes of historical docs/08-agent-evaluation.md and docs/09-decision-optimization.md, which are historical-manifest-bound.",
+      "Before future staging, inspect tracked examples whose index contains normalized LF but worktree original evidence is CRLF; the next commit may need to record original CRLF blob bytes. Do not rewrite local historical traces or hashes.",
+      "Validate filters using git hash-object --no-filters vs --path and test an isolated clean checkout/index without changing the real index or creating a commit."
+    ]
+  },
+  "recommendation": {
+    "preferred": "Retain all currently frozen/referenced raw evidence as ordinary Git files, including baseline and candidate-A failures and successful runs. Existing eval data is ~54 MiB with no file above 1 MiB, and independent deflate is ~4.8 MiB; integrity, complete denominators and direct review outweigh small derived-file savings.",
+    "stage_groups": [
+      "Existing source/replay/eval/test changes required by candidate B, plus current docs and final-evaluation.md.",
+      "All frozen datasets, rules, plans, source snapshots, manifest/hash/summary/score/audit records.",
+      "All historical and current canonical Trace JSON+JSONL and paired outputs, including failures, refusals and recovered errors.",
+      "A clearly scoped delivery-preparation checklist, final file list and fresh verification receipts after review."
+    ],
+    "suggest_ignore_or_not_stage": [
+      ".env and other secret configuration; .venv; __pycache__; *.pyc; .pytest_cache; coverage/build caches (already ignored).",
+      "Future rerun scratch directories and repeatedly generated local inspection outputs, with explicit path-scoped patterns only after documenting which receipts remain canonical.",
+      "Do not add blanket results.partial.json or JSONL ignores for existing frozen evidence: four historical partials are directly raw-hash-bound and all eight current partials are in the prior delivery inventory."
+    ],
+    "derived_files_not_intrinsically_necessary": "The twelve identical partial snapshots (~0.94 MiB), repeated console receipts and copied dataset/source bytes are reducible in a future archival design, but removing them from this delivery would break raw inventories or require special restoration and provides little benefit.",
+    "archive_alternative": "A lossless archive plus explicit restore/hash-check could preserve raw bytes and reduce visible raw files. It adds bootstrap dependencies and reduces direct diff review; redundant for this size. If selected, include all original raw bytes, never delete originals locally, and validate clean-checkout replay after restoration. Do not keep both archive and all expanded raw files in Git.",
+    "no_git_lfs_needed_based_on_observed_sizes": true
+  }
+}

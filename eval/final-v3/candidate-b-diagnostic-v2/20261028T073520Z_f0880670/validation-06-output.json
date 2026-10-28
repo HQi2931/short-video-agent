@@ -1,0 +1,65 @@
+{
+  "run_id": "validation-06",
+  "mode": "live",
+  "model": "deepseek-flash",
+  "status": "needs_info",
+  "reason": "User input or reliable evidence is required",
+  "title": null,
+  "topic": "远航耳机",
+  "audience": "通勤用户",
+  "platform": "视频号",
+  "style": "清晰介绍产品事实",
+  "target_duration_seconds": 18.0,
+  "script_version": null,
+  "script_revision": 0,
+  "storyboard": [],
+  "total_estimated_seconds": null,
+  "used_asset_ids": [],
+  "sources": [],
+  "duration_check": null,
+  "brand_rule_check": null,
+  "risk_flags": [],
+  "missing_information": [
+    "远航耳机的产品资料或事实要点（如型号、功能、参数、卖点）",
+    "可使用的产品图片/视频素材",
+    "确认“远航耳机”是否与当前素材库中的任何产品对应"
+  ],
+  "question": "我检索了“远航耳机”“耳机”“远航”等关键词，当前素材库没有找到任何可引用的产品事实或素材。为避免编造产品功能和量化效果，请补充远航耳机的官方产品资料（型号、功能、参数等）或可用素材；如果它对应素材库里的其他产品名称，也请告诉我准确名称。",
+  "errors": [],
+  "completed_steps": [
+    {
+      "step": 1,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 4,
+      "action": "request_info",
+      "ok": true
+    }
+  ],
+  "last_observation": {
+    "ok": true,
+    "fields": [
+      "远航耳机的产品资料或事实要点（如型号、功能、参数、卖点）",
+      "可使用的产品图片/视频素材",
+      "确认“远航耳机”是否与当前素材库中的任何产品对应"
+    ],
+    "question": "我检索了“远航耳机”“耳机”“远航”等关键词，当前素材库没有找到任何可引用的产品事实或素材。为避免编造产品功能和量化效果，请补充远航耳机的官方产品资料（型号、功能、参数等）或可用素材；如果它对应素材库里的其他产品名称，也请告诉我准确名称。"
+  },
+  "limitations": [
+    "合成素材，仅用于工程验证。",
+    "时长是工程估算，需要真人口播复核。",
+    "仅通过原文和批准文案核验，未知改写会被阻断。"
+  ]
+}

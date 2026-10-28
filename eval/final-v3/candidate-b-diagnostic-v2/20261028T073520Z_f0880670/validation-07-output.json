@@ -1,0 +1,63 @@
+{
+  "run_id": "validation-07",
+  "mode": "live",
+  "model": "deepseek-flash",
+  "status": "needs_info",
+  "reason": "User input or reliable evidence is required",
+  "title": null,
+  "topic": "暮云背包",
+  "audience": "通勤用户",
+  "platform": "视频号",
+  "style": "清晰介绍产品事实",
+  "target_duration_seconds": 18.0,
+  "script_version": null,
+  "script_revision": 0,
+  "storyboard": [],
+  "total_estimated_seconds": null,
+  "used_asset_ids": [],
+  "sources": [],
+  "duration_check": null,
+  "brand_rule_check": null,
+  "risk_flags": [],
+  "missing_information": [
+    "产品资料/素材链接（暮云背包的官方参数、卖点或产品图）",
+    "可用事实（如容量、尺寸、材质、重量等可核验信息）"
+  ],
+  "question": "已用“暮云背包”“通勤背包”“暮云 包 产品资料”等关键词检索素材库，均无匹配结果，无法核实“暮云背包”的任何产品事实。请补充该背包的官方产品资料或素材（容量、尺寸、材质、重量、结构等），我才能按事实撰写18秒视频号脚本；若产品名与素材库中的名称不同，也请告知准确名称。",
+  "errors": [],
+  "completed_steps": [
+    {
+      "step": 1,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 4,
+      "action": "request_info",
+      "ok": true
+    }
+  ],
+  "last_observation": {
+    "ok": true,
+    "fields": [
+      "产品资料/素材链接（暮云背包的官方参数、卖点或产品图）",
+      "可用事实（如容量、尺寸、材质、重量等可核验信息）"
+    ],
+    "question": "已用“暮云背包”“通勤背包”“暮云 包 产品资料”等关键词检索素材库，均无匹配结果，无法核实“暮云背包”的任何产品事实。请补充该背包的官方产品资料或素材（容量、尺寸、材质、重量、结构等），我才能按事实撰写18秒视频号脚本；若产品名与素材库中的名称不同，也请告知准确名称。"
+  },
+  "limitations": [
+    "合成素材，仅用于工程验证。",
+    "时长是工程估算，需要真人口播复核。",
+    "仅通过原文和批准文案核验，未知改写会被阻断。"
+  ]
+}

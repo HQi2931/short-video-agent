@@ -1,0 +1,512 @@
+{
+  "created_at_utc": "2026-10-28T07:45:06.207538+00:00",
+  "model_calls_made": 0,
+  "verified": true,
+  "frozen_file_checks": [
+    {
+      "manifest": "fresh-frozen-manifest-v2.json",
+      "path": "eval/final-v3/fresh-holdout-v3-contracts.json",
+      "verified": true
+    },
+    {
+      "manifest": "fresh-frozen-manifest-v2.json",
+      "path": "eval/final-v3/preflight-coverage-contracts.json",
+      "verified": true
+    },
+    {
+      "manifest": "fresh-frozen-manifest-v2.json",
+      "path": "eval/final-v3/frozen-test-plan-contracts.md",
+      "verified": true
+    },
+    {
+      "manifest": "fresh-frozen-manifest-v2.json",
+      "path": "eval/final-v3/build_frozen_dataset.py",
+      "verified": true
+    },
+    {
+      "manifest": "fresh-frozen-manifest-v2.json",
+      "path": "eval/final-v3/check_fresh_contracts.py",
+      "verified": true
+    },
+    {
+      "manifest": "fresh-frozen-manifest-v2.json",
+      "path": "eval/metrics.py",
+      "verified": true
+    },
+    {
+      "manifest": "fresh-frozen-manifest-v2.json",
+      "path": "eval/run.py",
+      "verified": true
+    },
+    {
+      "manifest": "fresh-frozen-manifest-v2.json",
+      "path": "scripts/evidence.py",
+      "verified": true
+    },
+    {
+      "manifest": "confirmation-v4/manifest.json",
+      "path": "eval/final-v3/confirmation-v4/dataset.json",
+      "verified": true
+    },
+    {
+      "manifest": "confirmation-v4/manifest.json",
+      "path": "eval/final-v3/confirmation-v4/plan.md",
+      "verified": true
+    },
+    {
+      "manifest": "confirmation-v4/manifest.json",
+      "path": "eval/final-v3/confirmation-v4/preflight.json",
+      "verified": true
+    },
+    {
+      "manifest": "confirmation-v4/manifest.json",
+      "path": "eval/final-v3/confirmation-v4/build_confirmation.py",
+      "verified": true
+    },
+    {
+      "manifest": "confirmation-v4/manifest.json",
+      "path": "eval/final-v3/check_fresh_contracts.py",
+      "verified": true
+    },
+    {
+      "manifest": "confirmation-v4/manifest.json",
+      "path": "eval/metrics.py",
+      "verified": true
+    },
+    {
+      "manifest": "confirmation-v4/manifest.json",
+      "path": "eval/run.py",
+      "verified": true
+    },
+    {
+      "manifest": "confirmation-v4/manifest.json",
+      "path": "scripts/evidence.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "src/__init__.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "src/agent.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "src/llm_adapter.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "src/main.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "src/mock_fixtures.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "src/schemas.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "src/state.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "src/tools.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "src/tracing.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "eval/__init__.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "eval/audit.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "eval/dataset.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "eval/decision_compare.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "eval/metrics.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "eval/report.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "eval/rescore.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "eval/run.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "scripts/acceptance_audit.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "scripts/audit.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "scripts/evidence.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "scripts/final_audit.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "scripts/replay.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "scripts/run_examples.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "scripts/summarize_live.py",
+      "verified": true
+    },
+    {
+      "manifest": "candidate-b-source-manifest.json",
+      "path": "scripts/verify.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "src/__init__.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "src/agent.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "src/llm_adapter.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "src/main.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "src/mock_fixtures.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "src/schemas.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "src/state.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "src/tools.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "src/tracing.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "eval/__init__.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "eval/audit.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "eval/dataset.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "eval/decision_compare.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "eval/metrics.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "eval/report.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "eval/rescore.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "eval/run.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "scripts/acceptance_audit.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "scripts/audit.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "scripts/evidence.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "scripts/replay.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "scripts/run_examples.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "scripts/summarize_live.py",
+      "verified": true
+    },
+    {
+      "manifest": "optimized-source-manifest.json",
+      "path": "scripts/verify.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "src/__init__.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "src/agent.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "src/llm_adapter.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "src/main.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "src/mock_fixtures.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "src/schemas.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "src/state.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "src/tools.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "src/tracing.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "eval/__init__.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "eval/audit.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "eval/dataset.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "eval/decision_compare.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "eval/metrics.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "eval/report.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "eval/rescore.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "eval/run.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "scripts/acceptance_audit.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "scripts/audit.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "scripts/evidence.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "scripts/replay.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "scripts/run_examples.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "scripts/summarize_live.py",
+      "verified": true
+    },
+    {
+      "manifest": "baseline-source-manifest.json",
+      "path": "scripts/verify.py",
+      "verified": true
+    }
+  ],
+  "batches": [
+    {
+      "batch": "optimized-fixed",
+      "directory": "eval/final-v3/optimized-fixed/20261028T071840Z_0a1d1fca",
+      "requests_checked": 107,
+      "verified": true,
+      "issues": []
+    },
+    {
+      "batch": "diagnostic-v2",
+      "directory": "eval/final-v3/diagnostic-v2/20261028T071840Z_db2115ca",
+      "requests_checked": 58,
+      "verified": true,
+      "issues": []
+    },
+    {
+      "batch": "fresh-baseline",
+      "directory": "eval/final-v3/fresh-baseline/20261028T072312Z_5e7ad9f4",
+      "requests_checked": 101,
+      "verified": true,
+      "issues": []
+    },
+    {
+      "batch": "fresh-optimized",
+      "directory": "eval/final-v3/fresh-optimized/20261028T072312Z_b3d74127",
+      "requests_checked": 102,
+      "verified": true,
+      "issues": []
+    },
+    {
+      "batch": "candidate-b-fixed",
+      "directory": "eval/final-v3/candidate-b-fixed/20261028T073520Z_5e8a2d91",
+      "requests_checked": 115,
+      "verified": true,
+      "issues": []
+    },
+    {
+      "batch": "candidate-b-diagnostic-v2",
+      "directory": "eval/final-v3/candidate-b-diagnostic-v2/20261028T073520Z_f0880670",
+      "requests_checked": 55,
+      "verified": true,
+      "issues": []
+    },
+    {
+      "batch": "confirmation-baseline",
+      "directory": "eval/final-v3/confirmation-baseline/20261028T073730Z_4f35c3e3",
+      "requests_checked": 76,
+      "verified": true,
+      "issues": []
+    },
+    {
+      "batch": "confirmation-optimized",
+      "directory": "eval/final-v3/confirmation-optimized/20261028T073730Z_5cf3fdd6",
+      "requests_checked": 69,
+      "verified": true,
+      "issues": []
+    }
+  ],
+  "request_prompts_checked": 683,
+  "limitation": "Local file timestamps and hashes corroborate order and integrity; not independent external attestation."
+}

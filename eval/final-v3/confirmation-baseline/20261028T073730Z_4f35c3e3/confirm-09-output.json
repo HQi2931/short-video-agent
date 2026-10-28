@@ -1,0 +1,156 @@
+{
+  "run_id": "confirm-09",
+  "mode": "live",
+  "model": "deepseek-flash",
+  "status": "needs_info",
+  "reason": "User input or reliable evidence is required",
+  "title": "横塘记录板正面印有周一至周日七个栏目，背面设有两条挂绳和一块可拆卸的笔托。",
+  "topic": "横塘记录板",
+  "audience": "排期人员",
+  "platform": "哔哩哔哩",
+  "style": "最终成稿必须把目录唯一一条事实逐字完整读在旁白中，不能删减、改写或移到画面和字幕；同时总时长不得超过3秒。两项都是最终硬约束，无法同时满足请直接说明并请求调整约束，不能只交短介绍。",
+  "target_duration_seconds": 3.0,
+  "script_version": "dc91d629c936c668328d1e8dbb5de94827dc303b3ccb7ba66d682d9d63265989",
+  "script_revision": 1,
+  "storyboard": [
+    {
+      "scene_id": "S1",
+      "visual": "产品入镜。局部特写。",
+      "narration": "横塘记录板正面印有周一至周日七个栏目，背面设有两条挂绳和一块可拆卸的笔托。",
+      "subtitle": "横塘记录板正面印有周一至周日七个栏目，背面设有两条挂绳和一块可拆卸的笔托。",
+      "source_ids": [
+        "Q46"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "Q46",
+          "fact_id": "F1",
+          "evidence_text": "横塘记录板正面印有周一至周日七个栏目，背面设有两条挂绳和一块可拆卸的笔托。",
+          "claim_text": "横塘记录板正面印有周一至周日七个栏目，背面设有两条挂绳和一块可拆卸的笔托。"
+        }
+      ],
+      "estimated_seconds": 8.49
+    }
+  ],
+  "total_estimated_seconds": 8.49,
+  "used_asset_ids": [
+    "Q46"
+  ],
+  "sources": [
+    {
+      "asset_id": "Q46",
+      "name": "横塘记录板",
+      "keywords": [
+        "横塘记录板"
+      ],
+      "facts": [
+        {
+          "fact_id": "F1",
+          "text": "横塘记录板正面印有周一至周日七个栏目，背面设有两条挂绳和一块可拆卸的笔托。"
+        }
+      ],
+      "source_text": "横塘记录板正面印有周一至周日七个栏目，背面设有两条挂绳和一块可拆卸的笔托。"
+    }
+  ],
+  "duration_check": {
+    "ok": true,
+    "script_version": "dc91d629c936c668328d1e8dbb5de94827dc303b3ccb7ba66d682d9d63265989",
+    "scenes": [
+      {
+        "scene_id": "S1",
+        "narration_seconds": 8.14,
+        "subtitle_reading_seconds": 8.14,
+        "estimated_seconds": 8.49
+      }
+    ],
+    "total_estimated_seconds": 8.49,
+    "target_duration_seconds": 3.0,
+    "is_overtime": true,
+    "passed": false,
+    "exceeded_seconds": 5.49,
+    "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+    "timing": {
+      "chinese_chars_per_second": 4.5,
+      "english_words_per_second": 2.5,
+      "number_groups_per_second": 2.0,
+      "punctuation_pause_seconds": 0.18,
+      "minimum_scene_seconds": 2.0,
+      "transition_seconds": 0.35
+    },
+    "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ.",
+    "revision_feedback": {
+      "script_version": "dc91d629c936c668328d1e8dbb5de94827dc303b3ccb7ba66d682d9d63265989",
+      "current_seconds": 8.49,
+      "target_seconds": 3.0,
+      "exceeded_seconds": 5.49,
+      "violations": [],
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "产品入镜。局部特写。",
+          "narration": "横塘记录板正面印有周一至周日七个栏目，背面设有两条挂绳和一块可拆卸的笔托。",
+          "subtitle": "横塘记录板正面印有周一至周日七个栏目，背面设有两条挂绳和一块可拆卸的笔托。",
+          "source_ids": [
+            "Q46"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "Q46",
+              "fact_id": "F1",
+              "evidence_text": "横塘记录板正面印有周一至周日七个栏目，背面设有两条挂绳和一块可拆卸的笔托。",
+              "claim_text": "横塘记录板正面印有周一至周日七个栏目，背面设有两条挂绳和一块可拆卸的笔托。"
+            }
+          ]
+        }
+      ],
+      "revalidate_after_edit": [
+        "estimate_duration",
+        "check_brand_rules"
+      ],
+      "guidance": "Fix reported scenes; preserve supported facts/source IDs. Check the new version before further edits."
+    }
+  },
+  "brand_rule_check": null,
+  "risk_flags": [],
+  "missing_information": [
+    "duration_seconds",
+    "style"
+  ],
+  "question": "当前两条硬约束无法同时满足：目录唯一事实“横塘记录板正面印有周一至周日七个栏目，背面设有两条挂绳和一块可拆卸的笔托。”需逐字完整读在旁白中，按 4.5 字/秒计仅旁白就约 8.14 秒（实测整片估时 8.49 秒），已超出 3 秒上限 5.49 秒，且单镜头最短时长为 2 秒。请确认要调整哪一项：1) 放宽总时长到至少约 8.5 秒（可保留逐字完整旁白）；2) 保持 3 秒，但允许旁白省略或改写该事实（例如只读其中一部分，或将该信息移到画面/字幕）；3) 其他折中方案。",
+  "errors": [],
+  "completed_steps": [
+    {
+      "step": 1,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "action": "draft_script",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "action": "estimate_duration",
+      "ok": true
+    },
+    {
+      "step": 4,
+      "action": "request_info",
+      "ok": true
+    }
+  ],
+  "last_observation": {
+    "ok": true,
+    "fields": [
+      "duration_seconds",
+      "style"
+    ],
+    "question": "当前两条硬约束无法同时满足：目录唯一事实“横塘记录板正面印有周一至周日七个栏目，背面设有两条挂绳和一块可拆卸的笔托。”需逐字完整读在旁白中，按 4.5 字/秒计仅旁白就约 8.14 秒（实测整片估时 8.49 秒），已超出 3 秒上限 5.49 秒，且单镜头最短时长为 2 秒。请确认要调整哪一项：1) 放宽总时长到至少约 8.5 秒（可保留逐字完整旁白）；2) 保持 3 秒，但允许旁白省略或改写该事实（例如只读其中一部分，或将该信息移到画面/字幕）；3) 其他折中方案。"
+  },
+  "limitations": [
+    "合成素材，仅用于工程验证。",
+    "时长是工程估算，需要真人口播复核。",
+    "仅通过原文和批准文案核验，未知改写会被阻断。"
+  ]
+}

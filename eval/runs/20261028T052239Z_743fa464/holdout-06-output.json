@@ -1,0 +1,150 @@
+{
+  "run_id": "holdout-06",
+  "mode": "live",
+  "model": "deepseek-flash",
+  "status": "completed",
+  "reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+  "title": "溪石收纳盒配有透明盒盖。",
+  "topic": "溪石收纳盒功能审片",
+  "audience": "社区科普活动参与者",
+  "platform": "视频号",
+  "style": "审片首稿必须分别用两个镜头介绍素材的两项不同事实，每镜原文旁白和字幕。先实际估时，再按工具观察为最终时限删减到一项事实。",
+  "target_duration_seconds": 4.5,
+  "script_version": "f2659286c19ac0c11b76b9b00ff5c03b038f519836f27021f1993406be2ebd2e",
+  "script_revision": 2,
+  "storyboard": [
+    {
+      "scene_id": "S1",
+      "visual": "镜头展示产品。",
+      "narration": "溪石收纳盒配有透明盒盖。",
+      "subtitle": "溪石收纳盒配有透明盒盖。",
+      "source_ids": [
+        "E02"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "E02",
+          "fact_id": "Q1",
+          "evidence_text": "溪石收纳盒配有透明盒盖。",
+          "claim_text": "溪石收纳盒配有透明盒盖。"
+        }
+      ],
+      "estimated_seconds": 2.98
+    }
+  ],
+  "total_estimated_seconds": 2.98,
+  "used_asset_ids": [
+    "E02"
+  ],
+  "sources": [
+    {
+      "asset_id": "E02",
+      "name": "溪石收纳盒（评测合成产品）",
+      "keywords": [
+        "溪石",
+        "收纳盒"
+      ],
+      "facts": [
+        {
+          "fact_id": "Q1",
+          "text": "溪石收纳盒配有透明盒盖。"
+        },
+        {
+          "fact_id": "Q2",
+          "text": "溪石收纳盒包含两个分隔板。"
+        }
+      ],
+      "source_text": "溪石收纳盒配有透明盒盖。溪石收纳盒包含两个分隔板。未提供销量、效率或健康效果数据。"
+    }
+  ],
+  "duration_check": {
+    "ok": true,
+    "script_version": "f2659286c19ac0c11b76b9b00ff5c03b038f519836f27021f1993406be2ebd2e",
+    "scenes": [
+      {
+        "scene_id": "S1",
+        "narration_seconds": 2.63,
+        "subtitle_reading_seconds": 2.63,
+        "estimated_seconds": 2.98
+      }
+    ],
+    "total_estimated_seconds": 2.98,
+    "target_duration_seconds": 4.5,
+    "is_overtime": false,
+    "passed": true,
+    "exceeded_seconds": 0,
+    "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+    "timing": {
+      "chinese_chars_per_second": 4.5,
+      "english_words_per_second": 2.5,
+      "number_groups_per_second": 2.0,
+      "punctuation_pause_seconds": 0.18,
+      "minimum_scene_seconds": 2.0,
+      "transition_seconds": 0.35
+    },
+    "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+  },
+  "brand_rule_check": {
+    "ok": true,
+    "script_version": "f2659286c19ac0c11b76b9b00ff5c03b038f519836f27021f1993406be2ebd2e",
+    "passed": true,
+    "violations": [],
+    "unsupported_claims": [],
+    "missing_references": [],
+    "risk_reasons": [],
+    "needs_confirmation": false,
+    "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+    "limitation": "String verification does not establish full natural-language semantic entailment."
+  },
+  "risk_flags": [],
+  "missing_information": [],
+  "question": null,
+  "errors": [],
+  "completed_steps": [
+    {
+      "step": 1,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "action": "draft_script",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "action": "estimate_duration",
+      "ok": true
+    },
+    {
+      "step": 4,
+      "action": "draft_script",
+      "ok": true
+    },
+    {
+      "step": 5,
+      "action": "estimate_duration",
+      "ok": true
+    },
+    {
+      "step": 6,
+      "action": "check_brand_rules",
+      "ok": true
+    },
+    {
+      "step": 7,
+      "action": "finish",
+      "ok": true
+    }
+  ],
+  "last_observation": {
+    "ok": true,
+    "status": "completed",
+    "script_version": "f2659286c19ac0c11b76b9b00ff5c03b038f519836f27021f1993406be2ebd2e"
+  },
+  "limitations": [
+    "合成素材，仅用于工程验证。",
+    "时长是工程估算，需要真人口播复核。",
+    "仅通过原文和批准文案核验，未知改写会被阻断。"
+  ]
+}

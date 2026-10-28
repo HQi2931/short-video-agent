@@ -1,0 +1,56 @@
+{
+  "run_id": "holdout-11",
+  "mode": "live",
+  "model": "deepseek-flash",
+  "status": "needs_info",
+  "reason": "User input or reliable evidence is required",
+  "title": null,
+  "topic": "远帆土壤测量站介绍",
+  "audience": "社区科普活动参与者",
+  "platform": "视频号",
+  "style": "找不到素材时尝试保持主题的另一种查询，仍无证据则明确请求素材。",
+  "target_duration_seconds": 18.0,
+  "script_version": null,
+  "script_revision": 0,
+  "storyboard": [],
+  "total_estimated_seconds": null,
+  "used_asset_ids": [],
+  "sources": [],
+  "duration_check": null,
+  "brand_rule_check": null,
+  "risk_flags": [],
+  "missing_information": [
+    "远帆土壤测量站的素材（视频或图片）与可引用的产品事实资料（如产品介绍、参数、官方说明原文）"
+  ],
+  "question": "已按主题做过两次检索（“远帆土壤测量站介绍”与“土壤测量站 环境监测设备介绍”），素材库中均未找到与远帆土壤测量站相关的内容，无法在不编造事实的前提下撰写脚本，也无法通过品牌规则与时长核验。请提供远帆土壤测量站的素材与可引用的官方事实原文；如该产品线有其他叫法或目录可用关键词（例如产品型号、所属系列名），也请一并告知，我会据此重新检索。",
+  "errors": [],
+  "completed_steps": [
+    {
+      "step": 1,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "action": "request_info",
+      "ok": true
+    }
+  ],
+  "last_observation": {
+    "ok": true,
+    "fields": [
+      "远帆土壤测量站的素材（视频或图片）与可引用的产品事实资料（如产品介绍、参数、官方说明原文）"
+    ],
+    "question": "已按主题做过两次检索（“远帆土壤测量站介绍”与“土壤测量站 环境监测设备介绍”），素材库中均未找到与远帆土壤测量站相关的内容，无法在不编造事实的前提下撰写脚本，也无法通过品牌规则与时长核验。请提供远帆土壤测量站的素材与可引用的官方事实原文；如该产品线有其他叫法或目录可用关键词（例如产品型号、所属系列名），也请一并告知，我会据此重新检索。"
+  },
+  "limitations": [
+    "合成素材，仅用于工程验证。",
+    "时长是工程估算，需要真人口播复核。",
+    "仅通过原文和批准文案核验，未知改写会被阻断。"
+  ]
+}

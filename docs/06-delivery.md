@@ -1,5 +1,11 @@
 # GitHub 交付
 
+## 当前审核状态（2026-10-28）
+
+第三轮工作仅保存在本地，**本轮未commit、未push**。用户要求最终审核后再提交；下方历史上传记录不代表本轮已经授权提交。最新质量结果、保留失败、待办与实际命令见 [final-evaluation.md](../final-evaluation.md)。本轮未调用远程仓库接口，Private状态沿用早期核实记录，不能声称已重新核验。
+
+当前候选B的交付准备结果和逐文件stage范围见[最终交付清单](../delivery/FINAL-HANDOFF.md)。实际暂存区保持不变；原始证据采用Git字节保留属性，避免换行转换破坏已冻结SHA-256。不要对证据批量格式化或对全仓库renormalize；交付清单中的定向重新索引仅在文本转换已关闭后写入原始字节，以清除旧Git索引缓存影响。
+
 ## 仓库与授权
 
 用户提供仓库地址并明确要求提交：
@@ -7,7 +13,7 @@
 - 仓库：https://github.com/HQi2931/short-video-agent
 - 远程 origin：https://github.com/HQi2931/short-video-agent.git
 - 本地分支：main
-- 可见性：Private，已通过 GitHub 查询确认。
+- 可见性：早期GitHub查询确认为Private，本轮未重新查询。
 
 最初检查时远程为空、可见性为 Public。按既定保密要求，已先改为 Private，再进行代码上传。本次提交使用现有本地 Git 作者配置，不据此声称候选人已完成代码审核或亲自编写全部代码。
 
@@ -21,16 +27,16 @@
 git status --short
 git check-ignore .env
 git check-ignore .venv/Scripts/python.exe
-.\.venv\Scripts\python.exe scripts/audit.py
-.\.venv\Scripts\python.exe scripts/audit.py --require-live
-.\.venv\Scripts\python.exe scripts/acceptance_audit.py
+.\.venv\Scripts\python.exe -m pytest -v --junitxml=eval/final-v3/review-pytest.xml
+.\.venv\Scripts\python.exe scripts/final_audit.py --output eval/final-v3/review-audit.json --pytest-report eval/final-v3/review-pytest.xml
 git diff --check
 ```
 
-本次离线测试与 CLI 证据已保存，详见 `docs/03-evaluation.md`。后续修改后，按修改范围运行必要测试，再提交更新：
+早期audit.py/acceptance_audit.py会更新examples的派生汇总，本轮为保留历史未执行；当前复核使用上面的只读final_audit。早期离线测试与CLI证据见`docs/03-evaluation.md`。以下仅供用户最终审核并明确同意提交后参考，本轮未执行：
 
 ```powershell
-git add README.md requirements.txt requirements-lock.txt pyproject.toml .env.example .gitignore .gitattributes src data tests scripts docs examples
+git --literal-pathspecs add --pathspec-from-file=delivery/stage-paths.txt
+git --literal-pathspecs add --renormalize --pathspec-from-file=delivery/raw-byte-paths.txt
 git diff --cached --check
 git diff --cached --stat
 git commit -m "Update short-video script agent"

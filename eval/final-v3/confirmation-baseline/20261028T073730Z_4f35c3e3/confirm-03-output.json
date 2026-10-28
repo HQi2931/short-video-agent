@@ -1,0 +1,281 @@
+{
+  "run_id": "confirm-03",
+  "mode": "live",
+  "model": "deepseek-flash",
+  "status": "completed",
+  "reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+  "title": "临川木扣为圆形。云桥纸夹为银色。",
+  "topic": "随身双件：临川木扣和云桥纸夹",
+  "audience": "手工市集观众",
+  "platform": "小红书",
+  "style": "两件物品各介绍一项完整有据事实，旁白或字幕均可，风格平实。",
+  "target_duration_seconds": 30.0,
+  "script_version": "fb62807ce2c1498de49ea9dbffa9cff7640468f299c48ea6107bfba777eb24b6",
+  "script_revision": 1,
+  "storyboard": [
+    {
+      "scene_id": "S1",
+      "visual": "产品入镜。局部特写。",
+      "narration": "临川木扣为圆形。",
+      "subtitle": "临川木扣为圆形。",
+      "source_ids": [
+        "Q41"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "Q41",
+          "fact_id": "F1",
+          "evidence_text": "临川木扣为圆形。",
+          "claim_text": "临川木扣为圆形。"
+        }
+      ],
+      "estimated_seconds": 2.35
+    },
+    {
+      "scene_id": "S2",
+      "visual": "产品入镜。请看细节。",
+      "narration": "云桥纸夹为银色。",
+      "subtitle": "云桥纸夹为银色。",
+      "source_ids": [
+        "Q42"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "Q42",
+          "fact_id": "F1",
+          "evidence_text": "云桥纸夹为银色。",
+          "claim_text": "云桥纸夹为银色。"
+        }
+      ],
+      "estimated_seconds": 2.35
+    }
+  ],
+  "total_estimated_seconds": 4.7,
+  "used_asset_ids": [
+    "Q41",
+    "Q42"
+  ],
+  "sources": [
+    {
+      "asset_id": "Q41",
+      "name": "临川木扣",
+      "keywords": [
+        "临川木扣",
+        "随身双件",
+        "桌前三件"
+      ],
+      "facts": [
+        {
+          "fact_id": "F1",
+          "text": "临川木扣为圆形。"
+        }
+      ],
+      "source_text": "临川木扣为圆形。"
+    },
+    {
+      "asset_id": "Q42",
+      "name": "云桥纸夹",
+      "keywords": [
+        "云桥纸夹",
+        "随身双件"
+      ],
+      "facts": [
+        {
+          "fact_id": "F1",
+          "text": "云桥纸夹为银色。"
+        },
+        {
+          "fact_id": "F2",
+          "text": "云桥纸夹长28毫米。"
+        },
+        {
+          "fact_id": "F3",
+          "text": "云桥纸夹采用钢材。"
+        }
+      ],
+      "source_text": "云桥纸夹为银色。云桥纸夹长28毫米。云桥纸夹采用钢材。"
+    }
+  ],
+  "duration_check": {
+    "ok": true,
+    "script_version": "fb62807ce2c1498de49ea9dbffa9cff7640468f299c48ea6107bfba777eb24b6",
+    "scenes": [
+      {
+        "scene_id": "S1",
+        "narration_seconds": 1.74,
+        "subtitle_reading_seconds": 1.74,
+        "estimated_seconds": 2.35
+      },
+      {
+        "scene_id": "S2",
+        "narration_seconds": 1.74,
+        "subtitle_reading_seconds": 1.74,
+        "estimated_seconds": 2.35
+      }
+    ],
+    "total_estimated_seconds": 4.7,
+    "target_duration_seconds": 30.0,
+    "is_overtime": false,
+    "passed": true,
+    "exceeded_seconds": 0,
+    "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+    "timing": {
+      "chinese_chars_per_second": 4.5,
+      "english_words_per_second": 2.5,
+      "number_groups_per_second": 2.0,
+      "punctuation_pause_seconds": 0.18,
+      "minimum_scene_seconds": 2.0,
+      "transition_seconds": 0.35
+    },
+    "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ.",
+    "revision_feedback": {
+      "script_version": "fb62807ce2c1498de49ea9dbffa9cff7640468f299c48ea6107bfba777eb24b6",
+      "current_seconds": 4.7,
+      "target_seconds": 30.0,
+      "exceeded_seconds": 0,
+      "violations": [],
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "产品入镜。局部特写。",
+          "narration": "临川木扣为圆形。",
+          "subtitle": "临川木扣为圆形。",
+          "source_ids": [
+            "Q41"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "Q41",
+              "fact_id": "F1",
+              "evidence_text": "临川木扣为圆形。",
+              "claim_text": "临川木扣为圆形。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S2",
+          "visual": "产品入镜。请看细节。",
+          "narration": "云桥纸夹为银色。",
+          "subtitle": "云桥纸夹为银色。",
+          "source_ids": [
+            "Q42"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "Q42",
+              "fact_id": "F1",
+              "evidence_text": "云桥纸夹为银色。",
+              "claim_text": "云桥纸夹为银色。"
+            }
+          ]
+        }
+      ],
+      "revalidate_after_edit": [
+        "estimate_duration",
+        "check_brand_rules"
+      ],
+      "guidance": "Fix reported scenes; preserve supported facts/source IDs. Check the new version before further edits."
+    }
+  },
+  "brand_rule_check": {
+    "ok": true,
+    "script_version": "fb62807ce2c1498de49ea9dbffa9cff7640468f299c48ea6107bfba777eb24b6",
+    "passed": true,
+    "violations": [],
+    "unsupported_claims": [],
+    "missing_references": [],
+    "risk_reasons": [],
+    "needs_confirmation": false,
+    "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+    "limitation": "String verification does not establish full natural-language semantic entailment.",
+    "revision_feedback": {
+      "script_version": "fb62807ce2c1498de49ea9dbffa9cff7640468f299c48ea6107bfba777eb24b6",
+      "current_seconds": 4.7,
+      "target_seconds": 30.0,
+      "exceeded_seconds": 0,
+      "violations": [],
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "产品入镜。局部特写。",
+          "narration": "临川木扣为圆形。",
+          "subtitle": "临川木扣为圆形。",
+          "source_ids": [
+            "Q41"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "Q41",
+              "fact_id": "F1",
+              "evidence_text": "临川木扣为圆形。",
+              "claim_text": "临川木扣为圆形。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S2",
+          "visual": "产品入镜。请看细节。",
+          "narration": "云桥纸夹为银色。",
+          "subtitle": "云桥纸夹为银色。",
+          "source_ids": [
+            "Q42"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "Q42",
+              "fact_id": "F1",
+              "evidence_text": "云桥纸夹为银色。",
+              "claim_text": "云桥纸夹为银色。"
+            }
+          ]
+        }
+      ],
+      "revalidate_after_edit": [
+        "estimate_duration",
+        "check_brand_rules"
+      ],
+      "guidance": "Fix reported scenes; preserve supported facts/source IDs. Check the new version before further edits."
+    }
+  },
+  "risk_flags": [],
+  "missing_information": [],
+  "question": null,
+  "errors": [],
+  "completed_steps": [
+    {
+      "step": 1,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "action": "draft_script",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "action": "estimate_duration",
+      "ok": true
+    },
+    {
+      "step": 4,
+      "action": "check_brand_rules",
+      "ok": true
+    },
+    {
+      "step": 5,
+      "action": "finish",
+      "ok": true
+    }
+  ],
+  "last_observation": {
+    "ok": true,
+    "status": "completed",
+    "script_version": "fb62807ce2c1498de49ea9dbffa9cff7640468f299c48ea6107bfba777eb24b6"
+  },
+  "limitations": [
+    "合成素材，仅用于工程验证。",
+    "时长是工程估算，需要真人口播复核。",
+    "仅通过原文和批准文案核验，未知改写会被阻断。"
+  ]
+}

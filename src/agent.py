@@ -8,7 +8,7 @@ from .tracing import TraceLogger
 
 class AgentRunner:
     def __init__(self, state: AgentState, adapter: Adapter, trace: TraceLogger,
-                 executor: ToolExecutor | None = None, max_steps: int = 12):
+                 executor: ToolExecutor | None = None, max_steps: int = 12, policy_version: int = 2):
         if type(max_steps) is not int or not 1 <= max_steps <= 100:
             raise ValueError("max_steps must be an integer in [1, 100]")
         if trace.trace["mode"] != adapter.mode:
@@ -16,6 +16,28 @@ class AgentRunner:
         self.state, self.adapter, self.trace = state, adapter, trace
         self.executor = executor or ToolExecutor()
         self.max_steps = max_steps
+        self.policy_version = policy_version
+
+    def decision_context(self, step: int) -> dict:
+        context = self.state.context()
+        remaining = self.max_steps - step + 1
+        context.update(step=step, max_steps=self.max_steps, remaining_steps=remaining)
+        if self.policy_version >= 2:
+            state = self.state
+            checks = {name: check for name, check in (
+                ("estimate_duration", state.current_duration), ("check_brand_rules", state.current_rules))
+                if check and check.get("script_version") == state.script_version}
+            pending = [name for name in ("estimate_duration", "check_brand_rules")
+                       if not checks.get(name, {}).get("passed")]
+            context["decision_progress"] = {
+                "current_checks": checks, "pending_checks": pending,
+                "completed_checks": [name for name, check in checks.items() if check.get("passed")],
+                "minimum_steps_to_finish_current": len(pending) + 1,
+                "steps_required_for_draft_checks_finish": 4,
+                "can_draft_and_verify": remaining >= 4,
+                "historical_feedback_notice": "Only current_checks applies to this script_version. Historical failures are not current failures.",
+            }
+        return context
 
     def run(self) -> dict:
         state = self.state
@@ -23,6 +45,7 @@ class AgentRunner:
             raise ValueError("A run state cannot be reused; create a fresh state")
         state.status = "running"
         configuration = {
+            "decision_policy_version": self.policy_version,
             "max_steps": self.max_steps, "tools": self.executor.registry.names,
             "fault_injection_once": sorted(self.executor.fail_once),
             "data_fingerprint": fingerprint({
@@ -33,8 +56,7 @@ class AgentRunner:
         self.trace.trace["configuration"] = configuration
         self.trace.event("configuration", configuration)
         for step in range(1, self.max_steps + 1):
-            context = state.context()
-            context.update({"step": step, "max_steps": self.max_steps, "remaining_steps": self.max_steps - step + 1})
+            context = self.decision_context(step)
             version_before = state.script_version
             model_record, arguments, reason = {}, {}, ""
             fatal = False
@@ -82,12 +104,38 @@ class AgentRunner:
                 state.invalidate()
             return {"ok": False, "error": {"type": type(exc).__name__, "message": str(exc)}}
         if action in {"search_assets", "estimate_duration", "check_brand_rules"}:
-            return self.executor.execute(action, arguments, state)
+            observation = self.executor.execute(action, arguments, state)
+            if self.policy_version >= 2 and action != "search_assets" and observation.get("ok"):
+                observation["revision_feedback"] = {
+                    "script_version": state.script_version,
+                    "current_seconds": (observation if action == "estimate_duration" else state.current_duration or {}).get("total_estimated_seconds"),
+                    "target_seconds": state.user_input.duration_seconds,
+                    "exceeded_seconds": (observation if action == "estimate_duration" else state.current_duration or {}).get("exceeded_seconds"),
+                    "violations": observation.get("violations", []),
+                    "scenes": [s.model_dump() for s in state.script.storyboard],
+                    "revalidate_after_edit": ["estimate_duration", "check_brand_rules"],
+                    "guidance": "Fix reported scenes; preserve supported facts/source IDs. Check the new version before further edits.",
+                }
+            return observation
         if action == "draft_script":
             if state.user_input.missing_fields():
                 return {"ok": False, "error": {"type": "MissingInput", "message": "Request required fields before drafting"}}
             if not state.retrieved_assets:
                 return {"ok": False, "error": {"type": "MissingEvidence", "message": "Retrieve evidence before drafting"}}
+            if self.policy_version >= 2:
+                if state.script and args.script.model_dump() == state.script.model_dump():
+                    return {"ok": False, "error": {"type": "UnchangedScript", "message": "Identical script rejected; use current checks or run pending checks"}}
+                drafts = [i for i, item in enumerate(state.actions)
+                          if item["action"] == "draft_script" and item["observation"].get("ok")]
+                if drafts and not any(item["action"] in {"search_assets", "estimate_duration", "check_brand_rules"}
+                                      and item["observation"].get("ok") for item in state.actions[drafts[-1]+1:]):
+                    return {"ok": False, "error": {"type": "FeedbackRequired", "message": "No new successful tool feedback since last draft; check current script before editing again"}}
+                remaining = self.max_steps - len(state.actions)
+                if remaining < 4:
+                    state.status = "incomplete"
+                    state.reason = "Insufficient steps for draft, two fresh checks and finish"
+                    return {"ok": False, "error": {"type": "InsufficientBudget", "message": state.reason},
+                            "remaining_steps": remaining, "required_steps": 4}
             state.update_script(args.script)
             return {"ok": True, "script_revision": state.script_revision, "script_version": state.script_version,
                     "script": state.script.model_dump(), "checks_invalidated": True}

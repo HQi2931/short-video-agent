@@ -1,0 +1,211 @@
+{
+  "run_id": "confirm-08",
+  "mode": "live",
+  "model": "deepseek-flash",
+  "status": "completed",
+  "reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+  "title": "秋渡工具盒附有清单。",
+  "topic": "秋渡工具盒",
+  "audience": "家庭维修用户",
+  "platform": "视频号",
+  "style": "首个单镜审片稿完整朗读包含托盘、配件目录及螺丝收纳格的长事实，再估时。最终上限5.5秒，审片稿长旁白不要求保留，成稿仍须准确完整介绍有据事实。",
+  "target_duration_seconds": 5.5,
+  "script_version": "8cffb69dcdaaa8f22438cdae3c5e233f49416002a97c584598f185bfc9b38f49",
+  "script_revision": 2,
+  "storyboard": [
+    {
+      "scene_id": "S1",
+      "visual": "产品入镜。局部特写。请看细节。",
+      "narration": "秋渡工具盒附有清单。",
+      "subtitle": "秋渡工具盒附有清单。",
+      "source_ids": [
+        "Q45"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "Q45",
+          "fact_id": "F2",
+          "evidence_text": "秋渡工具盒附有清单。",
+          "claim_text": "秋渡工具盒附有清单。"
+        }
+      ],
+      "estimated_seconds": 2.53
+    }
+  ],
+  "total_estimated_seconds": 2.53,
+  "used_asset_ids": [
+    "Q45"
+  ],
+  "sources": [
+    {
+      "asset_id": "Q45",
+      "name": "秋渡工具盒",
+      "keywords": [
+        "秋渡工具盒"
+      ],
+      "facts": [
+        {
+          "fact_id": "F1",
+          "text": "秋渡工具盒内置两层可取出的托盘，盒盖印有配件目录，底层设有单独的螺丝收纳格。"
+        },
+        {
+          "fact_id": "F2",
+          "text": "秋渡工具盒附有清单。"
+        }
+      ],
+      "source_text": "秋渡工具盒内置两层可取出的托盘，盒盖印有配件目录，底层设有单独的螺丝收纳格。秋渡工具盒附有清单。"
+    }
+  ],
+  "duration_check": {
+    "ok": true,
+    "script_version": "8cffb69dcdaaa8f22438cdae3c5e233f49416002a97c584598f185bfc9b38f49",
+    "scenes": [
+      {
+        "scene_id": "S1",
+        "narration_seconds": 2.18,
+        "subtitle_reading_seconds": 2.18,
+        "estimated_seconds": 2.53
+      }
+    ],
+    "total_estimated_seconds": 2.53,
+    "target_duration_seconds": 5.5,
+    "is_overtime": false,
+    "passed": true,
+    "exceeded_seconds": 0,
+    "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+    "timing": {
+      "chinese_chars_per_second": 4.5,
+      "english_words_per_second": 2.5,
+      "number_groups_per_second": 2.0,
+      "punctuation_pause_seconds": 0.18,
+      "minimum_scene_seconds": 2.0,
+      "transition_seconds": 0.35
+    },
+    "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ.",
+    "revision_feedback": {
+      "script_version": "8cffb69dcdaaa8f22438cdae3c5e233f49416002a97c584598f185bfc9b38f49",
+      "current_seconds": 2.53,
+      "target_seconds": 5.5,
+      "exceeded_seconds": 0,
+      "violations": [],
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "产品入镜。局部特写。请看细节。",
+          "narration": "秋渡工具盒附有清单。",
+          "subtitle": "秋渡工具盒附有清单。",
+          "source_ids": [
+            "Q45"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "Q45",
+              "fact_id": "F2",
+              "evidence_text": "秋渡工具盒附有清单。",
+              "claim_text": "秋渡工具盒附有清单。"
+            }
+          ]
+        }
+      ],
+      "revalidate_after_edit": [
+        "estimate_duration",
+        "check_brand_rules"
+      ],
+      "guidance": "Fix reported scenes; preserve supported facts/source IDs. Check the new version before further edits."
+    }
+  },
+  "brand_rule_check": {
+    "ok": true,
+    "script_version": "8cffb69dcdaaa8f22438cdae3c5e233f49416002a97c584598f185bfc9b38f49",
+    "passed": true,
+    "violations": [],
+    "unsupported_claims": [],
+    "missing_references": [],
+    "risk_reasons": [],
+    "needs_confirmation": false,
+    "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+    "limitation": "String verification does not establish full natural-language semantic entailment.",
+    "revision_feedback": {
+      "script_version": "8cffb69dcdaaa8f22438cdae3c5e233f49416002a97c584598f185bfc9b38f49",
+      "current_seconds": 2.53,
+      "target_seconds": 5.5,
+      "exceeded_seconds": 0,
+      "violations": [],
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "产品入镜。局部特写。请看细节。",
+          "narration": "秋渡工具盒附有清单。",
+          "subtitle": "秋渡工具盒附有清单。",
+          "source_ids": [
+            "Q45"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "Q45",
+              "fact_id": "F2",
+              "evidence_text": "秋渡工具盒附有清单。",
+              "claim_text": "秋渡工具盒附有清单。"
+            }
+          ]
+        }
+      ],
+      "revalidate_after_edit": [
+        "estimate_duration",
+        "check_brand_rules"
+      ],
+      "guidance": "Fix reported scenes; preserve supported facts/source IDs. Check the new version before further edits."
+    }
+  },
+  "risk_flags": [],
+  "missing_information": [],
+  "question": null,
+  "errors": [],
+  "completed_steps": [
+    {
+      "step": 1,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "action": "draft_script",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "action": "estimate_duration",
+      "ok": true
+    },
+    {
+      "step": 4,
+      "action": "draft_script",
+      "ok": true
+    },
+    {
+      "step": 5,
+      "action": "estimate_duration",
+      "ok": true
+    },
+    {
+      "step": 6,
+      "action": "check_brand_rules",
+      "ok": true
+    },
+    {
+      "step": 7,
+      "action": "finish",
+      "ok": true
+    }
+  ],
+  "last_observation": {
+    "ok": true,
+    "status": "completed",
+    "script_version": "8cffb69dcdaaa8f22438cdae3c5e233f49416002a97c584598f185bfc9b38f49"
+  },
+  "limitations": [
+    "合成素材，仅用于工程验证。",
+    "时长是工程估算，需要真人口播复核。",
+    "仅通过原文和批准文案核验，未知改写会被阻断。"
+  ]
+}

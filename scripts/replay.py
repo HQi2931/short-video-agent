@@ -42,6 +42,7 @@ def replay_trace(trace: dict, events: list[dict], output: dict) -> dict:
             state, SimpleNamespace(mode=trace["mode"], model=trace["model"]),
             SimpleNamespace(trace={"mode": trace["mode"]}, run_id=trace["run_id"]),
             ToolExecutor(fail_once=set(config["fault_injection_once"])), config["max_steps"],
+            policy_version=config.get("decision_policy_version", 1),
         )
         state.status = "running"
         if len(trace["steps"]) > config["max_steps"]:
@@ -55,8 +56,7 @@ def replay_trace(trace: dict, events: list[dict], output: dict) -> dict:
                 issues.append({"step": index, "phase": "version", "problem": "Wrong version before action"})
             if trace["mode"] == "live":
                 context = json.loads(step["model_call"]["request"]["messages"][-1]["content"])["state"]
-                expected = state.context()
-                expected.update({"step": index, "max_steps": config["max_steps"], "remaining_steps": config["max_steps"] - index + 1})
+                expected = runner.decision_context(index)
                 if context != expected:
                     different = sorted(key for key in set(context) | set(expected) if context.get(key) != expected.get(key))
                     issues.append({"step": index, "phase": "context", "problem": "Request state differs from recomputation", "fields": different})

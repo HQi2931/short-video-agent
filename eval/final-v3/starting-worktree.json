@@ -1,0 +1,17 @@
+{
+  "recorded_at_utc": "2026-10-28T07:16:27.624485+00:00",
+  "status_porcelain": " M docs/04-ai-usage.md\n M scripts/replay.py\n M src/agent.py\n M src/llm_adapter.py\n?? docs/08-agent-evaluation.md\n?? docs/09-decision-optimization.md\n?? eval/\n?? tests/test_decision_optimization.py\n?? tests/test_eval.py\n",
+  "branch": "main",
+  "head": "6ff258c0eef6c2d653ce15c022a35b1fd2f90832",
+  "source_sha256": {
+    "src/__init__.py": "488d7e28a8668bd27fd1ed6382985f35018065c55872c1a84ee8f65a7da4bdca",
+    "src/agent.py": "af23c2857683be8195102ed52da95a0836be39b4a22bab89d981fe5ba1ad871c",
+    "src/llm_adapter.py": "35365a0f7124a7c29638e830ddfa5354ed9ea17b228ad0fe959073d2feef82c5",
+    "src/main.py": "0e3a4624248a7766fa5ed67d5b86ae17722abf7adc5ab0f02c8fce3a3585007e",
+    "src/mock_fixtures.py": "5b2fd3c5a04d7a4c79cf6f70de09a0f216d507082893d3c2ee5ef524e4da21cf",
+    "src/schemas.py": "f7878d1fac634acccdb58689a2e7e9a098b02dfecc91be187edaebfc32af5222",
+    "src/state.py": "57af770f55ab037d1c951c4d5b780f030db57ecdec72a6ca68ebfcb7e9e605ef",
+    "src/tools.py": "ee5528446dd93af68a193b1331fbfdc9fc45ab09889b0b844c4b0858d76eced8",
+    "src/tracing.py": "a4058fc008cfa5812d2184613326d225021f38e0304cc8074afde6d675675a6c"
+  }
+}

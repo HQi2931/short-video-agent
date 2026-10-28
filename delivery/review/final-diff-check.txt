@@ -1,0 +1,6 @@
+exit_code=0
+STDOUT
+
+STDERR
+warning: in the working copy of '.gitattributes', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/04-ai-usage.md', CRLF will be replaced by LF the next time Git touches it

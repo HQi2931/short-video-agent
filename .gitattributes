@@ -7,5 +7,15 @@
 *.txt text eol=lf
 *.xml text eol=lf
 .env.example text eol=lf
-# Raw command receipts preserve their original trailing blank lines.
-examples/acceptance/*.txt whitespace=-blank-at-eof
+# Frozen evidence uses byte-level SHA-256. Keep its original line endings in Git.
+# Never rewrite/normalize working evidence. Targeted Git reindex under -text keeps its bytes.
+eval/** -text whitespace=cr-at-eol,-blank-at-eof
+examples/** -text whitespace=cr-at-eol,-blank-at-eof
+delivery/** -text whitespace=cr-at-eol,-blank-at-eof
+docs/08-agent-evaluation.md -text whitespace=cr-at-eol
+docs/09-decision-optimization.md -text whitespace=cr-at-eol
+docs/10-independent-failure-analysis.md -text whitespace=cr-at-eol
+docs/11-live-failure-ledger.md -text whitespace=cr-at-eol
+# This historical failed-test receipt includes captured trailing spaces on line 12.
+# Preserve the receipt, rather than editing recorded output to satisfy whitespace checks.
+eval/evidence/completion-regression-tests.txt whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

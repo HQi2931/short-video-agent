@@ -1,0 +1,21 @@
+{"case": "holdout-01", "status": "completed", "passed": true, "requests": 5}
+{"case": "holdout-02", "status": "completed", "passed": true, "requests": 10}
+{"case": "holdout-03", "status": "completed", "passed": true, "requests": 15}
+{"case": "holdout-04", "status": "completed", "passed": true, "requests": 20}
+{"case": "holdout-05", "status": "completed", "passed": true, "requests": 27}
+{"case": "holdout-06", "status": "completed", "passed": true, "requests": 34}
+{"case": "holdout-07", "status": "completed", "passed": true, "requests": 41}
+{"case": "holdout-08", "status": "completed", "passed": true, "requests": 48}
+{"case": "holdout-09", "status": "needs_info", "passed": true, "requests": 53}
+{"case": "holdout-10", "status": "needs_info", "passed": true, "requests": 57}
+{"case": "holdout-11", "status": "needs_info", "passed": true, "requests": 61}
+{"case": "holdout-12", "status": "completed", "passed": true, "requests": 67}
+{"case": "holdout-13", "status": "completed", "passed": true, "requests": 73}
+{"case": "holdout-14", "status": "completed", "passed": true, "requests": 82}
+{"case": "holdout-15", "status": "completed", "passed": true, "requests": 87}
+{"case": "holdout-16", "status": "completed", "passed": true, "requests": 92}
+{"case": "holdout-17", "status": "completed", "passed": true, "requests": 97}
+{"case": "holdout-18", "status": "completed", "passed": true, "requests": 105}
+{"case": "holdout-19", "status": "completed", "passed": true, "requests": 110}
+{"case": "holdout-20", "status": "completed", "passed": true, "requests": 115}
+eval\final-v3\candidate-b-fixed\20261028T073520Z_5e8a2d91

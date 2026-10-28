@@ -1,0 +1,42 @@
+{
+  "python": "3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "model": "deepseek-flash",
+  "base_url": "https://api.deepseek.com",
+  "response_format": "json_object",
+  "max_steps": 12,
+  "max_tool_calls": 9,
+  "max_requests": 240,
+  "timeout": 45.0,
+  "dataset_sha256": "3f09c95cb93538719592a692a14d5f4e4ad77fd543d79739b1d27c98fe681d10",
+  "started_at_utc": "2026-10-28T05:22:39.099827+00:00",
+  "source_sha256": {
+    "eval\\__init__.py": "5d0a1b8a39171684b55a7b674208cfc50cd4f8c015e11aeae8eb60ed95a6f1f3",
+    "eval\\dataset.py": "e11fba4347a1d8212222fae45f0bf4bcaad91ba09943f863052ee6096c2c3394",
+    "eval\\metrics.py": "5dc02694f1b5d14d97710046e2560b76608afeb552b3c40961e816abeb70a15e",
+    "eval\\report.py": "b0df2adb4195664f1360255cf135e85c2b9a8cf59cfee6b9e586925c3b4db143",
+    "eval\\run.py": "3597577d01276f0fa85a12585c310059d901776e192adebcb9f88fcc28e0fa00",
+    "src\\__init__.py": "ccbae9ab053ad1a12673322c76bf7674927bea06284da3c4f815661ae81d7f1e",
+    "src\\agent.py": "d8bc00eb05afdcd9b2817be6e22123aea89834cb152878641d11019d18941328",
+    "src\\llm_adapter.py": "3e63ff239b81475d929d39c1da872f4a47f868bd8cc4e817af37a8aebd2842d3",
+    "src\\main.py": "d0d8f3f830304d32737a5ad557af7ce3ab77e7d2e7e3465edf4fac334ff8056b",
+    "src\\mock_fixtures.py": "a4c05c123e0f06018d1e7f7e8d280f4292e85c3d81c352a284fb86a737ccda17",
+    "src\\schemas.py": "57939df7a9da831454bfb4f991dc140be8efa82d59a522dff04c474dde8c164e",
+    "src\\state.py": "3e65adf6e35f425b422b9616c90584ce35ed6a652bf7f5c71d9c5b01938f2951",
+    "src\\tools.py": "db112609f1ff788191c474252d82fb34d202b6c469fa26b27864db7f1d69a4d6",
+    "src\\tracing.py": "9d541ff2f48c493380e5679614c7fe22e30cfcf2fac8d660f0d53be3acbd8cc2"
+  },
+  "live_requested": true,
+  "key_present": true,
+  "rescore_source": "../",
+  "rescore_model_calls": 0,
+  "scoring_sha256": {
+    "audit.py": "c1dcaf54cae191209ccb1a45e2e6ece51fed07b8fa3b754fbdeab42752b89fa3",
+    "dataset.py": "57add22183e75af53f50664bc7e3605b77af8dbf03d8d50e624e166e17620359",
+    "metrics.py": "c7d388c4cb8a297505c96187baf1281ef3f2d5f09477228f5f5aeab07b381665",
+    "report.py": "e93200dd7a17a2331c673608363a95c75cea040eec937ea75b9912919e8a8c38",
+    "rescore.py": "b2edd027587e3aeef4ac7f3f04c7b5f04af2c75789e91a7019d70ea2dd86d41f",
+    "run.py": "e481fdfa19d1fa97e4e3c7acd4c8a8fa00a7337662d1e17686d84f81e98619e2",
+    "__init__.py": "5d0a1b8a39171684b55a7b674208cfc50cd4f8c015e11aeae8eb60ed95a6f1f3"
+  }
+}

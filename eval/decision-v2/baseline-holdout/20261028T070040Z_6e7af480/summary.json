@@ -1,0 +1,76 @@
+{
+  "planned": 10,
+  "executed": 10,
+  "skipped": 0,
+  "case_acceptance_rate": {
+    "numerator": 8,
+    "denominator": 10,
+    "value": 0.8
+  },
+  "task_completion_rate": {
+    "numerator": 6,
+    "denominator": 10,
+    "value": 0.6
+  },
+  "duration_correction_success_rate": {
+    "numerator": 0,
+    "denominator": 2,
+    "value": 0.0
+  },
+  "duration_triggered": 2,
+  "tool_decision_appropriateness_proxy": {
+    "numerator": 33,
+    "denominator": 34,
+    "value": 0.9705882352941176
+  },
+  "evidence_traceability_rate": {
+    "numerator": 16,
+    "denominator": 16,
+    "value": 1.0
+  },
+  "unsupported_claim_rate_proxy": {
+    "numerator": 0,
+    "denominator": 8,
+    "value": 0.0
+  },
+  "average_agent_steps": {
+    "numerator": 60,
+    "denominator": 10,
+    "value": 6.0
+  },
+  "average_tool_calls": {
+    "numerator": 34,
+    "denominator": 10,
+    "value": 3.4
+  },
+  "average_end_to_end_latency_seconds": {
+    "numerator": 211.05608679999978,
+    "denominator": 10,
+    "value": 21.10560867999998
+  },
+  "failure_case_frequency": {
+    "A": 0,
+    "B": 0,
+    "C": 0,
+    "D": 2,
+    "E": 0,
+    "F": 0,
+    "G": 0,
+    "H": 0
+  },
+  "observed_issue_case_frequency": {
+    "A": 0,
+    "B": 0,
+    "C": 3,
+    "D": 2,
+    "E": 1,
+    "F": 0,
+    "G": 0,
+    "H": 1
+  },
+  "human_semantic_metrics": "NOT VERIFIED",
+  "requests_attempted": 60,
+  "reported_total_tokens": 268085,
+  "live_completed": true,
+  "offline_dataset_valid": true
+}

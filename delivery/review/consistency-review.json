@@ -1,0 +1,1630 @@
+{
+  "created_at_utc": "2026-10-28T08:12:06.073719+00:00",
+  "reviewer": "AI subagent /root/consistency_review; source/document consistency, not human semantic review",
+  "model_calls_made": 0,
+  "constraints": "Read-only original files; wrote only this new report. No stage, commit, push, live calls or core modifications.",
+  "ancestor_agents_found": [],
+  "documents_sha256": {
+    "README.md": "41e11d5306719683a3841be5e34ac14c30650a41e29f169e10c9897051eff7e8",
+    "final-evaluation.md": "b1c116203246a2ce1c652708cb3bf735a2efeb28225095af44a9938bf31cd7b4",
+    "docs/08-agent-evaluation.md": "c15dc4cef13d0ad596791f0f9b3a77d29acef202ee580ec35c4eba88d4b7cd18",
+    "docs/09-decision-optimization.md": "da3f4926df81c10108348ce3f06cf1ad5926cf5183b05af8dc23892bf5353cb7"
+  },
+  "candidate_b_source_manifest": {
+    "files_checked": 25,
+    "verified": true,
+    "prompt_included_as_full_bytes": true,
+    "checks": [
+      {
+        "path": "src/__init__.py",
+        "verified": true
+      },
+      {
+        "path": "src/agent.py",
+        "verified": true
+      },
+      {
+        "path": "src/llm_adapter.py",
+        "verified": true
+      },
+      {
+        "path": "src/main.py",
+        "verified": true
+      },
+      {
+        "path": "src/mock_fixtures.py",
+        "verified": true
+      },
+      {
+        "path": "src/schemas.py",
+        "verified": true
+      },
+      {
+        "path": "src/state.py",
+        "verified": true
+      },
+      {
+        "path": "src/tools.py",
+        "verified": true
+      },
+      {
+        "path": "src/tracing.py",
+        "verified": true
+      },
+      {
+        "path": "eval/__init__.py",
+        "verified": true
+      },
+      {
+        "path": "eval/audit.py",
+        "verified": true
+      },
+      {
+        "path": "eval/dataset.py",
+        "verified": true
+      },
+      {
+        "path": "eval/decision_compare.py",
+        "verified": true
+      },
+      {
+        "path": "eval/metrics.py",
+        "verified": true
+      },
+      {
+        "path": "eval/report.py",
+        "verified": true
+      },
+      {
+        "path": "eval/rescore.py",
+        "verified": true
+      },
+      {
+        "path": "eval/run.py",
+        "verified": true
+      },
+      {
+        "path": "scripts/acceptance_audit.py",
+        "verified": true
+      },
+      {
+        "path": "scripts/audit.py",
+        "verified": true
+      },
+      {
+        "path": "scripts/evidence.py",
+        "verified": true
+      },
+      {
+        "path": "scripts/final_audit.py",
+        "verified": true
+      },
+      {
+        "path": "scripts/replay.py",
+        "verified": true
+      },
+      {
+        "path": "scripts/run_examples.py",
+        "verified": true
+      },
+      {
+        "path": "scripts/summarize_live.py",
+        "verified": true
+      },
+      {
+        "path": "scripts/verify.py",
+        "verified": true
+      }
+    ]
+  },
+  "pytest_source_metadata": {
+    "files_checked": 38,
+    "verified": true,
+    "checks": [
+      {
+        "path": "src/__init__.py",
+        "verified": true
+      },
+      {
+        "path": "src/agent.py",
+        "verified": true
+      },
+      {
+        "path": "src/llm_adapter.py",
+        "verified": true
+      },
+      {
+        "path": "src/main.py",
+        "verified": true
+      },
+      {
+        "path": "src/mock_fixtures.py",
+        "verified": true
+      },
+      {
+        "path": "src/schemas.py",
+        "verified": true
+      },
+      {
+        "path": "src/state.py",
+        "verified": true
+      },
+      {
+        "path": "src/tools.py",
+        "verified": true
+      },
+      {
+        "path": "src/tracing.py",
+        "verified": true
+      },
+      {
+        "path": "scripts/acceptance_audit.py",
+        "verified": true
+      },
+      {
+        "path": "scripts/audit.py",
+        "verified": true
+      },
+      {
+        "path": "scripts/evidence.py",
+        "verified": true
+      },
+      {
+        "path": "scripts/final_audit.py",
+        "verified": true
+      },
+      {
+        "path": "scripts/replay.py",
+        "verified": true
+      },
+      {
+        "path": "scripts/run_examples.py",
+        "verified": true
+      },
+      {
+        "path": "scripts/summarize_live.py",
+        "verified": true
+      },
+      {
+        "path": "scripts/verify.py",
+        "verified": true
+      },
+      {
+        "path": "tests/conftest.py",
+        "verified": true
+      },
+      {
+        "path": "tests/test_acceptance_regressions.py",
+        "verified": true
+      },
+      {
+        "path": "tests/test_adapter.py",
+        "verified": true
+      },
+      {
+        "path": "tests/test_agent.py",
+        "verified": true
+      },
+      {
+        "path": "tests/test_cli.py",
+        "verified": true
+      },
+      {
+        "path": "tests/test_decision_optimization.py",
+        "verified": true
+      },
+      {
+        "path": "tests/test_eval.py",
+        "verified": true
+      },
+      {
+        "path": "tests/test_evidence.py",
+        "verified": true
+      },
+      {
+        "path": "tests/test_failures.py",
+        "verified": true
+      },
+      {
+        "path": "tests/test_final_audit.py",
+        "verified": true
+      },
+      {
+        "path": "tests/test_tools.py",
+        "verified": true
+      },
+      {
+        "path": "tests/test_trace_replay.py",
+        "verified": true
+      },
+      {
+        "path": "tests/test_validation.py",
+        "verified": true
+      },
+      {
+        "path": "eval/__init__.py",
+        "verified": true
+      },
+      {
+        "path": "eval/audit.py",
+        "verified": true
+      },
+      {
+        "path": "eval/dataset.py",
+        "verified": true
+      },
+      {
+        "path": "eval/decision_compare.py",
+        "verified": true
+      },
+      {
+        "path": "eval/metrics.py",
+        "verified": true
+      },
+      {
+        "path": "eval/report.py",
+        "verified": true
+      },
+      {
+        "path": "eval/rescore.py",
+        "verified": true
+      },
+      {
+        "path": "eval/run.py",
+        "verified": true
+      }
+    ]
+  },
+  "prior_inventory_at_review_start": {
+    "listed_files": 508,
+    "hashed_files_checked": 507,
+    "changed": [],
+    "missing": [],
+    "verified": true,
+    "scope": "Before parent delivery-preparation documentation changes, not a regenerated inventory."
+  },
+  "historical_final_pytest": {
+    "cases": 158,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "numeric_table_cells_checked": 78,
+  "numeric_tables_verified": true,
+  "numeric_checks": [
+    {
+      "table": 1,
+      "batch": "first",
+      "metric": "场景验收",
+      "reported": "19/20",
+      "expected": "19/20",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "second_fixed",
+      "metric": "场景验收",
+      "reported": "20/20",
+      "expected": "20/20",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "a_fixed",
+      "metric": "场景验收",
+      "reported": "19/20",
+      "expected": "19/20",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "b_fixed",
+      "metric": "场景验收",
+      "reported": "20/20",
+      "expected": "20/20",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "first",
+      "metric": "脚本任务完成",
+      "reported": "16/20",
+      "expected": "16/20",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "second_fixed",
+      "metric": "脚本任务完成",
+      "reported": "17/20",
+      "expected": "17/20",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "a_fixed",
+      "metric": "脚本任务完成",
+      "reported": "16/20",
+      "expected": "16/20",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "b_fixed",
+      "metric": "脚本任务完成",
+      "reported": "17/20",
+      "expected": "17/20",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "first",
+      "metric": "预设时长修正",
+      "reported": "4/4",
+      "expected": "4/4",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "second_fixed",
+      "metric": "预设时长修正",
+      "reported": "4/4",
+      "expected": "4/4",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "a_fixed",
+      "metric": "预设时长修正",
+      "reported": "4/4",
+      "expected": "4/4",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "b_fixed",
+      "metric": "预设时长修正",
+      "reported": "4/4",
+      "expected": "4/4",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "first",
+      "metric": "平均决策步骤",
+      "reported": "7.00",
+      "expected": "7.00",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "second_fixed",
+      "metric": "平均决策步骤",
+      "reported": "5.70",
+      "expected": "5.70",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "a_fixed",
+      "metric": "平均决策步骤",
+      "reported": "5.35",
+      "expected": "5.35",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "b_fixed",
+      "metric": "平均决策步骤",
+      "reported": "5.75",
+      "expected": "5.75",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "first",
+      "metric": "平均业务工具调用",
+      "reported": "3.90",
+      "expected": "3.90",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "second_fixed",
+      "metric": "平均业务工具调用",
+      "reported": "3.50",
+      "expected": "3.50",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "a_fixed",
+      "metric": "平均业务工具调用",
+      "reported": "3.30",
+      "expected": "3.30",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "b_fixed",
+      "metric": "平均业务工具调用",
+      "reported": "3.60",
+      "expected": "3.60",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "first",
+      "metric": "平均端到端秒数",
+      "reported": "29.1438",
+      "expected": "29.1438",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "second_fixed",
+      "metric": "平均端到端秒数",
+      "reported": "24.2003",
+      "expected": "24.2003",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "a_fixed",
+      "metric": "平均端到端秒数",
+      "reported": "19.2462",
+      "expected": "19.2462",
+      "verified": true
+    },
+    {
+      "table": 1,
+      "batch": "b_fixed",
+      "metric": "平均端到端秒数",
+      "reported": "15.6275",
+      "expected": "15.6275",
+      "verified": true
+    },
+    {
+      "table": 2,
+      "batch": "second_holdout",
+      "metric": "场景验收",
+      "reported": "8/10",
+      "expected": "8/10",
+      "verified": true
+    },
+    {
+      "table": 2,
+      "batch": "a_diagnostic",
+      "metric": "场景验收",
+      "reported": "10/10",
+      "expected": "10/10",
+      "verified": true
+    },
+    {
+      "table": 2,
+      "batch": "b_diagnostic",
+      "metric": "场景验收",
+      "reported": "10/10",
+      "expected": "10/10",
+      "verified": true
+    },
+    {
+      "table": 2,
+      "batch": "second_holdout",
+      "metric": "脚本任务完成",
+      "reported": "6/10",
+      "expected": "6/10",
+      "verified": true
+    },
+    {
+      "table": 2,
+      "batch": "a_diagnostic",
+      "metric": "脚本任务完成",
+      "reported": "8/10",
+      "expected": "8/10",
+      "verified": true
+    },
+    {
+      "table": 2,
+      "batch": "b_diagnostic",
+      "metric": "脚本任务完成",
+      "reported": "8/10",
+      "expected": "8/10",
+      "verified": true
+    },
+    {
+      "table": 2,
+      "batch": "second_holdout",
+      "metric": "预设时长修正",
+      "reported": "0/2",
+      "expected": "0/2",
+      "verified": true
+    },
+    {
+      "table": 2,
+      "batch": "a_diagnostic",
+      "metric": "预设时长修正",
+      "reported": "2/2",
+      "expected": "2/2",
+      "verified": true
+    },
+    {
+      "table": 2,
+      "batch": "b_diagnostic",
+      "metric": "预设时长修正",
+      "reported": "2/2",
+      "expected": "2/2",
+      "verified": true
+    },
+    {
+      "table": 2,
+      "batch": "second_holdout",
+      "metric": "平均步骤",
+      "reported": "4.90",
+      "expected": "4.90",
+      "verified": true
+    },
+    {
+      "table": 2,
+      "batch": "a_diagnostic",
+      "metric": "平均步骤",
+      "reported": "5.80",
+      "expected": "5.80",
+      "verified": true
+    },
+    {
+      "table": 2,
+      "batch": "b_diagnostic",
+      "metric": "平均步骤",
+      "reported": "5.50",
+      "expected": "5.50",
+      "verified": true
+    },
+    {
+      "table": 2,
+      "batch": "second_holdout",
+      "metric": "平均业务工具",
+      "reported": "2.90",
+      "expected": "2.90",
+      "verified": true
+    },
+    {
+      "table": 2,
+      "batch": "a_diagnostic",
+      "metric": "平均业务工具",
+      "reported": "3.40",
+      "expected": "3.40",
+      "verified": true
+    },
+    {
+      "table": 2,
+      "batch": "b_diagnostic",
+      "metric": "平均业务工具",
+      "reported": "3.40",
+      "expected": "3.40",
+      "verified": true
+    },
+    {
+      "table": 2,
+      "batch": "second_holdout",
+      "metric": "平均端到端秒数",
+      "reported": "20.2712",
+      "expected": "20.2712",
+      "verified": true
+    },
+    {
+      "table": 2,
+      "batch": "a_diagnostic",
+      "metric": "平均端到端秒数",
+      "reported": "23.9969",
+      "expected": "23.9969",
+      "verified": true
+    },
+    {
+      "table": 2,
+      "batch": "b_diagnostic",
+      "metric": "平均端到端秒数",
+      "reported": "15.8172",
+      "expected": "15.8172",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "a_baseline",
+      "metric": "原门禁与补充契约交集验收",
+      "reported": "15/15",
+      "expected": "15/15",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "a_fresh",
+      "metric": "原门禁与补充契约交集验收",
+      "reported": "15/15",
+      "expected": "15/15",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "b_baseline",
+      "metric": "原门禁与补充契约交集验收",
+      "reported": "11/12",
+      "expected": "11/12",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "b_fresh",
+      "metric": "原门禁与补充契约交集验收",
+      "reported": "12/12",
+      "expected": "12/12",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "a_baseline",
+      "metric": "脚本任务完成",
+      "reported": "14/15",
+      "expected": "14/15",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "a_fresh",
+      "metric": "脚本任务完成",
+      "reported": "14/15",
+      "expected": "14/15",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "b_baseline",
+      "metric": "脚本任务完成",
+      "reported": "11/12",
+      "expected": "11/12",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "b_fresh",
+      "metric": "脚本任务完成",
+      "reported": "11/12",
+      "expected": "11/12",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "a_baseline",
+      "metric": "预设时长修正",
+      "reported": "4/4",
+      "expected": "4/4",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "a_fresh",
+      "metric": "预设时长修正",
+      "reported": "4/4",
+      "expected": "4/4",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "b_baseline",
+      "metric": "预设时长修正",
+      "reported": "3/3",
+      "expected": "3/3",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "b_fresh",
+      "metric": "预设时长修正",
+      "reported": "3/3",
+      "expected": "3/3",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "a_baseline",
+      "metric": "平均步骤",
+      "reported": "6.7333",
+      "expected": "6.7333",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "a_fresh",
+      "metric": "平均步骤",
+      "reported": "6.8000",
+      "expected": "6.8000",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "b_baseline",
+      "metric": "平均步骤",
+      "reported": "6.3333",
+      "expected": "6.3333",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "b_fresh",
+      "metric": "平均步骤",
+      "reported": "5.7500",
+      "expected": "5.7500",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "a_baseline",
+      "metric": "平均业务工具",
+      "reported": "4.0000",
+      "expected": "4.0000",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "a_fresh",
+      "metric": "平均业务工具",
+      "reported": "4.0000",
+      "expected": "4.0000",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "b_baseline",
+      "metric": "平均业务工具",
+      "reported": "3.5833",
+      "expected": "3.5833",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "b_fresh",
+      "metric": "平均业务工具",
+      "reported": "3.4167",
+      "expected": "3.4167",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "a_baseline",
+      "metric": "平均端到端秒数",
+      "reported": "30.4156",
+      "expected": "30.4156",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "a_fresh",
+      "metric": "平均端到端秒数",
+      "reported": "31.7091",
+      "expected": "31.7091",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "b_baseline",
+      "metric": "平均端到端秒数",
+      "reported": "25.9507",
+      "expected": "25.9507",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "b_fresh",
+      "metric": "平均端到端秒数",
+      "reported": "17.9469",
+      "expected": "17.9469",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "a_baseline",
+      "metric": "引用可追溯",
+      "reported": "39/39",
+      "expected": "39/39",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "a_fresh",
+      "metric": "引用可追溯",
+      "reported": "33/33",
+      "expected": "33/33",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "b_baseline",
+      "metric": "引用可追溯",
+      "reported": "22/22",
+      "expected": "22/22",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "b_fresh",
+      "metric": "引用可追溯",
+      "reported": "19/19",
+      "expected": "19/19",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "a_baseline",
+      "metric": "最终未核实文本代理",
+      "reported": "0/14",
+      "expected": "0/14",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "a_fresh",
+      "metric": "最终未核实文本代理",
+      "reported": "0/14",
+      "expected": "0/14",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "b_baseline",
+      "metric": "最终未核实文本代理",
+      "reported": "0/12",
+      "expected": "0/12",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "b_fresh",
+      "metric": "最终未核实文本代理",
+      "reported": "0/11",
+      "expected": "0/11",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "a_baseline",
+      "metric": "请求尝试",
+      "reported": "101",
+      "expected": "101",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "a_fresh",
+      "metric": "请求尝试",
+      "reported": "102",
+      "expected": "102",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "b_baseline",
+      "metric": "请求尝试",
+      "reported": "76",
+      "expected": "76",
+      "verified": true
+    },
+    {
+      "table": 3,
+      "batch": "b_fresh",
+      "metric": "请求尝试",
+      "reported": "69",
+      "expected": "69",
+      "verified": true
+    }
+  ],
+  "contract_reports": [
+    {
+      "batch": "fresh-baseline",
+      "planned": 15,
+      "original_pass": 15,
+      "supplemental_pass": 15,
+      "combined_pass": 15,
+      "counts_match_rows": true
+    },
+    {
+      "batch": "fresh-optimized",
+      "planned": 15,
+      "original_pass": 15,
+      "supplemental_pass": 15,
+      "combined_pass": 15,
+      "counts_match_rows": true
+    },
+    {
+      "batch": "confirmation-baseline",
+      "planned": 12,
+      "original_pass": 11,
+      "supplemental_pass": 12,
+      "combined_pass": 11,
+      "counts_match_rows": true
+    },
+    {
+      "batch": "confirmation-optimized",
+      "planned": 12,
+      "original_pass": 12,
+      "supplemental_pass": 12,
+      "combined_pass": 12,
+      "counts_match_rows": true
+    }
+  ],
+  "round3_live": {
+    "runs": 114,
+    "requests": 683,
+    "responses": 682,
+    "reported_total_tokens": 3959592,
+    "all_mode_live_execution_real_api": true,
+    "current_b_prompt_requests_checked": 239,
+    "current_b_prompt_verified": true,
+    "completion_rates_not_mixed_with_refusal_acceptance": true
+  },
+  "relative_link_checks": [
+    {
+      "document": "README.md",
+      "target": "final-evaluation.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "examples/live-report.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/08-manual-live-review.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "examples/test-environment.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "requirements-lock.txt",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "eval/final-v3/final-regression-b.txt",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "eval/final-v3/final-audit.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "eval/final-v3/frozen-test-plan-contracts.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "eval/final-v3/confirmation-v4/plan.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "examples/test-results.txt",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "examples/test-results.xml",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "examples/mock-manifest.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "examples/audit.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/07-acceptance-audit.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "examples/live-summary.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "examples/live-report.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "examples/traces/live_no_assets_round1.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "examples/traces/live_overtime_tight_round1.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "examples/traces/live_tool_failure_round1.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "examples/traces/live_changed_assets_round1.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "examples/traces/mock_overtime_validated.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "examples/outputs/mock_normal_validated.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "examples/traces/mock_tool_failure_validated.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "examples/traces/mock_unsupported_claim_validated.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/01-requirements.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/02-solution.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/03-evaluation.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/04-ai-usage.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/05-retrospective.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/06-delivery.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/07-acceptance-audit.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/08-manual-live-review.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/08-agent-evaluation.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/09-decision-optimization.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/10-independent-failure-analysis.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "docs/11-live-failure-ledger.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "final-evaluation.md",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "eval/final-v3/README.md",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "eval/final-v3/round3-all-live-ledger.json",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "docs/08-agent-evaluation.md",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "docs/09-decision-optimization.md",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "eval/final-v3/candidate-a-source/manifest.json",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "eval/final-v3/candidate-b-fixed/20261028T073520Z_5e8a2d91/summary.json",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "eval/final-v3/candidate-b-diagnostic-v2/20261028T073520Z_f0880670/summary.json",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "eval/final-v3/comparison.json",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "eval/final-v3/final-comparison.json",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "eval/final-v3/fresh-baseline-contract-results.json",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "eval/final-v3/fresh-optimized-contract-results.json",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "eval/final-v3/confirmation-baseline-contract-results.json",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "eval/final-v3/confirmation-optimized-contract-results.json",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "docs/11-live-failure-ledger.md",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "docs/10-independent-failure-analysis.md",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "eval/final-v3/round3-development-regression.json",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "eval/final-v3/round3-all-live-ledger.json",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "eval/final-v3/frozen-test-plan-contracts.md",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "eval/final-v3/confirmation-v4/plan.md",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "eval/final-v3/freeze-and-provenance-audit.json",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "eval/final-v3/final-regression-b.txt",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "eval/final-v3/final-regression-b.xml",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "eval/final-v3/pip-check.txt",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "eval/final-v3/final-audit.json",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "docs/04-ai-usage.md",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "eval/final-v3/delivery-inventory.json",
+      "exists": true
+    },
+    {
+      "document": "final-evaluation.md",
+      "target": "eval/final-v3/starting-worktree.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/evidence/historical-recheck.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/evidence/baseline-tests.txt",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/evidence/completion-regression-after-fix.txt",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/evidence/completion-regression-tests.txt",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/environment.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/dataset.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/summary.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/traces/holdout-01.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/holdout-01-output.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/traces/holdout-02.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/holdout-02-output.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/traces/holdout-03.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/holdout-03-output.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/traces/holdout-04.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/holdout-04-output.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/traces/holdout-05.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/holdout-05-output.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/traces/holdout-06.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/holdout-06-output.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/traces/holdout-07.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/holdout-07-output.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/traces/holdout-08.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/holdout-08-output.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/traces/holdout-09.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/holdout-09-output.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/traces/holdout-10.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/holdout-10-output.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/traces/holdout-11.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/holdout-11-output.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/traces/holdout-12.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/holdout-12-output.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/traces/holdout-13.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/holdout-13-output.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/traces/holdout-14.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/holdout-14-output.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/traces/holdout-15.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/holdout-15-output.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/traces/holdout-16.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/holdout-16-output.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/traces/holdout-17.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/holdout-17-output.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/traces/holdout-18.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/holdout-18-output.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/traces/holdout-19.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/holdout-19-output.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/traces/holdout-20.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/holdout-20-output.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/runs/20261028T052239Z_743fa464/results.json",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/evidence/live-console.txt",
+      "exists": true
+    },
+    {
+      "document": "docs/08-agent-evaluation.md",
+      "target": "../eval/evidence/delivery-manifest.json",
+      "exists": true
+    }
+  ],
+  "all_relative_links_exist": true,
+  "readme_input_files": [
+    {
+      "path": "examples/inputs/max_steps.json",
+      "exists": true
+    },
+    {
+      "path": "examples/inputs/no_assets.json",
+      "exists": true
+    },
+    {
+      "path": "examples/inputs/normal.json",
+      "exists": true
+    },
+    {
+      "path": "examples/inputs/overtime.json",
+      "exists": true
+    },
+    {
+      "path": "examples/inputs/overtime_tight.json",
+      "exists": true
+    },
+    {
+      "path": "examples/inputs/tool_failure.json",
+      "exists": true
+    },
+    {
+      "path": "examples/inputs/unsupported_claim.json",
+      "exists": true
+    }
+  ],
+  "readme_script_files": [
+    {
+      "path": "scripts/acceptance_audit.py",
+      "exists": true
+    },
+    {
+      "path": "scripts/audit.py",
+      "exists": true
+    },
+    {
+      "path": "scripts/final_audit.py",
+      "exists": true
+    },
+    {
+      "path": "scripts/run_examples.py",
+      "exists": true
+    },
+    {
+      "path": "scripts/summarize_live.py",
+      "exists": true
+    },
+    {
+      "path": "scripts/verify.py",
+      "exists": true
+    }
+  ],
+  "all_readme_command_input_and_script_paths_exist": true,
+  "notes": [
+    {
+      "severity": "documentation",
+      "location": "README.md real-model command block",
+      "finding": "scripts/run_examples.py --mode live writes examples/live-manifest.json; scripts/summarize_live.py writes examples/live-summary.json and live-report.md. New Trace run IDs do not prevent these derived summaries being overwritten.",
+      "recommendation": "Add an explicit historical/batch overwrite note beside the two live helper commands; do not execute them during delivery preparation."
+    },
+    {
+      "severity": "documentation",
+      "location": "README.md environment-record sentence",
+      "finding": "The environment link points to early examples/test-environment.json; current candidate-B runtime provenance is the final-regression and per-batch environment files.",
+      "recommendation": "Qualify this as the early environment record or link the new delivery verification receipt when available."
+    },
+    {
+      "severity": "scope",
+      "location": "final-evaluation.md vs current git diff",
+      "finding": "The report statement that only SYSTEM_PROMPT changed is scoped to third-round work, while current cumulative uncommitted git diff also contains second-round src/agent.py and scripts/replay.py changes. The report already discloses this at its end.",
+      "recommendation": "The final staging plan must include the second-round agent/replay changes; do not infer that only llm_adapter.py is needed."
+    }
+  ],
+  "p0_defects_found": [],
+  "not_verified": [
+    "Executing README live commands intentionally not performed.",
+    "Model quality or semantic truth is not established by this consistency audit.",
+    "Remote branch, remote visibility and provider attestation not queried."
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "run_id": "holdout-14",
+  "mode": "live",
+  "model": "deepseek-flash",
+  "status": "completed",
+  "reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+  "title": "栖叶计时器支持倒计时。栖叶计时器配有静音按钮。",
+  "topic": "栖叶计时器使用展示",
+  "audience": "社区科普活动参与者",
+  "platform": "视频号",
+  "style": "只介绍已核实的功能；工具失败后根据观察选择恢复。",
+  "target_duration_seconds": 20.0,
+  "script_version": "5f129054025564905b491db0c5029b07cd1593e93fde25790a3622c98f946acf",
+  "script_revision": 3,
+  "storyboard": [
+    {
+      "scene_id": "S1",
+      "visual": "镜头展示产品。",
+      "narration": "栖叶计时器支持倒计时。",
+      "subtitle": "栖叶计时器支持倒计时。",
+      "source_ids": [
+        "E03"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "E03",
+          "fact_id": "Q1",
+          "evidence_text": "栖叶计时器支持倒计时。",
+          "claim_text": "栖叶计时器支持倒计时。"
+        }
+      ],
+      "estimated_seconds": 2.76
+    },
+    {
+      "scene_id": "S2",
+      "visual": "手机屏幕展示产品界面。",
+      "narration": "栖叶计时器配有静音按钮。",
+      "subtitle": "栖叶计时器配有静音按钮。",
+      "source_ids": [
+        "E03"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "E03",
+          "fact_id": "Q2",
+          "evidence_text": "栖叶计时器配有静音按钮。",
+          "claim_text": "栖叶计时器配有静音按钮。"
+        }
+      ],
+      "estimated_seconds": 2.98
+    },
+    {
+      "scene_id": "S3",
+      "visual": "镜头展示产品。",
+      "narration": "栖叶计时器支持倒计时。",
+      "subtitle": "栖叶计时器支持倒计时。",
+      "source_ids": [
+        "E03"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "E03",
+          "fact_id": "Q1",
+          "evidence_text": "栖叶计时器支持倒计时。",
+          "claim_text": "栖叶计时器支持倒计时。"
+        }
+      ],
+      "estimated_seconds": 2.76
+    },
+    {
+      "scene_id": "S4",
+      "visual": "手机屏幕展示产品界面。",
+      "narration": "栖叶计时器配有静音按钮。",
+      "subtitle": "栖叶计时器配有静音按钮。",
+      "source_ids": [
+        "E03"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "E03",
+          "fact_id": "Q2",
+          "evidence_text": "栖叶计时器配有静音按钮。",
+          "claim_text": "栖叶计时器配有静音按钮。"
+        }
+      ],
+      "estimated_seconds": 2.98
+    }
+  ],
+  "total_estimated_seconds": 11.48,
+  "used_asset_ids": [
+    "E03"
+  ],
+  "sources": [
+    {
+      "asset_id": "E03",
+      "name": "栖叶计时器（评测合成产品）",
+      "keywords": [
+        "栖叶",
+        "计时器"
+      ],
+      "facts": [
+        {
+          "fact_id": "Q1",
+          "text": "栖叶计时器支持倒计时。"
+        },
+        {
+          "fact_id": "Q2",
+          "text": "栖叶计时器配有静音按钮。"
+        }
+      ],
+      "source_text": "栖叶计时器支持倒计时。栖叶计时器配有静音按钮。未提供销量、效率或健康效果数据。"
+    }
+  ],
+  "duration_check": {
+    "ok": true,
+    "script_version": "5f129054025564905b491db0c5029b07cd1593e93fde25790a3622c98f946acf",
+    "scenes": [
+      {
+        "scene_id": "S1",
+        "narration_seconds": 2.41,
+        "subtitle_reading_seconds": 2.41,
+        "estimated_seconds": 2.76
+      },
+      {
+        "scene_id": "S2",
+        "narration_seconds": 2.63,
+        "subtitle_reading_seconds": 2.63,
+        "estimated_seconds": 2.98
+      },
+      {
+        "scene_id": "S3",
+        "narration_seconds": 2.41,
+        "subtitle_reading_seconds": 2.41,
+        "estimated_seconds": 2.76
+      },
+      {
+        "scene_id": "S4",
+        "narration_seconds": 2.63,
+        "subtitle_reading_seconds": 2.63,
+        "estimated_seconds": 2.98
+      }
+    ],
+    "total_estimated_seconds": 11.48,
+    "target_duration_seconds": 20.0,
+    "is_overtime": false,
+    "passed": true,
+    "exceeded_seconds": 0,
+    "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+    "timing": {
+      "chinese_chars_per_second": 4.5,
+      "english_words_per_second": 2.5,
+      "number_groups_per_second": 2.0,
+      "punctuation_pause_seconds": 0.18,
+      "minimum_scene_seconds": 2.0,
+      "transition_seconds": 0.35
+    },
+    "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+  },
+  "brand_rule_check": {
+    "ok": true,
+    "script_version": "5f129054025564905b491db0c5029b07cd1593e93fde25790a3622c98f946acf",
+    "passed": true,
+    "violations": [],
+    "unsupported_claims": [],
+    "missing_references": [],
+    "risk_reasons": [],
+    "needs_confirmation": false,
+    "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+    "limitation": "String verification does not establish full natural-language semantic entailment."
+  },
+  "risk_flags": [],
+  "missing_information": [],
+  "question": null,
+  "errors": [
+    {
+      "step": 5,
+      "action": "check_brand_rules",
+      "error": {
+        "type": "RuntimeError",
+        "message": "Injected one-time tool failure"
+      }
+    }
+  ],
+  "completed_steps": [
+    {
+      "step": 1,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "action": "draft_script",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "action": "draft_script",
+      "ok": true
+    },
+    {
+      "step": 4,
+      "action": "estimate_duration",
+      "ok": true
+    },
+    {
+      "step": 5,
+      "action": "check_brand_rules",
+      "ok": false
+    },
+    {
+      "step": 6,
+      "action": "check_brand_rules",
+      "ok": true
+    },
+    {
+      "step": 7,
+      "action": "draft_script",
+      "ok": true
+    },
+    {
+      "step": 8,
+      "action": "estimate_duration",
+      "ok": true
+    },
+    {
+      "step": 9,
+      "action": "check_brand_rules",
+      "ok": true
+    },
+    {
+      "step": 10,
+      "action": "finish",
+      "ok": true
+    }
+  ],
+  "last_observation": {
+    "ok": true,
+    "status": "completed",
+    "script_version": "5f129054025564905b491db0c5029b07cd1593e93fde25790a3622c98f946acf"
+  },
+  "limitations": [
+    "合成素材，仅用于工程验证。",
+    "时长是工程估算，需要真人口播复核。",
+    "仅通过原文和批准文案核验，未知改写会被阻断。"
+  ]
+}

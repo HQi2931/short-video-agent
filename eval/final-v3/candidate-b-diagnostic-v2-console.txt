@@ -1,0 +1,11 @@
+{"case": "validation-01", "status": "completed", "passed": true, "requests": 5}
+{"case": "validation-02", "status": "completed", "passed": true, "requests": 10}
+{"case": "validation-03", "status": "completed", "passed": true, "requests": 15}
+{"case": "validation-04", "status": "completed", "passed": true, "requests": 22}
+{"case": "validation-05", "status": "completed", "passed": true, "requests": 29}
+{"case": "validation-06", "status": "needs_info", "passed": true, "requests": 33}
+{"case": "validation-07", "status": "needs_info", "passed": true, "requests": 37}
+{"case": "validation-08", "status": "completed", "passed": true, "requests": 44}
+{"case": "validation-09", "status": "completed", "passed": true, "requests": 49}
+{"case": "validation-10", "status": "completed", "passed": true, "requests": 55}
+eval\final-v3\candidate-b-diagnostic-v2\20261028T073520Z_f0880670

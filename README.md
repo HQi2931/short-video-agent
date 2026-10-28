@@ -2,7 +2,11 @@
 
 一个基于 Python 原生循环的、带证据和版本检查的短视频脚本 Agent。输入创作目标，输出可编辑的分镜 JSON、逐镜时长、素材 ID、事实原文和任务状态。产品与素材均为合成数据。
 
-**当前交付：离线验证及真实模型验证均已执行。** 使用配置的 `deepseek-flash` 累计完成13次真实运行，覆盖8类场景，保存77条模型响应；核验到8条不同的有效决策路径，见[真实验证报告](examples/live-report.md)。其中3次由候选人亲自执行，见[本人实测核对](docs/08-manual-live-review.md)。已配置[私有 GitHub 仓库](https://github.com/HQi2931/short-video-agent)。Mock 的修订路径仍是预设测试数据；live 每一步由远程模型返回动作，Runtime 负责校验、执行工具和完成门禁。
+**当前交付：第三轮质量优化与交付审计。** 完整 pytest 为158项通过；本轮真实模型结果、失败与限制统一见 [final-evaluation.md](final-evaluation.md)。第一轮固定集20例、第二轮独立集10例及本轮两组新案例（15例、12例）分别归档；旧独立集已参与开发诊断，不能继续当作全新盲测。所有历史结果与Trace保留，本轮不提交、不推送，等待本人最终审核。
+
+当前候选B的[最终提交范围与人工审核清单](delivery/FINAL-HANDOFF.md)单独列出待stage文件、证据体积、最新离线检查和本人待确认事项。本轮交付准备没有新增真实模型调用，也没有改动候选B实现或Prompt。
+
+使用配置的 `deepseek-flash`。最初13次真实运行、77条响应及8类场景是[早期真实验证](examples/live-report.md)的范围，不是当前累计总量。其中3次由候选人亲自执行，见[本人实测核对](docs/08-manual-live-review.md)。已配置[GitHub 仓库](https://github.com/HQi2931/short-video-agent)；早期核实为Private，本轮未查询远程状态。Mock 的修订路径是预设测试数据；live 每一步由远程模型返回动作，Runtime 负责校验、执行工具和完成门禁。
 
 ## 安装与运行
 
@@ -22,7 +26,7 @@ python -m src.main --mode mock --input-file examples/inputs/normal.json
 python -m pytest tests/ -v
 ```
 
-本次实际验证环境见 [环境记录](examples/test-environment.json)，依赖快照见 [requirements-lock.txt](requirements-lock.txt)。Python 3.11/3.12 尚未单独执行兼容性测试。
+早期验证环境见 [环境记录](examples/test-environment.json)，依赖快照见 [requirements-lock.txt](requirements-lock.txt)；本轮环境与最新验证结果见[交付准备记录](delivery/review/validation.json)。Python 3.11/3.12尚未单独执行兼容性测试。
 
 ## 运行其他离线案例
 
@@ -63,9 +67,24 @@ LLM_RESPONSE_FORMAT=json_object
 .\.venv\Scripts\python.exe scripts/summarize_live.py
 ```
 
-live 批量运行会产生真实 API 请求并消耗服务商额度。是否通过具体行为验证，取决于真实模型返回；若超时案例首稿已合格，不能记为“超时后修订已验证”。本次12秒用例首稿10.41秒，未触发修订，原批次 `all_expected_behaviors=false` 与退出码1如实保留；随后4秒补充用例实际出现7.64→2.35秒修订。`summarize_live.py` 汇总已有证据，不新增模型调用，也不覆盖初始批次结果。
+live 批量运行会产生真实 API 请求并消耗服务商额度。是否通过具体行为验证，取决于真实模型返回；未观察到工具超时反馈后的修订，不能记为“超时后修订已验证”。早期12秒用例首次工具估时10.41秒，未触发该行为；此前未经工具反馈的草稿修改不能冒充反馈驱动修订。原批次 `all_expected_behaviors=false` 与退出码1如实保留；随后4秒补充用例实际出现7.64→2.35秒修订。`summarize_live.py` 汇总早期已有证据，不新增模型调用。
+
+上面的`run_examples.py --mode live`会覆盖`examples/live-manifest.json`，`summarize_live.py`会覆盖早期`live-summary.json`和`live-report.md`；本轮保留历史时不要执行这些汇总命令。新增评测使用`python -m eval.run --live --output-root <新的目录>`，每次生成独立运行目录；实际完整参数见最终评估报告。
 
 ## 检查与实际证据
+
+本轮验证与零模型调用审计（输出文件须使用新名字）：
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest -v --junitxml=eval/final-v3/recheck-pytest.xml
+.\.venv\Scripts\python.exe scripts/final_audit.py --output eval/final-v3/recheck-audit.json --pytest-report eval/final-v3/recheck-pytest.xml
+.\.venv\Scripts\python.exe -m pip check
+git diff --check
+```
+
+实际结果保存在 [最终pytest记录](eval/final-v3/final-regression-b.txt) 和 [最终审计](eval/final-v3/final-audit.json)。[首组新集计划](eval/final-v3/frozen-test-plan-contracts.md)、[最终确认集计划](eval/final-v3/confirmation-v4/plan.md)及其补充验收器在相应测试前固定，要求完整事实实际进入旁白或字幕，并核验指定首稿结构、多素材使用及长旁白；通过口径详见最终报告。重复运行须另存，不覆盖本轮证据。
+
+下列是早期命令，会更新 `examples/` 的派生汇总；本轮为保留历史未重新运行它们：
 
 ```powershell
 .\.venv\Scripts\python.exe scripts/verify.py
@@ -103,6 +122,8 @@ Trace 自动生成 JSON 与追加式 JSONL。`run_id` 不覆盖已有日志；�
 
 ## 工程与交付文档
 
+现有 Runtime Harness 与 Evaluation Harness 的职责、代码映射、Mermaid 架构和执行流程，以及两条真实模型修订/恢复路径，见[Agent Harness 架构说明](docs/12-agent-harness.md)。该文档整理已有实现，并明确未实现的能力。
+
 - [需求与验收矩阵](docs/01-requirements.md)
 - [方案与技术取舍](docs/02-solution.md)
 - [实际评估与限制](docs/03-evaluation.md)
@@ -111,5 +132,10 @@ Trace 自动生成 JSON 与追加式 JSONL。`run_id` 不覆盖已有日志；�
 - [私有 GitHub 交付清单](docs/06-delivery.md)
 - [严格校招验收审计](docs/07-acceptance-audit.md)
 - [候选人亲自执行的API验证](docs/08-manual-live-review.md)
+- [第一轮效果基线](docs/08-agent-evaluation.md)
+- [第二轮决策优化](docs/09-decision-optimization.md)
+- [独立集两例失败分析](docs/10-independent-failure-analysis.md)
+- [历史真实失败台账](docs/11-live-failure-ledger.md)
+- [第三轮最终评估与审核待办](final-evaluation.md)
 
-此仓库没有复制考核题目原文。仓库可见性已核实为 Private，实际提交以 GitHub 历史为准。候选人仍需完成本人代码审核、实际工时与评审访问权限确认；文档中的 TODO 不代表已经审核通过。
+此仓库没有复制考核题目原文。仓库早期核实为Private，本轮未重新查询，实际提交以GitHub历史为准。候选人仍需完成本人代码审核、实际工时与评审访问权限确认；文档中的TODO不代表已经审核通过。

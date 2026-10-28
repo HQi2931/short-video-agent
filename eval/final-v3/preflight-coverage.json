@@ -1,0 +1,156 @@
+{
+  "valid_schema": true,
+  "no_exact_input_overlap": true,
+  "previous_datasets_checked": [
+    "eval/dataset-v1.json",
+    "eval/decision-v2/holdout-v2.json"
+  ],
+  "deterministic_search_and_feasibility": [
+    {
+      "case_id": "fresh-01",
+      "relevant_assets": 1,
+      "naturally_spoken_fact_duration_seconds": [
+        2.35,
+        2.59
+      ],
+      "target_duration_seconds": 2.5
+    },
+    {
+      "case_id": "fresh-02",
+      "relevant_assets": 1,
+      "naturally_spoken_fact_duration_seconds": [
+        2.35,
+        2.35,
+        2.76
+      ],
+      "target_duration_seconds": 7
+    },
+    {
+      "case_id": "fresh-03",
+      "relevant_assets": 1,
+      "naturally_spoken_fact_duration_seconds": [
+        2.35,
+        4.82
+      ],
+      "target_duration_seconds": 15
+    },
+    {
+      "case_id": "fresh-04",
+      "relevant_assets": 2,
+      "naturally_spoken_fact_duration_seconds": [
+        2.35,
+        2.59,
+        2.35,
+        2.35,
+        2.76
+      ],
+      "target_duration_seconds": 30
+    },
+    {
+      "case_id": "fresh-05",
+      "relevant_assets": 3,
+      "naturally_spoken_fact_duration_seconds": [
+        2.35,
+        2.59,
+        2.35,
+        4.82,
+        2.37,
+        2.53
+      ],
+      "target_duration_seconds": 60
+    },
+    {
+      "case_id": "fresh-06",
+      "relevant_assets": 1,
+      "naturally_spoken_fact_duration_seconds": [
+        8.67,
+        8.45,
+        2.53
+      ],
+      "target_duration_seconds": 45
+    },
+    {
+      "case_id": "fresh-07",
+      "relevant_assets": 1,
+      "naturally_spoken_fact_duration_seconds": [
+        2.35,
+        2.59
+      ],
+      "target_duration_seconds": 3.1
+    },
+    {
+      "case_id": "fresh-08",
+      "relevant_assets": 1,
+      "naturally_spoken_fact_duration_seconds": [
+        2.35,
+        2.35,
+        2.76
+      ],
+      "target_duration_seconds": 5
+    },
+    {
+      "case_id": "fresh-09",
+      "relevant_assets": 1,
+      "naturally_spoken_fact_duration_seconds": [
+        2.35,
+        4.82
+      ],
+      "target_duration_seconds": 4
+    },
+    {
+      "case_id": "fresh-10",
+      "relevant_assets": 1,
+      "naturally_spoken_fact_duration_seconds": [
+        8.67,
+        8.45,
+        2.53
+      ],
+      "target_duration_seconds": 6.5
+    },
+    {
+      "case_id": "fresh-11",
+      "relevant_assets": 1,
+      "naturally_spoken_fact_duration_seconds": [
+        2.35,
+        2.35,
+        2.76
+      ],
+      "target_duration_seconds": 18
+    },
+    {
+      "case_id": "fresh-12",
+      "relevant_assets": 1,
+      "naturally_spoken_fact_duration_seconds": [
+        2.37,
+        2.53
+      ],
+      "target_duration_seconds": 12
+    },
+    {
+      "case_id": "fresh-13",
+      "relevant_assets": 1,
+      "naturally_spoken_fact_duration_seconds": [
+        2.35,
+        4.82
+      ],
+      "target_duration_seconds": 22
+    },
+    {
+      "case_id": "fresh-14",
+      "relevant_assets": 1,
+      "naturally_spoken_fact_duration_seconds": [
+        2.35,
+        2.59
+      ],
+      "target_duration_seconds": 20
+    },
+    {
+      "case_id": "fresh-15",
+      "relevant_assets": 0,
+      "naturally_spoken_fact_duration_seconds": [],
+      "target_duration_seconds": 16
+    }
+  ],
+  "no_model_calls": true,
+  "note": "Feasibility check is not a candidate script or model output."
+}

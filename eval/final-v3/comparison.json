@@ -1,0 +1,1034 @@
+{
+  "baseline_fixed": {
+    "path": "eval\\decision-v2\\optimized-fixed\\20261028T070019Z_4610d425",
+    "summary": {
+      "planned": 20,
+      "executed": 20,
+      "skipped": 0,
+      "case_acceptance_rate": {
+        "numerator": 20,
+        "denominator": 20,
+        "value": 1.0
+      },
+      "task_completion_rate": {
+        "numerator": 17,
+        "denominator": 20,
+        "value": 0.85
+      },
+      "duration_correction_success_rate": {
+        "numerator": 4,
+        "denominator": 4,
+        "value": 1.0
+      },
+      "duration_triggered": 4,
+      "tool_decision_appropriateness_proxy": {
+        "numerator": 69,
+        "denominator": 70,
+        "value": 0.9857142857142858
+      },
+      "evidence_traceability_rate": {
+        "numerator": 38,
+        "denominator": 38,
+        "value": 1.0
+      },
+      "unsupported_claim_rate_proxy": {
+        "numerator": 0,
+        "denominator": 17,
+        "value": 0.0
+      },
+      "average_agent_steps": {
+        "numerator": 114,
+        "denominator": 20,
+        "value": 5.7
+      },
+      "average_tool_calls": {
+        "numerator": 70,
+        "denominator": 20,
+        "value": 3.5
+      },
+      "average_end_to_end_latency_seconds": {
+        "numerator": 484.0069906000001,
+        "denominator": 20,
+        "value": 24.200349530000004
+      },
+      "failure_case_frequency": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0
+      },
+      "observed_issue_case_frequency": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0,
+        "E": 0,
+        "F": 2,
+        "G": 0,
+        "H": 0
+      },
+      "human_semantic_metrics": "NOT VERIFIED",
+      "requests_attempted": 114,
+      "reported_total_tokens": 654447,
+      "live_completed": true,
+      "offline_dataset_valid": true
+    },
+    "first_drafts": [
+      {
+        "case": "holdout-01",
+        "seconds": 9.35,
+        "target": 22,
+        "overtime": false,
+        "scenes": 3,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-02",
+        "seconds": 20.68,
+        "target": 22,
+        "overtime": false,
+        "scenes": 6,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-03",
+        "seconds": 6.81,
+        "target": 22,
+        "overtime": false,
+        "scenes": 2,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-04",
+        "seconds": 7.46,
+        "target": 22,
+        "overtime": false,
+        "scenes": 3,
+        "unreferenced_scenes": 2,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-05",
+        "seconds": 5.52,
+        "target": 3.5,
+        "overtime": true,
+        "scenes": 2,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-06",
+        "seconds": 6.18,
+        "target": 4.5,
+        "overtime": true,
+        "scenes": 2,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-07",
+        "seconds": 5.74,
+        "target": 3.5,
+        "overtime": true,
+        "scenes": 2,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-08",
+        "seconds": 5.52,
+        "target": 4.5,
+        "overtime": true,
+        "scenes": 2,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-12",
+        "seconds": 9.35,
+        "target": 20,
+        "overtime": false,
+        "scenes": 3,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-13",
+        "seconds": 8.53,
+        "target": 20,
+        "overtime": false,
+        "scenes": 3,
+        "unreferenced_scenes": 1,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-14",
+        "seconds": 5.74,
+        "target": 20,
+        "overtime": false,
+        "scenes": 2,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-15",
+        "seconds": 10.63,
+        "target": 20,
+        "overtime": false,
+        "scenes": 4,
+        "unreferenced_scenes": 1,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-16",
+        "seconds": 7.25,
+        "target": 20,
+        "overtime": false,
+        "scenes": 2,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-17",
+        "seconds": 12.79,
+        "target": 20,
+        "overtime": false,
+        "scenes": 5,
+        "unreferenced_scenes": 3,
+        "violations": [
+          {
+            "code": "missing_fact_reference",
+            "location": "S3",
+            "detail": "E03"
+          },
+          {
+            "code": "missing_fact_reference",
+            "location": "S4",
+            "detail": "E03"
+          },
+          {
+            "code": "missing_fact_reference",
+            "location": "S5",
+            "detail": "E03"
+          }
+        ],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-18",
+        "seconds": 20.21,
+        "target": 20,
+        "overtime": true,
+        "scenes": 8,
+        "unreferenced_scenes": 7,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-19",
+        "seconds": 9.35,
+        "target": 20,
+        "overtime": false,
+        "scenes": 3,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-20",
+        "seconds": 13.08,
+        "target": 20,
+        "overtime": false,
+        "scenes": 3,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      }
+    ],
+    "first_submission_errors": [
+      {
+        "case": "holdout-19",
+        "step": 2,
+        "error": {
+          "type": "ValidationError",
+          "message": "5 validation errors for DraftArgs\nscript.storyboard.0\n  Value error, Scene requires narration or subtitles [type=value_error, input_value={'scene_id': 'S1', 'visua...s': [], 'fact_refs': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error\nscript.storyboard.3\n  Value error, Scene requires narration or subtitles [type=value_error, input_value={'scene_id': 'S4', 'visua...s': [], 'fact_refs': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error\nscript.storyboard.4\n  Value error, Scene requires narration or subtitles [type=value_error, input_value={'scene_id': 'S5', 'visua...s': [], 'fact_refs': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error\nscript.storyboard.5\n  Value error, Scene requires narration or subtitles [type=value_error, input_value={'scene_id': 'S6', 'visua...s': [], 'fact_refs': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error\nscript.storyboard.6\n  Value error, Scene requires narration or subtitles [type=value_error, input_value={'scene_id': 'S7', 'visua...s': [], 'fact_refs': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error"
+        }
+      }
+    ],
+    "failures": [],
+    "evidence_sha256": {
+      "results.json": "fc9ba5ec9294cdf5ef2aafd263ea056a7a80b91587471cae73542f7a083588a2",
+      "summary.json": "a9106cb5bb8904029c28346492d8da9a9279ad07eb2b6192585361d2410ea8de",
+      "environment.json": "0ab9bea85e6f55111b714f46deb84f755697ce2d06240f1527fad02ec3175164"
+    }
+  },
+  "optimized_fixed": {
+    "path": "eval\\final-v3\\optimized-fixed\\20261028T071840Z_0a1d1fca",
+    "summary": {
+      "planned": 20,
+      "executed": 20,
+      "skipped": 0,
+      "case_acceptance_rate": {
+        "numerator": 19,
+        "denominator": 20,
+        "value": 0.95
+      },
+      "task_completion_rate": {
+        "numerator": 16,
+        "denominator": 20,
+        "value": 0.8
+      },
+      "duration_correction_success_rate": {
+        "numerator": 4,
+        "denominator": 4,
+        "value": 1.0
+      },
+      "duration_triggered": 4,
+      "tool_decision_appropriateness_proxy": {
+        "numerator": 65,
+        "denominator": 66,
+        "value": 0.9848484848484849
+      },
+      "evidence_traceability_rate": {
+        "numerator": 33,
+        "denominator": 33,
+        "value": 1.0
+      },
+      "unsupported_claim_rate_proxy": {
+        "numerator": 0,
+        "denominator": 16,
+        "value": 0.0
+      },
+      "average_agent_steps": {
+        "numerator": 107,
+        "denominator": 20,
+        "value": 5.35
+      },
+      "average_tool_calls": {
+        "numerator": 66,
+        "denominator": 20,
+        "value": 3.3
+      },
+      "average_end_to_end_latency_seconds": {
+        "numerator": 384.92357949999996,
+        "denominator": 20,
+        "value": 19.246178975
+      },
+      "failure_case_frequency": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0
+      },
+      "observed_issue_case_frequency": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 1
+      },
+      "human_semantic_metrics": "NOT VERIFIED",
+      "requests_attempted": 107,
+      "reported_total_tokens": 572013,
+      "live_completed": true,
+      "offline_dataset_valid": true
+    },
+    "first_drafts": [
+      {
+        "case": "holdout-01",
+        "seconds": 8.28,
+        "target": 22,
+        "overtime": false,
+        "scenes": 3,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-02",
+        "seconds": 8.53,
+        "target": 22,
+        "overtime": false,
+        "scenes": 3,
+        "unreferenced_scenes": 1,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-03",
+        "seconds": 10.44,
+        "target": 22,
+        "overtime": false,
+        "scenes": 4,
+        "unreferenced_scenes": 2,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-05",
+        "seconds": 5.52,
+        "target": 3.5,
+        "overtime": true,
+        "scenes": 2,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-06",
+        "seconds": 6.18,
+        "target": 4.5,
+        "overtime": true,
+        "scenes": 2,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-07",
+        "seconds": 5.74,
+        "target": 3.5,
+        "overtime": true,
+        "scenes": 2,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-08",
+        "seconds": 5.52,
+        "target": 4.5,
+        "overtime": true,
+        "scenes": 2,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-12",
+        "seconds": 10.63,
+        "target": 20,
+        "overtime": false,
+        "scenes": 4,
+        "unreferenced_scenes": 1,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-13",
+        "seconds": 10.88,
+        "target": 20,
+        "overtime": false,
+        "scenes": 4,
+        "unreferenced_scenes": 2,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-14",
+        "seconds": 10.44,
+        "target": 20,
+        "overtime": false,
+        "scenes": 4,
+        "unreferenced_scenes": 2,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-15",
+        "seconds": 8.81,
+        "target": 20,
+        "overtime": false,
+        "scenes": 2,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-16",
+        "seconds": 7.25,
+        "target": 20,
+        "overtime": false,
+        "scenes": 2,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-17",
+        "seconds": 13.26,
+        "target": 20,
+        "overtime": false,
+        "scenes": 3,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-18",
+        "seconds": 5.7,
+        "target": 20,
+        "overtime": false,
+        "scenes": 2,
+        "unreferenced_scenes": 1,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-19",
+        "seconds": 8.28,
+        "target": 20,
+        "overtime": false,
+        "scenes": 3,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "holdout-20",
+        "seconds": 6.18,
+        "target": 20,
+        "overtime": false,
+        "scenes": 2,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      }
+    ],
+    "first_submission_errors": [],
+    "failures": [
+      {
+        "case": "holdout-04",
+        "status": "needs_info",
+        "categories": [
+          "B"
+        ],
+        "replay_issues": [],
+        "reason": null
+      }
+    ],
+    "evidence_sha256": {
+      "results.json": "4b10fb46f863dff70dd7d8dc3b0bc3132831db9f170b6061f5e34a59cbb199bd",
+      "summary.json": "32d662598ac01eb5a88f06be9934f63288a2c9674902af0f7b9353f0faeee5b8",
+      "environment.json": "04f4ec82895265ff3527136cab59d4e789ff3931a8c65fc8593f1d13f39a2220"
+    }
+  },
+  "baseline_holdout": {
+    "path": "eval\\final-v3\\fresh-baseline\\20261028T072312Z_5e7ad9f4",
+    "summary": {
+      "planned": 15,
+      "executed": 15,
+      "skipped": 0,
+      "case_acceptance_rate": {
+        "numerator": 15,
+        "denominator": 15,
+        "value": 1.0
+      },
+      "task_completion_rate": {
+        "numerator": 14,
+        "denominator": 15,
+        "value": 0.9333333333333333
+      },
+      "duration_correction_success_rate": {
+        "numerator": 4,
+        "denominator": 4,
+        "value": 1.0
+      },
+      "duration_triggered": 4,
+      "tool_decision_appropriateness_proxy": {
+        "numerator": 60,
+        "denominator": 60,
+        "value": 1.0
+      },
+      "evidence_traceability_rate": {
+        "numerator": 39,
+        "denominator": 39,
+        "value": 1.0
+      },
+      "unsupported_claim_rate_proxy": {
+        "numerator": 0,
+        "denominator": 14,
+        "value": 0.0
+      },
+      "average_agent_steps": {
+        "numerator": 101,
+        "denominator": 15,
+        "value": 6.733333333333333
+      },
+      "average_tool_calls": {
+        "numerator": 60,
+        "denominator": 15,
+        "value": 4.0
+      },
+      "average_end_to_end_latency_seconds": {
+        "numerator": 456.2334186000003,
+        "denominator": 15,
+        "value": 30.41556124000002
+      },
+      "failure_case_frequency": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0
+      },
+      "observed_issue_case_frequency": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0,
+        "E": 1,
+        "F": 2,
+        "G": 0,
+        "H": 0
+      },
+      "human_semantic_metrics": "NOT VERIFIED",
+      "requests_attempted": 101,
+      "reported_total_tokens": 682683,
+      "live_completed": true,
+      "offline_dataset_valid": true
+    },
+    "first_drafts": [
+      {
+        "case": "fresh-01",
+        "seconds": 2.59,
+        "target": 2.5,
+        "overtime": true,
+        "scenes": 1,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-02",
+        "seconds": 8.27,
+        "target": 7,
+        "overtime": true,
+        "scenes": 3,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-03",
+        "seconds": 15.53,
+        "target": 15,
+        "overtime": true,
+        "scenes": 5,
+        "unreferenced_scenes": 3,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-04",
+        "seconds": 30.01,
+        "target": 30,
+        "overtime": true,
+        "scenes": 8,
+        "unreferenced_scenes": 1,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-05",
+        "seconds": 14.89,
+        "target": 60,
+        "overtime": false,
+        "scenes": 3,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-06",
+        "seconds": 23.21,
+        "target": 45,
+        "overtime": false,
+        "scenes": 4,
+        "unreferenced_scenes": 1,
+        "violations": [
+          {
+            "code": "unverified_text",
+            "location": "title",
+            "detail": "Uncovered text requires evidence or human confirmation: 澄野收纳箱"
+          }
+        ],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-07",
+        "seconds": 4.94,
+        "target": 3.1,
+        "overtime": true,
+        "scenes": 2,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-08",
+        "seconds": 7.46,
+        "target": 5,
+        "overtime": true,
+        "scenes": 3,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-09",
+        "seconds": 6.46,
+        "target": 4,
+        "overtime": true,
+        "scenes": 1,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-10",
+        "seconds": 8.67,
+        "target": 6.5,
+        "overtime": true,
+        "scenes": 1,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-11",
+        "seconds": 18.73,
+        "target": 18,
+        "overtime": true,
+        "scenes": 6,
+        "unreferenced_scenes": 3,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-12",
+        "seconds": 11.74,
+        "target": 12,
+        "overtime": false,
+        "scenes": 4,
+        "unreferenced_scenes": 2,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-13",
+        "seconds": 11.87,
+        "target": 22,
+        "overtime": false,
+        "scenes": 4,
+        "unreferenced_scenes": 2,
+        "violations": [
+          {
+            "code": "missing_fact_reference",
+            "location": "S3",
+            "detail": "N33"
+          },
+          {
+            "code": "missing_fact_reference",
+            "location": "S4",
+            "detail": "N33"
+          }
+        ],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-14",
+        "seconds": 6.01,
+        "target": 20,
+        "overtime": false,
+        "scenes": 2,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      }
+    ],
+    "first_submission_errors": [],
+    "failures": [],
+    "evidence_sha256": {
+      "results.json": "c225cc1cfc43c53ec54405218d3af777a1c2ba0c1e37f7562349e6b843b321bb",
+      "summary.json": "038a77abc1264c199cec85d7a91a5a523e757b213287b313e3fcb671b0e2341c",
+      "environment.json": "051af6b7cf458f1c6a3d7807e9cb3fbce851f1a494a550ab9173c1e82678fad8"
+    }
+  },
+  "optimized_holdout": {
+    "path": "eval\\final-v3\\fresh-optimized\\20261028T072312Z_b3d74127",
+    "summary": {
+      "planned": 15,
+      "executed": 15,
+      "skipped": 0,
+      "case_acceptance_rate": {
+        "numerator": 15,
+        "denominator": 15,
+        "value": 1.0
+      },
+      "task_completion_rate": {
+        "numerator": 14,
+        "denominator": 15,
+        "value": 0.9333333333333333
+      },
+      "duration_correction_success_rate": {
+        "numerator": 4,
+        "denominator": 4,
+        "value": 1.0
+      },
+      "duration_triggered": 4,
+      "tool_decision_appropriateness_proxy": {
+        "numerator": 59,
+        "denominator": 60,
+        "value": 0.9833333333333333
+      },
+      "evidence_traceability_rate": {
+        "numerator": 33,
+        "denominator": 33,
+        "value": 1.0
+      },
+      "unsupported_claim_rate_proxy": {
+        "numerator": 0,
+        "denominator": 14,
+        "value": 0.0
+      },
+      "average_agent_steps": {
+        "numerator": 102,
+        "denominator": 15,
+        "value": 6.8
+      },
+      "average_tool_calls": {
+        "numerator": 60,
+        "denominator": 15,
+        "value": 4.0
+      },
+      "average_end_to_end_latency_seconds": {
+        "numerator": 475.63636420000057,
+        "denominator": 15,
+        "value": 31.709090946666706
+      },
+      "failure_case_frequency": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "G": 0,
+        "H": 0
+      },
+      "observed_issue_case_frequency": {
+        "A": 0,
+        "B": 0,
+        "C": 2,
+        "D": 0,
+        "E": 1,
+        "F": 2,
+        "G": 0,
+        "H": 2
+      },
+      "human_semantic_metrics": "NOT VERIFIED",
+      "requests_attempted": 102,
+      "reported_total_tokens": 696280,
+      "live_completed": true,
+      "offline_dataset_valid": true
+    },
+    "first_drafts": [
+      {
+        "case": "fresh-01",
+        "seconds": 2.35,
+        "target": 2.5,
+        "overtime": false,
+        "scenes": 1,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-02",
+        "seconds": 6.45,
+        "target": 7,
+        "overtime": false,
+        "scenes": 1,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-03",
+        "seconds": 11.87,
+        "target": 15,
+        "overtime": false,
+        "scenes": 4,
+        "unreferenced_scenes": 2,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-04",
+        "seconds": 30.28,
+        "target": 30,
+        "overtime": true,
+        "scenes": 5,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-05",
+        "seconds": 17.01,
+        "target": 60,
+        "overtime": false,
+        "scenes": 6,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-06",
+        "seconds": 19.47,
+        "target": 45,
+        "overtime": false,
+        "scenes": 3,
+        "unreferenced_scenes": 1,
+        "violations": [
+          {
+            "code": "unverified_text",
+            "location": "title",
+            "detail": "Uncovered text requires evidence or human confirmation: 澄野收纳箱"
+          }
+        ],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-07",
+        "seconds": 4.94,
+        "target": 3.1,
+        "overtime": true,
+        "scenes": 2,
+        "unreferenced_scenes": 0,
+        "violations": [
+          {
+            "code": "unverified_text",
+            "location": "title",
+            "detail": "Uncovered text requires evidence or human confirmation: 石珠审片稿"
+          }
+        ],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-08",
+        "seconds": 7.46,
+        "target": 5,
+        "overtime": true,
+        "scenes": 3,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-09",
+        "seconds": 6.46,
+        "target": 4,
+        "overtime": true,
+        "scenes": 1,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-10",
+        "seconds": 8.67,
+        "target": 6.5,
+        "overtime": true,
+        "scenes": 1,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-11",
+        "seconds": 15.79,
+        "target": 18,
+        "overtime": false,
+        "scenes": 5,
+        "unreferenced_scenes": 2,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-12",
+        "seconds": 7.25,
+        "target": 12,
+        "overtime": false,
+        "scenes": 3,
+        "unreferenced_scenes": 1,
+        "violations": [
+          {
+            "code": "missing_fact_reference",
+            "location": "S1",
+            "detail": "N34"
+          }
+        ],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-13",
+        "seconds": 22.66,
+        "target": 22,
+        "overtime": true,
+        "scenes": 5,
+        "unreferenced_scenes": 3,
+        "violations": [],
+        "missing_fields": []
+      },
+      {
+        "case": "fresh-14",
+        "seconds": 6.37,
+        "target": 20,
+        "overtime": false,
+        "scenes": 2,
+        "unreferenced_scenes": 0,
+        "violations": [],
+        "missing_fields": []
+      }
+    ],
+    "first_submission_errors": [],
+    "failures": [],
+    "evidence_sha256": {
+      "results.json": "5037df052553c48cc0a405678a7db58e9fc23133c95146e35c322f727e39bf01",
+      "summary.json": "c84104198db4d511f3b73272da09a380a07056192dba72461a570d95ba69488c",
+      "environment.json": "802618409ff12b2b033dcbdc3f73a6575de0adb191f449889f66cdc3c1c85dfb"
+    }
+  }
+}

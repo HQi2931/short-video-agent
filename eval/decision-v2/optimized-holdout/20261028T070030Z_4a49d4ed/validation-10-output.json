@@ -1,0 +1,367 @@
+{
+  "run_id": "validation-10",
+  "mode": "live",
+  "model": "deepseek-flash",
+  "status": "completed",
+  "reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+  "title": "松岚水杯容量为350毫升。松岚水杯配有杯盖。",
+  "topic": "松岚水杯",
+  "audience": "通勤用户",
+  "platform": "视频号",
+  "style": "宣传保证提效，若缺证据则仅用真实素材事实",
+  "target_duration_seconds": 18.0,
+  "script_version": "1db610d31c82b9b7bda207e67094dcb86f72a0abfa07dd4f32474b4b30280d33",
+  "script_revision": 1,
+  "storyboard": [
+    {
+      "scene_id": "S1",
+      "visual": "镜头展示产品。",
+      "narration": "松岚水杯容量为350毫升。镜头展示产品。",
+      "subtitle": "松岚水杯容量为350毫升。镜头展示产品。",
+      "source_ids": [
+        "V01"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "V01",
+          "fact_id": "F1",
+          "evidence_text": "松岚水杯容量为350毫升。",
+          "claim_text": "松岚水杯容量为350毫升。"
+        }
+      ],
+      "estimated_seconds": 4.55
+    },
+    {
+      "scene_id": "S2",
+      "visual": "细节特写。",
+      "narration": "松岚水杯配有杯盖。细节特写。",
+      "subtitle": "松岚水杯配有杯盖。细节特写。",
+      "source_ids": [
+        "V01"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "V01",
+          "fact_id": "F2",
+          "evidence_text": "松岚水杯配有杯盖。",
+          "claim_text": "松岚水杯配有杯盖。"
+        }
+      ],
+      "estimated_seconds": 3.38
+    },
+    {
+      "scene_id": "S3",
+      "visual": "镜头展示产品。",
+      "narration": "一起看看。了解产品。",
+      "subtitle": "一起看看。了解产品。",
+      "source_ids": [],
+      "fact_refs": [],
+      "estimated_seconds": 2.49
+    },
+    {
+      "scene_id": "S4",
+      "visual": "细节特写。",
+      "narration": "松岚水杯容量为350毫升。松岚水杯配有杯盖。一起看看。了解产品。",
+      "subtitle": "松岚水杯容量为350毫升。松岚水杯配有杯盖。一起看看。了解产品。",
+      "source_ids": [
+        "V01"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "V01",
+          "fact_id": "F1",
+          "evidence_text": "松岚水杯容量为350毫升。",
+          "claim_text": "松岚水杯容量为350毫升。"
+        },
+        {
+          "asset_id": "V01",
+          "fact_id": "F2",
+          "evidence_text": "松岚水杯配有杯盖。",
+          "claim_text": "松岚水杯配有杯盖。"
+        }
+      ],
+      "estimated_seconds": 7.13
+    }
+  ],
+  "total_estimated_seconds": 17.55,
+  "used_asset_ids": [
+    "V01"
+  ],
+  "sources": [
+    {
+      "asset_id": "V01",
+      "name": "松岚水杯",
+      "keywords": [
+        "松岚水杯",
+        "水杯"
+      ],
+      "facts": [
+        {
+          "fact_id": "F1",
+          "text": "松岚水杯容量为350毫升。"
+        },
+        {
+          "fact_id": "F2",
+          "text": "松岚水杯配有杯盖。"
+        }
+      ],
+      "source_text": "松岚水杯容量为350毫升。松岚水杯配有杯盖。"
+    }
+  ],
+  "duration_check": {
+    "ok": true,
+    "script_version": "1db610d31c82b9b7bda207e67094dcb86f72a0abfa07dd4f32474b4b30280d33",
+    "scenes": [
+      {
+        "scene_id": "S1",
+        "narration_seconds": 4.2,
+        "subtitle_reading_seconds": 4.2,
+        "estimated_seconds": 4.55
+      },
+      {
+        "scene_id": "S2",
+        "narration_seconds": 3.03,
+        "subtitle_reading_seconds": 3.03,
+        "estimated_seconds": 3.38
+      },
+      {
+        "scene_id": "S3",
+        "narration_seconds": 2.14,
+        "subtitle_reading_seconds": 2.14,
+        "estimated_seconds": 2.49
+      },
+      {
+        "scene_id": "S4",
+        "narration_seconds": 6.78,
+        "subtitle_reading_seconds": 6.78,
+        "estimated_seconds": 7.13
+      }
+    ],
+    "total_estimated_seconds": 17.55,
+    "target_duration_seconds": 18.0,
+    "is_overtime": false,
+    "passed": true,
+    "exceeded_seconds": 0,
+    "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+    "timing": {
+      "chinese_chars_per_second": 4.5,
+      "english_words_per_second": 2.5,
+      "number_groups_per_second": 2.0,
+      "punctuation_pause_seconds": 0.18,
+      "minimum_scene_seconds": 2.0,
+      "transition_seconds": 0.35
+    },
+    "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ.",
+    "revision_feedback": {
+      "script_version": "1db610d31c82b9b7bda207e67094dcb86f72a0abfa07dd4f32474b4b30280d33",
+      "current_seconds": 17.55,
+      "target_seconds": 18.0,
+      "exceeded_seconds": 0,
+      "violations": [],
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "镜头展示产品。",
+          "narration": "松岚水杯容量为350毫升。镜头展示产品。",
+          "subtitle": "松岚水杯容量为350毫升。镜头展示产品。",
+          "source_ids": [
+            "V01"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "V01",
+              "fact_id": "F1",
+              "evidence_text": "松岚水杯容量为350毫升。",
+              "claim_text": "松岚水杯容量为350毫升。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S2",
+          "visual": "细节特写。",
+          "narration": "松岚水杯配有杯盖。细节特写。",
+          "subtitle": "松岚水杯配有杯盖。细节特写。",
+          "source_ids": [
+            "V01"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "V01",
+              "fact_id": "F2",
+              "evidence_text": "松岚水杯配有杯盖。",
+              "claim_text": "松岚水杯配有杯盖。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S3",
+          "visual": "镜头展示产品。",
+          "narration": "一起看看。了解产品。",
+          "subtitle": "一起看看。了解产品。",
+          "source_ids": [],
+          "fact_refs": []
+        },
+        {
+          "scene_id": "S4",
+          "visual": "细节特写。",
+          "narration": "松岚水杯容量为350毫升。松岚水杯配有杯盖。一起看看。了解产品。",
+          "subtitle": "松岚水杯容量为350毫升。松岚水杯配有杯盖。一起看看。了解产品。",
+          "source_ids": [
+            "V01"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "V01",
+              "fact_id": "F1",
+              "evidence_text": "松岚水杯容量为350毫升。",
+              "claim_text": "松岚水杯容量为350毫升。"
+            },
+            {
+              "asset_id": "V01",
+              "fact_id": "F2",
+              "evidence_text": "松岚水杯配有杯盖。",
+              "claim_text": "松岚水杯配有杯盖。"
+            }
+          ]
+        }
+      ],
+      "revalidate_after_edit": [
+        "estimate_duration",
+        "check_brand_rules"
+      ],
+      "guidance": "Fix reported scenes; preserve supported facts/source IDs. Check the new version before further edits."
+    }
+  },
+  "brand_rule_check": {
+    "ok": true,
+    "script_version": "1db610d31c82b9b7bda207e67094dcb86f72a0abfa07dd4f32474b4b30280d33",
+    "passed": true,
+    "violations": [],
+    "unsupported_claims": [],
+    "missing_references": [],
+    "risk_reasons": [],
+    "needs_confirmation": false,
+    "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+    "limitation": "String verification does not establish full natural-language semantic entailment.",
+    "revision_feedback": {
+      "script_version": "1db610d31c82b9b7bda207e67094dcb86f72a0abfa07dd4f32474b4b30280d33",
+      "current_seconds": 17.55,
+      "target_seconds": 18.0,
+      "exceeded_seconds": 0,
+      "violations": [],
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "镜头展示产品。",
+          "narration": "松岚水杯容量为350毫升。镜头展示产品。",
+          "subtitle": "松岚水杯容量为350毫升。镜头展示产品。",
+          "source_ids": [
+            "V01"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "V01",
+              "fact_id": "F1",
+              "evidence_text": "松岚水杯容量为350毫升。",
+              "claim_text": "松岚水杯容量为350毫升。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S2",
+          "visual": "细节特写。",
+          "narration": "松岚水杯配有杯盖。细节特写。",
+          "subtitle": "松岚水杯配有杯盖。细节特写。",
+          "source_ids": [
+            "V01"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "V01",
+              "fact_id": "F2",
+              "evidence_text": "松岚水杯配有杯盖。",
+              "claim_text": "松岚水杯配有杯盖。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S3",
+          "visual": "镜头展示产品。",
+          "narration": "一起看看。了解产品。",
+          "subtitle": "一起看看。了解产品。",
+          "source_ids": [],
+          "fact_refs": []
+        },
+        {
+          "scene_id": "S4",
+          "visual": "细节特写。",
+          "narration": "松岚水杯容量为350毫升。松岚水杯配有杯盖。一起看看。了解产品。",
+          "subtitle": "松岚水杯容量为350毫升。松岚水杯配有杯盖。一起看看。了解产品。",
+          "source_ids": [
+            "V01"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "V01",
+              "fact_id": "F1",
+              "evidence_text": "松岚水杯容量为350毫升。",
+              "claim_text": "松岚水杯容量为350毫升。"
+            },
+            {
+              "asset_id": "V01",
+              "fact_id": "F2",
+              "evidence_text": "松岚水杯配有杯盖。",
+              "claim_text": "松岚水杯配有杯盖。"
+            }
+          ]
+        }
+      ],
+      "revalidate_after_edit": [
+        "estimate_duration",
+        "check_brand_rules"
+      ],
+      "guidance": "Fix reported scenes; preserve supported facts/source IDs. Check the new version before further edits."
+    }
+  },
+  "risk_flags": [],
+  "missing_information": [],
+  "question": null,
+  "errors": [],
+  "completed_steps": [
+    {
+      "step": 1,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "action": "draft_script",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "action": "estimate_duration",
+      "ok": true
+    },
+    {
+      "step": 4,
+      "action": "check_brand_rules",
+      "ok": true
+    },
+    {
+      "step": 5,
+      "action": "finish",
+      "ok": true
+    }
+  ],
+  "last_observation": {
+    "ok": true,
+    "status": "completed",
+    "script_version": "1db610d31c82b9b7bda207e67094dcb86f72a0abfa07dd4f32474b4b30280d33"
+  },
+  "limitations": [
+    "合成素材，仅用于工程验证。",
+    "时长是工程估算，需要真人口播复核。",
+    "仅通过原文和批准文案核验，未知改写会被阻断。"
+  ]
+}

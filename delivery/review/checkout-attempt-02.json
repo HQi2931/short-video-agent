@@ -1,0 +1,12 @@
+{
+  "created_at_utc": "2026-10-28T08:31:44.876074+00:00",
+  "verified": false,
+  "stage_check_exit_code": 2,
+  "diagnostics": [
+    "eval/evidence/completion-regression-tests.txt:12: trailing whitespace."
+  ],
+  "real_head_unchanged": true,
+  "real_index_entries_unchanged": true,
+  "model_calls_made": 0,
+  "commits_created": 0
+}

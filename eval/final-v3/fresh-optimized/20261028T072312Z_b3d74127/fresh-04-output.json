@@ -1,0 +1,496 @@
+{
+  "run_id": "fresh-04",
+  "mode": "live",
+  "model": "deepseek-flash",
+  "status": "completed",
+  "reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+  "title": "一起看看。石珠为圆形。栖沙布袋含两格。",
+  "topic": "出行二件：石珠与栖沙布袋",
+  "audience": "市集访客",
+  "platform": "快手",
+  "style": "介绍两件出行小物，按素材事实组织口播，节奏轻松。",
+  "target_duration_seconds": 30.0,
+  "script_version": "29a5a59f8db1f568b16f42b775833f17f1de4f75fb89aed511bb15c9c2d8d1c0",
+  "script_revision": 2,
+  "storyboard": [
+    {
+      "scene_id": "S1",
+      "visual": "镜头展示产品。细节特写。",
+      "narration": "镜头展示产品。一起看看。了解产品。石珠为圆形。",
+      "subtitle": "镜头展示产品。一起看看。了解产品。石珠为圆形。",
+      "source_ids": [
+        "N31"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "N31",
+          "fact_id": "F1",
+          "evidence_text": "石珠为圆形。",
+          "claim_text": "石珠为圆形。"
+        }
+      ],
+      "estimated_seconds": 5.3
+    },
+    {
+      "scene_id": "S2",
+      "visual": "镜头展示产品。细节特写。",
+      "narration": "镜头展示产品。细节特写。一起看看。石珠直径为18毫米。",
+      "subtitle": "镜头展示产品。细节特写。一起看看。石珠直径为18毫米。",
+      "source_ids": [
+        "N31"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "N31",
+          "fact_id": "F2",
+          "evidence_text": "石珠直径为18毫米。",
+          "claim_text": "石珠直径为18毫米。"
+        }
+      ],
+      "estimated_seconds": 6.24
+    },
+    {
+      "scene_id": "S3",
+      "visual": "镜头展示产品。细节特写。",
+      "narration": "细节特写。一起看看。了解产品。栖沙布袋含两格。",
+      "subtitle": "细节特写。一起看看。了解产品。栖沙布袋含两格。",
+      "source_ids": [
+        "N32"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "N32",
+          "fact_id": "F1",
+          "evidence_text": "栖沙布袋含两格。",
+          "claim_text": "栖沙布袋含两格。"
+        }
+      ],
+      "estimated_seconds": 5.3
+    },
+    {
+      "scene_id": "S4",
+      "visual": "镜头展示产品。细节特写。",
+      "narration": "镜头展示产品。细节特写。一起看看。栖沙布袋配有拉绳。",
+      "subtitle": "镜头展示产品。细节特写。一起看看。栖沙布袋配有拉绳。",
+      "source_ids": [
+        "N32"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "N32",
+          "fact_id": "F2",
+          "evidence_text": "栖沙布袋配有拉绳。",
+          "claim_text": "栖沙布袋配有拉绳。"
+        }
+      ],
+      "estimated_seconds": 5.96
+    },
+    {
+      "scene_id": "S5",
+      "visual": "镜头展示产品。细节特写。",
+      "narration": "镜头展示产品。细节特写。了解产品。栖沙布袋采用棉布材质。",
+      "subtitle": "镜头展示产品。细节特写。了解产品。栖沙布袋采用棉布材质。",
+      "source_ids": [
+        "N32"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "N32",
+          "fact_id": "F3",
+          "evidence_text": "栖沙布袋采用棉布材质。",
+          "claim_text": "栖沙布袋采用棉布材质。"
+        }
+      ],
+      "estimated_seconds": 6.41
+    }
+  ],
+  "total_estimated_seconds": 29.21,
+  "used_asset_ids": [
+    "N31",
+    "N32"
+  ],
+  "sources": [
+    {
+      "asset_id": "N31",
+      "name": "石珠",
+      "keywords": [
+        "石珠",
+        "出行二件",
+        "桌面三件"
+      ],
+      "facts": [
+        {
+          "fact_id": "F1",
+          "text": "石珠为圆形。"
+        },
+        {
+          "fact_id": "F2",
+          "text": "石珠直径为18毫米。"
+        }
+      ],
+      "source_text": "石珠为圆形。石珠直径为18毫米。"
+    },
+    {
+      "asset_id": "N32",
+      "name": "栖沙布袋",
+      "keywords": [
+        "栖沙布袋",
+        "出行二件"
+      ],
+      "facts": [
+        {
+          "fact_id": "F1",
+          "text": "栖沙布袋含两格。"
+        },
+        {
+          "fact_id": "F2",
+          "text": "栖沙布袋配有拉绳。"
+        },
+        {
+          "fact_id": "F3",
+          "text": "栖沙布袋采用棉布材质。"
+        }
+      ],
+      "source_text": "栖沙布袋含两格。栖沙布袋配有拉绳。栖沙布袋采用棉布材质。"
+    }
+  ],
+  "duration_check": {
+    "ok": true,
+    "script_version": "29a5a59f8db1f568b16f42b775833f17f1de4f75fb89aed511bb15c9c2d8d1c0",
+    "scenes": [
+      {
+        "scene_id": "S1",
+        "narration_seconds": 4.95,
+        "subtitle_reading_seconds": 4.95,
+        "estimated_seconds": 5.3
+      },
+      {
+        "scene_id": "S2",
+        "narration_seconds": 5.89,
+        "subtitle_reading_seconds": 5.89,
+        "estimated_seconds": 6.24
+      },
+      {
+        "scene_id": "S3",
+        "narration_seconds": 4.95,
+        "subtitle_reading_seconds": 4.95,
+        "estimated_seconds": 5.3
+      },
+      {
+        "scene_id": "S4",
+        "narration_seconds": 5.61,
+        "subtitle_reading_seconds": 5.61,
+        "estimated_seconds": 5.96
+      },
+      {
+        "scene_id": "S5",
+        "narration_seconds": 6.06,
+        "subtitle_reading_seconds": 6.06,
+        "estimated_seconds": 6.41
+      }
+    ],
+    "total_estimated_seconds": 29.21,
+    "target_duration_seconds": 30.0,
+    "is_overtime": false,
+    "passed": true,
+    "exceeded_seconds": 0,
+    "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+    "timing": {
+      "chinese_chars_per_second": 4.5,
+      "english_words_per_second": 2.5,
+      "number_groups_per_second": 2.0,
+      "punctuation_pause_seconds": 0.18,
+      "minimum_scene_seconds": 2.0,
+      "transition_seconds": 0.35
+    },
+    "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ.",
+    "revision_feedback": {
+      "script_version": "29a5a59f8db1f568b16f42b775833f17f1de4f75fb89aed511bb15c9c2d8d1c0",
+      "current_seconds": 29.21,
+      "target_seconds": 30.0,
+      "exceeded_seconds": 0,
+      "violations": [],
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "镜头展示产品。细节特写。",
+          "narration": "镜头展示产品。一起看看。了解产品。石珠为圆形。",
+          "subtitle": "镜头展示产品。一起看看。了解产品。石珠为圆形。",
+          "source_ids": [
+            "N31"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "N31",
+              "fact_id": "F1",
+              "evidence_text": "石珠为圆形。",
+              "claim_text": "石珠为圆形。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S2",
+          "visual": "镜头展示产品。细节特写。",
+          "narration": "镜头展示产品。细节特写。一起看看。石珠直径为18毫米。",
+          "subtitle": "镜头展示产品。细节特写。一起看看。石珠直径为18毫米。",
+          "source_ids": [
+            "N31"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "N31",
+              "fact_id": "F2",
+              "evidence_text": "石珠直径为18毫米。",
+              "claim_text": "石珠直径为18毫米。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S3",
+          "visual": "镜头展示产品。细节特写。",
+          "narration": "细节特写。一起看看。了解产品。栖沙布袋含两格。",
+          "subtitle": "细节特写。一起看看。了解产品。栖沙布袋含两格。",
+          "source_ids": [
+            "N32"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "N32",
+              "fact_id": "F1",
+              "evidence_text": "栖沙布袋含两格。",
+              "claim_text": "栖沙布袋含两格。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S4",
+          "visual": "镜头展示产品。细节特写。",
+          "narration": "镜头展示产品。细节特写。一起看看。栖沙布袋配有拉绳。",
+          "subtitle": "镜头展示产品。细节特写。一起看看。栖沙布袋配有拉绳。",
+          "source_ids": [
+            "N32"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "N32",
+              "fact_id": "F2",
+              "evidence_text": "栖沙布袋配有拉绳。",
+              "claim_text": "栖沙布袋配有拉绳。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S5",
+          "visual": "镜头展示产品。细节特写。",
+          "narration": "镜头展示产品。细节特写。了解产品。栖沙布袋采用棉布材质。",
+          "subtitle": "镜头展示产品。细节特写。了解产品。栖沙布袋采用棉布材质。",
+          "source_ids": [
+            "N32"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "N32",
+              "fact_id": "F3",
+              "evidence_text": "栖沙布袋采用棉布材质。",
+              "claim_text": "栖沙布袋采用棉布材质。"
+            }
+          ]
+        }
+      ],
+      "revalidate_after_edit": [
+        "estimate_duration",
+        "check_brand_rules"
+      ],
+      "guidance": "Fix reported scenes; preserve supported facts/source IDs. Check the new version before further edits."
+    }
+  },
+  "brand_rule_check": {
+    "ok": true,
+    "script_version": "29a5a59f8db1f568b16f42b775833f17f1de4f75fb89aed511bb15c9c2d8d1c0",
+    "passed": true,
+    "violations": [],
+    "unsupported_claims": [],
+    "missing_references": [],
+    "risk_reasons": [],
+    "needs_confirmation": false,
+    "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+    "limitation": "String verification does not establish full natural-language semantic entailment.",
+    "revision_feedback": {
+      "script_version": "29a5a59f8db1f568b16f42b775833f17f1de4f75fb89aed511bb15c9c2d8d1c0",
+      "current_seconds": 29.21,
+      "target_seconds": 30.0,
+      "exceeded_seconds": 0,
+      "violations": [],
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "镜头展示产品。细节特写。",
+          "narration": "镜头展示产品。一起看看。了解产品。石珠为圆形。",
+          "subtitle": "镜头展示产品。一起看看。了解产品。石珠为圆形。",
+          "source_ids": [
+            "N31"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "N31",
+              "fact_id": "F1",
+              "evidence_text": "石珠为圆形。",
+              "claim_text": "石珠为圆形。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S2",
+          "visual": "镜头展示产品。细节特写。",
+          "narration": "镜头展示产品。细节特写。一起看看。石珠直径为18毫米。",
+          "subtitle": "镜头展示产品。细节特写。一起看看。石珠直径为18毫米。",
+          "source_ids": [
+            "N31"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "N31",
+              "fact_id": "F2",
+              "evidence_text": "石珠直径为18毫米。",
+              "claim_text": "石珠直径为18毫米。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S3",
+          "visual": "镜头展示产品。细节特写。",
+          "narration": "细节特写。一起看看。了解产品。栖沙布袋含两格。",
+          "subtitle": "细节特写。一起看看。了解产品。栖沙布袋含两格。",
+          "source_ids": [
+            "N32"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "N32",
+              "fact_id": "F1",
+              "evidence_text": "栖沙布袋含两格。",
+              "claim_text": "栖沙布袋含两格。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S4",
+          "visual": "镜头展示产品。细节特写。",
+          "narration": "镜头展示产品。细节特写。一起看看。栖沙布袋配有拉绳。",
+          "subtitle": "镜头展示产品。细节特写。一起看看。栖沙布袋配有拉绳。",
+          "source_ids": [
+            "N32"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "N32",
+              "fact_id": "F2",
+              "evidence_text": "栖沙布袋配有拉绳。",
+              "claim_text": "栖沙布袋配有拉绳。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S5",
+          "visual": "镜头展示产品。细节特写。",
+          "narration": "镜头展示产品。细节特写。了解产品。栖沙布袋采用棉布材质。",
+          "subtitle": "镜头展示产品。细节特写。了解产品。栖沙布袋采用棉布材质。",
+          "source_ids": [
+            "N32"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "N32",
+              "fact_id": "F3",
+              "evidence_text": "栖沙布袋采用棉布材质。",
+              "claim_text": "栖沙布袋采用棉布材质。"
+            }
+          ]
+        }
+      ],
+      "revalidate_after_edit": [
+        "estimate_duration",
+        "check_brand_rules"
+      ],
+      "guidance": "Fix reported scenes; preserve supported facts/source IDs. Check the new version before further edits."
+    }
+  },
+  "risk_flags": [],
+  "missing_information": [],
+  "question": null,
+  "errors": [
+    {
+      "step": 2,
+      "action": "model_error",
+      "error": {
+        "type": "ModelError",
+        "message": "Invalid model response or transport failure: ReadTimeout"
+      }
+    },
+    {
+      "step": 6,
+      "action": "draft_script",
+      "error": {
+        "type": "FeedbackRequired",
+        "message": "No new successful tool feedback since last draft; check current script before editing again"
+      }
+    }
+  ],
+  "completed_steps": [
+    {
+      "step": 1,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "action": "model_error",
+      "ok": false
+    },
+    {
+      "step": 3,
+      "action": "draft_script",
+      "ok": true
+    },
+    {
+      "step": 4,
+      "action": "estimate_duration",
+      "ok": true
+    },
+    {
+      "step": 5,
+      "action": "draft_script",
+      "ok": true
+    },
+    {
+      "step": 6,
+      "action": "draft_script",
+      "ok": false
+    },
+    {
+      "step": 7,
+      "action": "estimate_duration",
+      "ok": true
+    },
+    {
+      "step": 8,
+      "action": "check_brand_rules",
+      "ok": true
+    },
+    {
+      "step": 9,
+      "action": "finish",
+      "ok": true
+    }
+  ],
+  "last_observation": {
+    "ok": true,
+    "status": "completed",
+    "script_version": "29a5a59f8db1f568b16f42b775833f17f1de4f75fb89aed511bb15c9c2d8d1c0"
+  },
+  "limitations": [
+    "合成素材，仅用于工程验证。",
+    "时长是工程估算，需要真人口播复核。",
+    "仅通过原文和批准文案核验，未知改写会被阻断。"
+  ]
+}

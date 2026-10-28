@@ -1,0 +1,274 @@
+{
+  "run_id": "fresh-08",
+  "mode": "live",
+  "model": "deepseek-flash",
+  "status": "completed",
+  "reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+  "title": "栖沙布袋含两格。栖沙布袋配有拉绳。",
+  "topic": "栖沙布袋",
+  "audience": "手帐用户",
+  "platform": "小红书",
+  "style": "首稿采用三张分镜卡，分别朗读三个不同的完整素材事实，提交后检查。最终是5秒产品短片，审片稿结构不作为最终结构要求。",
+  "target_duration_seconds": 5.0,
+  "script_version": "e5f4b29a3691fe11043ffdbbf736d20488085c8c62aa670d632d8d977adc897a",
+  "script_revision": 2,
+  "storyboard": [
+    {
+      "scene_id": "S1",
+      "visual": "镜头展示产品。",
+      "narration": "栖沙布袋含两格。",
+      "subtitle": "栖沙布袋含两格。",
+      "source_ids": [
+        "N32"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "N32",
+          "fact_id": "F1",
+          "evidence_text": "栖沙布袋含两格。",
+          "claim_text": "栖沙布袋含两格。"
+        }
+      ],
+      "estimated_seconds": 2.35
+    },
+    {
+      "scene_id": "S2",
+      "visual": "细节特写。",
+      "narration": "栖沙布袋配有拉绳。",
+      "subtitle": "栖沙布袋配有拉绳。",
+      "source_ids": [
+        "N32"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "N32",
+          "fact_id": "F2",
+          "evidence_text": "栖沙布袋配有拉绳。",
+          "claim_text": "栖沙布袋配有拉绳。"
+        }
+      ],
+      "estimated_seconds": 2.35
+    }
+  ],
+  "total_estimated_seconds": 4.7,
+  "used_asset_ids": [
+    "N32"
+  ],
+  "sources": [
+    {
+      "asset_id": "N32",
+      "name": "栖沙布袋",
+      "keywords": [
+        "栖沙布袋",
+        "出行二件"
+      ],
+      "facts": [
+        {
+          "fact_id": "F1",
+          "text": "栖沙布袋含两格。"
+        },
+        {
+          "fact_id": "F2",
+          "text": "栖沙布袋配有拉绳。"
+        },
+        {
+          "fact_id": "F3",
+          "text": "栖沙布袋采用棉布材质。"
+        }
+      ],
+      "source_text": "栖沙布袋含两格。栖沙布袋配有拉绳。栖沙布袋采用棉布材质。"
+    }
+  ],
+  "duration_check": {
+    "ok": true,
+    "script_version": "e5f4b29a3691fe11043ffdbbf736d20488085c8c62aa670d632d8d977adc897a",
+    "scenes": [
+      {
+        "scene_id": "S1",
+        "narration_seconds": 1.74,
+        "subtitle_reading_seconds": 1.74,
+        "estimated_seconds": 2.35
+      },
+      {
+        "scene_id": "S2",
+        "narration_seconds": 1.96,
+        "subtitle_reading_seconds": 1.96,
+        "estimated_seconds": 2.35
+      }
+    ],
+    "total_estimated_seconds": 4.7,
+    "target_duration_seconds": 5.0,
+    "is_overtime": false,
+    "passed": true,
+    "exceeded_seconds": 0,
+    "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+    "timing": {
+      "chinese_chars_per_second": 4.5,
+      "english_words_per_second": 2.5,
+      "number_groups_per_second": 2.0,
+      "punctuation_pause_seconds": 0.18,
+      "minimum_scene_seconds": 2.0,
+      "transition_seconds": 0.35
+    },
+    "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ.",
+    "revision_feedback": {
+      "script_version": "e5f4b29a3691fe11043ffdbbf736d20488085c8c62aa670d632d8d977adc897a",
+      "current_seconds": 4.7,
+      "target_seconds": 5.0,
+      "exceeded_seconds": 0,
+      "violations": [],
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "镜头展示产品。",
+          "narration": "栖沙布袋含两格。",
+          "subtitle": "栖沙布袋含两格。",
+          "source_ids": [
+            "N32"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "N32",
+              "fact_id": "F1",
+              "evidence_text": "栖沙布袋含两格。",
+              "claim_text": "栖沙布袋含两格。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S2",
+          "visual": "细节特写。",
+          "narration": "栖沙布袋配有拉绳。",
+          "subtitle": "栖沙布袋配有拉绳。",
+          "source_ids": [
+            "N32"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "N32",
+              "fact_id": "F2",
+              "evidence_text": "栖沙布袋配有拉绳。",
+              "claim_text": "栖沙布袋配有拉绳。"
+            }
+          ]
+        }
+      ],
+      "revalidate_after_edit": [
+        "estimate_duration",
+        "check_brand_rules"
+      ],
+      "guidance": "Fix reported scenes; preserve supported facts/source IDs. Check the new version before further edits."
+    }
+  },
+  "brand_rule_check": {
+    "ok": true,
+    "script_version": "e5f4b29a3691fe11043ffdbbf736d20488085c8c62aa670d632d8d977adc897a",
+    "passed": true,
+    "violations": [],
+    "unsupported_claims": [],
+    "missing_references": [],
+    "risk_reasons": [],
+    "needs_confirmation": false,
+    "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+    "limitation": "String verification does not establish full natural-language semantic entailment.",
+    "revision_feedback": {
+      "script_version": "e5f4b29a3691fe11043ffdbbf736d20488085c8c62aa670d632d8d977adc897a",
+      "current_seconds": 4.7,
+      "target_seconds": 5.0,
+      "exceeded_seconds": 0,
+      "violations": [],
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "镜头展示产品。",
+          "narration": "栖沙布袋含两格。",
+          "subtitle": "栖沙布袋含两格。",
+          "source_ids": [
+            "N32"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "N32",
+              "fact_id": "F1",
+              "evidence_text": "栖沙布袋含两格。",
+              "claim_text": "栖沙布袋含两格。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S2",
+          "visual": "细节特写。",
+          "narration": "栖沙布袋配有拉绳。",
+          "subtitle": "栖沙布袋配有拉绳。",
+          "source_ids": [
+            "N32"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "N32",
+              "fact_id": "F2",
+              "evidence_text": "栖沙布袋配有拉绳。",
+              "claim_text": "栖沙布袋配有拉绳。"
+            }
+          ]
+        }
+      ],
+      "revalidate_after_edit": [
+        "estimate_duration",
+        "check_brand_rules"
+      ],
+      "guidance": "Fix reported scenes; preserve supported facts/source IDs. Check the new version before further edits."
+    }
+  },
+  "risk_flags": [],
+  "missing_information": [],
+  "question": null,
+  "errors": [],
+  "completed_steps": [
+    {
+      "step": 1,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "action": "draft_script",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "action": "estimate_duration",
+      "ok": true
+    },
+    {
+      "step": 4,
+      "action": "draft_script",
+      "ok": true
+    },
+    {
+      "step": 5,
+      "action": "estimate_duration",
+      "ok": true
+    },
+    {
+      "step": 6,
+      "action": "check_brand_rules",
+      "ok": true
+    },
+    {
+      "step": 7,
+      "action": "finish",
+      "ok": true
+    }
+  ],
+  "last_observation": {
+    "ok": true,
+    "status": "completed",
+    "script_version": "e5f4b29a3691fe11043ffdbbf736d20488085c8c62aa670d632d8d977adc897a"
+  },
+  "limitations": [
+    "合成素材，仅用于工程验证。",
+    "时长是工程估算，需要真人口播复核。",
+    "仅通过原文和批准文案核验，未知改写会被阻断。"
+  ]
+}

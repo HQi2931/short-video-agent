@@ -1,0 +1,164 @@
+{
+  "run_id": "holdout-02",
+  "mode": "live",
+  "model": "deepseek-flash",
+  "status": "completed",
+  "reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+  "title": "溪石收纳盒配有透明盒盖。",
+  "topic": "溪石收纳盒功能介绍",
+  "audience": "社区科普活动参与者",
+  "platform": "视频号",
+  "style": "用素材原文介绍一个功能，风格克制。",
+  "target_duration_seconds": 22.0,
+  "script_version": "07370696690577d62a6f692695822e26b2261e8e450373dcd7bcc290be0b74b3",
+  "script_revision": 1,
+  "storyboard": [
+    {
+      "scene_id": "S1",
+      "visual": "镜头展示产品。",
+      "narration": "溪石收纳盒配有透明盒盖。",
+      "subtitle": "溪石收纳盒配有透明盒盖。",
+      "source_ids": [
+        "E02"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "E02",
+          "fact_id": "Q1",
+          "evidence_text": "溪石收纳盒配有透明盒盖。",
+          "claim_text": "溪石收纳盒配有透明盒盖。"
+        }
+      ],
+      "estimated_seconds": 2.98
+    },
+    {
+      "scene_id": "S2",
+      "visual": "镜头展示产品。",
+      "narration": "溪石收纳盒包含两个分隔板。",
+      "subtitle": "溪石收纳盒包含两个分隔板。",
+      "source_ids": [
+        "E02"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "E02",
+          "fact_id": "Q2",
+          "evidence_text": "溪石收纳盒包含两个分隔板。",
+          "claim_text": "溪石收纳盒包含两个分隔板。"
+        }
+      ],
+      "estimated_seconds": 3.2
+    }
+  ],
+  "total_estimated_seconds": 6.18,
+  "used_asset_ids": [
+    "E02"
+  ],
+  "sources": [
+    {
+      "asset_id": "E02",
+      "name": "溪石收纳盒（评测合成产品）",
+      "keywords": [
+        "溪石",
+        "收纳盒"
+      ],
+      "facts": [
+        {
+          "fact_id": "Q1",
+          "text": "溪石收纳盒配有透明盒盖。"
+        },
+        {
+          "fact_id": "Q2",
+          "text": "溪石收纳盒包含两个分隔板。"
+        }
+      ],
+      "source_text": "溪石收纳盒配有透明盒盖。溪石收纳盒包含两个分隔板。未提供销量、效率或健康效果数据。"
+    }
+  ],
+  "duration_check": {
+    "ok": true,
+    "script_version": "07370696690577d62a6f692695822e26b2261e8e450373dcd7bcc290be0b74b3",
+    "scenes": [
+      {
+        "scene_id": "S1",
+        "narration_seconds": 2.63,
+        "subtitle_reading_seconds": 2.63,
+        "estimated_seconds": 2.98
+      },
+      {
+        "scene_id": "S2",
+        "narration_seconds": 2.85,
+        "subtitle_reading_seconds": 2.85,
+        "estimated_seconds": 3.2
+      }
+    ],
+    "total_estimated_seconds": 6.18,
+    "target_duration_seconds": 22.0,
+    "is_overtime": false,
+    "passed": true,
+    "exceeded_seconds": 0,
+    "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+    "timing": {
+      "chinese_chars_per_second": 4.5,
+      "english_words_per_second": 2.5,
+      "number_groups_per_second": 2.0,
+      "punctuation_pause_seconds": 0.18,
+      "minimum_scene_seconds": 2.0,
+      "transition_seconds": 0.35
+    },
+    "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+  },
+  "brand_rule_check": {
+    "ok": true,
+    "script_version": "07370696690577d62a6f692695822e26b2261e8e450373dcd7bcc290be0b74b3",
+    "passed": true,
+    "violations": [],
+    "unsupported_claims": [],
+    "missing_references": [],
+    "risk_reasons": [],
+    "needs_confirmation": false,
+    "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+    "limitation": "String verification does not establish full natural-language semantic entailment."
+  },
+  "risk_flags": [],
+  "missing_information": [],
+  "question": null,
+  "errors": [],
+  "completed_steps": [
+    {
+      "step": 1,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "action": "draft_script",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "action": "estimate_duration",
+      "ok": true
+    },
+    {
+      "step": 4,
+      "action": "check_brand_rules",
+      "ok": true
+    },
+    {
+      "step": 5,
+      "action": "finish",
+      "ok": true
+    }
+  ],
+  "last_observation": {
+    "ok": true,
+    "status": "completed",
+    "script_version": "07370696690577d62a6f692695822e26b2261e8e450373dcd7bcc290be0b74b3"
+  },
+  "limitations": [
+    "合成素材，仅用于工程验证。",
+    "时长是工程估算，需要真人口播复核。",
+    "仅通过原文和批准文案核验，未知改写会被阻断。"
+  ]
+}

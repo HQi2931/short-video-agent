@@ -1,0 +1,102 @@
+{
+  "frozen_at_utc": "2026-10-28T07:16:42.165950+00:00",
+  "description": "Round 2 runtime/evaluator snapshot before round 3 prompt-only correction; no credentials copied.",
+  "files": [
+    {
+      "path": "src/__init__.py",
+      "sha256": "488d7e28a8668bd27fd1ed6382985f35018065c55872c1a84ee8f65a7da4bdca"
+    },
+    {
+      "path": "src/agent.py",
+      "sha256": "af23c2857683be8195102ed52da95a0836be39b4a22bab89d981fe5ba1ad871c"
+    },
+    {
+      "path": "src/llm_adapter.py",
+      "sha256": "35365a0f7124a7c29638e830ddfa5354ed9ea17b228ad0fe959073d2feef82c5"
+    },
+    {
+      "path": "src/main.py",
+      "sha256": "0e3a4624248a7766fa5ed67d5b86ae17722abf7adc5ab0f02c8fce3a3585007e"
+    },
+    {
+      "path": "src/mock_fixtures.py",
+      "sha256": "5b2fd3c5a04d7a4c79cf6f70de09a0f216d507082893d3c2ee5ef524e4da21cf"
+    },
+    {
+      "path": "src/schemas.py",
+      "sha256": "f7878d1fac634acccdb58689a2e7e9a098b02dfecc91be187edaebfc32af5222"
+    },
+    {
+      "path": "src/state.py",
+      "sha256": "57af770f55ab037d1c951c4d5b780f030db57ecdec72a6ca68ebfcb7e9e605ef"
+    },
+    {
+      "path": "src/tools.py",
+      "sha256": "ee5528446dd93af68a193b1331fbfdc9fc45ab09889b0b844c4b0858d76eced8"
+    },
+    {
+      "path": "src/tracing.py",
+      "sha256": "a4058fc008cfa5812d2184613326d225021f38e0304cc8074afde6d675675a6c"
+    },
+    {
+      "path": "eval/__init__.py",
+      "sha256": "392676b8a4a765f61ea1152f296a60a2ea707581d789a848e9d95f5a6977c0f4"
+    },
+    {
+      "path": "eval/audit.py",
+      "sha256": "c24ece23468d730762b43b22cb3be70ac8770641b2c4f7ee5bf021ed2d7aaf4e"
+    },
+    {
+      "path": "eval/dataset.py",
+      "sha256": "af581294fc8cc275072c54ba0db1cafe7eb767e0c8fa8bbb9613af126784bacf"
+    },
+    {
+      "path": "eval/decision_compare.py",
+      "sha256": "4f7d43373d2c5518e63f26270e13acbca3646499660df7d879d80b7dd49400a6"
+    },
+    {
+      "path": "eval/metrics.py",
+      "sha256": "4db94243fdfdc9a9a5a247b5ef17c9b55048bd7839378f025f38235a46ba35dc"
+    },
+    {
+      "path": "eval/report.py",
+      "sha256": "71f011441ba021a980a7a4b2630772e6f7b64a3c0b05751c6de4da172b1874aa"
+    },
+    {
+      "path": "eval/rescore.py",
+      "sha256": "16ba2897108ed6e9bb83b7ed03b34b9d0280bf9df154b4983a03533b44f9e424"
+    },
+    {
+      "path": "eval/run.py",
+      "sha256": "bf683ce412bdecdb30ba8a7a1b046dfd59aa1d52e4daa7217262e618e9c73b41"
+    },
+    {
+      "path": "scripts/acceptance_audit.py",
+      "sha256": "c9234ce277676d46ebd7ded537b1d6676a8c2cc056e803b9ec451d8f08c8d5d7"
+    },
+    {
+      "path": "scripts/audit.py",
+      "sha256": "1c22e05880c2c137fe8d42528ce3eea5c6436b1320ad97599f831f9e3ccdfe8b"
+    },
+    {
+      "path": "scripts/evidence.py",
+      "sha256": "1b530ecf6a9fd4e33bc66d45ac1f988868c67f58c1d8b5545e0f94fd8fdf3f66"
+    },
+    {
+      "path": "scripts/replay.py",
+      "sha256": "edd2a28aa6f4ac6910935fd29943f58a53903a22308394fe0b51edf4295a1801"
+    },
+    {
+      "path": "scripts/run_examples.py",
+      "sha256": "23356141566840d68bfb0147b634fce72cf50a840ccdb8205df2540f0f40402a"
+    },
+    {
+      "path": "scripts/summarize_live.py",
+      "sha256": "6a764104ea8a5682af9d896d543877dfde82f093a953d2dde23b8ccf4acf9367"
+    },
+    {
+      "path": "scripts/verify.py",
+      "sha256": "0702090e5e99e4bc6d9dfadf5ffb2335c2ec55e21d05604865d8026cac964709"
+    }
+  ]
+}

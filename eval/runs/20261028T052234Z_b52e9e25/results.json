@@ -1,0 +1,122 @@
+[
+  {
+    "case_id": "holdout-01",
+    "scenario": "normal",
+    "executed": false,
+    "reason": "offline_validation_only"
+  },
+  {
+    "case_id": "holdout-02",
+    "scenario": "normal",
+    "executed": false,
+    "reason": "offline_validation_only"
+  },
+  {
+    "case_id": "holdout-03",
+    "scenario": "normal",
+    "executed": false,
+    "reason": "offline_validation_only"
+  },
+  {
+    "case_id": "holdout-04",
+    "scenario": "normal",
+    "executed": false,
+    "reason": "offline_validation_only"
+  },
+  {
+    "case_id": "holdout-05",
+    "scenario": "duration",
+    "executed": false,
+    "reason": "offline_validation_only"
+  },
+  {
+    "case_id": "holdout-06",
+    "scenario": "duration",
+    "executed": false,
+    "reason": "offline_validation_only"
+  },
+  {
+    "case_id": "holdout-07",
+    "scenario": "duration",
+    "executed": false,
+    "reason": "offline_validation_only"
+  },
+  {
+    "case_id": "holdout-08",
+    "scenario": "duration",
+    "executed": false,
+    "reason": "offline_validation_only"
+  },
+  {
+    "case_id": "holdout-09",
+    "scenario": "no_assets",
+    "executed": false,
+    "reason": "offline_validation_only"
+  },
+  {
+    "case_id": "holdout-10",
+    "scenario": "no_assets",
+    "executed": false,
+    "reason": "offline_validation_only"
+  },
+  {
+    "case_id": "holdout-11",
+    "scenario": "no_assets",
+    "executed": false,
+    "reason": "offline_validation_only"
+  },
+  {
+    "case_id": "holdout-12",
+    "scenario": "tool_failure",
+    "executed": false,
+    "reason": "offline_validation_only"
+  },
+  {
+    "case_id": "holdout-13",
+    "scenario": "tool_failure",
+    "executed": false,
+    "reason": "offline_validation_only"
+  },
+  {
+    "case_id": "holdout-14",
+    "scenario": "tool_failure",
+    "executed": false,
+    "reason": "offline_validation_only"
+  },
+  {
+    "case_id": "holdout-15",
+    "scenario": "unsupported",
+    "executed": false,
+    "reason": "offline_validation_only"
+  },
+  {
+    "case_id": "holdout-16",
+    "scenario": "unsupported",
+    "executed": false,
+    "reason": "offline_validation_only"
+  },
+  {
+    "case_id": "holdout-17",
+    "scenario": "unsupported",
+    "executed": false,
+    "reason": "offline_validation_only"
+  },
+  {
+    "case_id": "holdout-18",
+    "scenario": "brand",
+    "executed": false,
+    "reason": "offline_validation_only"
+  },
+  {
+    "case_id": "holdout-19",
+    "scenario": "brand",
+    "executed": false,
+    "reason": "offline_validation_only"
+  },
+  {
+    "case_id": "holdout-20",
+    "scenario": "brand",
+    "executed": false,
+    "reason": "offline_validation_only"
+  }
+]

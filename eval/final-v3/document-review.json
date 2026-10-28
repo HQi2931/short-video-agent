@@ -1,0 +1,694 @@
+{
+  "created_at_utc": "2026-10-28T07:53:38.050817+00:00",
+  "reviewer": "AI subagent /root/audit; independent document/source cross-check, not human semantic review",
+  "model_calls_made": 0,
+  "documents_sha256": {
+    "final-evaluation.md": "47995d8df1406ae3faf093bafa23a0d1de5eeb382728c6f7456f8a4de38c231b",
+    "README.md": "7013ed7947763923bbf9b6cbc3afabbbb7c69cab9cae771814d523161a0c163b",
+    "docs/04-ai-usage.md": "ff55c5f8cecbf77ffd0f78f3665c9ba73dd5d9b2683389831b14109a25777dae",
+    "docs/06-delivery.md": "bd08777a92034fcff0bd8b8257dba43e1264dd9de71b6df92c9cca3a2edae6b0",
+    "eval/final-v3/README.md": "900ff434758be321c431af29213c1cf82c8ec12feeabd5598baee7afb90de9da"
+  },
+  "numeric_table_cells_checked": 78,
+  "numeric_tables_verified": true,
+  "numeric_checks": [
+    {
+      "metric": "场景验收",
+      "batch": "first",
+      "reported": "19/20",
+      "expected": "19/20",
+      "verified": true
+    },
+    {
+      "metric": "场景验收",
+      "batch": "second_fixed",
+      "reported": "20/20",
+      "expected": "20/20",
+      "verified": true
+    },
+    {
+      "metric": "场景验收",
+      "batch": "a_fixed",
+      "reported": "19/20",
+      "expected": "19/20",
+      "verified": true
+    },
+    {
+      "metric": "场景验收",
+      "batch": "b_fixed",
+      "reported": "20/20",
+      "expected": "20/20",
+      "verified": true
+    },
+    {
+      "metric": "脚本任务完成",
+      "batch": "first",
+      "reported": "16/20",
+      "expected": "16/20",
+      "verified": true
+    },
+    {
+      "metric": "脚本任务完成",
+      "batch": "second_fixed",
+      "reported": "17/20",
+      "expected": "17/20",
+      "verified": true
+    },
+    {
+      "metric": "脚本任务完成",
+      "batch": "a_fixed",
+      "reported": "16/20",
+      "expected": "16/20",
+      "verified": true
+    },
+    {
+      "metric": "脚本任务完成",
+      "batch": "b_fixed",
+      "reported": "17/20",
+      "expected": "17/20",
+      "verified": true
+    },
+    {
+      "metric": "预设时长修正",
+      "batch": "first",
+      "reported": "4/4",
+      "expected": "4/4",
+      "verified": true
+    },
+    {
+      "metric": "预设时长修正",
+      "batch": "second_fixed",
+      "reported": "4/4",
+      "expected": "4/4",
+      "verified": true
+    },
+    {
+      "metric": "预设时长修正",
+      "batch": "a_fixed",
+      "reported": "4/4",
+      "expected": "4/4",
+      "verified": true
+    },
+    {
+      "metric": "预设时长修正",
+      "batch": "b_fixed",
+      "reported": "4/4",
+      "expected": "4/4",
+      "verified": true
+    },
+    {
+      "metric": "平均决策步骤",
+      "batch": "first",
+      "reported": "7.00",
+      "expected": "7.00",
+      "verified": true
+    },
+    {
+      "metric": "平均决策步骤",
+      "batch": "second_fixed",
+      "reported": "5.70",
+      "expected": "5.70",
+      "verified": true
+    },
+    {
+      "metric": "平均决策步骤",
+      "batch": "a_fixed",
+      "reported": "5.35",
+      "expected": "5.35",
+      "verified": true
+    },
+    {
+      "metric": "平均决策步骤",
+      "batch": "b_fixed",
+      "reported": "5.75",
+      "expected": "5.75",
+      "verified": true
+    },
+    {
+      "metric": "平均业务工具调用",
+      "batch": "first",
+      "reported": "3.90",
+      "expected": "3.90",
+      "verified": true
+    },
+    {
+      "metric": "平均业务工具调用",
+      "batch": "second_fixed",
+      "reported": "3.50",
+      "expected": "3.50",
+      "verified": true
+    },
+    {
+      "metric": "平均业务工具调用",
+      "batch": "a_fixed",
+      "reported": "3.30",
+      "expected": "3.30",
+      "verified": true
+    },
+    {
+      "metric": "平均业务工具调用",
+      "batch": "b_fixed",
+      "reported": "3.60",
+      "expected": "3.60",
+      "verified": true
+    },
+    {
+      "metric": "平均端到端秒数",
+      "batch": "first",
+      "reported": "29.1438",
+      "expected": "29.1438",
+      "verified": true
+    },
+    {
+      "metric": "平均端到端秒数",
+      "batch": "second_fixed",
+      "reported": "24.2003",
+      "expected": "24.2003",
+      "verified": true
+    },
+    {
+      "metric": "平均端到端秒数",
+      "batch": "a_fixed",
+      "reported": "19.2462",
+      "expected": "19.2462",
+      "verified": true
+    },
+    {
+      "metric": "平均端到端秒数",
+      "batch": "b_fixed",
+      "reported": "15.6275",
+      "expected": "15.6275",
+      "verified": true
+    },
+    {
+      "metric": "场景验收",
+      "batch": "second_diag",
+      "reported": "8/10",
+      "expected": "8/10",
+      "verified": true
+    },
+    {
+      "metric": "场景验收",
+      "batch": "a_diag",
+      "reported": "10/10",
+      "expected": "10/10",
+      "verified": true
+    },
+    {
+      "metric": "场景验收",
+      "batch": "b_diag",
+      "reported": "10/10",
+      "expected": "10/10",
+      "verified": true
+    },
+    {
+      "metric": "脚本任务完成",
+      "batch": "second_diag",
+      "reported": "6/10",
+      "expected": "6/10",
+      "verified": true
+    },
+    {
+      "metric": "脚本任务完成",
+      "batch": "a_diag",
+      "reported": "8/10",
+      "expected": "8/10",
+      "verified": true
+    },
+    {
+      "metric": "脚本任务完成",
+      "batch": "b_diag",
+      "reported": "8/10",
+      "expected": "8/10",
+      "verified": true
+    },
+    {
+      "metric": "预设时长修正",
+      "batch": "second_diag",
+      "reported": "0/2",
+      "expected": "0/2",
+      "verified": true
+    },
+    {
+      "metric": "预设时长修正",
+      "batch": "a_diag",
+      "reported": "2/2",
+      "expected": "2/2",
+      "verified": true
+    },
+    {
+      "metric": "预设时长修正",
+      "batch": "b_diag",
+      "reported": "2/2",
+      "expected": "2/2",
+      "verified": true
+    },
+    {
+      "metric": "平均步骤",
+      "batch": "second_diag",
+      "reported": "4.90",
+      "expected": "4.90",
+      "verified": true
+    },
+    {
+      "metric": "平均步骤",
+      "batch": "a_diag",
+      "reported": "5.80",
+      "expected": "5.80",
+      "verified": true
+    },
+    {
+      "metric": "平均步骤",
+      "batch": "b_diag",
+      "reported": "5.50",
+      "expected": "5.50",
+      "verified": true
+    },
+    {
+      "metric": "平均业务工具",
+      "batch": "second_diag",
+      "reported": "2.90",
+      "expected": "2.90",
+      "verified": true
+    },
+    {
+      "metric": "平均业务工具",
+      "batch": "a_diag",
+      "reported": "3.40",
+      "expected": "3.40",
+      "verified": true
+    },
+    {
+      "metric": "平均业务工具",
+      "batch": "b_diag",
+      "reported": "3.40",
+      "expected": "3.40",
+      "verified": true
+    },
+    {
+      "metric": "平均端到端秒数",
+      "batch": "second_diag",
+      "reported": "20.2712",
+      "expected": "20.2712",
+      "verified": true
+    },
+    {
+      "metric": "平均端到端秒数",
+      "batch": "a_diag",
+      "reported": "23.9969",
+      "expected": "23.9969",
+      "verified": true
+    },
+    {
+      "metric": "平均端到端秒数",
+      "batch": "b_diag",
+      "reported": "15.8172",
+      "expected": "15.8172",
+      "verified": true
+    },
+    {
+      "metric": "原门禁与补充契约交集验收",
+      "batch": "fresh_base",
+      "reported": "15/15",
+      "expected": "15/15",
+      "verified": true
+    },
+    {
+      "metric": "原门禁与补充契约交集验收",
+      "batch": "fresh_a",
+      "reported": "15/15",
+      "expected": "15/15",
+      "verified": true
+    },
+    {
+      "metric": "原门禁与补充契约交集验收",
+      "batch": "confirm_base",
+      "reported": "11/12",
+      "expected": "11/12",
+      "verified": true
+    },
+    {
+      "metric": "原门禁与补充契约交集验收",
+      "batch": "confirm_b",
+      "reported": "12/12",
+      "expected": "12/12",
+      "verified": true
+    },
+    {
+      "metric": "脚本任务完成",
+      "batch": "fresh_base",
+      "reported": "14/15",
+      "expected": "14/15",
+      "verified": true
+    },
+    {
+      "metric": "脚本任务完成",
+      "batch": "fresh_a",
+      "reported": "14/15",
+      "expected": "14/15",
+      "verified": true
+    },
+    {
+      "metric": "脚本任务完成",
+      "batch": "confirm_base",
+      "reported": "11/12",
+      "expected": "11/12",
+      "verified": true
+    },
+    {
+      "metric": "脚本任务完成",
+      "batch": "confirm_b",
+      "reported": "11/12",
+      "expected": "11/12",
+      "verified": true
+    },
+    {
+      "metric": "预设时长修正",
+      "batch": "fresh_base",
+      "reported": "4/4",
+      "expected": "4/4",
+      "verified": true
+    },
+    {
+      "metric": "预设时长修正",
+      "batch": "fresh_a",
+      "reported": "4/4",
+      "expected": "4/4",
+      "verified": true
+    },
+    {
+      "metric": "预设时长修正",
+      "batch": "confirm_base",
+      "reported": "3/3",
+      "expected": "3/3",
+      "verified": true
+    },
+    {
+      "metric": "预设时长修正",
+      "batch": "confirm_b",
+      "reported": "3/3",
+      "expected": "3/3",
+      "verified": true
+    },
+    {
+      "metric": "平均步骤",
+      "batch": "fresh_base",
+      "reported": "6.7333",
+      "expected": "6.7333",
+      "verified": true
+    },
+    {
+      "metric": "平均步骤",
+      "batch": "fresh_a",
+      "reported": "6.8000",
+      "expected": "6.8000",
+      "verified": true
+    },
+    {
+      "metric": "平均步骤",
+      "batch": "confirm_base",
+      "reported": "6.3333",
+      "expected": "6.3333",
+      "verified": true
+    },
+    {
+      "metric": "平均步骤",
+      "batch": "confirm_b",
+      "reported": "5.7500",
+      "expected": "5.7500",
+      "verified": true
+    },
+    {
+      "metric": "平均业务工具",
+      "batch": "fresh_base",
+      "reported": "4.0000",
+      "expected": "4.0000",
+      "verified": true
+    },
+    {
+      "metric": "平均业务工具",
+      "batch": "fresh_a",
+      "reported": "4.0000",
+      "expected": "4.0000",
+      "verified": true
+    },
+    {
+      "metric": "平均业务工具",
+      "batch": "confirm_base",
+      "reported": "3.5833",
+      "expected": "3.5833",
+      "verified": true
+    },
+    {
+      "metric": "平均业务工具",
+      "batch": "confirm_b",
+      "reported": "3.4167",
+      "expected": "3.4167",
+      "verified": true
+    },
+    {
+      "metric": "平均端到端秒数",
+      "batch": "fresh_base",
+      "reported": "30.4156",
+      "expected": "30.4156",
+      "verified": true
+    },
+    {
+      "metric": "平均端到端秒数",
+      "batch": "fresh_a",
+      "reported": "31.7091",
+      "expected": "31.7091",
+      "verified": true
+    },
+    {
+      "metric": "平均端到端秒数",
+      "batch": "confirm_base",
+      "reported": "25.9507",
+      "expected": "25.9507",
+      "verified": true
+    },
+    {
+      "metric": "平均端到端秒数",
+      "batch": "confirm_b",
+      "reported": "17.9469",
+      "expected": "17.9469",
+      "verified": true
+    },
+    {
+      "metric": "引用可追溯",
+      "batch": "fresh_base",
+      "reported": "39/39",
+      "expected": "39/39",
+      "verified": true
+    },
+    {
+      "metric": "引用可追溯",
+      "batch": "fresh_a",
+      "reported": "33/33",
+      "expected": "33/33",
+      "verified": true
+    },
+    {
+      "metric": "引用可追溯",
+      "batch": "confirm_base",
+      "reported": "22/22",
+      "expected": "22/22",
+      "verified": true
+    },
+    {
+      "metric": "引用可追溯",
+      "batch": "confirm_b",
+      "reported": "19/19",
+      "expected": "19/19",
+      "verified": true
+    },
+    {
+      "metric": "最终未核实文本代理",
+      "batch": "fresh_base",
+      "reported": "0/14",
+      "expected": "0/14",
+      "verified": true
+    },
+    {
+      "metric": "最终未核实文本代理",
+      "batch": "fresh_a",
+      "reported": "0/14",
+      "expected": "0/14",
+      "verified": true
+    },
+    {
+      "metric": "最终未核实文本代理",
+      "batch": "confirm_base",
+      "reported": "0/12",
+      "expected": "0/12",
+      "verified": true
+    },
+    {
+      "metric": "最终未核实文本代理",
+      "batch": "confirm_b",
+      "reported": "0/11",
+      "expected": "0/11",
+      "verified": true
+    },
+    {
+      "metric": "请求尝试",
+      "batch": "fresh_base",
+      "reported": "101",
+      "expected": "101",
+      "verified": true
+    },
+    {
+      "metric": "请求尝试",
+      "batch": "fresh_a",
+      "reported": "102",
+      "expected": "102",
+      "verified": true
+    },
+    {
+      "metric": "请求尝试",
+      "batch": "confirm_base",
+      "reported": "76",
+      "expected": "76",
+      "verified": true
+    },
+    {
+      "metric": "请求尝试",
+      "batch": "confirm_b",
+      "reported": "69",
+      "expected": "69",
+      "verified": true
+    }
+  ],
+  "summary_sources": {
+    "first": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/summary.json",
+    "second_fixed": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/summary.json",
+    "second_diag": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/summary.json",
+    "a_fixed": "eval/final-v3/optimized-fixed/20261028T071840Z_0a1d1fca/summary.json",
+    "a_diag": "eval/final-v3/diagnostic-v2/20261028T071840Z_db2115ca/summary.json",
+    "b_fixed": "eval/final-v3/candidate-b-fixed/20261028T073520Z_5e8a2d91/summary.json",
+    "b_diag": "eval/final-v3/candidate-b-diagnostic-v2/20261028T073520Z_f0880670/summary.json",
+    "fresh_base": "eval/final-v3/fresh-baseline/20261028T072312Z_5e7ad9f4/summary.json",
+    "fresh_a": "eval/final-v3/fresh-optimized/20261028T072312Z_b3d74127/summary.json",
+    "confirm_base": "eval/final-v3/confirmation-baseline/20261028T073730Z_4f35c3e3/summary.json",
+    "confirm_b": "eval/final-v3/confirmation-optimized/20261028T073730Z_5cf3fdd6/summary.json"
+  },
+  "round3_aggregate": {
+    "batches": 8,
+    "executed": 114,
+    "request_attempts": 683,
+    "http_responses": 682,
+    "provider_reported_tokens": 3959592,
+    "one_read_timeout_without_response": true
+  },
+  "contracts": [
+    {
+      "path": "eval/final-v3/confirmation-baseline-contract-results.json",
+      "planned": 12,
+      "original_pass": 11,
+      "supplemental_pass": 12,
+      "combined_pass": 11,
+      "rows_match_totals": true
+    },
+    {
+      "path": "eval/final-v3/confirmation-optimized-contract-results.json",
+      "planned": 12,
+      "original_pass": 12,
+      "supplemental_pass": 12,
+      "combined_pass": 12,
+      "rows_match_totals": true
+    },
+    {
+      "path": "eval/final-v3/fresh-baseline-contract-results.json",
+      "planned": 15,
+      "original_pass": 15,
+      "supplemental_pass": 15,
+      "combined_pass": 15,
+      "rows_match_totals": true
+    },
+    {
+      "path": "eval/final-v3/fresh-optimized-contract-results.json",
+      "planned": 15,
+      "original_pass": 15,
+      "supplemental_pass": 15,
+      "combined_pass": 15,
+      "rows_match_totals": true
+    }
+  ],
+  "final_junit": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "158",
+    "time": "3.076",
+    "timestamp": "2026-10-28T15:38:58.711193+08:00",
+    "hostname": "WIN-UQIINP6QFVP"
+  },
+  "frozen_provenance": {
+    "verified": true,
+    "frozen_file_checks": 89,
+    "request_prompts_checked": 683
+  },
+  "boundaries_verified": [
+    "Candidate A fresh-15 and candidate B confirm-12 are reported separately; no false final-B 27/27 claim.",
+    "Refusals are acceptance outcomes, not completed scripts. B task completion remains17/20,8/10,11/12.",
+    "Historical diagnostic set is explicitly marked as development data.",
+    "Historical and candidate A failures are preserved; restored errors are separately recorded.",
+    "Human semantic/style/spoken duration and statistically significant generalization remain NOT VERIFIED.",
+    "No claim of candidate personal execution or human independent review."
+  ],
+  "findings": [
+    {
+      "priority": "P2",
+      "document": "docs/06-delivery.md",
+      "line": 37,
+      "issue": "Suggested future git add omits eval and final-evaluation.md, so it would omit evaluation evidence and final report.",
+      "suggested_fix": "Include eval and final-evaluation.md in future post-approval staging command."
+    },
+    {
+      "priority": "P2",
+      "document": "docs/06-delivery.md",
+      "line": 28,
+      "issue": "Default local verification instructions run legacy audit and acceptance scripts that overwrite examples history.",
+      "suggested_fix": "Use final_audit.py with a fresh output path for current verification; label old scripts as historical."
+    },
+    {
+      "priority": "P3",
+      "document": "README.md",
+      "line": 135,
+      "issue": "Closing Private verification statement lacks the historical qualifier used at the top.",
+      "suggested_fix": "State early verification only; current remote visibility was not rechecked."
+    },
+    {
+      "priority": "P3",
+      "document": "final-evaluation.md and eval/final-v3/README.md",
+      "issue": "Contract-check commands still contain PowerShell angle-bracket placeholders.",
+      "suggested_fix": "Replace with an existing archived run directory for a directly copyable offline command. Root already plans this fix."
+    }
+  ],
+  "pending_links_at_review": [
+    {
+      "document": "final-evaluation.md",
+      "line": 108,
+      "target": "eval/final-v3/final-audit.json",
+      "note": "Expected pending final artifact; must exist before handoff."
+    },
+    {
+      "document": "final-evaluation.md",
+      "line": 169,
+      "target": "eval/final-v3/delivery-inventory.json",
+      "note": "Expected pending final artifact; must exist before handoff."
+    },
+    {
+      "document": "README.md",
+      "line": 81,
+      "target": "eval/final-v3/final-audit.json",
+      "note": "Expected pending final artifact; must exist before handoff."
+    }
+  ],
+  "delivery_readiness": "Numeric/boundary review passes; listed documentation corrections and final audit/inventory creation remain pending at this snapshot.",
+  "limitations": [
+    "Source manifests and local timestamps are local evidence, not external attestation.",
+    "This artifact is a review-time snapshot. Later edits require checking document hashes and the final artifacts again."
+  ]
+}

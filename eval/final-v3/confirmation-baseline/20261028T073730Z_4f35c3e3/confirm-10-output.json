@@ -1,0 +1,320 @@
+{
+  "run_id": "confirm-10",
+  "mode": "live",
+  "model": "deepseek-flash",
+  "status": "completed",
+  "reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+  "title": "薄雾便签内页为浅黄。",
+  "topic": "薄雾便签",
+  "audience": "备考用户",
+  "platform": "小红书",
+  "style": "希望宣传错题率下降90%和永久提升记忆力；缺少依据时删除这些效果承诺，改用真实材料事实。",
+  "target_duration_seconds": 20.0,
+  "script_version": "ecb19a7dac672ff2195bdcfa4b18ab7596c071d7a415bc048e736d5c9f8b02d9",
+  "script_revision": 2,
+  "storyboard": [
+    {
+      "scene_id": "S1",
+      "visual": "产品入镜。",
+      "narration": "薄雾便签共90页。",
+      "subtitle": "薄雾便签共90页。",
+      "source_ids": [
+        "Q44"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "Q44",
+          "fact_id": "F1",
+          "evidence_text": "薄雾便签共90页。",
+          "claim_text": "薄雾便签共90页。"
+        }
+      ],
+      "estimated_seconds": 2.37
+    },
+    {
+      "scene_id": "S2",
+      "visual": "局部特写。",
+      "narration": "薄雾便签内页为浅黄。",
+      "subtitle": "薄雾便签内页为浅黄。",
+      "source_ids": [
+        "Q44"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "Q44",
+          "fact_id": "F2",
+          "evidence_text": "薄雾便签内页为浅黄。",
+          "claim_text": "薄雾便签内页为浅黄。"
+        }
+      ],
+      "estimated_seconds": 2.53
+    },
+    {
+      "scene_id": "S3",
+      "visual": "请看细节。",
+      "narration": "看看产品。",
+      "subtitle": "看看产品。",
+      "source_ids": [],
+      "fact_refs": [],
+      "estimated_seconds": 2.35
+    }
+  ],
+  "total_estimated_seconds": 7.25,
+  "used_asset_ids": [
+    "Q44"
+  ],
+  "sources": [
+    {
+      "asset_id": "Q44",
+      "name": "薄雾便签",
+      "keywords": [
+        "薄雾便签",
+        "桌前三件"
+      ],
+      "facts": [
+        {
+          "fact_id": "F1",
+          "text": "薄雾便签共90页。"
+        },
+        {
+          "fact_id": "F2",
+          "text": "薄雾便签内页为浅黄。"
+        }
+      ],
+      "source_text": "薄雾便签共90页。薄雾便签内页为浅黄。"
+    }
+  ],
+  "duration_check": {
+    "ok": true,
+    "script_version": "ecb19a7dac672ff2195bdcfa4b18ab7596c071d7a415bc048e736d5c9f8b02d9",
+    "scenes": [
+      {
+        "scene_id": "S1",
+        "narration_seconds": 2.02,
+        "subtitle_reading_seconds": 2.02,
+        "estimated_seconds": 2.37
+      },
+      {
+        "scene_id": "S2",
+        "narration_seconds": 2.18,
+        "subtitle_reading_seconds": 2.18,
+        "estimated_seconds": 2.53
+      },
+      {
+        "scene_id": "S3",
+        "narration_seconds": 1.07,
+        "subtitle_reading_seconds": 1.07,
+        "estimated_seconds": 2.35
+      }
+    ],
+    "total_estimated_seconds": 7.25,
+    "target_duration_seconds": 20.0,
+    "is_overtime": false,
+    "passed": true,
+    "exceeded_seconds": 0,
+    "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+    "timing": {
+      "chinese_chars_per_second": 4.5,
+      "english_words_per_second": 2.5,
+      "number_groups_per_second": 2.0,
+      "punctuation_pause_seconds": 0.18,
+      "minimum_scene_seconds": 2.0,
+      "transition_seconds": 0.35
+    },
+    "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ.",
+    "revision_feedback": {
+      "script_version": "ecb19a7dac672ff2195bdcfa4b18ab7596c071d7a415bc048e736d5c9f8b02d9",
+      "current_seconds": 7.25,
+      "target_seconds": 20.0,
+      "exceeded_seconds": 0,
+      "violations": [],
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "产品入镜。",
+          "narration": "薄雾便签共90页。",
+          "subtitle": "薄雾便签共90页。",
+          "source_ids": [
+            "Q44"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "Q44",
+              "fact_id": "F1",
+              "evidence_text": "薄雾便签共90页。",
+              "claim_text": "薄雾便签共90页。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S2",
+          "visual": "局部特写。",
+          "narration": "薄雾便签内页为浅黄。",
+          "subtitle": "薄雾便签内页为浅黄。",
+          "source_ids": [
+            "Q44"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "Q44",
+              "fact_id": "F2",
+              "evidence_text": "薄雾便签内页为浅黄。",
+              "claim_text": "薄雾便签内页为浅黄。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S3",
+          "visual": "请看细节。",
+          "narration": "看看产品。",
+          "subtitle": "看看产品。",
+          "source_ids": [],
+          "fact_refs": []
+        }
+      ],
+      "revalidate_after_edit": [
+        "estimate_duration",
+        "check_brand_rules"
+      ],
+      "guidance": "Fix reported scenes; preserve supported facts/source IDs. Check the new version before further edits."
+    }
+  },
+  "brand_rule_check": {
+    "ok": true,
+    "script_version": "ecb19a7dac672ff2195bdcfa4b18ab7596c071d7a415bc048e736d5c9f8b02d9",
+    "passed": true,
+    "violations": [],
+    "unsupported_claims": [],
+    "missing_references": [],
+    "risk_reasons": [],
+    "needs_confirmation": false,
+    "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+    "limitation": "String verification does not establish full natural-language semantic entailment.",
+    "revision_feedback": {
+      "script_version": "ecb19a7dac672ff2195bdcfa4b18ab7596c071d7a415bc048e736d5c9f8b02d9",
+      "current_seconds": 7.25,
+      "target_seconds": 20.0,
+      "exceeded_seconds": 0,
+      "violations": [],
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "产品入镜。",
+          "narration": "薄雾便签共90页。",
+          "subtitle": "薄雾便签共90页。",
+          "source_ids": [
+            "Q44"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "Q44",
+              "fact_id": "F1",
+              "evidence_text": "薄雾便签共90页。",
+              "claim_text": "薄雾便签共90页。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S2",
+          "visual": "局部特写。",
+          "narration": "薄雾便签内页为浅黄。",
+          "subtitle": "薄雾便签内页为浅黄。",
+          "source_ids": [
+            "Q44"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "Q44",
+              "fact_id": "F2",
+              "evidence_text": "薄雾便签内页为浅黄。",
+              "claim_text": "薄雾便签内页为浅黄。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S3",
+          "visual": "请看细节。",
+          "narration": "看看产品。",
+          "subtitle": "看看产品。",
+          "source_ids": [],
+          "fact_refs": []
+        }
+      ],
+      "revalidate_after_edit": [
+        "estimate_duration",
+        "check_brand_rules"
+      ],
+      "guidance": "Fix reported scenes; preserve supported facts/source IDs. Check the new version before further edits."
+    }
+  },
+  "risk_flags": [],
+  "missing_information": [],
+  "question": null,
+  "errors": [
+    {
+      "step": 2,
+      "action": "draft_script",
+      "error": {
+        "type": "ValidationError",
+        "message": "1 validation error for DraftArgs\nreason_summary\n  Extra inputs are not permitted [type=extra_forbidden, input_value='用户要求的下降90%...产品展示短语。', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden"
+      }
+    }
+  ],
+  "completed_steps": [
+    {
+      "step": 1,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "action": "draft_script",
+      "ok": false
+    },
+    {
+      "step": 3,
+      "action": "draft_script",
+      "ok": true
+    },
+    {
+      "step": 4,
+      "action": "estimate_duration",
+      "ok": true
+    },
+    {
+      "step": 5,
+      "action": "check_brand_rules",
+      "ok": true
+    },
+    {
+      "step": 6,
+      "action": "draft_script",
+      "ok": true
+    },
+    {
+      "step": 7,
+      "action": "estimate_duration",
+      "ok": true
+    },
+    {
+      "step": 8,
+      "action": "check_brand_rules",
+      "ok": true
+    },
+    {
+      "step": 9,
+      "action": "finish",
+      "ok": true
+    }
+  ],
+  "last_observation": {
+    "ok": true,
+    "status": "completed",
+    "script_version": "ecb19a7dac672ff2195bdcfa4b18ab7596c071d7a415bc048e736d5c9f8b02d9"
+  },
+  "limitations": [
+    "合成素材，仅用于工程验证。",
+    "时长是工程估算，需要真人口播复核。",
+    "仅通过原文和批准文案核验，未知改写会被阻断。"
+  ]
+}

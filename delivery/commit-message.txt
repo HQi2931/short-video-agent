@@ -1,0 +1,9 @@
+Finalize candidate B evaluation and reproducible delivery evidence
+
+Include the pending decision-progress safeguards and candidate B prompt clarifications.
+Preserve all evaluation inputs, live traces and failures without changing results.
+Add offline delivery audits and preserve frozen evidence bytes across Git checkouts.
+Document the exact staging scope and outstanding human review.
+
+Validation: 158 pytest cases, 220 trace replays, pip check and whitespace checks.
+Human review and final submission authorization remain pending.

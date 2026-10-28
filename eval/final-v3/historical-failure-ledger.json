@@ -1,0 +1,4360 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-10-28T07:23:35.272788+00:00",
+  "scope": {
+    "included": [
+      "examples/traces live records",
+      "eval/runs direct live traces",
+      "eval/decision-v2 optimized-fixed, baseline-holdout, optimized-holdout live traces"
+    ],
+    "excluded": [
+      "eval/final-v3 live outputs and traces: explicitly not read",
+      "Mock traces",
+      "baseline-source copied code/data",
+      "rescore reports as additional runs"
+    ],
+    "deduplication": "One run per exact Trace SHA-256; report/rescore aliases do not create additional live runs. Same case ID in different actual API runs remains distinct.",
+    "limitations": [
+      "Local execution evidence, not independent provider attestation.",
+      "No human semantic or creative-quality review inferred.",
+      "Historical needs_info responses are expected outcomes, not failures.",
+      "Offline accepted-draft diagnostics are not runtime observations or new live runs."
+    ]
+  },
+  "summary": {
+    "unique_historical_live_traces": 73,
+    "unique_trace_sha256_count": 73,
+    "status_counts": {
+      "completed": 55,
+      "needs_info": 13,
+      "incomplete": 1,
+      "failed": 4
+    },
+    "classification_counts": {
+      "accepted_completed": 54,
+      "expected_needs_info": 13,
+      "behavior_not_triggered": 1,
+      "terminal_failure": 5
+    },
+    "real_request_records": 440,
+    "real_response_records": 440,
+    "runtime_event_counts": {
+      "rule_check_rejection": 6,
+      "duration_check_overtime": 26,
+      "injected_tool_failure": 9,
+      "draft_argument_validation_rejection": 3,
+      "model_response_protocol_error": 3
+    },
+    "runtime_unique_run_counts_by_event_kind": {
+      "draft_argument_validation_rejection": 3,
+      "duration_check_overtime": 26,
+      "injected_tool_failure": 9,
+      "model_response_protocol_error": 3,
+      "rule_check_rejection": 6
+    },
+    "recovered_non_duration_event_count": 21,
+    "recovered_non_duration_unique_runs": 18,
+    "offline_only_batches": 2,
+    "offline_only_planned_case_rows": 40,
+    "max_steps_terminal_incomplete_traces": 1,
+    "request_or_tool_budget_stop_events": 0
+  },
+  "source_reports": [
+    {
+      "path": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/results.json",
+      "sha256": "992eede12bfde12f6e7d19477fec3bfb0081f636f81995f6aaebd638a242f14e"
+    },
+    {
+      "path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/results.json",
+      "sha256": "fc9ba5ec9294cdf5ef2aafd263ea056a7a80b91587471cae73542f7a083588a2"
+    },
+    {
+      "path": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/results.json",
+      "sha256": "281b6691a362085404255528069edd34dcfae1c6ceebb39c4eb65e973055bd59"
+    },
+    {
+      "path": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+      "sha256": "9320a958abcfd1cd46c3adb4ab9ca9a6f7d204259ea5a7468f9b8f134c56fd88"
+    },
+    {
+      "path": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+      "sha256": "9320a958abcfd1cd46c3adb4ab9ca9a6f7d204259ea5a7468f9b8f134c56fd88"
+    },
+    {
+      "path": "eval/runs/20261028T052239Z_743fa464/results.json",
+      "sha256": "34f81f4cd15fcfbbe1cac394644b18ed98e2cd34e18881b13e4a57fa26983fda"
+    },
+    {
+      "path": "examples/live-manifest.json",
+      "sha256": "c3812c09e5ab625969f29860b576441f87f221dcd0bb5fb5c18e07004e9c430f"
+    },
+    {
+      "path": "examples/live-summary.json",
+      "sha256": "fbe57962268a2bb50264ae01153c8b5bfdc78904888d7add1c15d4c7e9a66711"
+    }
+  ],
+  "true_terminal_failures": [
+    "eval/runs/20261028T052239Z_743fa464/traces/holdout-20.json",
+    "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/traces/validation-04.json",
+    "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/traces/validation-05.json",
+    "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/traces/validation-04.json",
+    "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/traces/validation-05.json"
+  ],
+  "behavior_not_triggered": [
+    "examples/traces/live_overtime_round1.json"
+  ],
+  "scoring_false_negatives": [
+    {
+      "trace": "eval/runs/20261028T052239Z_743fa464/traces/holdout-03.json",
+      "run_id": "holdout-03",
+      "history": [
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/results.json",
+          "case_pass": false,
+          "task_completed": false,
+          "replay_issues": [
+            {
+              "step": 6,
+              "phase": "unsupported_or_invalid_record",
+              "problem": "ValidationError"
+            }
+          ]
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        }
+      ],
+      "explanation": "Original scorer could not replay a recovered JSONDecodeError; error-aware rescores preserve the model error but verify the completed run. No new model request and no Trace rewrite."
+    }
+  ],
+  "zero_request_batches": [
+    {
+      "directory": "eval/runs/20261028T052234Z_b52e9e25",
+      "summary": {
+        "path": "eval/runs/20261028T052234Z_b52e9e25/summary.json",
+        "sha256": "0b2a348116b9f6f59c62daa09f82661ff364c504e3fa9dcd970f2c9fd3e483f8"
+      },
+      "environment": {
+        "path": "eval/runs/20261028T052234Z_b52e9e25/environment.json",
+        "sha256": "04520af12265d5bd354ecb9a9c9539c374be282eb8dd07652b3fa610fedf240b"
+      },
+      "results": {
+        "path": "eval/runs/20261028T052234Z_b52e9e25/results.json",
+        "sha256": "5cd9e7e5dc5743bb51fba846c130e00e04117243fd3268b48e8144f67fc14d13"
+      },
+      "live_requested": false,
+      "requests_attempted": 0,
+      "planned": 20,
+      "executed": 0,
+      "skipped": 20,
+      "skip_reasons": {
+        "offline_validation_only": 20
+      },
+      "classification": "offline_validation_only",
+      "included_in_live_trace_denominator": false
+    },
+    {
+      "directory": "eval/runs/20261028T053323Z_38561df7",
+      "summary": {
+        "path": "eval/runs/20261028T053323Z_38561df7/summary.json",
+        "sha256": "0b2a348116b9f6f59c62daa09f82661ff364c504e3fa9dcd970f2c9fd3e483f8"
+      },
+      "environment": {
+        "path": "eval/runs/20261028T053323Z_38561df7/environment.json",
+        "sha256": "1b75c2bb92c2d3ba7a93bb0e346aa85f1491ddb63b6e7f6c9e8e33140d502127"
+      },
+      "results": {
+        "path": "eval/runs/20261028T053323Z_38561df7/results.json",
+        "sha256": "5cd9e7e5dc5743bb51fba846c130e00e04117243fd3268b48e8144f67fc14d13"
+      },
+      "live_requested": false,
+      "requests_attempted": 0,
+      "planned": 20,
+      "executed": 0,
+      "skipped": 20,
+      "skip_reasons": {
+        "offline_validation_only": 20
+      },
+      "classification": "offline_validation_only",
+      "included_in_live_trace_denominator": false
+    }
+  ],
+  "runs": [
+    {
+      "group": "examples",
+      "run_id": "live_changed_assets_round1",
+      "trace": "examples/traces/live_changed_assets_round1.json",
+      "trace_sha256": "66aecd7e0f9ce747280072ba49e62eca1b0165c3979f433440746343ff2da48c",
+      "aliases": [],
+      "events_path": "examples/traces/live_changed_assets_round1.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "examples/live-summary.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 8,
+      "max_steps": 12,
+      "request_records": 8,
+      "response_records": 8,
+      "runtime_duration_estimates": [
+        9.03,
+        9.03
+      ],
+      "runtime_issues": [
+        {
+          "step": 4,
+          "kind": "rule_check_rejection",
+          "action": "check_brand_rules",
+          "recovered_by_final_completed": true,
+          "script_version": "0d2f29b5981404acdd0868063255ae6eb6d4c76cf49f7db84e8dfe8d0679b74a",
+          "error": null,
+          "violations": [
+            {
+              "code": "missing_fact_reference",
+              "location": "S1",
+              "detail": "P03"
+            }
+          ]
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "0d2f29b5981404acdd0868063255ae6eb6d4c76cf49f7db84e8dfe8d0679b74a",
+          "offline_estimated_seconds": 9.03,
+          "offline_duration_passed": true,
+          "offline_rule_passed": false,
+          "offline_violations": [
+            {
+              "code": "missing_fact_reference",
+              "location": "S1",
+              "detail": "P03"
+            }
+          ],
+          "runtime_observation": false
+        },
+        {
+          "step": 5,
+          "script_revision": 2,
+          "script_version": "a07d31f34b5fe5ea97e23d2bc23f0f4f0df966d4d755ce5213e78d0c9bf375d0",
+          "offline_estimated_seconds": 9.03,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "rule_revision"
+      ]
+    },
+    {
+      "group": "examples",
+      "run_id": "live_changed_duration_round1",
+      "trace": "examples/traces/live_changed_duration_round1.json",
+      "trace_sha256": "4a8dfe8ac5b3e44959d8f9c27688edb41790d8c168f6b55ea7a4a0aae31f54b7",
+      "aliases": [],
+      "events_path": "examples/traces/live_changed_duration_round1.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "examples/live-summary.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 7,
+      "max_steps": 12,
+      "request_records": 7,
+      "response_records": 7,
+      "runtime_duration_estimates": [
+        4.09,
+        2.35
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "4e51a38cecfec5c35a0a4197d76b4d3c77d0fcf2bc370e125226958fa76790ac",
+          "error": null,
+          "current_seconds": 4.09,
+          "target_seconds": 4.0,
+          "exceeded_seconds": 0.09
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "4e51a38cecfec5c35a0a4197d76b4d3c77d0fcf2bc370e125226958fa76790ac",
+          "offline_estimated_seconds": 4.09,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 4,
+          "script_revision": 2,
+          "script_version": "ca901e9004547a1508dbd5b238cf0cb7ab9148f1c2a08aa3a14182ecb1d9dfc8",
+          "offline_estimated_seconds": 2.35,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "duration_revision"
+      ]
+    },
+    {
+      "group": "examples",
+      "run_id": "live_manual_no_assets_20261028_130515",
+      "trace": "examples/traces/live_manual_no_assets_20261028_130515.json",
+      "trace_sha256": "eaab36f4073f6826f9b505e2a6c8f3b1894305722df51c30522ea45cd8b10da0",
+      "aliases": [],
+      "events_path": "examples/traces/live_manual_no_assets_20261028_130515.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "needs_info",
+      "classification": "expected_needs_info",
+      "case_pass": true,
+      "case_acceptance_source": "examples/live-summary.json",
+      "is_script_task_completed": false,
+      "needs_info_is_failure": false,
+      "final_reason": "User input or reliable evidence is required",
+      "steps": 4,
+      "max_steps": 12,
+      "request_records": 4,
+      "response_records": 4,
+      "runtime_duration_estimates": [],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [],
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "query_rewrite"
+      ]
+    },
+    {
+      "group": "examples",
+      "run_id": "live_manual_normal_20261028_130515",
+      "trace": "examples/traces/live_manual_normal_20261028_130515.json",
+      "trace_sha256": "e18bf1faafb339a160b640d76b152e29e3f230cdab8618b2b10037fddf74385a",
+      "aliases": [],
+      "events_path": "examples/traces/live_manual_normal_20261028_130515.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "examples/live-summary.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 5,
+      "max_steps": 12,
+      "request_records": 5,
+      "response_records": 5,
+      "runtime_duration_estimates": [
+        28.56
+      ],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "18057b66017f9627ce4551c44977783ef7671e0e48d9514a3f64c1f4f7de97e6",
+          "offline_estimated_seconds": 28.56,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "behavior_verified": true,
+      "observed_adaptations": []
+    },
+    {
+      "group": "examples",
+      "run_id": "live_manual_overtime_20261028_130515",
+      "trace": "examples/traces/live_manual_overtime_20261028_130515.json",
+      "trace_sha256": "14e91a28d8813850ffa55bcf38645dafc0b91b37fb6de487387de6ca2c69abbc",
+      "aliases": [],
+      "events_path": "examples/traces/live_manual_overtime_20261028_130515.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "examples/live-summary.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 7,
+      "max_steps": 12,
+      "request_records": 7,
+      "response_records": 7,
+      "runtime_duration_estimates": [
+        7.64,
+        2.35
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "f459c49c407e283f786661d277e59c5a20ed9e775a7d05e08a23316ca0bf8e22",
+          "error": null,
+          "current_seconds": 7.64,
+          "target_seconds": 4.0,
+          "exceeded_seconds": 3.64
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "f459c49c407e283f786661d277e59c5a20ed9e775a7d05e08a23316ca0bf8e22",
+          "offline_estimated_seconds": 7.64,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 4,
+          "script_revision": 2,
+          "script_version": "4694bca7597e46cfd5e779552ce120bf01d8cd4cf20629d38509acfb1a99b692",
+          "offline_estimated_seconds": 2.35,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "duration_revision"
+      ]
+    },
+    {
+      "group": "examples",
+      "run_id": "live_missing_info_round1",
+      "trace": "examples/traces/live_missing_info_round1.json",
+      "trace_sha256": "fcf6bc528b7a4ed26eb36803e0453561864e602c82b6345bd25353816bc5c54c",
+      "aliases": [],
+      "events_path": "examples/traces/live_missing_info_round1.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "needs_info",
+      "classification": "expected_needs_info",
+      "case_pass": true,
+      "case_acceptance_source": "examples/live-summary.json",
+      "is_script_task_completed": false,
+      "needs_info_is_failure": false,
+      "final_reason": "User input or reliable evidence is required",
+      "steps": 1,
+      "max_steps": 12,
+      "request_records": 1,
+      "response_records": 1,
+      "runtime_duration_estimates": [],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [],
+      "behavior_verified": true,
+      "observed_adaptations": []
+    },
+    {
+      "group": "examples",
+      "run_id": "live_no_assets_round1",
+      "trace": "examples/traces/live_no_assets_round1.json",
+      "trace_sha256": "b8525a1907fc860a725f4140c903cb82e468678c1eaf5d383b72089ce3bdcc36",
+      "aliases": [],
+      "events_path": "examples/traces/live_no_assets_round1.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "needs_info",
+      "classification": "expected_needs_info",
+      "case_pass": true,
+      "case_acceptance_source": "examples/live-summary.json",
+      "is_script_task_completed": false,
+      "needs_info_is_failure": false,
+      "final_reason": "User input or reliable evidence is required",
+      "steps": 3,
+      "max_steps": 12,
+      "request_records": 3,
+      "response_records": 3,
+      "runtime_duration_estimates": [],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [],
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "query_rewrite"
+      ]
+    },
+    {
+      "group": "examples",
+      "run_id": "live_normal_initial",
+      "trace": "examples/traces/live_normal_initial.json",
+      "trace_sha256": "35b793ddf57c039001df20b69bf3378ec53dff6d1f362d82cf4424efc3937557",
+      "aliases": [],
+      "events_path": "examples/traces/live_normal_initial.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "examples/live-summary.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 8,
+      "max_steps": 12,
+      "request_records": 8,
+      "response_records": 8,
+      "runtime_duration_estimates": [
+        30.52,
+        25.4
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "6d7e05de7f36a78d6487f1c4d3da75b8ad59b99ae72f859aab6071e0f043f974",
+          "error": null,
+          "current_seconds": 30.52,
+          "target_seconds": 30.0,
+          "exceeded_seconds": 0.52
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "6d7e05de7f36a78d6487f1c4d3da75b8ad59b99ae72f859aab6071e0f043f974",
+          "offline_estimated_seconds": 30.52,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 4,
+          "script_revision": 2,
+          "script_version": "f1dfa2265b4a626bfeee1202700fbc531d587773ff851f3372a5ccc598058b9a",
+          "offline_estimated_seconds": 26.25,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 5,
+          "script_revision": 3,
+          "script_version": "ebcda46a7f636feb10fca87f9860bdbcb8e8b235cc49216987f94d220772b121",
+          "offline_estimated_seconds": 25.4,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "duration_revision"
+      ]
+    },
+    {
+      "group": "examples",
+      "run_id": "live_normal_round1",
+      "trace": "examples/traces/live_normal_round1.json",
+      "trace_sha256": "5a90da1bdb79171f4fbc4398843ceca2855f60fbfb894e7cf8fb56ac1c58c8b3",
+      "aliases": [],
+      "events_path": "examples/traces/live_normal_round1.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "examples/live-summary.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 5,
+      "max_steps": 12,
+      "request_records": 5,
+      "response_records": 5,
+      "runtime_duration_estimates": [
+        25.39
+      ],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "003d9b9d677176ca57b9473dc311d810e3c649d37ef820261e0b23452110b449",
+          "offline_estimated_seconds": 25.39,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "behavior_verified": true,
+      "observed_adaptations": []
+    },
+    {
+      "group": "examples",
+      "run_id": "live_overtime_round1",
+      "trace": "examples/traces/live_overtime_round1.json",
+      "trace_sha256": "7bc9526e8b58307f5082f01d2a1228129fce92c11fa7efe0fd85640c716b3158",
+      "aliases": [],
+      "events_path": "examples/traces/live_overtime_round1.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "behavior_not_triggered",
+      "case_pass": false,
+      "case_acceptance_source": "examples/live-summary.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 6,
+      "max_steps": 12,
+      "request_records": 6,
+      "response_records": 6,
+      "runtime_duration_estimates": [
+        10.41
+      ],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "8717bf0497b41871faaf5117746399dc242ded5791b7f115a099a7911242f458",
+          "offline_estimated_seconds": 12.18,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 3,
+          "script_revision": 2,
+          "script_version": "cf4485b515185f2df2ba16b522eb9cf2f58b7d9f769f1748b4b1278331f9f2f5",
+          "offline_estimated_seconds": 10.41,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "behavior_verified": false,
+      "observed_adaptations": []
+    },
+    {
+      "group": "examples",
+      "run_id": "live_overtime_tight_round1",
+      "trace": "examples/traces/live_overtime_tight_round1.json",
+      "trace_sha256": "4b89605270a998377d09bc54bbc2dea20fbf24d681b160cfb5b97f10278df09a",
+      "aliases": [],
+      "events_path": "examples/traces/live_overtime_tight_round1.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "examples/live-summary.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 7,
+      "max_steps": 12,
+      "request_records": 7,
+      "response_records": 7,
+      "runtime_duration_estimates": [
+        7.64,
+        2.35
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "e336f3337b8d842792e633e33ea358a9fa6abf14baed66f93466d2cdd4207769",
+          "error": null,
+          "current_seconds": 7.64,
+          "target_seconds": 4.0,
+          "exceeded_seconds": 3.64
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "e336f3337b8d842792e633e33ea358a9fa6abf14baed66f93466d2cdd4207769",
+          "offline_estimated_seconds": 7.64,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 4,
+          "script_revision": 2,
+          "script_version": "7e34debd564b1d6ea67c7d1dfee277fc6f4b140f7fe9a8f1314aa20625fb157e",
+          "offline_estimated_seconds": 2.35,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "duration_revision"
+      ]
+    },
+    {
+      "group": "examples",
+      "run_id": "live_sparse_round1",
+      "trace": "examples/traces/live_sparse_round1.json",
+      "trace_sha256": "7dc5b09ed248b2816d8989ef33e037691e53ca54eea3924c84247cda641fb7ba",
+      "aliases": [],
+      "events_path": "examples/traces/live_sparse_round1.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "examples/live-summary.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 8,
+      "max_steps": 12,
+      "request_records": 8,
+      "response_records": 8,
+      "runtime_duration_estimates": [
+        10.28,
+        7.65
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "5abb31614e2699fb67cf32dc658608d0ea9a382ad378e41b5efc1a1ee4cb63ad",
+          "error": null,
+          "current_seconds": 10.28,
+          "target_seconds": 10.0,
+          "exceeded_seconds": 0.28
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "5abb31614e2699fb67cf32dc658608d0ea9a382ad378e41b5efc1a1ee4cb63ad",
+          "offline_estimated_seconds": 10.28,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 4,
+          "script_revision": 2,
+          "script_version": "df12d3e1a60ceb7e54658f1caf104315986aa678a27850872b845355f380be03",
+          "offline_estimated_seconds": 8.54,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 5,
+          "script_revision": 3,
+          "script_version": "6c628163039154d1d048ee7ca2f7d006b33d637bc23b978a0ad362f2aaaf2713",
+          "offline_estimated_seconds": 7.65,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "duration_revision"
+      ]
+    },
+    {
+      "group": "examples",
+      "run_id": "live_tool_failure_round1",
+      "trace": "examples/traces/live_tool_failure_round1.json",
+      "trace_sha256": "f75262de4341caf2fe576adb1b8478a09a2ba66afe9c7c07eb60114dd7fc1388",
+      "aliases": [],
+      "events_path": "examples/traces/live_tool_failure_round1.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "examples/live-summary.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 8,
+      "max_steps": 12,
+      "request_records": 8,
+      "response_records": 8,
+      "runtime_duration_estimates": [
+        30.91,
+        23.18
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "injected_tool_failure",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "b04acb8becdf95e8d69ca765c6bce0a77b4a918cde393587834999b4775b6df8",
+          "error": {
+            "type": "RuntimeError",
+            "message": "Injected one-time tool failure"
+          }
+        },
+        {
+          "step": 4,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "b04acb8becdf95e8d69ca765c6bce0a77b4a918cde393587834999b4775b6df8",
+          "error": null,
+          "current_seconds": 30.91,
+          "target_seconds": 30.0,
+          "exceeded_seconds": 0.91
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "b04acb8becdf95e8d69ca765c6bce0a77b4a918cde393587834999b4775b6df8",
+          "offline_estimated_seconds": 30.91,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 5,
+          "script_revision": 2,
+          "script_version": "769ddfe5f2700db84edce53f347508331604ac771d240f13faaa05c322f5a446",
+          "offline_estimated_seconds": 23.18,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "duration_revision",
+        "tool_retry"
+      ]
+    },
+    {
+      "group": "phase1_fixed",
+      "run_id": "holdout-01",
+      "trace": "eval/runs/20261028T052239Z_743fa464/traces/holdout-01.json",
+      "trace_sha256": "ca27cfb50b7ada44dcb6a41392f69457b20a74ca43c5b09cd392c0e8e31b200b",
+      "aliases": [],
+      "events_path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-01.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 6,
+      "max_steps": 12,
+      "request_records": 6,
+      "response_records": 6,
+      "runtime_duration_estimates": [
+        20.56
+      ],
+      "runtime_issues": [
+        {
+          "step": 2,
+          "kind": "draft_argument_validation_rejection",
+          "action": "draft_script",
+          "recovered_by_final_completed": true,
+          "script_version": null,
+          "error": {
+            "type": "ValidationError",
+            "message": "7 validation errors for DraftArgs\nscript.storyboard.2\n  Value error, Scene requires narration or subtitles [type=value_error, input_value={'scene_id': 'S3', 'visua...s': [], 'fact_refs': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error\nscript.storyboard.3\n  Value error, Scene requires narration or subtitles [type=value_error, input_value={'scene_id': 'S4', 'visua...s': [], 'fact_refs': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error\nscript.storyboard.4\n  Value error, Scene requires narration or subtitles [type=value_error, input_value={'scene_id': 'S5', 'visua...s': [], 'fact_refs': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error\nscript.storyboard.5\n  Value error, Scene requires narration or subtitles [type=value_error, input_value={'scene_id': 'S6', 'visua...s': [], 'fact_refs': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error\nscript.storyboard.6\n  Value error, Scene requires narration or subtitles [type=value_error, input_value={'scene_id': 'S7', 'visua...s': [], 'fact_refs': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error\nscript.storyboard.7\n  Value error, Scene requires narration or subtitles [type=value_error, input_value={'scene_id': 'S8', 'visua...s': [], 'fact_refs': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error\nscript.storyboard.8\n  Value error, Scene requires narration or subtitles [type=value_error, input_value={'scene_id': 'S9', 'visua...s': [], 'fact_refs': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error"
+          }
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 3,
+          "script_revision": 1,
+          "script_version": "d4502793fa34bd0c4361b56442634e16f2d62dfb7d2ec05417a1c65e60d1aba9",
+          "offline_estimated_seconds": 20.56,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "historical_scores": [
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        }
+      ]
+    },
+    {
+      "group": "phase1_fixed",
+      "run_id": "holdout-02",
+      "trace": "eval/runs/20261028T052239Z_743fa464/traces/holdout-02.json",
+      "trace_sha256": "c28f6d2317b1a1fdc55c99e893119ca9a33fca0f8554c597f7197f79edc284e4",
+      "aliases": [],
+      "events_path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-02.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 5,
+      "max_steps": 12,
+      "request_records": 5,
+      "response_records": 5,
+      "runtime_duration_estimates": [
+        6.18
+      ],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "07370696690577d62a6f692695822e26b2261e8e450373dcd7bcc290be0b74b3",
+          "offline_estimated_seconds": 6.18,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "historical_scores": [
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        }
+      ]
+    },
+    {
+      "group": "phase1_fixed",
+      "run_id": "holdout-03",
+      "trace": "eval/runs/20261028T052239Z_743fa464/traces/holdout-03.json",
+      "trace_sha256": "387f76e8b5d2dc8c29029adef1f1b80ad663e6b49573b4c20e376bf087f11f65",
+      "aliases": [],
+      "events_path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-03.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 9,
+      "max_steps": 12,
+      "request_records": 9,
+      "response_records": 9,
+      "runtime_duration_estimates": [
+        13.38,
+        12.79
+      ],
+      "runtime_issues": [
+        {
+          "step": 4,
+          "kind": "rule_check_rejection",
+          "action": "check_brand_rules",
+          "recovered_by_final_completed": true,
+          "script_version": "bf62fcc870dc1a326b0c0c40c6875080c78e8a5397f428b3fd54baf00bff1845",
+          "error": null,
+          "violations": [
+            {
+              "code": "missing_fact_reference",
+              "location": "S3",
+              "detail": "E03"
+            },
+            {
+              "code": "missing_fact_reference",
+              "location": "S4",
+              "detail": "E03"
+            },
+            {
+              "code": "missing_fact_reference",
+              "location": "S5",
+              "detail": "E03"
+            }
+          ]
+        },
+        {
+          "step": 6,
+          "kind": "model_response_protocol_error",
+          "action": "model_error",
+          "recovered_by_final_completed": true,
+          "script_version": "58d94439e69e51dd45f9c9008657ab45d0b67555979a92b29903cb2cca3ea93e",
+          "error": {
+            "type": "ModelError",
+            "message": "Invalid model response or transport failure: JSONDecodeError"
+          },
+          "parser_diagnostic": "JSONDecodeError: Extra data: line 2 column 1 (char 109)"
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "bf62fcc870dc1a326b0c0c40c6875080c78e8a5397f428b3fd54baf00bff1845",
+          "offline_estimated_seconds": 13.38,
+          "offline_duration_passed": true,
+          "offline_rule_passed": false,
+          "offline_violations": [
+            {
+              "code": "missing_fact_reference",
+              "location": "S3",
+              "detail": "E03"
+            },
+            {
+              "code": "missing_fact_reference",
+              "location": "S4",
+              "detail": "E03"
+            },
+            {
+              "code": "missing_fact_reference",
+              "location": "S5",
+              "detail": "E03"
+            }
+          ],
+          "runtime_observation": false
+        },
+        {
+          "step": 5,
+          "script_revision": 2,
+          "script_version": "58d94439e69e51dd45f9c9008657ab45d0b67555979a92b29903cb2cca3ea93e",
+          "offline_estimated_seconds": 12.79,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "historical_scores": [
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/results.json",
+          "case_pass": false,
+          "task_completed": false,
+          "replay_issues": [
+            {
+              "step": 6,
+              "phase": "unsupported_or_invalid_record",
+              "problem": "ValidationError"
+            }
+          ]
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        }
+      ]
+    },
+    {
+      "group": "phase1_fixed",
+      "run_id": "holdout-04",
+      "trace": "eval/runs/20261028T052239Z_743fa464/traces/holdout-04.json",
+      "trace_sha256": "c0b4cf9e811b395204e5542b60341045dbb7c892ed65127581a9ef5f2fe1a76f",
+      "aliases": [],
+      "events_path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-04.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 6,
+      "max_steps": 12,
+      "request_records": 6,
+      "response_records": 6,
+      "runtime_duration_estimates": [
+        12.75
+      ],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "6ee2f15c26cbdf47777a98e5c089634e95442a2f9c0c6a072b6a635e9cb45978",
+          "offline_estimated_seconds": 12.75,
+          "offline_duration_passed": true,
+          "offline_rule_passed": false,
+          "offline_violations": [
+            {
+              "code": "unverified_text",
+              "location": "S2.visual",
+              "detail": "Uncovered text requires evidence or human confirmation: 画面展示产品界面"
+            }
+          ],
+          "runtime_observation": false
+        },
+        {
+          "step": 3,
+          "script_revision": 2,
+          "script_version": "1c491636b04e77c3b53b202d19afac805650623854c02b3e56d6c11c85dd0016",
+          "offline_estimated_seconds": 12.75,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "historical_scores": [
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        }
+      ]
+    },
+    {
+      "group": "phase1_fixed",
+      "run_id": "holdout-05",
+      "trace": "eval/runs/20261028T052239Z_743fa464/traces/holdout-05.json",
+      "trace_sha256": "88dbffa7887564269759eb6877b4d4590f4dd5b6b752bf6f067cc1f108ba5b97",
+      "aliases": [],
+      "events_path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-05.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 7,
+      "max_steps": 12,
+      "request_records": 7,
+      "response_records": 7,
+      "runtime_duration_estimates": [
+        5.52,
+        2.76
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "d5dcc3d1f79bdccc73226bfd85282bbb1262f98f30d55d3d522ef1d61a55b5c4",
+          "error": null,
+          "current_seconds": 5.52,
+          "target_seconds": 3.5,
+          "exceeded_seconds": 2.02
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "d5dcc3d1f79bdccc73226bfd85282bbb1262f98f30d55d3d522ef1d61a55b5c4",
+          "offline_estimated_seconds": 5.52,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 4,
+          "script_revision": 2,
+          "script_version": "3e1a624c68ed5b5b957fe445bc9e7e7d1cd860cf45cf2c063453522554eb90ff",
+          "offline_estimated_seconds": 2.76,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "historical_scores": [
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        }
+      ]
+    },
+    {
+      "group": "phase1_fixed",
+      "run_id": "holdout-06",
+      "trace": "eval/runs/20261028T052239Z_743fa464/traces/holdout-06.json",
+      "trace_sha256": "e4b8d758ca1dca3493cb08e5c5728d7aa916ce16faf0be0edd65c7b451e897ba",
+      "aliases": [],
+      "events_path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-06.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 7,
+      "max_steps": 12,
+      "request_records": 7,
+      "response_records": 7,
+      "runtime_duration_estimates": [
+        6.18,
+        2.98
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "0e70933c02786a5032ae1a94ab52f92b9c18ac3ba42dbb31ff42a40639947f62",
+          "error": null,
+          "current_seconds": 6.18,
+          "target_seconds": 4.5,
+          "exceeded_seconds": 1.68
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "0e70933c02786a5032ae1a94ab52f92b9c18ac3ba42dbb31ff42a40639947f62",
+          "offline_estimated_seconds": 6.18,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 4,
+          "script_revision": 2,
+          "script_version": "f2659286c19ac0c11b76b9b00ff5c03b038f519836f27021f1993406be2ebd2e",
+          "offline_estimated_seconds": 2.98,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "historical_scores": [
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        }
+      ]
+    },
+    {
+      "group": "phase1_fixed",
+      "run_id": "holdout-07",
+      "trace": "eval/runs/20261028T052239Z_743fa464/traces/holdout-07.json",
+      "trace_sha256": "2a55eb075b9fe1e66466eaa8eef6d09187da20778d505d8ad46dc3581ddb5ab7",
+      "aliases": [],
+      "events_path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-07.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 7,
+      "max_steps": 12,
+      "request_records": 7,
+      "response_records": 7,
+      "runtime_duration_estimates": [
+        5.74,
+        2.76
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "1c5f39ad09b8583223aac96a740869b3211e52e2322dff65af0ac07b464c8d73",
+          "error": null,
+          "current_seconds": 5.74,
+          "target_seconds": 3.5,
+          "exceeded_seconds": 2.24
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "1c5f39ad09b8583223aac96a740869b3211e52e2322dff65af0ac07b464c8d73",
+          "offline_estimated_seconds": 5.74,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 4,
+          "script_revision": 2,
+          "script_version": "03d29fd7734f11d897b753f8ec144fe780106f53768429bcc80b65a584ec6bf9",
+          "offline_estimated_seconds": 2.76,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "historical_scores": [
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        }
+      ]
+    },
+    {
+      "group": "phase1_fixed",
+      "run_id": "holdout-08",
+      "trace": "eval/runs/20261028T052239Z_743fa464/traces/holdout-08.json",
+      "trace_sha256": "4efe6aa14fdd985e1e856834f671c3636a77f2a494dbf8454096f3aaf33bd9ab",
+      "aliases": [],
+      "events_path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-08.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 7,
+      "max_steps": 12,
+      "request_records": 7,
+      "response_records": 7,
+      "runtime_duration_estimates": [
+        5.52,
+        2.76
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "0486a5bcb836a4de24b74999615dca517605160720d16e9eca78c9630dd1d204",
+          "error": null,
+          "current_seconds": 5.52,
+          "target_seconds": 4.5,
+          "exceeded_seconds": 1.02
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "0486a5bcb836a4de24b74999615dca517605160720d16e9eca78c9630dd1d204",
+          "offline_estimated_seconds": 5.52,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 4,
+          "script_revision": 2,
+          "script_version": "fd50f45569986aabf6c31f0f73aeda2a8abccbb9d0d4fbe254a0cf5f2a4e3c24",
+          "offline_estimated_seconds": 2.76,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "historical_scores": [
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        }
+      ]
+    },
+    {
+      "group": "phase1_fixed",
+      "run_id": "holdout-09",
+      "trace": "eval/runs/20261028T052239Z_743fa464/traces/holdout-09.json",
+      "trace_sha256": "ca39a41abb6484cec73d6fd3742fa7111e586cbb8d0f810571b7409933162208",
+      "aliases": [],
+      "events_path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-09.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "needs_info",
+      "classification": "expected_needs_info",
+      "case_pass": true,
+      "case_acceptance_source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+      "is_script_task_completed": false,
+      "needs_info_is_failure": false,
+      "final_reason": "User input or reliable evidence is required",
+      "steps": 4,
+      "max_steps": 12,
+      "request_records": 4,
+      "response_records": 4,
+      "runtime_duration_estimates": [],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [],
+      "historical_scores": [
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/results.json",
+          "case_pass": true,
+          "task_completed": false,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+          "case_pass": true,
+          "task_completed": false,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+          "case_pass": true,
+          "task_completed": false,
+          "replay_issues": []
+        }
+      ]
+    },
+    {
+      "group": "phase1_fixed",
+      "run_id": "holdout-10",
+      "trace": "eval/runs/20261028T052239Z_743fa464/traces/holdout-10.json",
+      "trace_sha256": "584f90cbe010281523a8869c4bf8e09659dc35524dd147039751afddd48267bb",
+      "aliases": [],
+      "events_path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-10.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "needs_info",
+      "classification": "expected_needs_info",
+      "case_pass": true,
+      "case_acceptance_source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+      "is_script_task_completed": false,
+      "needs_info_is_failure": false,
+      "final_reason": "User input or reliable evidence is required",
+      "steps": 5,
+      "max_steps": 12,
+      "request_records": 5,
+      "response_records": 5,
+      "runtime_duration_estimates": [],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [],
+      "historical_scores": [
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/results.json",
+          "case_pass": true,
+          "task_completed": false,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+          "case_pass": true,
+          "task_completed": false,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+          "case_pass": true,
+          "task_completed": false,
+          "replay_issues": []
+        }
+      ]
+    },
+    {
+      "group": "phase1_fixed",
+      "run_id": "holdout-11",
+      "trace": "eval/runs/20261028T052239Z_743fa464/traces/holdout-11.json",
+      "trace_sha256": "c854c74541111bdc6922afeaeffa131b8f202e45352b434695495c34555fc507",
+      "aliases": [],
+      "events_path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-11.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "needs_info",
+      "classification": "expected_needs_info",
+      "case_pass": true,
+      "case_acceptance_source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+      "is_script_task_completed": false,
+      "needs_info_is_failure": false,
+      "final_reason": "User input or reliable evidence is required",
+      "steps": 3,
+      "max_steps": 12,
+      "request_records": 3,
+      "response_records": 3,
+      "runtime_duration_estimates": [],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [],
+      "historical_scores": [
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/results.json",
+          "case_pass": true,
+          "task_completed": false,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+          "case_pass": true,
+          "task_completed": false,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+          "case_pass": true,
+          "task_completed": false,
+          "replay_issues": []
+        }
+      ]
+    },
+    {
+      "group": "phase1_fixed",
+      "run_id": "holdout-12",
+      "trace": "eval/runs/20261028T052239Z_743fa464/traces/holdout-12.json",
+      "trace_sha256": "13dff8d0f332b8287fa0f5a299e0cad78af290ff5b90fbb569952f2081a11c0d",
+      "aliases": [],
+      "events_path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-12.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 10,
+      "max_steps": 12,
+      "request_records": 10,
+      "response_records": 10,
+      "runtime_duration_estimates": [
+        20.64,
+        8.28
+      ],
+      "runtime_issues": [
+        {
+          "step": 1,
+          "kind": "injected_tool_failure",
+          "action": "search_assets",
+          "recovered_by_final_completed": true,
+          "script_version": null,
+          "error": {
+            "type": "RuntimeError",
+            "message": "Injected one-time tool failure"
+          }
+        },
+        {
+          "step": 4,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "cd702ee3130c11fdbed5272e075525478da3d31349a8c3aa6cc5f36040c21e93",
+          "error": null,
+          "current_seconds": 20.64,
+          "target_seconds": 20.0,
+          "exceeded_seconds": 0.64
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 3,
+          "script_revision": 1,
+          "script_version": "cd702ee3130c11fdbed5272e075525478da3d31349a8c3aa6cc5f36040c21e93",
+          "offline_estimated_seconds": 20.64,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 5,
+          "script_revision": 2,
+          "script_version": "19076125ba5d245436064970490ace542ad670f29d74262da898153adef5f2f2",
+          "offline_estimated_seconds": 18.24,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 6,
+          "script_revision": 3,
+          "script_version": "936e231249f1e49adba16773121924a506f21306d2f728413a8ef4882bfea954",
+          "offline_estimated_seconds": 11.04,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 7,
+          "script_revision": 4,
+          "script_version": "cff4ae2c7f99f277057aa5f83c800afc13f9b04543ca458410aad7d3fb8be21e",
+          "offline_estimated_seconds": 8.28,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "historical_scores": [
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        }
+      ]
+    },
+    {
+      "group": "phase1_fixed",
+      "run_id": "holdout-13",
+      "trace": "eval/runs/20261028T052239Z_743fa464/traces/holdout-13.json",
+      "trace_sha256": "9b7d5700b8f6c671c20fbf9045f9027e81eff472de7fbf35f63a063c0abf4c64",
+      "aliases": [],
+      "events_path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-13.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 6,
+      "max_steps": 12,
+      "request_records": 6,
+      "response_records": 6,
+      "runtime_duration_estimates": [
+        7.07
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "injected_tool_failure",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "a24f91133d27f8d5726da9916edbd82e23ac49229248052a44483c70279a31e9",
+          "error": {
+            "type": "RuntimeError",
+            "message": "Injected one-time tool failure"
+          }
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "a24f91133d27f8d5726da9916edbd82e23ac49229248052a44483c70279a31e9",
+          "offline_estimated_seconds": 7.07,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "historical_scores": [
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        }
+      ]
+    },
+    {
+      "group": "phase1_fixed",
+      "run_id": "holdout-14",
+      "trace": "eval/runs/20261028T052239Z_743fa464/traces/holdout-14.json",
+      "trace_sha256": "19b06740af4d852f4b95732a890755b59f8c23108237dd5b130eaf19efa4b869",
+      "aliases": [],
+      "events_path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-14.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 10,
+      "max_steps": 12,
+      "request_records": 10,
+      "response_records": 10,
+      "runtime_duration_estimates": [
+        13.83,
+        11.48
+      ],
+      "runtime_issues": [
+        {
+          "step": 5,
+          "kind": "injected_tool_failure",
+          "action": "check_brand_rules",
+          "recovered_by_final_completed": true,
+          "script_version": "24b141d4a731682566725e7e45c548f254bbc02e21e9f159f9cb0d3514e37cc8",
+          "error": {
+            "type": "RuntimeError",
+            "message": "Injected one-time tool failure"
+          }
+        },
+        {
+          "step": 6,
+          "kind": "rule_check_rejection",
+          "action": "check_brand_rules",
+          "recovered_by_final_completed": true,
+          "script_version": "24b141d4a731682566725e7e45c548f254bbc02e21e9f159f9cb0d3514e37cc8",
+          "error": null,
+          "violations": [
+            {
+              "code": "missing_fact_reference",
+              "location": "S5",
+              "detail": "E03"
+            }
+          ]
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "807fe65aff057fd28405ec8f291ac47705f83de1dc028c5609d915bedc7ce512",
+          "offline_estimated_seconds": 19.98,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 3,
+          "script_revision": 2,
+          "script_version": "24b141d4a731682566725e7e45c548f254bbc02e21e9f159f9cb0d3514e37cc8",
+          "offline_estimated_seconds": 13.83,
+          "offline_duration_passed": true,
+          "offline_rule_passed": false,
+          "offline_violations": [
+            {
+              "code": "missing_fact_reference",
+              "location": "S5",
+              "detail": "E03"
+            }
+          ],
+          "runtime_observation": false
+        },
+        {
+          "step": 7,
+          "script_revision": 3,
+          "script_version": "5f129054025564905b491db0c5029b07cd1593e93fde25790a3622c98f946acf",
+          "offline_estimated_seconds": 11.48,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "historical_scores": [
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        }
+      ]
+    },
+    {
+      "group": "phase1_fixed",
+      "run_id": "holdout-15",
+      "trace": "eval/runs/20261028T052239Z_743fa464/traces/holdout-15.json",
+      "trace_sha256": "4e7916833a2326ffe243b189c38a3305b38b72be7b8e2a6c04b714bf3392e1c9",
+      "aliases": [],
+      "events_path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-15.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 7,
+      "max_steps": 12,
+      "request_records": 7,
+      "response_records": 7,
+      "runtime_duration_estimates": [
+        20.62,
+        17.68
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "4edd7dd3c5dd73ac3f9457d1e926ada3cd3d20c949d8f383aeec43a072f764f3",
+          "error": null,
+          "current_seconds": 20.62,
+          "target_seconds": 20.0,
+          "exceeded_seconds": 0.62
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "4edd7dd3c5dd73ac3f9457d1e926ada3cd3d20c949d8f383aeec43a072f764f3",
+          "offline_estimated_seconds": 20.62,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 4,
+          "script_revision": 2,
+          "script_version": "9810a442d2e27b2ed0832a2f992e44bf933a5b0c841b8ddeaa9044ad73ccb17e",
+          "offline_estimated_seconds": 17.68,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "historical_scores": [
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        }
+      ]
+    },
+    {
+      "group": "phase1_fixed",
+      "run_id": "holdout-16",
+      "trace": "eval/runs/20261028T052239Z_743fa464/traces/holdout-16.json",
+      "trace_sha256": "415f7952bf445b211f8c694caaf85474e647cfe051af38fad6e431a90bffd79e",
+      "aliases": [],
+      "events_path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-16.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 9,
+      "max_steps": 12,
+      "request_records": 9,
+      "response_records": 9,
+      "runtime_duration_estimates": [
+        8.53,
+        8.53
+      ],
+      "runtime_issues": [
+        {
+          "step": 5,
+          "kind": "rule_check_rejection",
+          "action": "check_brand_rules",
+          "recovered_by_final_completed": true,
+          "script_version": "cce563642be76d55a8de629a69f377ec71af00ecf2bfb8cb027ab104d33c2e38",
+          "error": null,
+          "violations": [
+            {
+              "code": "missing_fact_reference",
+              "location": "S1",
+              "detail": "E02"
+            }
+          ]
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "eea612e70d422538822caa32d2899b5c17cac35e6d4824f3f8195dd23be4e550",
+          "offline_estimated_seconds": 19.41,
+          "offline_duration_passed": true,
+          "offline_rule_passed": false,
+          "offline_violations": [
+            {
+              "code": "missing_fact_reference",
+              "location": "S1",
+              "detail": "E02"
+            },
+            {
+              "code": "missing_fact_reference",
+              "location": "S4",
+              "detail": "E02"
+            },
+            {
+              "code": "missing_fact_reference",
+              "location": "S6",
+              "detail": "E02"
+            }
+          ],
+          "runtime_observation": false
+        },
+        {
+          "step": 3,
+          "script_revision": 2,
+          "script_version": "cce563642be76d55a8de629a69f377ec71af00ecf2bfb8cb027ab104d33c2e38",
+          "offline_estimated_seconds": 8.53,
+          "offline_duration_passed": true,
+          "offline_rule_passed": false,
+          "offline_violations": [
+            {
+              "code": "missing_fact_reference",
+              "location": "S1",
+              "detail": "E02"
+            }
+          ],
+          "runtime_observation": false
+        },
+        {
+          "step": 6,
+          "script_revision": 3,
+          "script_version": "11f2d4c9a6369f622fbf83f8aa4680379ef635127b6892586460810207cb57dc",
+          "offline_estimated_seconds": 8.53,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "historical_scores": [
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        }
+      ]
+    },
+    {
+      "group": "phase1_fixed",
+      "run_id": "holdout-17",
+      "trace": "eval/runs/20261028T052239Z_743fa464/traces/holdout-17.json",
+      "trace_sha256": "efc636fb9944e3b7becddc41cbea0d0ef3791b43f186d2bd31d982231ed102a5",
+      "aliases": [],
+      "events_path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-17.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 7,
+      "max_steps": 12,
+      "request_records": 7,
+      "response_records": 7,
+      "runtime_duration_estimates": [
+        20.12,
+        11.03
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "f09a6c774a29aec65acf4c94e02aba5c0aa410da4789719e5ea7f79e4412d7e9",
+          "error": null,
+          "current_seconds": 20.12,
+          "target_seconds": 20.0,
+          "exceeded_seconds": 0.12
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "f09a6c774a29aec65acf4c94e02aba5c0aa410da4789719e5ea7f79e4412d7e9",
+          "offline_estimated_seconds": 20.12,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 4,
+          "script_revision": 2,
+          "script_version": "251f296a47eaa8cc02c365d417a15b09c0d17a75fafd462a78a82d44153de1c6",
+          "offline_estimated_seconds": 11.03,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "historical_scores": [
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        }
+      ]
+    },
+    {
+      "group": "phase1_fixed",
+      "run_id": "holdout-18",
+      "trace": "eval/runs/20261028T052239Z_743fa464/traces/holdout-18.json",
+      "trace_sha256": "af9097b817a2618b95246ab36be4ffd55aff43484cbc1234632771d4d0ebfc81",
+      "aliases": [],
+      "events_path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-18.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 6,
+      "max_steps": 12,
+      "request_records": 6,
+      "response_records": 6,
+      "runtime_duration_estimates": [
+        19.8
+      ],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "be984d8725e73b046412ec77f6653c0e5a8c1734df0ec16c3447d53b59c51cab",
+          "offline_estimated_seconds": 22.15,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 3,
+          "script_revision": 2,
+          "script_version": "200cd5f8dac234a408063f5222fd77bbbcd2b70a86bdcd094b277c37eccfa568",
+          "offline_estimated_seconds": 19.8,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "historical_scores": [
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        }
+      ]
+    },
+    {
+      "group": "phase1_fixed",
+      "run_id": "holdout-19",
+      "trace": "eval/runs/20261028T052239Z_743fa464/traces/holdout-19.json",
+      "trace_sha256": "b782b12f0699c30b697d6c18ff2b0847a8d32f7624ba40eaea654f8a6a853780",
+      "aliases": [],
+      "events_path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-19.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 7,
+      "max_steps": 12,
+      "request_records": 7,
+      "response_records": 7,
+      "runtime_duration_estimates": [
+        20.62,
+        18.27
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "ca4f44e9b6f2c8fa9462448de900c74c077667d89fccb6f6b31ace653da38a6f",
+          "error": null,
+          "current_seconds": 20.62,
+          "target_seconds": 20.0,
+          "exceeded_seconds": 0.62
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "ca4f44e9b6f2c8fa9462448de900c74c077667d89fccb6f6b31ace653da38a6f",
+          "offline_estimated_seconds": 20.62,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 4,
+          "script_revision": 2,
+          "script_version": "0837870a72e578c25c4bb6fa027dbd21abb952d11cddb9a38afd2cd5a16ab0a3",
+          "offline_estimated_seconds": 18.27,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "historical_scores": [
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+          "case_pass": true,
+          "task_completed": true,
+          "replay_issues": []
+        }
+      ]
+    },
+    {
+      "group": "phase1_fixed",
+      "run_id": "holdout-20",
+      "trace": "eval/runs/20261028T052239Z_743fa464/traces/holdout-20.json",
+      "trace_sha256": "d2d4b061b31e8ed3197503cbc5f7c78556d11e873c7a69061ecec3988183cde8",
+      "aliases": [],
+      "events_path": "eval/runs/20261028T052239Z_743fa464/traces/holdout-20.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "incomplete",
+      "classification": "terminal_failure",
+      "case_pass": false,
+      "case_acceptance_source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+      "is_script_task_completed": false,
+      "needs_info_is_failure": null,
+      "final_reason": "Reached max_steps=12 without a verified result",
+      "steps": 12,
+      "max_steps": 12,
+      "request_records": 12,
+      "response_records": 12,
+      "runtime_duration_estimates": [
+        20.64,
+        18.25
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": false,
+          "script_version": "c8dffbc20b395e94f0ce803231eafe601e9f4791ec741863a8e853a47d72a8aa",
+          "error": null,
+          "current_seconds": 20.64,
+          "target_seconds": 20.0,
+          "exceeded_seconds": 0.64
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "c8dffbc20b395e94f0ce803231eafe601e9f4791ec741863a8e853a47d72a8aa",
+          "offline_estimated_seconds": 20.64,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 4,
+          "script_revision": 2,
+          "script_version": "131917fdcf87c434d8cc307e85a925c8dc94867742f25a1f59eec04c367accca",
+          "offline_estimated_seconds": 17.18,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 5,
+          "script_revision": 3,
+          "script_version": "d41918655fdfa3ae1cfbe6aa99e8c568df42d63ba14eee02e0b871f302a3ab6e",
+          "offline_estimated_seconds": 19.13,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 6,
+          "script_revision": 4,
+          "script_version": "b3956d077dc1d006e5ab47207acf9b145bfc8e93e203209c5de27ae045eff84b",
+          "offline_estimated_seconds": 17.4,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 7,
+          "script_revision": 5,
+          "script_version": "affc178d328c71830bd60ebe6bc477312dd89ef0c858dd2831f71193257cbab1",
+          "offline_estimated_seconds": 16.37,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 8,
+          "script_revision": 6,
+          "script_version": "8c26c4804d24ac52a5caf089ff799eb00e359815edf1ff61f0da620606030634",
+          "offline_estimated_seconds": 18.73,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 9,
+          "script_revision": 7,
+          "script_version": "62e258f4313da3d4580b66306f33cf6779ea1735b2600450d5770c5f1e837100",
+          "offline_estimated_seconds": 16.17,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 10,
+          "script_revision": 8,
+          "script_version": "d64ac5be7be97dbf085747671f4f434c46275303b5c75563e89ca050243d9966",
+          "offline_estimated_seconds": 18.25,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ],
+      "historical_scores": [
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/results.json",
+          "case_pass": false,
+          "task_completed": false,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T053239Z_d3fe90/results.json",
+          "case_pass": false,
+          "task_completed": false,
+          "replay_issues": []
+        },
+        {
+          "source": "eval/runs/20261028T052239Z_743fa464/rescore_20261028T070111Z_506938/results.json",
+          "case_pass": false,
+          "task_completed": false,
+          "replay_issues": []
+        }
+      ]
+    },
+    {
+      "group": "phase2_fixed",
+      "run_id": "holdout-01",
+      "trace": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-01.json",
+      "trace_sha256": "bd7b3e3af04d1efa47a1a2cf79923d7465bde7fefe094248afb21150ea9b224a",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-01.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 5,
+      "max_steps": 12,
+      "request_records": 5,
+      "response_records": 5,
+      "runtime_duration_estimates": [
+        9.35
+      ],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "e2ed1fbaeba58050c4899402208f18d6f5993be2c92cd75277ebc7d5dff9fcc2",
+          "offline_estimated_seconds": 9.35,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_fixed",
+      "run_id": "holdout-02",
+      "trace": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-02.json",
+      "trace_sha256": "0d20e3232843140967c6c33b6c773e2408f8f65070286c7ef7dbf9a446493e2a",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-02.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 5,
+      "max_steps": 12,
+      "request_records": 5,
+      "response_records": 5,
+      "runtime_duration_estimates": [
+        20.68
+      ],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "aeac83a349fe3a1efec48a44abdb5f30ffebca566e9e0ae22dbb4bd8000f1e0b",
+          "offline_estimated_seconds": 20.68,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_fixed",
+      "run_id": "holdout-03",
+      "trace": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-03.json",
+      "trace_sha256": "297b759b8970bec5d6844ea1df26df4feedc2fbae8617481cd9b0fac6115c234",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-03.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 5,
+      "max_steps": 12,
+      "request_records": 5,
+      "response_records": 5,
+      "runtime_duration_estimates": [
+        6.81
+      ],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "644bc9a4994954fbfd10dac8b7e9f0b9b4843b0b54edf8d5f34c8eb1f9db8340",
+          "offline_estimated_seconds": 6.81,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_fixed",
+      "run_id": "holdout-04",
+      "trace": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-04.json",
+      "trace_sha256": "29d2699aa52259f969cb335166b6199c567f0880ea3ddae01b72d10f4e074f33",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-04.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 5,
+      "max_steps": 12,
+      "request_records": 5,
+      "response_records": 5,
+      "runtime_duration_estimates": [
+        7.46
+      ],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "6e763f4e3053da1e34540e0b01d523cddd1b82981d812e0ae1fe4faf63a51f57",
+          "offline_estimated_seconds": 7.46,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_fixed",
+      "run_id": "holdout-05",
+      "trace": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-05.json",
+      "trace_sha256": "10b334583597e31a0261a56e52ce4f8c9738a7b9e8519c51204351e9956c7b13",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-05.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 7,
+      "max_steps": 12,
+      "request_records": 7,
+      "response_records": 7,
+      "runtime_duration_estimates": [
+        5.52,
+        2.76
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "d5dcc3d1f79bdccc73226bfd85282bbb1262f98f30d55d3d522ef1d61a55b5c4",
+          "error": null,
+          "current_seconds": 5.52,
+          "target_seconds": 3.5,
+          "exceeded_seconds": 2.02
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "d5dcc3d1f79bdccc73226bfd85282bbb1262f98f30d55d3d522ef1d61a55b5c4",
+          "offline_estimated_seconds": 5.52,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 4,
+          "script_revision": 2,
+          "script_version": "3e1a624c68ed5b5b957fe445bc9e7e7d1cd860cf45cf2c063453522554eb90ff",
+          "offline_estimated_seconds": 2.76,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_fixed",
+      "run_id": "holdout-06",
+      "trace": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-06.json",
+      "trace_sha256": "fd1693af8af6ddbe2b7df1062604b387b2c7e53a176a517887b515a0bb4fd406",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-06.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 7,
+      "max_steps": 12,
+      "request_records": 7,
+      "response_records": 7,
+      "runtime_duration_estimates": [
+        6.18,
+        2.98
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "0e70933c02786a5032ae1a94ab52f92b9c18ac3ba42dbb31ff42a40639947f62",
+          "error": null,
+          "current_seconds": 6.18,
+          "target_seconds": 4.5,
+          "exceeded_seconds": 1.68
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "0e70933c02786a5032ae1a94ab52f92b9c18ac3ba42dbb31ff42a40639947f62",
+          "offline_estimated_seconds": 6.18,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 4,
+          "script_revision": 2,
+          "script_version": "f2659286c19ac0c11b76b9b00ff5c03b038f519836f27021f1993406be2ebd2e",
+          "offline_estimated_seconds": 2.98,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_fixed",
+      "run_id": "holdout-07",
+      "trace": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-07.json",
+      "trace_sha256": "bc6a096bc0e8bdd2257864b954a90f5286b90f8b00f155a0e657a541fde5ffa7",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-07.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 7,
+      "max_steps": 12,
+      "request_records": 7,
+      "response_records": 7,
+      "runtime_duration_estimates": [
+        5.74,
+        2.76
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "6be912e7809c2a23df509e4b9efbf798460094e97d359aa729737211f112426b",
+          "error": null,
+          "current_seconds": 5.74,
+          "target_seconds": 3.5,
+          "exceeded_seconds": 2.24
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "6be912e7809c2a23df509e4b9efbf798460094e97d359aa729737211f112426b",
+          "offline_estimated_seconds": 5.74,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 4,
+          "script_revision": 2,
+          "script_version": "03d29fd7734f11d897b753f8ec144fe780106f53768429bcc80b65a584ec6bf9",
+          "offline_estimated_seconds": 2.76,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_fixed",
+      "run_id": "holdout-08",
+      "trace": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-08.json",
+      "trace_sha256": "8f9acf16f8b9f1464b56da43ab5fd9cae95ef94ba1f83bd263f700186b27d7c7",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-08.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 7,
+      "max_steps": 12,
+      "request_records": 7,
+      "response_records": 7,
+      "runtime_duration_estimates": [
+        5.52,
+        2.76
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "f247aed5be1f86188f41ee6419204358c89297f45344bd22ec607562595230e6",
+          "error": null,
+          "current_seconds": 5.52,
+          "target_seconds": 4.5,
+          "exceeded_seconds": 1.02
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "f247aed5be1f86188f41ee6419204358c89297f45344bd22ec607562595230e6",
+          "offline_estimated_seconds": 5.52,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 4,
+          "script_revision": 2,
+          "script_version": "fd50f45569986aabf6c31f0f73aeda2a8abccbb9d0d4fbe254a0cf5f2a4e3c24",
+          "offline_estimated_seconds": 2.76,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_fixed",
+      "run_id": "holdout-09",
+      "trace": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-09.json",
+      "trace_sha256": "0e7ff8a570ae4114faffb73e3b0233d2c760e0d4259e2c516465a737c7229be8",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-09.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "needs_info",
+      "classification": "expected_needs_info",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/results.json",
+      "is_script_task_completed": false,
+      "needs_info_is_failure": false,
+      "final_reason": "User input or reliable evidence is required",
+      "steps": 5,
+      "max_steps": 12,
+      "request_records": 5,
+      "response_records": 5,
+      "runtime_duration_estimates": [],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": []
+    },
+    {
+      "group": "phase2_fixed",
+      "run_id": "holdout-10",
+      "trace": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-10.json",
+      "trace_sha256": "12f282ad9ee08e8bb3fbd92a2c5e6aa0d8ea11baf0eb5fd8cc0b72ce02e70556",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-10.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "needs_info",
+      "classification": "expected_needs_info",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/results.json",
+      "is_script_task_completed": false,
+      "needs_info_is_failure": false,
+      "final_reason": "User input or reliable evidence is required",
+      "steps": 3,
+      "max_steps": 12,
+      "request_records": 3,
+      "response_records": 3,
+      "runtime_duration_estimates": [],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": []
+    },
+    {
+      "group": "phase2_fixed",
+      "run_id": "holdout-11",
+      "trace": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-11.json",
+      "trace_sha256": "aabed1c5f310a5ea4fb49a3d01dc1da37121ca93f9ce560e73725f9fa1973339",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-11.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "needs_info",
+      "classification": "expected_needs_info",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/results.json",
+      "is_script_task_completed": false,
+      "needs_info_is_failure": false,
+      "final_reason": "User input or reliable evidence is required",
+      "steps": 3,
+      "max_steps": 12,
+      "request_records": 3,
+      "response_records": 3,
+      "runtime_duration_estimates": [],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": []
+    },
+    {
+      "group": "phase2_fixed",
+      "run_id": "holdout-12",
+      "trace": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-12.json",
+      "trace_sha256": "703e4c679fccad74cf46eb41ff13d5579494fd4a70ebdf1b4f4bc61772758699",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-12.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 6,
+      "max_steps": 12,
+      "request_records": 6,
+      "response_records": 6,
+      "runtime_duration_estimates": [
+        9.35
+      ],
+      "runtime_issues": [
+        {
+          "step": 1,
+          "kind": "injected_tool_failure",
+          "action": "search_assets",
+          "recovered_by_final_completed": true,
+          "script_version": null,
+          "error": {
+            "type": "RuntimeError",
+            "message": "Injected one-time tool failure"
+          }
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 3,
+          "script_revision": 1,
+          "script_version": "d14d936ea569b814f0a0e11b3f5ad0cd9d1a87d5f6a598beaebfecaadee396a2",
+          "offline_estimated_seconds": 9.35,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_fixed",
+      "run_id": "holdout-13",
+      "trace": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-13.json",
+      "trace_sha256": "faee93bab4ca246ac9d1b5ec3b2c1ccb12aeaf689c73af2f7cbbddd48177ad8b",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-13.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 6,
+      "max_steps": 12,
+      "request_records": 6,
+      "response_records": 6,
+      "runtime_duration_estimates": [
+        8.53
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "injected_tool_failure",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "df35876ddc976d1bfea6806fcd88441d68c930211f30a32bd6591f0b75796921",
+          "error": {
+            "type": "RuntimeError",
+            "message": "Injected one-time tool failure"
+          }
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "df35876ddc976d1bfea6806fcd88441d68c930211f30a32bd6591f0b75796921",
+          "offline_estimated_seconds": 8.53,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_fixed",
+      "run_id": "holdout-14",
+      "trace": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-14.json",
+      "trace_sha256": "c4dfd63b5e753db063a1ea371d64df50c76c743f848ad98b1906e782e7ba7663",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-14.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 7,
+      "max_steps": 12,
+      "request_records": 7,
+      "response_records": 7,
+      "runtime_duration_estimates": [
+        5.74,
+        5.74
+      ],
+      "runtime_issues": [
+        {
+          "step": 4,
+          "kind": "injected_tool_failure",
+          "action": "check_brand_rules",
+          "recovered_by_final_completed": true,
+          "script_version": "516cab8d05e2f3fec2bfebbabee834df9a9143fd4a96831752f94dc87679f5f9",
+          "error": {
+            "type": "RuntimeError",
+            "message": "Injected one-time tool failure"
+          }
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "516cab8d05e2f3fec2bfebbabee834df9a9143fd4a96831752f94dc87679f5f9",
+          "offline_estimated_seconds": 5.74,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_fixed",
+      "run_id": "holdout-15",
+      "trace": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-15.json",
+      "trace_sha256": "d297d43b5cb5602a9af8c81f613c77621a40dea2172fc19dcbb3b19d4e627cf3",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-15.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 5,
+      "max_steps": 12,
+      "request_records": 5,
+      "response_records": 5,
+      "runtime_duration_estimates": [
+        10.63
+      ],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "3e814775227f3246224667324660405749b9fc6a9720f9d9e0a08985100a0f55",
+          "offline_estimated_seconds": 10.63,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_fixed",
+      "run_id": "holdout-16",
+      "trace": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-16.json",
+      "trace_sha256": "cc3f454da60bfcff63b8237d015b9694daecb3f27217ceaa20b7e4016532280f",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-16.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 5,
+      "max_steps": 12,
+      "request_records": 5,
+      "response_records": 5,
+      "runtime_duration_estimates": [
+        7.25
+      ],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "387277e63952a5551ebf6c9c3926d1e89149d1715e10962c474a4cb6df9381f3",
+          "offline_estimated_seconds": 7.25,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_fixed",
+      "run_id": "holdout-17",
+      "trace": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-17.json",
+      "trace_sha256": "b6c0cf9eee8b06be8eaa9e8f5ba4d702e7ed43b539569488f124d515fd98e8b0",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-17.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 8,
+      "max_steps": 12,
+      "request_records": 8,
+      "response_records": 8,
+      "runtime_duration_estimates": [
+        12.79,
+        8.09
+      ],
+      "runtime_issues": [
+        {
+          "step": 4,
+          "kind": "rule_check_rejection",
+          "action": "check_brand_rules",
+          "recovered_by_final_completed": true,
+          "script_version": "e0e531e0115002420685c49660db852505b6f30fdfc02578eb9c29a4ffff048a",
+          "error": null,
+          "violations": [
+            {
+              "code": "missing_fact_reference",
+              "location": "S3",
+              "detail": "E03"
+            },
+            {
+              "code": "missing_fact_reference",
+              "location": "S4",
+              "detail": "E03"
+            },
+            {
+              "code": "missing_fact_reference",
+              "location": "S5",
+              "detail": "E03"
+            }
+          ]
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "e0e531e0115002420685c49660db852505b6f30fdfc02578eb9c29a4ffff048a",
+          "offline_estimated_seconds": 12.79,
+          "offline_duration_passed": true,
+          "offline_rule_passed": false,
+          "offline_violations": [
+            {
+              "code": "missing_fact_reference",
+              "location": "S3",
+              "detail": "E03"
+            },
+            {
+              "code": "missing_fact_reference",
+              "location": "S4",
+              "detail": "E03"
+            },
+            {
+              "code": "missing_fact_reference",
+              "location": "S5",
+              "detail": "E03"
+            }
+          ],
+          "runtime_observation": false
+        },
+        {
+          "step": 5,
+          "script_revision": 2,
+          "script_version": "4abd4d926397d9b0d2e3e835b4f392bbf05c56e0c9eff83067132c886e93a209",
+          "offline_estimated_seconds": 8.09,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_fixed",
+      "run_id": "holdout-18",
+      "trace": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-18.json",
+      "trace_sha256": "7c345fdb701265e5ea7cfc73b5056ee6163b0f7dc4eb0879a6b852381a444bb0",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-18.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 7,
+      "max_steps": 12,
+      "request_records": 7,
+      "response_records": 7,
+      "runtime_duration_estimates": [
+        20.21,
+        17.86
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "a9ed5611cd142138b23f7d9727ffc59c4e218ae1cdfb89237e7f4c3e292401c3",
+          "error": null,
+          "current_seconds": 20.21,
+          "target_seconds": 20.0,
+          "exceeded_seconds": 0.21
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "a9ed5611cd142138b23f7d9727ffc59c4e218ae1cdfb89237e7f4c3e292401c3",
+          "offline_estimated_seconds": 20.21,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 4,
+          "script_revision": 2,
+          "script_version": "3ca74e93be1862ca2f52cfbe1d51ae1f9c1a8174249c57c3939055d19360ac57",
+          "offline_estimated_seconds": 17.86,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_fixed",
+      "run_id": "holdout-19",
+      "trace": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-19.json",
+      "trace_sha256": "f389ac279373c2d6b2f42aeb8b684d54fed555b41b413275c26f317086c57307",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-19.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 6,
+      "max_steps": 12,
+      "request_records": 6,
+      "response_records": 6,
+      "runtime_duration_estimates": [
+        9.35
+      ],
+      "runtime_issues": [
+        {
+          "step": 2,
+          "kind": "draft_argument_validation_rejection",
+          "action": "draft_script",
+          "recovered_by_final_completed": true,
+          "script_version": null,
+          "error": {
+            "type": "ValidationError",
+            "message": "5 validation errors for DraftArgs\nscript.storyboard.0\n  Value error, Scene requires narration or subtitles [type=value_error, input_value={'scene_id': 'S1', 'visua...s': [], 'fact_refs': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error\nscript.storyboard.3\n  Value error, Scene requires narration or subtitles [type=value_error, input_value={'scene_id': 'S4', 'visua...s': [], 'fact_refs': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error\nscript.storyboard.4\n  Value error, Scene requires narration or subtitles [type=value_error, input_value={'scene_id': 'S5', 'visua...s': [], 'fact_refs': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error\nscript.storyboard.5\n  Value error, Scene requires narration or subtitles [type=value_error, input_value={'scene_id': 'S6', 'visua...s': [], 'fact_refs': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error\nscript.storyboard.6\n  Value error, Scene requires narration or subtitles [type=value_error, input_value={'scene_id': 'S7', 'visua...s': [], 'fact_refs': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/value_error"
+          }
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 3,
+          "script_revision": 1,
+          "script_version": "c81aa64345b49bb0c6a8a23eb1042d6420d87e6ad8c23c4c6f775467d657f627",
+          "offline_estimated_seconds": 9.35,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_fixed",
+      "run_id": "holdout-20",
+      "trace": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-20.json",
+      "trace_sha256": "3fbcee3b5e981d2d8a3e711834abd0fd3da56e06405949f723f72ea544e4deff",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/traces/holdout-20.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-fixed/20261028T070019Z_4610d425/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 5,
+      "max_steps": 12,
+      "request_records": 5,
+      "response_records": 5,
+      "runtime_duration_estimates": [
+        13.08
+      ],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "d101c8c1adf449a2a02a56bea9338ef780ace07b972339f683d180f12eb5321d",
+          "offline_estimated_seconds": 13.08,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_independent_baseline",
+      "run_id": "validation-01",
+      "trace": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/traces/validation-01.json",
+      "trace_sha256": "10095a065b0e0e5d6f3e897a54dfc74f8e7231f45aa7613724437e9e681e1d66",
+      "aliases": [],
+      "events_path": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/traces/validation-01.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 9,
+      "max_steps": 12,
+      "request_records": 9,
+      "response_records": 9,
+      "runtime_duration_estimates": [
+        18.18,
+        5.38
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "4ee41d84ff0b30db1ecb2121ae8a4caf414db380dbadc0dbb7a56ed7c33a18c2",
+          "error": null,
+          "current_seconds": 18.18,
+          "target_seconds": 18.0,
+          "exceeded_seconds": 0.18
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "4ee41d84ff0b30db1ecb2121ae8a4caf414db380dbadc0dbb7a56ed7c33a18c2",
+          "offline_estimated_seconds": 18.18,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 4,
+          "script_revision": 2,
+          "script_version": "0b510c247a223a7398642e1f827c9b4a410abeb1cd16218fed40694a059b20ff",
+          "offline_estimated_seconds": 12.51,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 5,
+          "script_revision": 3,
+          "script_version": "0d2204bd9e7022ffb589334d772bb4ca8667adcabb48a3f2192cb210767e37b6",
+          "offline_estimated_seconds": 10.37,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 6,
+          "script_revision": 4,
+          "script_version": "f82900596e585461392ace256e636c391dea57266ee7d96ab7e1c84d0b5de1fe",
+          "offline_estimated_seconds": 5.38,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_independent_baseline",
+      "run_id": "validation-02",
+      "trace": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/traces/validation-02.json",
+      "trace_sha256": "a714afc431a374defd43397acb1d5a40cac44ce9b3462d6fd92bc3b767466fb9",
+      "aliases": [],
+      "events_path": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/traces/validation-02.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 6,
+      "max_steps": 12,
+      "request_records": 6,
+      "response_records": 6,
+      "runtime_duration_estimates": [
+        8.09
+      ],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "7fc2a8f663c67bf0d9c2a62e9a7a000a477120fcd2563966b82331eab12a405f",
+          "offline_estimated_seconds": 18.53,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 3,
+          "script_revision": 2,
+          "script_version": "ed324954a510fd6e0fe137266b65769fbf51d501462c4a1146b48e9855382523",
+          "offline_estimated_seconds": 8.09,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_independent_baseline",
+      "run_id": "validation-03",
+      "trace": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/traces/validation-03.json",
+      "trace_sha256": "01e56377c1ef38f67f891403d0b49bb213f504825fa2dacd1598b1807efcd68b",
+      "aliases": [],
+      "events_path": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/traces/validation-03.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 6,
+      "max_steps": 12,
+      "request_records": 6,
+      "response_records": 6,
+      "runtime_duration_estimates": [
+        7.66
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "model_response_protocol_error",
+          "action": "model_error",
+          "recovered_by_final_completed": true,
+          "script_version": "2c3334a1aeb909b9c58b4eb13a79ba30406abf5491795bf3ad1c5360ffa720d4",
+          "error": {
+            "type": "ModelError",
+            "message": "Invalid model response or transport failure: JSONDecodeError"
+          },
+          "parser_diagnostic": "JSONDecodeError: Extra data: line 1 column 82 (char 81)"
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "2c3334a1aeb909b9c58b4eb13a79ba30406abf5491795bf3ad1c5360ffa720d4",
+          "offline_estimated_seconds": 7.66,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_independent_baseline",
+      "run_id": "validation-04",
+      "trace": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/traces/validation-04.json",
+      "trace_sha256": "0faca66c51e52d3f2b3f2cc4521543419ad7505e772db4999010f46c696f6670",
+      "aliases": [],
+      "events_path": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/traces/validation-04.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "failed",
+      "classification": "terminal_failure",
+      "case_pass": false,
+      "case_acceptance_source": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/results.json",
+      "is_script_task_completed": false,
+      "needs_info_is_failure": null,
+      "final_reason": "在2.0秒镜头下限加0.35秒转场的规则下，两个分镜至少需4.70秒，已超过3.5秒目标；且每镜须朗读一个不同完整事实，无法在不违反用户要求的前提下压缩达标。",
+      "steps": 4,
+      "max_steps": 12,
+      "request_records": 4,
+      "response_records": 4,
+      "runtime_duration_estimates": [
+        5.38
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": false,
+          "script_version": "d53d6dd13d42cc93a43349eeed83a76343d03aa67723d860164abacf914bad0e",
+          "error": null,
+          "current_seconds": 5.38,
+          "target_seconds": 3.5,
+          "exceeded_seconds": 1.88
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "d53d6dd13d42cc93a43349eeed83a76343d03aa67723d860164abacf914bad0e",
+          "offline_estimated_seconds": 5.38,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_independent_baseline",
+      "run_id": "validation-05",
+      "trace": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/traces/validation-05.json",
+      "trace_sha256": "cddbe12efb2cffd050524448b82a2b54999ceaab9d95b54586171f56ef558ff0",
+      "aliases": [],
+      "events_path": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/traces/validation-05.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "failed",
+      "classification": "terminal_failure",
+      "case_pass": false,
+      "case_acceptance_source": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/results.json",
+      "is_script_task_completed": false,
+      "needs_info_is_failure": null,
+      "final_reason": "3.5 秒的目标时长与既定拍摄要求无法兼容：用户要求两个分镜、每镜各使用一个不同产品事实并朗读，而品牌时长规则中单镜最短 2.0 秒、转场 0.35 秒，两镜合计最少 4.70 秒，即使把两镜事实句压到最短也必然超时。现有审片稿实测 5.74 秒，已确认超时 2.24 秒；若减到单镜又会丢失一个必需事实。因此在不改动用户创作要求的前提下，无法在 3.5 秒内同时交付两条独立事实的审片稿，建议把目标时长放宽到约 5.0 秒以上，或确认改为单镜单事实后再重做。",
+      "steps": 4,
+      "max_steps": 12,
+      "request_records": 4,
+      "response_records": 4,
+      "runtime_duration_estimates": [
+        5.74
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": false,
+          "script_version": "b54609ed2adee7c67776c345cba89edf27bfa3eed396e57e56de0b995c219b6d",
+          "error": null,
+          "current_seconds": 5.74,
+          "target_seconds": 3.5,
+          "exceeded_seconds": 2.24
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "b54609ed2adee7c67776c345cba89edf27bfa3eed396e57e56de0b995c219b6d",
+          "offline_estimated_seconds": 5.74,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_independent_baseline",
+      "run_id": "validation-06",
+      "trace": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/traces/validation-06.json",
+      "trace_sha256": "734f5cde9174f4a50e2e3098ce8d41f8d075d5f06143435a217b8ff8e22d87c6",
+      "aliases": [],
+      "events_path": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/traces/validation-06.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "needs_info",
+      "classification": "expected_needs_info",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/results.json",
+      "is_script_task_completed": false,
+      "needs_info_is_failure": false,
+      "final_reason": "User input or reliable evidence is required",
+      "steps": 4,
+      "max_steps": 12,
+      "request_records": 4,
+      "response_records": 4,
+      "runtime_duration_estimates": [],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": []
+    },
+    {
+      "group": "phase2_independent_baseline",
+      "run_id": "validation-07",
+      "trace": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/traces/validation-07.json",
+      "trace_sha256": "ea5fc966d88c92f76e91a9abe175d04edf0b86baa4dcad98598cd70e0b8a55d8",
+      "aliases": [],
+      "events_path": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/traces/validation-07.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "needs_info",
+      "classification": "expected_needs_info",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/results.json",
+      "is_script_task_completed": false,
+      "needs_info_is_failure": false,
+      "final_reason": "User input or reliable evidence is required",
+      "steps": 4,
+      "max_steps": 12,
+      "request_records": 4,
+      "response_records": 4,
+      "runtime_duration_estimates": [],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": []
+    },
+    {
+      "group": "phase2_independent_baseline",
+      "run_id": "validation-08",
+      "trace": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/traces/validation-08.json",
+      "trace_sha256": "3ecd263a08e818ef4d75bf969596fe3df5d47daf1666d4e4bc24271191325ec3",
+      "aliases": [],
+      "events_path": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/traces/validation-08.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 10,
+      "max_steps": 12,
+      "request_records": 10,
+      "response_records": 10,
+      "runtime_duration_estimates": [
+        18.94,
+        8.01,
+        8.01
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": true,
+          "script_version": "1ecfbc39cf9cd042adc533abd4e154caac62e179195c1086b8da49d05b0a3bcc",
+          "error": null,
+          "current_seconds": 18.94,
+          "target_seconds": 18.0,
+          "exceeded_seconds": 0.94
+        },
+        {
+          "step": 7,
+          "kind": "injected_tool_failure",
+          "action": "check_brand_rules",
+          "recovered_by_final_completed": true,
+          "script_version": "5f475a9da9fa4d97ac22162f9ffa24a460d9697557848cb16b272f9fe87a5fa1",
+          "error": {
+            "type": "RuntimeError",
+            "message": "Injected one-time tool failure"
+          }
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "1ecfbc39cf9cd042adc533abd4e154caac62e179195c1086b8da49d05b0a3bcc",
+          "offline_estimated_seconds": 18.94,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 4,
+          "script_revision": 2,
+          "script_version": "a7abe1526ec56072505840d8896aec774fc6c6fd988f815467f20d2ac3891898",
+          "offline_estimated_seconds": 16.59,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        },
+        {
+          "step": 5,
+          "script_revision": 3,
+          "script_version": "5f475a9da9fa4d97ac22162f9ffa24a460d9697557848cb16b272f9fe87a5fa1",
+          "offline_estimated_seconds": 8.01,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_independent_baseline",
+      "run_id": "validation-09",
+      "trace": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/traces/validation-09.json",
+      "trace_sha256": "3f4fd4a5b31f857583491dcb41a178247ed78b3e14ef271f7968b4ac96820480",
+      "aliases": [],
+      "events_path": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/traces/validation-09.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 8,
+      "max_steps": 12,
+      "request_records": 8,
+      "response_records": 8,
+      "runtime_duration_estimates": [
+        5.74,
+        5.74
+      ],
+      "runtime_issues": [
+        {
+          "step": 4,
+          "kind": "rule_check_rejection",
+          "action": "check_brand_rules",
+          "recovered_by_final_completed": true,
+          "script_version": "dec9deab826483cf76cf28553a1a8b9ae2c89f0c964fa173afa08e4b086f4f78",
+          "error": null,
+          "violations": [
+            {
+              "code": "unverified_text",
+              "location": "title",
+              "detail": "Uncovered text requires evidence or human confirmation: 白榆笔袋设有两个拉链袋"
+            }
+          ]
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "dec9deab826483cf76cf28553a1a8b9ae2c89f0c964fa173afa08e4b086f4f78",
+          "offline_estimated_seconds": 5.74,
+          "offline_duration_passed": true,
+          "offline_rule_passed": false,
+          "offline_violations": [
+            {
+              "code": "unverified_text",
+              "location": "title",
+              "detail": "Uncovered text requires evidence or human confirmation: 白榆笔袋设有两个拉链袋"
+            }
+          ],
+          "runtime_observation": false
+        },
+        {
+          "step": 5,
+          "script_revision": 2,
+          "script_version": "879e264fcb8c6a06c6a88f03cc836df325bd3e265fdb09d3e938389a325a23d0",
+          "offline_estimated_seconds": 5.74,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_independent_baseline",
+      "run_id": "validation-10",
+      "trace": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/traces/validation-10.json",
+      "trace_sha256": "001e536bfe4653817b9b903b6b182530eabc930f1b1ef37d2eab1280d408da10",
+      "aliases": [],
+      "events_path": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/traces/validation-10.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/baseline-holdout/20261028T070040Z_6e7af480/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 5,
+      "max_steps": 12,
+      "request_records": 5,
+      "response_records": 5,
+      "runtime_duration_estimates": [
+        7.73
+      ],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "52f58275caddb81ba8d9a4f946794abe6a05e780d4123c98d291cfe25ec62bf5",
+          "offline_estimated_seconds": 7.73,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_independent_optimized",
+      "run_id": "validation-01",
+      "trace": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/traces/validation-01.json",
+      "trace_sha256": "363a8d35d6610c7b3a9e8190bfe8a0c325bc560c137ff18e7c75aab1c2035965",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/traces/validation-01.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 5,
+      "max_steps": 12,
+      "request_records": 5,
+      "response_records": 5,
+      "runtime_duration_estimates": [
+        17.56
+      ],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "3c1ac9314aee9963d071addc04edd7df1fbadc8876aee8b02baa7b38a3764246",
+          "offline_estimated_seconds": 17.56,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_independent_optimized",
+      "run_id": "validation-02",
+      "trace": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/traces/validation-02.json",
+      "trace_sha256": "23842b70027c39eee7c942a76046b929151c2e4f728751640803dafbc28c60e0",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/traces/validation-02.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 5,
+      "max_steps": 12,
+      "request_records": 5,
+      "response_records": 5,
+      "runtime_duration_estimates": [
+        10.44
+      ],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "70ac32ad8977ab4bfd43e02069334c90b92e500557259f722e6cd247e6eb65e3",
+          "offline_estimated_seconds": 10.44,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_independent_optimized",
+      "run_id": "validation-03",
+      "trace": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/traces/validation-03.json",
+      "trace_sha256": "5d4367933f09ada4fd314c81c070a126b92fd2824ccda506928b9a7f0a199f8b",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/traces/validation-03.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 5,
+      "max_steps": 12,
+      "request_records": 5,
+      "response_records": 5,
+      "runtime_duration_estimates": [
+        7.87
+      ],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "c21965841f30fe48e898b7e64900bad178bc056770adadaa765cb1ee958c0622",
+          "offline_estimated_seconds": 7.87,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_independent_optimized",
+      "run_id": "validation-04",
+      "trace": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/traces/validation-04.json",
+      "trace_sha256": "3699276a4de6894b3c06e4d34d5a46f08095d180460761a74af7187a715b9045",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/traces/validation-04.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "failed",
+      "classification": "terminal_failure",
+      "case_pass": false,
+      "case_acceptance_source": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/results.json",
+      "is_script_task_completed": false,
+      "needs_info_is_failure": null,
+      "final_reason": "目标时长 3.5 秒与“两个分镜、每镜朗读一个完整产品事实”的要求冲突：按当前工具规则，每镜最短 2.0 秒且含 0.35 秒转场，两镜最低约 4.70 秒，已超过 3.5 秒；当前两事实稿估算 5.38 秒。需放宽目标时长或允许改为单镜/不逐镜朗读完整事实。",
+      "steps": 4,
+      "max_steps": 12,
+      "request_records": 4,
+      "response_records": 4,
+      "runtime_duration_estimates": [
+        5.38
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": false,
+          "script_version": "329ac608634cb3a494c4c49132bb51a8ff6c4b633dd70537d98d033a9ab4a73a",
+          "error": null,
+          "current_seconds": 5.38,
+          "target_seconds": 3.5,
+          "exceeded_seconds": 1.88
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "329ac608634cb3a494c4c49132bb51a8ff6c4b633dd70537d98d033a9ab4a73a",
+          "offline_estimated_seconds": 5.38,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_independent_optimized",
+      "run_id": "validation-05",
+      "trace": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/traces/validation-05.json",
+      "trace_sha256": "668ca028ae17bc8f80b04909783af153988e80e7d0e9cc2c0be8e0eebb64055e",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/traces/validation-05.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "failed",
+      "classification": "terminal_failure",
+      "case_pass": false,
+      "case_acceptance_source": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/results.json",
+      "is_script_task_completed": false,
+      "needs_info_is_failure": null,
+      "final_reason": "目标时长 3.5 秒无法容纳用户要求的两个分镜：按品牌规则每镜最短 2.0 秒、转场 0.35 秒，两镜最低约 4.7 秒；且每镜需各保留一个完整产品事实，无法在不违反结构要求的情况下压缩达成。",
+      "steps": 4,
+      "max_steps": 12,
+      "request_records": 4,
+      "response_records": 4,
+      "runtime_duration_estimates": [
+        5.74
+      ],
+      "runtime_issues": [
+        {
+          "step": 3,
+          "kind": "duration_check_overtime",
+          "action": "estimate_duration",
+          "recovered_by_final_completed": false,
+          "script_version": "6e2feb3cbfb366e66ebd64f88a8c520404b12271d7796899994a0727ae8cbaea",
+          "error": null,
+          "current_seconds": 5.74,
+          "target_seconds": 3.5,
+          "exceeded_seconds": 2.24
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "6e2feb3cbfb366e66ebd64f88a8c520404b12271d7796899994a0727ae8cbaea",
+          "offline_estimated_seconds": 5.74,
+          "offline_duration_passed": false,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_independent_optimized",
+      "run_id": "validation-06",
+      "trace": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/traces/validation-06.json",
+      "trace_sha256": "61c688e1a543ca50b208d769ff9dcabf562cd73cf044277cc8e2bef549b6745e",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/traces/validation-06.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "needs_info",
+      "classification": "expected_needs_info",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/results.json",
+      "is_script_task_completed": false,
+      "needs_info_is_failure": false,
+      "final_reason": "User input or reliable evidence is required",
+      "steps": 3,
+      "max_steps": 12,
+      "request_records": 3,
+      "response_records": 3,
+      "runtime_duration_estimates": [],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": []
+    },
+    {
+      "group": "phase2_independent_optimized",
+      "run_id": "validation-07",
+      "trace": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/traces/validation-07.json",
+      "trace_sha256": "a10ac86102cbb547dbde44bf75826da00527d0cbc87035ec2a541538ccd5ed97",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/traces/validation-07.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "needs_info",
+      "classification": "expected_needs_info",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/results.json",
+      "is_script_task_completed": false,
+      "needs_info_is_failure": false,
+      "final_reason": "User input or reliable evidence is required",
+      "steps": 4,
+      "max_steps": 12,
+      "request_records": 4,
+      "response_records": 4,
+      "runtime_duration_estimates": [],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": []
+    },
+    {
+      "group": "phase2_independent_optimized",
+      "run_id": "validation-08",
+      "trace": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/traces/validation-08.json",
+      "trace_sha256": "22a213082503bde6662c35ae778c6fbca999fa5f77b1182263ac69525235295d",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/traces/validation-08.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 7,
+      "max_steps": 12,
+      "request_records": 7,
+      "response_records": 7,
+      "runtime_duration_estimates": [
+        14.92,
+        14.92
+      ],
+      "runtime_issues": [
+        {
+          "step": 4,
+          "kind": "injected_tool_failure",
+          "action": "check_brand_rules",
+          "recovered_by_final_completed": true,
+          "script_version": "f25dc83ea81fe7f824b416433e4530984ed088ae56c3ca4efd45ee464c6b1fc2",
+          "error": {
+            "type": "RuntimeError",
+            "message": "Injected one-time tool failure"
+          }
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "f25dc83ea81fe7f824b416433e4530984ed088ae56c3ca4efd45ee464c6b1fc2",
+          "offline_estimated_seconds": 14.92,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_independent_optimized",
+      "run_id": "validation-09",
+      "trace": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/traces/validation-09.json",
+      "trace_sha256": "651160236fea6c5fbfd8ba1a80a69f62f8b19c63b76df6fb7e8054234843b7e7",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/traces/validation-09.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 7,
+      "max_steps": 12,
+      "request_records": 7,
+      "response_records": 7,
+      "runtime_duration_estimates": [
+        5.74
+      ],
+      "runtime_issues": [
+        {
+          "step": 2,
+          "kind": "draft_argument_validation_rejection",
+          "action": "draft_script",
+          "recovered_by_final_completed": true,
+          "script_version": null,
+          "error": {
+            "type": "ValidationError",
+            "message": "1 validation error for DraftArgs\nreason_summary\n  Extra inputs are not permitted [type=extra_forbidden, input_value='品牌禁用语“全网...帆布材质展开。', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden"
+          }
+        },
+        {
+          "step": 3,
+          "kind": "model_response_protocol_error",
+          "action": "model_error",
+          "recovered_by_final_completed": true,
+          "script_version": null,
+          "error": {
+            "type": "ModelError",
+            "message": "Invalid model response or transport failure: ValidationError"
+          },
+          "parser_diagnostic": "ValidationError: 1 validation error for Action\nreason_summary\n  Field required [type=missing, input_value={'action': 'draft_script'...]}], 'risk_flags': []}}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/missing"
+        }
+      ],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 4,
+          "script_revision": 1,
+          "script_version": "4eb5bd9ebb2dc42bee7850bbf53edd1f31399af83db45a0bbbf0a4bdb0bd4cee",
+          "offline_estimated_seconds": 5.74,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    },
+    {
+      "group": "phase2_independent_optimized",
+      "run_id": "validation-10",
+      "trace": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/traces/validation-10.json",
+      "trace_sha256": "63dcbd3677c4b36409cba04f9a0b89b23361d08a5b831d3a6cf9bd9c1e50a5a3",
+      "aliases": [],
+      "events_path": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/traces/validation-10.jsonl",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "classification": "accepted_completed",
+      "case_pass": true,
+      "case_acceptance_source": "eval/decision-v2/optimized-holdout/20261028T070030Z_4a49d4ed/results.json",
+      "is_script_task_completed": true,
+      "needs_info_is_failure": null,
+      "final_reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+      "steps": 5,
+      "max_steps": 12,
+      "request_records": 5,
+      "response_records": 5,
+      "runtime_duration_estimates": [
+        17.55
+      ],
+      "runtime_issues": [],
+      "accepted_drafts_offline_diagnostics": [
+        {
+          "step": 2,
+          "script_revision": 1,
+          "script_version": "1db610d31c82b9b7bda207e67094dcb86f72a0abfa07dd4f32474b4b30280d33",
+          "offline_estimated_seconds": 17.55,
+          "offline_duration_passed": true,
+          "offline_rule_passed": true,
+          "offline_violations": [],
+          "runtime_observation": false
+        }
+      ]
+    }
+  ]
+}

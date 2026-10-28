@@ -1,0 +1,821 @@
+{
+  "created_at_utc": "2026-10-28T08:13:08.719992+00:00",
+  "method": "AI-assisted read-only repository, index, reachable blob and contribution review; no real LLM calls",
+  "no_agent_runtime_or_prompt_modifications": true,
+  "no_stage_commit_or_push": true,
+  "agent_instructions": {
+    "ancestor_or_repository_AGENTS_found": false,
+    "searched": [
+      "D:/AGENTS.md",
+      "D:/Xiaoying/AGENTS.md",
+      "D:/Xiaoying/short-video-agent/AGENTS.md",
+      "repository rg --files -g AGENTS.md excluding .venv and .git"
+    ]
+  },
+  "current_head": "6ff258c0eef6c2d653ce15c022a35b1fd2f90832",
+  "baseline_secret_scanner": {
+    "verified": true,
+    "working_files_checked": 1022,
+    "reachable_git_blobs_checked": 263,
+    "exact_configured_credential_available": true,
+    "dotenv_ignored": true,
+    "tracked_private_env": [],
+    "working_tree_findings": [],
+    "git_findings": [],
+    "limitations": "Checks configured current credentials and common token shapes; revoked or unknown credential formats require separate review."
+  },
+  "supplemental_scan": {
+    "verified": true,
+    "tracked_paths_checked": 224,
+    "index_blobs_checked": 224,
+    "reachable_blobs_checked": 263,
+    "working_files_checked": 1022,
+    "known_configured_credentials_available": true,
+    "credential_patterns": [
+      "private_key_pem",
+      "github_credential_shape",
+      "aws_access_key_shape",
+      "google_api_key_shape",
+      "slack_token_shape",
+      "telegram_bot_token_shape",
+      "credential_bearing_url",
+      "credential_query_parameter"
+    ],
+    "decoding": "UTF-8, UTF-8 BOM, UTF-16 BOM; raw exact-byte scan also performed by baseline scanner",
+    "tracked_worktree_sensitive_findings": [],
+    "index_sensitive_findings": [],
+    "reachable_sensitive_findings": [],
+    "working_tree_sensitive_findings": [],
+    "private_env_tracked_or_indexed": [],
+    "placeholder_or_example_findings": [
+      {
+        "scope": "tracked_worktree",
+        "path": "tests/test_adapter.py",
+        "labels": [
+          "credential_bearing_url_example_or_loopback_only",
+          "example_contact_email"
+        ]
+      },
+      {
+        "scope": "index",
+        "path": "tests/test_adapter.py",
+        "labels": [
+          "credential_bearing_url_example_or_loopback_only",
+          "example_contact_email"
+        ]
+      },
+      {
+        "scope": "reachable_history",
+        "path": "tests/test_adapter.py",
+        "labels": [
+          "credential_bearing_url_example_or_loopback_only",
+          "example_contact_email"
+        ]
+      },
+      {
+        "scope": "working_tree",
+        "path": "tests/test_adapter.py",
+        "labels": [
+          "credential_bearing_url_example_or_loopback_only",
+          "example_contact_email"
+        ]
+      }
+    ],
+    "possible_privacy_findings": {
+      "tracked_worktree": [
+        {
+          "path": "README.md",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "docs/07-acceptance-audit.md",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/acceptance/audit-fixture-before-fix.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/acceptance/baseline-tests.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/acceptance/commands.json",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/acceptance/final-tests.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/acceptance/p0-after-fix.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/acceptance/regressions-after-fix.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/acceptance/regressions-before-fix.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T033558Z_6a4b11.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T042125Z_719ef1.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T042437Z_b97582.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T044004Z_6c993d.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T044903Z_cbf629.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T045436Z_66ec19.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T045646Z_82a961.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T045748Z_285cb8.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T051415Z_5777fd.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-results.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "scripts/acceptance_audit.py",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        }
+      ],
+      "index": [
+        {
+          "path": "README.md",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "docs/07-acceptance-audit.md",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/acceptance/audit-fixture-before-fix.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/acceptance/baseline-tests.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/acceptance/commands.json",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/acceptance/final-tests.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/acceptance/p0-after-fix.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/acceptance/regressions-after-fix.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/acceptance/regressions-before-fix.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T033558Z_6a4b11.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T042125Z_719ef1.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T042437Z_b97582.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T044004Z_6c993d.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T044903Z_cbf629.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T045436Z_66ec19.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T045646Z_82a961.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T045748Z_285cb8.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T051415Z_5777fd.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-results.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "scripts/acceptance_audit.py",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        }
+      ],
+      "reachable_history": [
+        {
+          "object": "5bc1467b19f60bf943b5689959f2dcd7a4574326",
+          "path": "README.md",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "object": "fbd6154a0a9014ccb089f727581592f7bf339a52",
+          "path": "docs/07-acceptance-audit.md",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "object": "f06c36ee14eaa8f4c1eed882e69df6e946bd47fb",
+          "path": "examples/acceptance/audit-fixture-before-fix.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "object": "0d7fe24105879e2b8cfcd02c7f5b6e507cd1f373",
+          "path": "examples/acceptance/baseline-tests.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "object": "15ecdc79367126a1ae32f85ab97417c8341b1282",
+          "path": "examples/acceptance/commands.json",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "object": "a1fb5b0a74b4a1a95e5dc30acc731e8ce8673b5b",
+          "path": "examples/acceptance/final-tests.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "object": "d96bed9f0a82e03b815af5abca326edd19eef6c6",
+          "path": "examples/acceptance/p0-after-fix.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "object": "ae9bf6fea62b8ee2cd070f13ed1d17c2f86e052e",
+          "path": "examples/acceptance/regressions-after-fix.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "object": "89511d30f2499048bb30aae60a276aaa6b2a28ea",
+          "path": "examples/acceptance/regressions-before-fix.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "object": "86025732863832679b2ee1c705df4bf684af46ea",
+          "path": "examples/test-history/test-results_20261028T033558Z_6a4b11.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "object": "2036eda987141c6a4052e764a4639b6ef7b50014",
+          "path": "examples/test-history/test-results_20261028T042125Z_719ef1.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "object": "98585a3a7826f4752c2bf340f1dc06c539cee72f",
+          "path": "examples/test-history/test-results_20261028T042437Z_b97582.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "object": "df8e77b92640b64f6981f77303c55afbef53ac88",
+          "path": "examples/test-history/test-results_20261028T044004Z_6c993d.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "object": "497bf29943b1703f0e360db8ad1c7f10c3e92326",
+          "path": "examples/test-history/test-results_20261028T045436Z_66ec19.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "object": "b9fb9021a5863094ab59d3b1fc769b1225d3e642",
+          "path": "examples/test-history/test-results_20261028T045646Z_82a961.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "object": "2666cc976ea772807385dac1f059db881f6ba99a",
+          "path": "examples/test-results.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "object": "299f11e32889aca99e95199dde739ae28fea014b",
+          "path": "scripts/acceptance_audit.py",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "object": "2e89d1e4ba8b8c2ea6003e7f10d56bb5e564da5c",
+          "path": "README.md",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "object": "29a51405cdee3bc65e4b6e70fd82de9f457f2e88",
+          "path": "docs/07-acceptance-audit.md",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "object": "6780ea405611d595974c73ef369daadc6034305b",
+          "path": "scripts/acceptance_audit.py",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "object": "95fb7daaf36bded977174d8481784e1379014416",
+          "path": "README.md",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "object": "a851158d3d348e1c8b81bf8dacc15c22743d8a27",
+          "path": "README.md",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        }
+      ],
+      "working_tree": [
+        {
+          "path": "final-evaluation.md",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "README.md",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "docs/07-acceptance-audit.md",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-results.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "scripts/acceptance_audit.py",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/acceptance/audit-fixture-before-fix.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/acceptance/baseline-tests.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/acceptance/commands.json",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/acceptance/final-tests.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/acceptance/p0-after-fix.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/acceptance/regressions-after-fix.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/acceptance/regressions-before-fix.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T033558Z_6a4b11.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T042125Z_719ef1.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T042437Z_b97582.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T044004Z_6c993d.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T044903Z_cbf629.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T045436Z_66ec19.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T045646Z_82a961.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T045748Z_285cb8.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "examples/test-history/test-results_20261028T051415Z_5777fd.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "eval/evidence/live-console.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "eval/evidence/offline-final-console.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "eval/evidence/report-repair-20261028T065834Z.json",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "eval/final-v3/confirmation-baseline-console.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "eval/final-v3/final-pytest.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "eval/final-v3/final-regression-b.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "eval/final-v3/fresh-baseline-console.txt",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "eval/final-v3/fresh-baseline-contract-results.json",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "eval/final-v3/fresh-optimized-contract-results.json",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "eval/final-v3/candidate-a-source/scripts/acceptance_audit.py",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "eval/final-v3/baseline-source/scripts/acceptance_audit.py",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        },
+        {
+          "path": "eval/decision-v2/baseline-source/scripts/acceptance_audit.py",
+          "labels": [
+            "local_absolute_paths_environment_metadata"
+          ]
+        }
+      ]
+    },
+    "git_commit_identity_metadata": {
+      "present": true,
+      "unique_name_email_pairs": 1,
+      "email_shaped_pairs": 1,
+      "identities_not_exported": true,
+      "classification": "Commit authorship metadata is expected and attributable, but human approval of personal identity disclosure is still required."
+    },
+    "classification_notes": [
+      "GitHub repository/account names are public account identifiers, not authentication secrets.",
+      "Administrator/local workspace paths and Python/pytest environment paths are environment metadata, not credentials.",
+      "Synthetic product names/facts and example.invalid test endpoints are not evidence of real personal or customer data.",
+      "Possible email/mobile patterns require context review; matches are labels and paths only, never exported values or lines."
+    ]
+  },
+  "historical_evidence_integrity": {
+    "verified": true,
+    "files_checked": 471,
+    "changed": [],
+    "missing": [],
+    "manifest": "eval/final-v3/historical-evidence-sha256.json"
+  },
+  "contribution_review": {
+    "source": "docs/04-ai-usage.md",
+    "source_sha256": "22f4f65747e7945b34978ea864bba3f47ad9de7885fa6d1a776825ecf124fc20",
+    "human_review_status": "NOT VERIFIED / all current human review checklist items remain unconfirmed",
+    "documented_user_role": [
+      "Provided project goals, constraints and acceptance requirements.",
+      "Explicitly requested preservation of failure evidence and no commit/push before final approval."
+    ],
+    "documented_ai_role": [
+      "AI authored implementation, prompts, tests, synthetic datasets and documentation.",
+      "AI coordinated three subtasks for third-round diagnosis, frozen datasets/contracts and evidence audits.",
+      "AI tools executed third-round 114 real model runs and automated regression/audits."
+    ],
+    "existing_human_execution_record": {
+      "scope": "Three early manually executed API commands stated by the user and matched against saved evidence; not current-round implementation or all-code review.",
+      "reference": "docs/08-manual-live-review.md",
+      "new_human_execution_in_this_delivery_preparation": "NOT VERIFIED"
+    },
+    "human_must_confirm": [
+      {
+        "id": "identity_disclosure",
+        "status": "UNCONFIRMED",
+        "item": "Whether name/identity and Git commit author metadata may be disclosed; no invented identity."
+      },
+      {
+        "id": "authorship_boundaries",
+        "status": "UNCONFIRMED",
+        "item": "Which files or specific lines the person personally wrote or changed, distinguishing AI output and user requirements."
+      },
+      {
+        "id": "review_scope",
+        "status": "UNCONFIRMED",
+        "item": "Exact reviewed files, sections and Trace IDs; findings, disagreements, fixes and unresolved issues, with dates."
+      },
+      {
+        "id": "understanding",
+        "status": "UNCONFIRMED",
+        "item": "Personal understanding of native decision loop, version-bound checks, completion/export gates, citation constraints, timing assumptions and max_steps."
+      },
+      {
+        "id": "actual_commands",
+        "status": "UNCONFIRMED",
+        "item": "Which commands the person actually ran, when and on what environment; user-initiated AI execution is not personal terminal execution."
+      },
+      {
+        "id": "actual_hours",
+        "status": "UNCONFIRMED",
+        "item": "Actual time by requirements/design, code reading, personal changes, command execution, semantic review and delivery; 180 minutes was only a plan, and AI wall-clock/log time is not human work time."
+      },
+      {
+        "id": "semantic_creative_review",
+        "status": "UNCONFIRMED",
+        "item": "Human review of fact meaning, stage/final constraints, omitted facts, platform style and intended audience; proxy checks do not establish those."
+      },
+      {
+        "id": "spoken_duration",
+        "status": "UNCONFIRMED",
+        "item": "Real narration/readability and video pacing for selected scripts, separate from deterministic estimates."
+      },
+      {
+        "id": "provider_and_rights",
+        "status": "UNCONFIRMED",
+        "item": "API authorization, billing, confidentiality and any real input/material copyright permissions; tokens are not actual cost."
+      },
+      {
+        "id": "reviewer_access",
+        "status": "UNCONFIRMED",
+        "item": "Current repository visibility, correct reviewer account and access; no current remote verification or invitation has been performed."
+      },
+      {
+        "id": "final_submit_approval",
+        "status": "UNCONFIRMED",
+        "item": "Human approves exact final stage file list, exclusions, contribution declarations and commit message before any commit/push."
+      }
+    ]
+  },
+  "suggested_human_checklist": [
+    {
+      "status": "NOT PERFORMED BY HUMAN / awaiting confirmation",
+      "task": "Read final-evaluation.md and map B fixed20/diagnostic10/confirmation12 to their own raw batches; do not attribute A fresh15 to B."
+    },
+    {
+      "status": "NOT PERFORMED BY HUMAN / awaiting confirmation",
+      "task": "Inspect current src/agent.py, llm_adapter.py, state.py, tools.py, schemas.py and tracing.py; state which parts were personally read and understood."
+    },
+    {
+      "status": "NOT PERFORMED BY HUMAN / awaiting confirmation",
+      "task": "Review old validation04/05 failures, A fixed04 over-refusal, A real ReadTimeout, baseline confirm09 residual script and B no-script refusal, without changing historical scores."
+    },
+    {
+      "status": "NOT PERFORMED BY HUMAN / awaiting confirmation",
+      "task": "Run chosen offline verification commands personally and record new output filenames plus actual results; never overwrite saved evidence."
+    },
+    {
+      "status": "NOT PERFORMED BY HUMAN / awaiting confirmation",
+      "task": "Check final staged-list proposal, all failure evidence retention and exclusions; keep .env, venv and caches out of Git."
+    },
+    {
+      "status": "NOT PERFORMED BY HUMAN / awaiting confirmation",
+      "task": "Complete docs/04-ai-usage.md personal contribution/review/hours records only from actual work; mark unresolved items as unconfirmed."
+    },
+    {
+      "status": "NOT PERFORMED BY HUMAN / awaiting confirmation",
+      "task": "Decide whether local paths, repository username and existing Git authorship metadata are acceptable to disclose; do not rewrite old evidence to conceal them."
+    }
+  ],
+  "limitations": [
+    "Read-only automated scans use current known credential values and recognisable patterns; unknown formats, revoked credentials and false negatives cannot be excluded.",
+    "Reachable objects from git rev-list --objects --all are inspected; unreachable/dangling/reflog-only objects, external storage and remote state were not inspected.",
+    "Ignored .env/virtual environment/cache files are intentionally excluded from exported-file scans; their contents are not published.",
+    "The present Git index was scanned, but no new stage action occurred; repeat the staged-file scan if the index changes.",
+    "No person has executed or confirmed this checklist in this review; findings are AI-assisted review results, not human sign-off."
+  ],
+  "verified_security_scan": true
+}

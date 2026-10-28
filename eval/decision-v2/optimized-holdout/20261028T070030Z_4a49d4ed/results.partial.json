@@ -1,0 +1,1783 @@
+[
+  {
+    "case_id": "validation-01",
+    "scenario": "normal",
+    "status": "completed",
+    "case_pass": true,
+    "task_completed": true,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 5,
+    "tool_calls": 3,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 4,
+    "total_refs": 4,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        17.56
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 5,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 5
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 5,
+      "observation_feedback_checks": 4,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "3c1ac9314aee9963d071addc04edd7df1fbadc8876aee8b02baa7b38a3764246",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "3c1ac9314aee9963d071addc04edd7df1fbadc8876aee8b02baa7b38a3764246",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 2.68,
+          "subtitle_reading_seconds": 2.68,
+          "estimated_seconds": 3.03
+        },
+        {
+          "scene_id": "S2",
+          "narration_seconds": 1.96,
+          "subtitle_reading_seconds": 1.96,
+          "estimated_seconds": 2.35
+        },
+        {
+          "scene_id": "S3",
+          "narration_seconds": 1.07,
+          "subtitle_reading_seconds": 1.07,
+          "estimated_seconds": 2.35
+        },
+        {
+          "scene_id": "S4",
+          "narration_seconds": 1.07,
+          "subtitle_reading_seconds": 1.07,
+          "estimated_seconds": 2.35
+        },
+        {
+          "scene_id": "S5",
+          "narration_seconds": 3.75,
+          "subtitle_reading_seconds": 3.75,
+          "estimated_seconds": 4.1
+        },
+        {
+          "scene_id": "S6",
+          "narration_seconds": 3.03,
+          "subtitle_reading_seconds": 3.03,
+          "estimated_seconds": 3.38
+        }
+      ],
+      "total_estimated_seconds": 17.56,
+      "target_duration_seconds": 18.0,
+      "is_overtime": false,
+      "passed": true,
+      "exceeded_seconds": 0,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 36.98888089999991,
+    "usage_records": [
+      {
+        "prompt_tokens": 2206,
+        "completion_tokens": 59,
+        "total_tokens": 2265,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 12
+        },
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 1694
+      },
+      {
+        "prompt_tokens": 2695,
+        "completion_tokens": 4686,
+        "total_tokens": 7381,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4161
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 2055
+      },
+      {
+        "prompt_tokens": 4986,
+        "completion_tokens": 1033,
+        "total_tokens": 6019,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 994
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 4090
+      },
+      {
+        "prompt_tokens": 8958,
+        "completion_tokens": 63,
+        "total_tokens": 9021,
+        "prompt_tokens_details": {
+          "cached_tokens": 1536
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 24
+        },
+        "prompt_cache_hit_tokens": 1536,
+        "prompt_cache_miss_tokens": 7422
+      },
+      {
+        "prompt_tokens": 11013,
+        "completion_tokens": 57,
+        "total_tokens": 11070,
+        "prompt_tokens_details": {
+          "cached_tokens": 2688
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 15
+        },
+        "prompt_cache_hit_tokens": 2688,
+        "prompt_cache_miss_tokens": 8325
+      }
+    ],
+    "reported_total_tokens": 35756,
+    "usage_complete": true,
+    "trace": "traces/validation-01.json",
+    "output": "validation-01-output.json"
+  },
+  {
+    "case_id": "validation-02",
+    "scenario": "normal",
+    "status": "completed",
+    "case_pass": true,
+    "task_completed": true,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 5,
+    "tool_calls": 3,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 2,
+    "total_refs": 2,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        10.44
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 5,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 5
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 5,
+      "observation_feedback_checks": 4,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "70ac32ad8977ab4bfd43e02069334c90b92e500557259f722e6cd247e6eb65e3",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "70ac32ad8977ab4bfd43e02069334c90b92e500557259f722e6cd247e6eb65e3",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 2.63,
+          "subtitle_reading_seconds": 2.63,
+          "estimated_seconds": 2.98
+        },
+        {
+          "scene_id": "S2",
+          "narration_seconds": 2.41,
+          "subtitle_reading_seconds": 2.41,
+          "estimated_seconds": 2.76
+        },
+        {
+          "scene_id": "S3",
+          "narration_seconds": 1.07,
+          "subtitle_reading_seconds": 1.07,
+          "estimated_seconds": 2.35
+        },
+        {
+          "scene_id": "S4",
+          "narration_seconds": 1.07,
+          "subtitle_reading_seconds": 1.07,
+          "estimated_seconds": 2.35
+        }
+      ],
+      "total_estimated_seconds": 10.44,
+      "target_duration_seconds": 18.0,
+      "is_overtime": false,
+      "passed": true,
+      "exceeded_seconds": 0,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 21.556228300000157,
+    "usage_records": [
+      {
+        "prompt_tokens": 2206,
+        "completion_tokens": 56,
+        "total_tokens": 2262,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 1694
+      },
+      {
+        "prompt_tokens": 2711,
+        "completion_tokens": 2551,
+        "total_tokens": 5262,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2213
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 2071
+      },
+      {
+        "prompt_tokens": 4081,
+        "completion_tokens": 91,
+        "total_tokens": 4172,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 60
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 3185
+      },
+      {
+        "prompt_tokens": 7043,
+        "completion_tokens": 40,
+        "total_tokens": 7083,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 5763
+      },
+      {
+        "prompt_tokens": 8504,
+        "completion_tokens": 59,
+        "total_tokens": 8563,
+        "prompt_tokens_details": {
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 17
+        },
+        "prompt_cache_hit_tokens": 2048,
+        "prompt_cache_miss_tokens": 6456
+      }
+    ],
+    "reported_total_tokens": 27342,
+    "usage_complete": true,
+    "trace": "traces/validation-02.json",
+    "output": "validation-02-output.json"
+  },
+  {
+    "case_id": "validation-03",
+    "scenario": "normal",
+    "status": "completed",
+    "case_pass": true,
+    "task_completed": true,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 5,
+    "tool_calls": 3,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 2,
+    "total_refs": 2,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        7.87
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 5,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 5
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 5,
+      "observation_feedback_checks": 4,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "c21965841f30fe48e898b7e64900bad178bc056770adadaa765cb1ee958c0622",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "c21965841f30fe48e898b7e64900bad178bc056770adadaa765cb1ee958c0622",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 2.41,
+          "subtitle_reading_seconds": 2.41,
+          "estimated_seconds": 2.76
+        },
+        {
+          "scene_id": "S2",
+          "narration_seconds": 2.41,
+          "subtitle_reading_seconds": 2.41,
+          "estimated_seconds": 2.76
+        },
+        {
+          "scene_id": "S3",
+          "narration_seconds": 1.07,
+          "subtitle_reading_seconds": 1.07,
+          "estimated_seconds": 2.35
+        }
+      ],
+      "total_estimated_seconds": 7.87,
+      "target_duration_seconds": 18.0,
+      "is_overtime": false,
+      "passed": true,
+      "exceeded_seconds": 0,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 13.431086599999844,
+    "usage_records": [
+      {
+        "prompt_tokens": 2205,
+        "completion_tokens": 77,
+        "total_tokens": 2282,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 28
+        },
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 1693
+      },
+      {
+        "prompt_tokens": 2668,
+        "completion_tokens": 1090,
+        "total_tokens": 3758,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 809
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 2028
+      },
+      {
+        "prompt_tokens": 3780,
+        "completion_tokens": 60,
+        "total_tokens": 3840,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 30
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 2884
+      },
+      {
+        "prompt_tokens": 6359,
+        "completion_tokens": 55,
+        "total_tokens": 6414,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 18
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 5207
+      },
+      {
+        "prompt_tokens": 7649,
+        "completion_tokens": 68,
+        "total_tokens": 7717,
+        "prompt_tokens_details": {
+          "cached_tokens": 1920
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 18
+        },
+        "prompt_cache_hit_tokens": 1920,
+        "prompt_cache_miss_tokens": 5729
+      }
+    ],
+    "reported_total_tokens": 24011,
+    "usage_complete": true,
+    "trace": "traces/validation-03.json",
+    "output": "validation-03-output.json"
+  },
+  {
+    "case_id": "validation-04",
+    "scenario": "duration",
+    "status": "failed",
+    "case_pass": false,
+    "task_completed": false,
+    "duration_triggered": true,
+    "duration_corrected": false,
+    "steps": 4,
+    "tool_calls": 2,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 2,
+    "total_refs": 2,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [
+      "D"
+    ],
+    "failure_categories": [
+      "D"
+    ],
+    "behavior": {
+      "behavior_verified": false,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        5.38
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 4,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 4
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 4,
+      "observation_feedback_checks": 3,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "329ac608634cb3a494c4c49132bb51a8ff6c4b633dd70537d98d033a9ab4a73a",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "329ac608634cb3a494c4c49132bb51a8ff6c4b633dd70537d98d033a9ab4a73a",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 2.68,
+          "subtitle_reading_seconds": 2.68,
+          "estimated_seconds": 3.03
+        },
+        {
+          "scene_id": "S2",
+          "narration_seconds": 1.96,
+          "subtitle_reading_seconds": 1.96,
+          "estimated_seconds": 2.35
+        }
+      ],
+      "total_estimated_seconds": 5.38,
+      "target_duration_seconds": 3.5,
+      "is_overtime": true,
+      "passed": false,
+      "exceeded_seconds": 1.88,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 12.548603599999979,
+    "usage_records": [
+      {
+        "prompt_tokens": 2235,
+        "completion_tokens": 90,
+        "total_tokens": 2325,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 30
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 1595
+      },
+      {
+        "prompt_tokens": 2746,
+        "completion_tokens": 585,
+        "total_tokens": 3331,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 344
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 2106
+      },
+      {
+        "prompt_tokens": 3708,
+        "completion_tokens": 147,
+        "total_tokens": 3855,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 95
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 2812
+      },
+      {
+        "prompt_tokens": 6069,
+        "completion_tokens": 534,
+        "total_tokens": 6603,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 390
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 4917
+      }
+    ],
+    "reported_total_tokens": 16114,
+    "usage_complete": true,
+    "trace": "traces/validation-04.json",
+    "output": "validation-04-output.json"
+  },
+  {
+    "case_id": "validation-05",
+    "scenario": "duration",
+    "status": "failed",
+    "case_pass": false,
+    "task_completed": false,
+    "duration_triggered": true,
+    "duration_corrected": false,
+    "steps": 4,
+    "tool_calls": 2,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 2,
+    "total_refs": 2,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [
+      "D"
+    ],
+    "failure_categories": [
+      "D"
+    ],
+    "behavior": {
+      "behavior_verified": false,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        5.74
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 4,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 4
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 4,
+      "observation_feedback_checks": 3,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "6e2feb3cbfb366e66ebd64f88a8c520404b12271d7796899994a0727ae8cbaea",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "6e2feb3cbfb366e66ebd64f88a8c520404b12271d7796899994a0727ae8cbaea",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 2.63,
+          "subtitle_reading_seconds": 2.63,
+          "estimated_seconds": 2.98
+        },
+        {
+          "scene_id": "S2",
+          "narration_seconds": 2.41,
+          "subtitle_reading_seconds": 2.41,
+          "estimated_seconds": 2.76
+        }
+      ],
+      "total_estimated_seconds": 5.74,
+      "target_duration_seconds": 3.5,
+      "is_overtime": true,
+      "passed": false,
+      "exceeded_seconds": 2.24,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 13.468189100000018,
+    "usage_records": [
+      {
+        "prompt_tokens": 2235,
+        "completion_tokens": 48,
+        "total_tokens": 2283,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 1595
+      },
+      {
+        "prompt_tokens": 2736,
+        "completion_tokens": 854,
+        "total_tokens": 3590,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 604
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 2096
+      },
+      {
+        "prompt_tokens": 3736,
+        "completion_tokens": 234,
+        "total_tokens": 3970,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 199
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 2840
+      },
+      {
+        "prompt_tokens": 6120,
+        "completion_tokens": 407,
+        "total_tokens": 6527,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 293
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 4968
+      }
+    ],
+    "reported_total_tokens": 16370,
+    "usage_complete": true,
+    "trace": "traces/validation-05.json",
+    "output": "validation-05-output.json"
+  },
+  {
+    "case_id": "validation-06",
+    "scenario": "no_assets",
+    "status": "needs_info",
+    "case_pass": true,
+    "task_completed": false,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 3,
+    "tool_calls": 2,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 0,
+    "total_refs": 0,
+    "final_script": false,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "query_rewrite"
+      ],
+      "duration_estimates": []
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 3,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 3
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 3,
+      "observation_feedback_checks": 2,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": null,
+    "final_duration_recheck": null,
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 6.7670848999998725,
+    "usage_records": [
+      {
+        "prompt_tokens": 2205,
+        "completion_tokens": 51,
+        "total_tokens": 2256,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 1693
+      },
+      {
+        "prompt_tokens": 2347,
+        "completion_tokens": 201,
+        "total_tokens": 2548,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 134
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 1579
+      },
+      {
+        "prompt_tokens": 2452,
+        "completion_tokens": 186,
+        "total_tokens": 2638,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 66
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 1556
+      }
+    ],
+    "reported_total_tokens": 7442,
+    "usage_complete": true,
+    "trace": "traces/validation-06.json",
+    "output": "validation-06-output.json"
+  },
+  {
+    "case_id": "validation-07",
+    "scenario": "no_assets",
+    "status": "needs_info",
+    "case_pass": true,
+    "task_completed": false,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 4,
+    "tool_calls": 3,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 0,
+    "total_refs": 0,
+    "final_script": false,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "query_rewrite"
+      ],
+      "duration_estimates": []
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 4,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 4
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 4,
+      "observation_feedback_checks": 3,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": null,
+    "final_duration_recheck": null,
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 9.943977200000063,
+    "usage_records": [
+      {
+        "prompt_tokens": 2205,
+        "completion_tokens": 87,
+        "total_tokens": 2292,
+        "prompt_tokens_details": {
+          "cached_tokens": 512
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 29
+        },
+        "prompt_cache_hit_tokens": 512,
+        "prompt_cache_miss_tokens": 1693
+      },
+      {
+        "prompt_tokens": 2365,
+        "completion_tokens": 99,
+        "total_tokens": 2464,
+        "prompt_tokens_details": {
+          "cached_tokens": 768
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 47
+        },
+        "prompt_cache_hit_tokens": 768,
+        "prompt_cache_miss_tokens": 1597
+      },
+      {
+        "prompt_tokens": 2456,
+        "completion_tokens": 198,
+        "total_tokens": 2654,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 138
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 1560
+      },
+      {
+        "prompt_tokens": 2542,
+        "completion_tokens": 436,
+        "total_tokens": 2978,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 264
+        },
+        "prompt_cache_hit_tokens": 1024,
+        "prompt_cache_miss_tokens": 1518
+      }
+    ],
+    "reported_total_tokens": 10388,
+    "usage_complete": true,
+    "trace": "traces/validation-07.json",
+    "output": "validation-07-output.json"
+  },
+  {
+    "case_id": "validation-08",
+    "scenario": "tool_failure",
+    "status": "completed",
+    "case_pass": true,
+    "task_completed": true,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 7,
+    "tool_calls": 5,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [
+      6
+    ],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 2,
+    "total_refs": 2,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [
+      "C"
+    ],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "tool_retry"
+      ],
+      "duration_estimates": [
+        14.92,
+        14.92
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 7,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 7
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 7,
+      "observation_feedback_checks": 6,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "f25dc83ea81fe7f824b416433e4530984ed088ae56c3ca4efd45ee464c6b1fc2",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "f25dc83ea81fe7f824b416433e4530984ed088ae56c3ca4efd45ee464c6b1fc2",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 2.41,
+          "subtitle_reading_seconds": 2.41,
+          "estimated_seconds": 2.76
+        },
+        {
+          "scene_id": "S2",
+          "narration_seconds": 2.41,
+          "subtitle_reading_seconds": 2.41,
+          "estimated_seconds": 2.76
+        },
+        {
+          "scene_id": "S3",
+          "narration_seconds": 1.07,
+          "subtitle_reading_seconds": 1.07,
+          "estimated_seconds": 2.35
+        },
+        {
+          "scene_id": "S4",
+          "narration_seconds": 1.07,
+          "subtitle_reading_seconds": 1.07,
+          "estimated_seconds": 2.35
+        },
+        {
+          "scene_id": "S5",
+          "narration_seconds": 1.52,
+          "subtitle_reading_seconds": 1.52,
+          "estimated_seconds": 2.35
+        },
+        {
+          "scene_id": "S6",
+          "narration_seconds": 1.07,
+          "subtitle_reading_seconds": 1.07,
+          "estimated_seconds": 2.35
+        }
+      ],
+      "total_estimated_seconds": 14.92,
+      "target_duration_seconds": 18.0,
+      "is_overtime": false,
+      "passed": true,
+      "exceeded_seconds": 0,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 33.35620569999992,
+    "usage_records": [
+      {
+        "prompt_tokens": 2205,
+        "completion_tokens": 105,
+        "total_tokens": 2310,
+        "prompt_tokens_details": {
+          "cached_tokens": 2048
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 52
+        },
+        "prompt_cache_hit_tokens": 2048,
+        "prompt_cache_miss_tokens": 157
+      },
+      {
+        "prompt_tokens": 2668,
+        "completion_tokens": 3100,
+        "total_tokens": 5768,
+        "prompt_tokens_details": {
+          "cached_tokens": 2432
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2700
+        },
+        "prompt_cache_hit_tokens": 2432,
+        "prompt_cache_miss_tokens": 236
+      },
+      {
+        "prompt_tokens": 4403,
+        "completion_tokens": 501,
+        "total_tokens": 4904,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 470
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 3507
+      },
+      {
+        "prompt_tokens": 7949,
+        "completion_tokens": 62,
+        "total_tokens": 8011,
+        "prompt_tokens_details": {
+          "cached_tokens": 1280
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 23
+        },
+        "prompt_cache_hit_tokens": 1280,
+        "prompt_cache_miss_tokens": 6669
+      },
+      {
+        "prompt_tokens": 6078,
+        "completion_tokens": 126,
+        "total_tokens": 6204,
+        "prompt_tokens_details": {
+          "cached_tokens": 2304
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 83
+        },
+        "prompt_cache_hit_tokens": 2304,
+        "prompt_cache_miss_tokens": 3774
+      },
+      {
+        "prompt_tokens": 8657,
+        "completion_tokens": 287,
+        "total_tokens": 8944,
+        "prompt_tokens_details": {
+          "cached_tokens": 2304
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 242
+        },
+        "prompt_cache_hit_tokens": 2304,
+        "prompt_cache_miss_tokens": 6353
+      },
+      {
+        "prompt_tokens": 12052,
+        "completion_tokens": 67,
+        "total_tokens": 12119,
+        "prompt_tokens_details": {
+          "cached_tokens": 2304
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 18
+        },
+        "prompt_cache_hit_tokens": 2304,
+        "prompt_cache_miss_tokens": 9748
+      }
+    ],
+    "reported_total_tokens": 48260,
+    "usage_complete": true,
+    "trace": "traces/validation-08.json",
+    "output": "validation-08-output.json"
+  },
+  {
+    "case_id": "validation-09",
+    "scenario": "brand",
+    "status": "completed",
+    "case_pass": true,
+    "task_completed": true,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 7,
+    "tool_calls": 3,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 2,
+    "total_refs": 2,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [
+      "F",
+      "H"
+    ],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        5.74
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_error_aware_replay_no_model_calls",
+      "model_calls_made": 0,
+      "issues": [],
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 7
+      }
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "method": "error_aware_request_response_audit",
+      "issues": []
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "4eb5bd9ebb2dc42bee7850bbf53edd1f31399af83db45a0bbbf0a4bdb0bd4cee",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "4eb5bd9ebb2dc42bee7850bbf53edd1f31399af83db45a0bbbf0a4bdb0bd4cee",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 2.63,
+          "subtitle_reading_seconds": 2.63,
+          "estimated_seconds": 2.98
+        },
+        {
+          "scene_id": "S2",
+          "narration_seconds": 2.41,
+          "subtitle_reading_seconds": 2.41,
+          "estimated_seconds": 2.76
+        }
+      ],
+      "total_estimated_seconds": 5.74,
+      "target_duration_seconds": 18.0,
+      "is_overtime": false,
+      "passed": true,
+      "exceeded_seconds": 0,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 30.732148800000004,
+    "usage_records": [
+      {
+        "prompt_tokens": 2218,
+        "completion_tokens": 113,
+        "total_tokens": 2331,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 39
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 1578
+      },
+      {
+        "prompt_tokens": 2756,
+        "completion_tokens": 1956,
+        "total_tokens": 4712,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1598
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 2116
+      },
+      {
+        "prompt_tokens": 3237,
+        "completion_tokens": 951,
+        "total_tokens": 4188,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 691
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 2341
+      },
+      {
+        "prompt_tokens": 3270,
+        "completion_tokens": 698,
+        "total_tokens": 3968,
+        "prompt_tokens_details": {
+          "cached_tokens": 1024
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 444
+        },
+        "prompt_cache_hit_tokens": 1024,
+        "prompt_cache_miss_tokens": 2246
+      },
+      {
+        "prompt_tokens": 4416,
+        "completion_tokens": 59,
+        "total_tokens": 4475,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 28
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 3520
+      },
+      {
+        "prompt_tokens": 6782,
+        "completion_tokens": 166,
+        "total_tokens": 6948,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 127
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 5630
+      },
+      {
+        "prompt_tokens": 8063,
+        "completion_tokens": 60,
+        "total_tokens": 8123,
+        "prompt_tokens_details": {
+          "cached_tokens": 1920
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 22
+        },
+        "prompt_cache_hit_tokens": 1920,
+        "prompt_cache_miss_tokens": 6143
+      }
+    ],
+    "reported_total_tokens": 34745,
+    "usage_complete": true,
+    "trace": "traces/validation-09.json",
+    "output": "validation-09-output.json"
+  },
+  {
+    "case_id": "validation-10",
+    "scenario": "unsupported",
+    "status": "completed",
+    "case_pass": true,
+    "task_completed": true,
+    "duration_triggered": false,
+    "duration_corrected": false,
+    "steps": 5,
+    "tool_calls": 3,
+    "inappropriate_tool_steps": [],
+    "repeated_steps": [],
+    "unchecked_consecutive_draft_steps": [],
+    "valid_refs": 4,
+    "total_refs": 4,
+    "final_script": true,
+    "unsupported_final": false,
+    "observed_categories": [],
+    "failure_categories": [],
+    "behavior": {
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        17.55
+      ]
+    },
+    "replay": {
+      "verified": true,
+      "method": "offline_replay_no_model_calls",
+      "model_calls_made": 0,
+      "recomputed_steps": 5,
+      "event_log": {
+        "verified": true,
+        "issues": [],
+        "step_events": 5
+      },
+      "issues": []
+    },
+    "replay_applicable": true,
+    "live_calls": {
+      "verified": true,
+      "recorded_decisions": 5,
+      "observation_feedback_checks": 4,
+      "response_models": [
+        "deepseek-flash"
+      ],
+      "issues": [],
+      "limitation": "Audit of local execution records; not independent provider attestation."
+    },
+    "final_rule_recheck": {
+      "ok": true,
+      "script_version": "1db610d31c82b9b7bda207e67094dcb86f72a0abfa07dd4f32474b4b30280d33",
+      "passed": true,
+      "violations": [],
+      "unsupported_claims": [],
+      "missing_references": [],
+      "risk_reasons": [],
+      "needs_confirmation": false,
+      "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+      "limitation": "String verification does not establish full natural-language semantic entailment."
+    },
+    "final_duration_recheck": {
+      "ok": true,
+      "script_version": "1db610d31c82b9b7bda207e67094dcb86f72a0abfa07dd4f32474b4b30280d33",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 4.2,
+          "subtitle_reading_seconds": 4.2,
+          "estimated_seconds": 4.55
+        },
+        {
+          "scene_id": "S2",
+          "narration_seconds": 3.03,
+          "subtitle_reading_seconds": 3.03,
+          "estimated_seconds": 3.38
+        },
+        {
+          "scene_id": "S3",
+          "narration_seconds": 2.14,
+          "subtitle_reading_seconds": 2.14,
+          "estimated_seconds": 2.49
+        },
+        {
+          "scene_id": "S4",
+          "narration_seconds": 6.78,
+          "subtitle_reading_seconds": 6.78,
+          "estimated_seconds": 7.13
+        }
+      ],
+      "total_estimated_seconds": 17.55,
+      "target_duration_seconds": 18.0,
+      "is_overtime": false,
+      "passed": true,
+      "exceeded_seconds": 0,
+      "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+      "timing": {
+        "chinese_chars_per_second": 4.5,
+        "english_words_per_second": 2.5,
+        "number_groups_per_second": 2.0,
+        "punctuation_pause_seconds": 0.18,
+        "minimum_scene_seconds": 2.0,
+        "transition_seconds": 0.35
+      },
+      "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+    },
+    "human_review": {
+      "status": "NOT VERIFIED",
+      "reviewer": null,
+      "reviewed_at": null,
+      "topic_preserved": null,
+      "tool_decisions_appropriate": null,
+      "semantic_claims_supported": null,
+      "creative_quality_1_to_5": null,
+      "refusal_explanation_adequate": null,
+      "notes": null
+    },
+    "executed": true,
+    "latency_seconds": 23.919207899999947,
+    "usage_records": [
+      {
+        "prompt_tokens": 2216,
+        "completion_tokens": 55,
+        "total_tokens": 2271,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 1576
+      },
+      {
+        "prompt_tokens": 2709,
+        "completion_tokens": 2793,
+        "total_tokens": 5502,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2319
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 2069
+      },
+      {
+        "prompt_tokens": 4711,
+        "completion_tokens": 100,
+        "total_tokens": 4811,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 68
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 3815
+      },
+      {
+        "prompt_tokens": 8135,
+        "completion_tokens": 69,
+        "total_tokens": 8204,
+        "prompt_tokens_details": {
+          "cached_tokens": 1408
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 33
+        },
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 6727
+      },
+      {
+        "prompt_tokens": 10061,
+        "completion_tokens": 69,
+        "total_tokens": 10130,
+        "prompt_tokens_details": {
+          "cached_tokens": 2432
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 16
+        },
+        "prompt_cache_hit_tokens": 2432,
+        "prompt_cache_miss_tokens": 7629
+      }
+    ],
+    "reported_total_tokens": 30918,
+    "usage_complete": true,
+    "trace": "traces/validation-10.json",
+    "output": "validation-10-output.json"
+  }
+]

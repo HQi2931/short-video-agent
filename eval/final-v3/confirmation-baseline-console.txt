@@ -1,0 +1,13 @@
+{"case": "confirm-01", "status": "completed", "passed": true, "requests": 6}
+{"case": "confirm-02", "status": "completed", "passed": true, "requests": 11}
+{"case": "confirm-03", "status": "completed", "passed": true, "requests": 16}
+{"case": "confirm-04", "status": "completed", "passed": true, "requests": 21}
+{"case": "confirm-05", "status": "completed", "passed": true, "requests": 28}
+{"case": "confirm-06", "status": "completed", "passed": true, "requests": 35}
+{"case": "confirm-07", "status": "completed", "passed": true, "requests": 42}
+{"case": "confirm-08", "status": "completed", "passed": true, "requests": 49}
+{"case": "confirm-09", "status": "needs_info", "passed": false, "requests": 53}
+{"case": "confirm-10", "status": "completed", "passed": true, "requests": 62}
+{"case": "confirm-11", "status": "completed", "passed": true, "requests": 69}
+{"case": "confirm-12", "status": "completed", "passed": true, "requests": 76}
+D:\Xiaoying\short-video-agent\eval\final-v3\confirmation-baseline\20261028T073730Z_4f35c3e3

@@ -1,0 +1,63 @@
+{
+  "run_id": "holdout-10",
+  "mode": "live",
+  "model": "deepseek-flash",
+  "status": "needs_info",
+  "reason": "User input or reliable evidence is required",
+  "title": null,
+  "topic": "星渡潮汐传感器介绍",
+  "audience": "社区科普活动参与者",
+  "platform": "视频号",
+  "style": "找不到素材时尝试保持主题的另一种查询，仍无证据则明确请求素材。",
+  "target_duration_seconds": 18.0,
+  "script_version": null,
+  "script_revision": 0,
+  "storyboard": [],
+  "total_estimated_seconds": null,
+  "used_asset_ids": [],
+  "sources": [],
+  "duration_check": null,
+  "brand_rule_check": null,
+  "risk_flags": [],
+  "missing_information": [
+    "星渡潮汐传感器的产品素材（参数、功能、适用场景等原文）",
+    "可用的产品图片/视频素材或素材目录名称"
+  ],
+  "question": "已用“星渡潮汐传感器 产品介绍 参数 功能”“星渡潮汐 传感器”“星渡 传感器 设备 监测”等保持主题的查询检索素材库，均无结果，因此无法核验产品事实、也无法生成合规脚本。请提供星渡潮汐传感器的产品事实原文（如功能、参数、适用场景）及可用素材，或告知素材库中对应的产品名称/目录关键词。",
+  "errors": [],
+  "completed_steps": [
+    {
+      "step": 1,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 4,
+      "action": "request_info",
+      "ok": true
+    }
+  ],
+  "last_observation": {
+    "ok": true,
+    "fields": [
+      "星渡潮汐传感器的产品素材（参数、功能、适用场景等原文）",
+      "可用的产品图片/视频素材或素材目录名称"
+    ],
+    "question": "已用“星渡潮汐传感器 产品介绍 参数 功能”“星渡潮汐 传感器”“星渡 传感器 设备 监测”等保持主题的查询检索素材库，均无结果，因此无法核验产品事实、也无法生成合规脚本。请提供星渡潮汐传感器的产品事实原文（如功能、参数、适用场景）及可用素材，或告知素材库中对应的产品名称/目录关键词。"
+  },
+  "limitations": [
+    "合成素材，仅用于工程验证。",
+    "时长是工程估算，需要真人口播复核。",
+    "仅通过原文和批准文案核验，未知改写会被阻断。"
+  ]
+}
