@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-28T04:15:13.866768+00:00",
+  "generated_at_utc": "2026-10-28T04:29:04.414184+00:00",
   "offline_checks_passed": true,
   "checks": [
     {
@@ -11,7 +11,7 @@
       "check": "actual_pytest_result",
       "passed": true,
       "detail": {
-        "tests": 112,
+        "tests": 116,
         "failures_or_errors": 0
       }
     },
@@ -562,14 +562,454 @@
     }
   ],
   "live_validation": {
-    "verified": false,
-    "detail": "Not run: user chose offline delivery; no API configuration supplied."
+    "verified": true,
+    "detail": {
+      "distinct_verified_paths": 7,
+      "observed_adaptations": [
+        "duration_revision",
+        "query_rewrite",
+        "rule_revision",
+        "tool_retry"
+      ],
+      "all_required_cases_covered": true,
+      "non_triggered_or_failed_runs": [
+        "live_overtime_round1"
+      ],
+      "required_case_coverage": {
+        "normal": [
+          "live_normal_initial",
+          "live_normal_round1"
+        ],
+        "missing_info": [
+          "live_missing_info_round1"
+        ],
+        "no_assets": [
+          "live_no_assets_round1"
+        ],
+        "tool_failure": [
+          "live_tool_failure_round1"
+        ],
+        "overtime": [
+          "live_overtime_tight_round1"
+        ],
+        "changed_duration": [
+          "live_changed_duration_round1"
+        ],
+        "changed_assets": [
+          "live_changed_assets_round1"
+        ],
+        "sparse": [
+          "live_sparse_round1"
+        ]
+      }
+    },
+    "cases": [
+      {
+        "run_id": "live_changed_assets_round1",
+        "case": "changed_assets",
+        "input": "examples/inputs/changed_assets.json",
+        "trace": "examples/traces/live_changed_assets_round1.json",
+        "events": "examples/traces/live_changed_assets_round1.jsonl",
+        "output": "examples/outputs/live_changed_assets_round1.json",
+        "output_matches_trace": true,
+        "status": "completed",
+        "expected_status": "completed",
+        "status_matches": true,
+        "actions": [
+          "search_assets",
+          "draft_script",
+          "estimate_duration",
+          "check_brand_rules",
+          "draft_script",
+          "estimate_duration",
+          "check_brand_rules",
+          "finish"
+        ],
+        "target_seconds": 15,
+        "real_model_responses": 8,
+        "recorded_total_tokens": 37598,
+        "live_call_integrity": {
+          "verified": true,
+          "recorded_decisions": 8,
+          "observation_feedback_checks": 7,
+          "response_models": [
+            "deepseek-flash"
+          ],
+          "issues": [],
+          "limitation": "Audit of local execution records; not independent provider attestation."
+        },
+        "behavior_verified": true,
+        "observed_adaptations": [
+          "rule_revision"
+        ],
+        "duration_estimates": [
+          9.03,
+          9.03
+        ]
+      },
+      {
+        "run_id": "live_changed_duration_round1",
+        "case": "changed_duration",
+        "input": "examples/inputs/changed_duration.json",
+        "trace": "examples/traces/live_changed_duration_round1.json",
+        "events": "examples/traces/live_changed_duration_round1.jsonl",
+        "output": "examples/outputs/live_changed_duration_round1.json",
+        "output_matches_trace": true,
+        "status": "completed",
+        "expected_status": "completed",
+        "status_matches": true,
+        "actions": [
+          "search_assets",
+          "draft_script",
+          "estimate_duration",
+          "draft_script",
+          "estimate_duration",
+          "check_brand_rules",
+          "finish"
+        ],
+        "target_seconds": 4,
+        "real_model_responses": 7,
+        "recorded_total_tokens": 29918,
+        "live_call_integrity": {
+          "verified": true,
+          "recorded_decisions": 7,
+          "observation_feedback_checks": 6,
+          "response_models": [
+            "deepseek-flash"
+          ],
+          "issues": [],
+          "limitation": "Audit of local execution records; not independent provider attestation."
+        },
+        "behavior_verified": true,
+        "observed_adaptations": [
+          "duration_revision"
+        ],
+        "duration_estimates": [
+          4.09,
+          2.35
+        ]
+      },
+      {
+        "run_id": "live_missing_info_round1",
+        "case": "missing_info",
+        "input": "examples/inputs/missing_info.json",
+        "trace": "examples/traces/live_missing_info_round1.json",
+        "events": "examples/traces/live_missing_info_round1.jsonl",
+        "output": "examples/outputs/live_missing_info_round1.json",
+        "output_matches_trace": true,
+        "status": "needs_info",
+        "expected_status": "needs_info",
+        "status_matches": true,
+        "actions": [
+          "request_info"
+        ],
+        "target_seconds": null,
+        "real_model_responses": 1,
+        "recorded_total_tokens": 2148,
+        "live_call_integrity": {
+          "verified": true,
+          "recorded_decisions": 1,
+          "observation_feedback_checks": 0,
+          "response_models": [
+            "deepseek-flash"
+          ],
+          "issues": [],
+          "limitation": "Audit of local execution records; not independent provider attestation."
+        },
+        "behavior_verified": true,
+        "observed_adaptations": [],
+        "duration_estimates": []
+      },
+      {
+        "run_id": "live_no_assets_round1",
+        "case": "no_assets",
+        "input": "examples/inputs/no_assets.json",
+        "trace": "examples/traces/live_no_assets_round1.json",
+        "events": "examples/traces/live_no_assets_round1.jsonl",
+        "output": "examples/outputs/live_no_assets_round1.json",
+        "output_matches_trace": true,
+        "status": "needs_info",
+        "expected_status": "needs_info",
+        "status_matches": true,
+        "actions": [
+          "search_assets",
+          "search_assets",
+          "request_info"
+        ],
+        "target_seconds": 30,
+        "real_model_responses": 3,
+        "recorded_total_tokens": 6815,
+        "live_call_integrity": {
+          "verified": true,
+          "recorded_decisions": 3,
+          "observation_feedback_checks": 2,
+          "response_models": [
+            "deepseek-flash"
+          ],
+          "issues": [],
+          "limitation": "Audit of local execution records; not independent provider attestation."
+        },
+        "behavior_verified": true,
+        "observed_adaptations": [
+          "query_rewrite"
+        ],
+        "duration_estimates": []
+      },
+      {
+        "run_id": "live_normal_initial",
+        "case": "normal",
+        "input": "examples/inputs/normal.json",
+        "trace": "examples/traces/live_normal_initial.json",
+        "events": "examples/traces/live_normal_initial.jsonl",
+        "output": "examples/outputs/live_normal_initial.json",
+        "output_matches_trace": true,
+        "status": "completed",
+        "expected_status": "completed",
+        "status_matches": true,
+        "actions": [
+          "search_assets",
+          "draft_script",
+          "estimate_duration",
+          "draft_script",
+          "draft_script",
+          "estimate_duration",
+          "check_brand_rules",
+          "finish"
+        ],
+        "target_seconds": 30,
+        "real_model_responses": 8,
+        "recorded_total_tokens": 65911,
+        "live_call_integrity": {
+          "verified": true,
+          "recorded_decisions": 8,
+          "observation_feedback_checks": 7,
+          "response_models": [
+            "deepseek-flash"
+          ],
+          "issues": [],
+          "limitation": "Audit of local execution records; not independent provider attestation."
+        },
+        "behavior_verified": true,
+        "observed_adaptations": [
+          "duration_revision"
+        ],
+        "duration_estimates": [
+          30.52,
+          25.4
+        ]
+      },
+      {
+        "run_id": "live_normal_round1",
+        "case": "normal",
+        "input": "examples/inputs/normal.json",
+        "trace": "examples/traces/live_normal_round1.json",
+        "events": "examples/traces/live_normal_round1.jsonl",
+        "output": "examples/outputs/live_normal_round1.json",
+        "output_matches_trace": true,
+        "status": "completed",
+        "expected_status": "completed",
+        "status_matches": true,
+        "actions": [
+          "search_assets",
+          "draft_script",
+          "estimate_duration",
+          "check_brand_rules",
+          "finish"
+        ],
+        "target_seconds": 30,
+        "real_model_responses": 5,
+        "recorded_total_tokens": 26797,
+        "live_call_integrity": {
+          "verified": true,
+          "recorded_decisions": 5,
+          "observation_feedback_checks": 4,
+          "response_models": [
+            "deepseek-flash"
+          ],
+          "issues": [],
+          "limitation": "Audit of local execution records; not independent provider attestation."
+        },
+        "behavior_verified": true,
+        "observed_adaptations": [],
+        "duration_estimates": [
+          25.39
+        ]
+      },
+      {
+        "run_id": "live_overtime_round1",
+        "case": "overtime",
+        "input": "examples/inputs/overtime.json",
+        "trace": "examples/traces/live_overtime_round1.json",
+        "events": "examples/traces/live_overtime_round1.jsonl",
+        "output": "examples/outputs/live_overtime_round1.json",
+        "output_matches_trace": true,
+        "status": "completed",
+        "expected_status": "completed",
+        "status_matches": true,
+        "actions": [
+          "search_assets",
+          "draft_script",
+          "draft_script",
+          "estimate_duration",
+          "check_brand_rules",
+          "finish"
+        ],
+        "target_seconds": 12,
+        "real_model_responses": 6,
+        "recorded_total_tokens": 30374,
+        "live_call_integrity": {
+          "verified": true,
+          "recorded_decisions": 6,
+          "observation_feedback_checks": 5,
+          "response_models": [
+            "deepseek-flash"
+          ],
+          "issues": [],
+          "limitation": "Audit of local execution records; not independent provider attestation."
+        },
+        "behavior_verified": false,
+        "observed_adaptations": [],
+        "duration_estimates": [
+          10.41
+        ]
+      },
+      {
+        "run_id": "live_overtime_tight_round1",
+        "case": "overtime",
+        "input": "examples/inputs/overtime_tight.json",
+        "trace": "examples/traces/live_overtime_tight_round1.json",
+        "events": "examples/traces/live_overtime_tight_round1.jsonl",
+        "output": "examples/outputs/live_overtime_tight_round1.json",
+        "output_matches_trace": true,
+        "status": "completed",
+        "expected_status": "completed",
+        "status_matches": true,
+        "actions": [
+          "search_assets",
+          "draft_script",
+          "estimate_duration",
+          "draft_script",
+          "estimate_duration",
+          "check_brand_rules",
+          "finish"
+        ],
+        "target_seconds": 4,
+        "real_model_responses": 7,
+        "recorded_total_tokens": 30849,
+        "live_call_integrity": {
+          "verified": true,
+          "recorded_decisions": 7,
+          "observation_feedback_checks": 6,
+          "response_models": [
+            "deepseek-flash"
+          ],
+          "issues": [],
+          "limitation": "Audit of local execution records; not independent provider attestation."
+        },
+        "behavior_verified": true,
+        "observed_adaptations": [
+          "duration_revision"
+        ],
+        "duration_estimates": [
+          7.64,
+          2.35
+        ]
+      },
+      {
+        "run_id": "live_sparse_round1",
+        "case": "sparse",
+        "input": "examples/inputs/sparse.json",
+        "trace": "examples/traces/live_sparse_round1.json",
+        "events": "examples/traces/live_sparse_round1.jsonl",
+        "output": "examples/outputs/live_sparse_round1.json",
+        "output_matches_trace": true,
+        "status": "completed",
+        "expected_status": "completed",
+        "status_matches": true,
+        "actions": [
+          "search_assets",
+          "draft_script",
+          "estimate_duration",
+          "draft_script",
+          "draft_script",
+          "estimate_duration",
+          "check_brand_rules",
+          "finish"
+        ],
+        "target_seconds": 10,
+        "real_model_responses": 8,
+        "recorded_total_tokens": 41004,
+        "live_call_integrity": {
+          "verified": true,
+          "recorded_decisions": 8,
+          "observation_feedback_checks": 7,
+          "response_models": [
+            "deepseek-flash"
+          ],
+          "issues": [],
+          "limitation": "Audit of local execution records; not independent provider attestation."
+        },
+        "behavior_verified": true,
+        "observed_adaptations": [
+          "duration_revision"
+        ],
+        "duration_estimates": [
+          10.28,
+          7.65
+        ]
+      },
+      {
+        "run_id": "live_tool_failure_round1",
+        "case": "tool_failure",
+        "input": "examples/inputs/tool_failure.json",
+        "trace": "examples/traces/live_tool_failure_round1.json",
+        "events": "examples/traces/live_tool_failure_round1.jsonl",
+        "output": "examples/outputs/live_tool_failure_round1.json",
+        "output_matches_trace": true,
+        "status": "completed",
+        "expected_status": "completed",
+        "status_matches": true,
+        "actions": [
+          "search_assets",
+          "draft_script",
+          "estimate_duration",
+          "estimate_duration",
+          "draft_script",
+          "estimate_duration",
+          "check_brand_rules",
+          "finish"
+        ],
+        "target_seconds": 30,
+        "real_model_responses": 8,
+        "recorded_total_tokens": 51578,
+        "live_call_integrity": {
+          "verified": true,
+          "recorded_decisions": 8,
+          "observation_feedback_checks": 7,
+          "response_models": [
+            "deepseek-flash"
+          ],
+          "issues": [],
+          "limitation": "Audit of local execution records; not independent provider attestation."
+        },
+        "behavior_verified": true,
+        "observed_adaptations": [
+          "duration_revision",
+          "tool_retry"
+        ],
+        "duration_estimates": [
+          30.91,
+          23.18
+        ]
+      }
+    ]
   },
   "remote_configured": true,
+  "engineering_validation_complete": true,
   "overall_delivery_complete": false,
   "pending_human_items": [
     "Candidate review and actual time confirmation",
-    "Confidentiality approval before publication",
+    "Confidentiality review",
     "Reviewer access confirmation; repository visibility must remain private"
   ],
   "scan_limitations": "Pattern scan cannot guarantee discovery of every possible secret or confidential item; candidate review remains required."

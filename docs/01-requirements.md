@@ -10,7 +10,7 @@
 4. 实际执行单元与 Mock 集成测试，保存多场景输出并修复问题。
 5. 完成说明、评估、AI 使用记录、复盘和 Git 交付审计。
 
-用户已选择先完成离线部分，live 验证保留待完成。需求分析开始时尚未提供 API 配置、远程仓库或评审账号；后续用户已提供 GitHub 地址并明确授权提交。计划预算 180 分钟不作为实际工时记录。
+用户最初选择先完成离线部分，后续已填写本地 API 配置并要求进行 live 验证。需求分析开始时尚未提供 API 配置、远程仓库或评审账号；之后用户已提供 GitHub 地址并明确授权提交。计划预算 180 分钟不作为实际工时记录。
 
 ## 验收矩阵
 
@@ -27,7 +27,7 @@
 | 规则修正 | 观察品牌违规后修改脚本并重新检查 | Runner、Mock fixture | `tests/test_agent.py` | `examples/traces/mock_rule_repair.json` |
 | 协议异常 | 非 JSON、未知动作、非法参数返回观察，执行上限仍有效 | Adapter、Executor | `tests/test_failures.py`, `tests/test_adapter.py` | 测试实际输出 |
 | 可审计 | run_id、模式、模型、请求/响应、动作、参数、观察、错误自动落盘 | `src/tracing.py` | `tests/test_agent.py`, `tests/test_adapter.py` | `examples/traces/*.json`, `*.jsonl` |
-| live 动态性 | 至少两条真实模型路径，包含实际请求与工具观察反馈 | Live Adapter、`scripts/run_examples.py` | 真实 API 集成（待执行） | 尚无，不能以 Mock Trace 代替 |
+| live 动态性 | 至少两条真实模型路径，包含实际请求与工具观察反馈 | Live Adapter、运行/汇总/核验脚本 | 已执行10次真实运行并核验动作、参数与反馈一致性 | `examples/live-summary.json`；`live_no_assets_round1.json`、`live_overtime_tight_round1.json` |
 | 交付 | 可运行 README、五份文档、真实测试输出、无密钥、无题目原文 | 项目文档与审计脚本 | 实际命令、审计报告 | `examples/test-results.txt`, `examples/audit.json` |
 
 ## 成功标准与范围

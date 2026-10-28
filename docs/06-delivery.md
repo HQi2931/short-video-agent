@@ -47,7 +47,7 @@ git ls-remote origin refs/heads/main
 ## 仍需本人完成
 
 - 补充 `docs/04-ai-usage.md` 的本人审核、实际修改与实际工时记录。
-- 配置授权 API，完成 live 验证；当前没有两条真实模型动态路径。
+- 复核已保存的 live 验证证据：`examples/live-report.md`、`examples/live-summary.json`；本次已覆盖8类场景并有两条以上真实不同路径，其他服务商与稳定性仍未验证。
 - 按考核方提供的准确账号，在 GitHub Settings → Collaborators → Add people 中邀请评审，确认对方接受并能访问。
 - 保持仓库为 Private，按考核要求处理提交后的保密事项。
 

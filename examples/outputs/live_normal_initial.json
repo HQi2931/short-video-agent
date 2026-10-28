@@ -1,0 +1,299 @@
+{
+  "run_id": "live_normal_initial",
+  "mode": "live",
+  "model": "deepseek-flash",
+  "status": "completed",
+  "reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+  "title": "打开你的创作灵感。轻剪支持自动字幕。",
+  "topic": "轻剪字幕与竖屏剪辑",
+  "audience": "初次创作的大学生",
+  "platform": "抖音",
+  "style": "清晰、轻快，依据提供的产品事实",
+  "target_duration_seconds": 30.0,
+  "script_version": "ebcda46a7f636feb10fca87f9860bdbcb8e8b235cc49216987f94d220772b121",
+  "script_revision": 3,
+  "storyboard": [
+    {
+      "scene_id": "S01",
+      "visual": "镜头推近手机屏幕。",
+      "narration": "打开你的创作灵感。轻剪支持自动字幕。",
+      "subtitle": "打开你的创作灵感。轻剪支持自动字幕。",
+      "source_ids": [
+        "P01"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "P01",
+          "fact_id": "F01",
+          "evidence_text": "轻剪支持自动字幕。",
+          "claim_text": "轻剪支持自动字幕。"
+        }
+      ],
+      "estimated_seconds": 4.27
+    },
+    {
+      "scene_id": "S02",
+      "visual": "画面切换到时间线区域。",
+      "narration": "今天，试着记录一个灵感。轻剪支持时间线剪辑。",
+      "subtitle": "今天，试着记录一个灵感。轻剪支持时间线剪辑。",
+      "source_ids": [
+        "P01"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "P01",
+          "fact_id": "F02",
+          "evidence_text": "轻剪支持时间线剪辑。",
+          "claim_text": "轻剪支持时间线剪辑。"
+        }
+      ],
+      "estimated_seconds": 5.12
+    },
+    {
+      "scene_id": "S03",
+      "visual": "画面展示竖屏预览。",
+      "narration": "试着开始创作吧。轻剪支持竖屏视频导出。",
+      "subtitle": "试着开始创作吧。轻剪支持竖屏视频导出。",
+      "source_ids": [
+        "P01"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "P01",
+          "fact_id": "F03",
+          "evidence_text": "轻剪支持竖屏视频导出。",
+          "claim_text": "轻剪支持竖屏视频导出。"
+        }
+      ],
+      "estimated_seconds": 4.49
+    },
+    {
+      "scene_id": "S04",
+      "visual": "画面展示配乐区域。",
+      "narration": "试着开始创作吧。轻剪支持添加背景音乐。",
+      "subtitle": "试着开始创作吧。轻剪支持添加背景音乐。",
+      "source_ids": [
+        "P02"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "P02",
+          "fact_id": "F01",
+          "evidence_text": "轻剪支持添加背景音乐。",
+          "claim_text": "轻剪支持添加背景音乐。"
+        }
+      ],
+      "estimated_seconds": 4.49
+    },
+    {
+      "scene_id": "S05",
+      "visual": "画面切换到字幕区域。",
+      "narration": "打开你的创作灵感。轻剪支持自动字幕。",
+      "subtitle": "打开你的创作灵感。轻剪支持自动字幕。",
+      "source_ids": [
+        "P01"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "P01",
+          "fact_id": "F01",
+          "evidence_text": "轻剪支持自动字幕。",
+          "claim_text": "轻剪支持自动字幕。"
+        }
+      ],
+      "estimated_seconds": 4.27
+    },
+    {
+      "scene_id": "S06",
+      "visual": "画面展示竖屏预览。",
+      "narration": "轻剪支持竖屏视频导出。",
+      "subtitle": "轻剪支持竖屏视频导出。",
+      "source_ids": [
+        "P01"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "P01",
+          "fact_id": "F03",
+          "evidence_text": "轻剪支持竖屏视频导出。",
+          "claim_text": "轻剪支持竖屏视频导出。"
+        }
+      ],
+      "estimated_seconds": 2.76
+    }
+  ],
+  "total_estimated_seconds": 25.4,
+  "used_asset_ids": [
+    "P01",
+    "P02"
+  ],
+  "sources": [
+    {
+      "asset_id": "P01",
+      "name": "轻剪基础功能（合成产品）",
+      "keywords": [
+        "轻剪",
+        "剪辑",
+        "字幕",
+        "短视频",
+        "竖屏"
+      ],
+      "facts": [
+        {
+          "fact_id": "F01",
+          "text": "轻剪支持自动字幕。"
+        },
+        {
+          "fact_id": "F02",
+          "text": "轻剪支持时间线剪辑。"
+        },
+        {
+          "fact_id": "F03",
+          "text": "轻剪支持竖屏视频导出。"
+        }
+      ],
+      "source_text": "轻剪支持自动字幕。轻剪支持时间线剪辑。轻剪支持竖屏视频导出。此为合成素材，未提供效率、准确率或收益数据。"
+    },
+    {
+      "asset_id": "P02",
+      "name": "轻剪音乐功能（少量事实）",
+      "keywords": [
+        "轻剪",
+        "音乐",
+        "配乐"
+      ],
+      "facts": [
+        {
+          "fact_id": "F01",
+          "text": "轻剪支持添加背景音乐。"
+        }
+      ],
+      "source_text": "轻剪支持添加背景音乐。此为合成素材，没有曲库数量、版权范围或效率数据。"
+    }
+  ],
+  "duration_check": {
+    "ok": true,
+    "script_version": "ebcda46a7f636feb10fca87f9860bdbcb8e8b235cc49216987f94d220772b121",
+    "scenes": [
+      {
+        "scene_id": "S01",
+        "narration_seconds": 3.92,
+        "subtitle_reading_seconds": 3.92,
+        "estimated_seconds": 4.27
+      },
+      {
+        "scene_id": "S02",
+        "narration_seconds": 4.77,
+        "subtitle_reading_seconds": 4.77,
+        "estimated_seconds": 5.12
+      },
+      {
+        "scene_id": "S03",
+        "narration_seconds": 4.14,
+        "subtitle_reading_seconds": 4.14,
+        "estimated_seconds": 4.49
+      },
+      {
+        "scene_id": "S04",
+        "narration_seconds": 4.14,
+        "subtitle_reading_seconds": 4.14,
+        "estimated_seconds": 4.49
+      },
+      {
+        "scene_id": "S05",
+        "narration_seconds": 3.92,
+        "subtitle_reading_seconds": 3.92,
+        "estimated_seconds": 4.27
+      },
+      {
+        "scene_id": "S06",
+        "narration_seconds": 2.41,
+        "subtitle_reading_seconds": 2.41,
+        "estimated_seconds": 2.76
+      }
+    ],
+    "total_estimated_seconds": 25.4,
+    "target_duration_seconds": 30.0,
+    "is_overtime": false,
+    "passed": true,
+    "exceeded_seconds": 0,
+    "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+    "timing": {
+      "chinese_chars_per_second": 4.5,
+      "english_words_per_second": 2.5,
+      "number_groups_per_second": 2.0,
+      "punctuation_pause_seconds": 0.18,
+      "minimum_scene_seconds": 2.0,
+      "transition_seconds": 0.35
+    },
+    "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ."
+  },
+  "brand_rule_check": {
+    "ok": true,
+    "script_version": "ebcda46a7f636feb10fca87f9860bdbcb8e8b235cc49216987f94d220772b121",
+    "passed": true,
+    "violations": [],
+    "unsupported_claims": [],
+    "missing_references": [],
+    "risk_reasons": [],
+    "needs_confirmation": false,
+    "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+    "limitation": "String verification does not establish full natural-language semantic entailment."
+  },
+  "risk_flags": [],
+  "missing_information": [],
+  "question": null,
+  "errors": [],
+  "completed_steps": [
+    {
+      "step": 1,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "action": "draft_script",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "action": "estimate_duration",
+      "ok": true
+    },
+    {
+      "step": 4,
+      "action": "draft_script",
+      "ok": true
+    },
+    {
+      "step": 5,
+      "action": "draft_script",
+      "ok": true
+    },
+    {
+      "step": 6,
+      "action": "estimate_duration",
+      "ok": true
+    },
+    {
+      "step": 7,
+      "action": "check_brand_rules",
+      "ok": true
+    },
+    {
+      "step": 8,
+      "action": "finish",
+      "ok": true
+    }
+  ],
+  "last_observation": {
+    "ok": true,
+    "status": "completed",
+    "script_version": "ebcda46a7f636feb10fca87f9860bdbcb8e8b235cc49216987f94d220772b121"
+  },
+  "limitations": [
+    "合成素材，仅用于工程验证。",
+    "时长是工程估算，需要真人口播复核。",
+    "仅通过原文和批准文案核验，未知改写会被阻断。"
+  ]
+}

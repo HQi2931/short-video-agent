@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from uuid import uuid4
 
-from evidence import inspect_behavior
+from evidence import inspect_behavior, inspect_live_calls
 
 ROOT = Path(__file__).resolve().parents[1]
 CASES = {
@@ -50,13 +50,15 @@ def run_examples(mode: str, tag: str | None = None) -> dict:
             "actions": path, "real_model_responses": trace.get("real_model_responses", 0),
             "stderr": process.stderr, "stdout": process.stdout,
             **inspect_behavior(case, trace),
+            "live_call_integrity": inspect_live_calls(trace) if mode == "live" else None,
         }
         batch["runs"].append(row)
         print(f"{case}: {row['actual_status']} (exit={process.returncode})", flush=True)
         if mode == "live" and output.get("failure_phase") == "configuration":
             # Avoid repeatedly attempting a known unavailable API configuration.
             break
-    live_paths = {tuple(r["actions"]) for r in batch["runs"] if r["real_model_responses"] and r["behavior_verified"]}
+    live_paths = {tuple(r["actions"]) for r in batch["runs"] if r["real_model_responses"]
+                  and r["behavior_verified"] and (r.get("live_call_integrity") or {}).get("verified")}
     batch["distinct_verified_live_paths"] = len(live_paths) if mode == "live" else 0
     batch["live_requirement_verified"] = (
         mode == "live" and len(live_paths) >= 2

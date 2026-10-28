@@ -1,4 +1,43 @@
 """Inspect observable behavior; completion alone does not prove a correction path."""
+import json
+
+
+def inspect_live_calls(trace: dict) -> dict:
+    """Verify exported actions and feedback against recorded HTTP requests/responses."""
+    issues = []
+    steps = trace.get("steps", [])
+    response_models = set()
+    for index, step in enumerate(steps):
+        record = step.get("model_call", {})
+        response = record.get("response", {})
+        if response.get("model"):
+            response_models.add(response["model"])
+        if trace.get("mode") != "live" or record.get("mode") != "live" or record.get("http_status") != 200:
+            issues.append({"step": step.get("step"), "problem": "Missing successful live HTTP record"})
+            continue
+        try:
+            request = record["request"]
+            raw_action = json.loads(response["content"])
+            expected_action = {key: step[key] for key in ("action", "arguments", "reason_summary")}
+            if raw_action != expected_action:
+                issues.append({"step": step["step"], "problem": "Action differs from model response"})
+            context = json.loads(request["messages"][-1]["content"])["state"]
+            previous = steps[index - 1]["observation"] if index else None
+            if context["last_observation"] != previous:
+                issues.append({"step": step["step"], "problem": "Previous observation was not fed back"})
+            # The input trace is raw; Pydantic fills None defaults and strips text.
+            def normalized_input(value):
+                return {k: v.strip() if isinstance(v, str) else v for k, v in value.items() if v is not None}
+            if normalized_input(context["user_input"]) != normalized_input(trace["input"]) or request["model"] != trace["model"]:
+                issues.append({"step": step["step"], "problem": "Request target/input differs from trace"})
+        except (KeyError, TypeError, ValueError, IndexError):
+            issues.append({"step": step.get("step"), "problem": "Unverifiable request or model response"})
+    return {
+        "verified": bool(steps) and not issues, "recorded_decisions": len(steps),
+        "observation_feedback_checks": max(0, len(steps) - 1),
+        "response_models": sorted(response_models), "issues": issues,
+        "limitation": "Audit of local execution records; not independent provider attestation.",
+    }
 
 
 def inspect_behavior(case: str, trace: dict) -> dict:

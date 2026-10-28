@@ -2,7 +2,7 @@
 
 一个基于 Python 原生循环的、带证据和版本检查的短视频脚本 Agent。输入创作目标，输出可编辑的分镜 JSON、逐镜时长、素材 ID、事实原文和任务状态。产品与素材均为合成数据。
 
-**当前交付：离线实现与 Mock 验证完成；真实模型验证待完成。** 已配置[私有 GitHub 仓库](https://github.com/HQi2931/short-video-agent)。Mock 的修订路径是预设测试数据，不能证明模型自主决策。真实模式的 Adapter 已实现，每一步由远程模型返回动作，Runtime 只负责校验、执行工具和完成门禁。
+**当前交付：离线验证及真实模型验证均已执行。** 使用配置的 `deepseek-flash` 完成10次真实运行，覆盖8类场景，保存61条模型响应；核验到7条不同的有效决策路径，见[真实验证报告](examples/live-report.md)。已配置[私有 GitHub 仓库](https://github.com/HQi2931/short-video-agent)。Mock 的修订路径仍是预设测试数据；live 每一步由远程模型返回动作，Runtime 负责校验、执行工具和完成门禁。
 
 ## 安装与运行
 
@@ -36,7 +36,7 @@ python -m pytest tests/ -v
 
 `--scenario` 仅选择 Mock 预设动作。输入与情景应搭配；默认 `normal` 不会替所有输入自动规划。CLI 日志会显示本次输出与 Trace 路径。
 
-## 真实模型模式（待验证）
+## 真实模型模式
 
 将 `.env.example` 复制为 `.env`，在本地填写配置，勿将密钥提交到 Git：
 
@@ -58,10 +58,12 @@ LLM_RESPONSE_FORMAT=json_object
 ```powershell
 .\.venv\Scripts\python.exe -m src.main --mode live --input-file examples/inputs/normal.json
 .\.venv\Scripts\python.exe -m src.main --mode live --input-file examples/inputs/overtime.json
+.\.venv\Scripts\python.exe -m src.main --mode live --input-file examples/inputs/overtime_tight.json
 .\.venv\Scripts\python.exe scripts/run_examples.py --mode live
+.\.venv\Scripts\python.exe scripts/summarize_live.py
 ```
 
-live 批量运行会产生真实 API 请求并消耗服务商额度。是否通过具体行为验证，取决于真实模型返回；若超时案例首稿已合格，不能记为“超时后修订已验证”。请检查 `examples/live-manifest.json` 中的 `behavior_verified`、`observed_adaptations` 和具体 Trace，修正不通过项后再审计。
+live 批量运行会产生真实 API 请求并消耗服务商额度。是否通过具体行为验证，取决于真实模型返回；若超时案例首稿已合格，不能记为“超时后修订已验证”。本次12秒用例首稿10.41秒，未触发修订，原批次 `all_expected_behaviors=false` 与退出码1如实保留；随后4秒补充用例实际出现7.64→2.35秒修订。`summarize_live.py` 汇总已有证据，不新增模型调用，也不覆盖初始批次结果。
 
 ## 检查与实际证据
 
@@ -72,9 +74,11 @@ live 批量运行会产生真实 API 请求并消耗服务商额度。是否通�
 .\.venv\Scripts\python.exe -m pip check
 ```
 
-- [测试实际输出](examples/test-results.txt) 与 [JUnit 报告](examples/test-results.xml)：本次112项通过。重跑时保留旧文本报告。
+- [测试实际输出](examples/test-results.txt) 与 [JUnit 报告](examples/test-results.xml)：本次116项通过。重跑时保留旧文本报告。
 - [离线案例清单](examples/mock-manifest.json)：每组输入、输出、Trace、退出码和动作路径。
-- [最终审计](examples/audit.json)：离线检查与 live 验证分别给出状态；离线通过不代表整体 live 验收完成。
+- [最终审计](examples/audit.json)：分别报告离线检查、live 覆盖与人工待办；工程验证通过仍不代表候选人审核已完成。
+- [真实运行汇总](examples/live-summary.json)与[报告](examples/live-report.md)：10次运行全部保留，包括1条未触发预期修订的记录。
+- 两条真实动态路径：[无素材后改写查询并请求补充](examples/traces/live_no_assets_round1.json)；[超时后改稿并重新检查](examples/traces/live_overtime_tight_round1.json)。另有[注入工具错误后的模型重试](examples/traces/live_tool_failure_round1.json)及[引用规则修正](examples/traces/live_changed_assets_round1.json)。
 - 基准超时例的实际工具估时为 **43.43 → 7.64 秒**，目标 12 秒；两个脚本版本和重新检查记录见 [修订 Trace](examples/traces/mock_overtime_validated.json)。此路径为 **Mock 预设修订**。
 - [正常例](examples/outputs/mock_normal_validated.json)、[工具失败例](examples/traces/mock_tool_failure_validated.json)、[拒绝无据效果例](examples/traces/mock_unsupported_claim_validated.json)。
 
