@@ -6,7 +6,7 @@ from scripts.evidence import inspect_live_calls
 
 
 def trace_fixture():
-    trace = {"mode": "live", "model": "transport-fixture", "input": {"topic": "字幕"}, "steps": []}
+    trace = {"mode": "live", "execution_kind": "real_api", "model": "transport-fixture", "input": {"topic": "字幕"}, "steps": []}
     for index, name in enumerate(("search_assets", "stop")):
         selected = {"action": name, "arguments": {}, "reason_summary": "transport fixture"}
         context = {"user_input": trace["input"],
@@ -17,6 +17,8 @@ def trace_fixture():
                            "request": {"model": trace["model"], "messages": [{"role": "user", "content": json.dumps({"state": context})}]},
                            "response": {"model": "transport-fixture", "content": json.dumps(selected)}},
         })
+    for index, step in enumerate(trace["steps"]):
+        step["next_action"] = trace["steps"][index + 1]["action"] if index + 1 < len(trace["steps"]) else None
     return trace
 
 

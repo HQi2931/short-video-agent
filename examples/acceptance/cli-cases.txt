@@ -1,0 +1,13 @@
+actual_exit_code=0
+normal: completed (exit=0)
+missing_info: needs_info (exit=2)
+no_assets: needs_info (exit=2)
+tool_failure: completed (exit=0)
+overtime: completed (exit=0)
+unsupported_claim: failed (exit=3)
+max_steps: incomplete (exit=4)
+changed_duration: completed (exit=0)
+changed_assets: completed (exit=0)
+sparse: completed (exit=0)
+rule_repair: completed (exit=0)
+

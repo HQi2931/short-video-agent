@@ -1,4 +1,5 @@
 """Read-only evidence audit, except for writing its own report."""
+import argparse
 import json
 import os
 import re
@@ -12,6 +13,8 @@ from dotenv import dotenv_values
 
 from evidence import inspect_behavior, inspect_live_calls
 from summarize_live import summarize_live
+from replay import replay_files
+from verify import source_hashes
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -37,7 +40,9 @@ def audit() -> dict:
     suites = list(xml.iter("testsuite"))
     count = sum(int(s.get("tests", 0)) for s in suites)
     failures = sum(int(s.get("failures", 0)) + int(s.get("errors", 0)) for s in suites)
-    check("actual_pytest_result", count > 0 and failures == 0 and environment["exit_code"] == 0,
+    binding = environment.get("tested_source_sha256")
+    fresh = binding is None or (binding == source_hashes() and environment.get("source_unchanged_during_tests"))
+    check("actual_pytest_result", count > 0 and failures == 0 and environment["exit_code"] == 0 and fresh,
           {"tests": count, "failures_or_errors": failures})
     manifest = read_json(ROOT / "examples/mock-manifest.json")
     check("at_least_three_actual_mock_runs", len(manifest["runs"]) >= 3)
@@ -49,6 +54,8 @@ def audit() -> dict:
         result = inspect_behavior(row["case"], trace)
         behavior.append({"case": row["case"], "trace": row["trace"], **result})
         check(f"{row['case']}: output_matches_trace", output == trace["final_result"])
+        recomputation = replay_files(ROOT / row["trace"])
+        check(f"{row['case']}: deterministic_replay_and_jsonl", recomputation["verified"], recomputation)
         check(f"{row['case']}: honest_mock_mode", output["mode"] == trace["mode"] == "mock"
               and trace["real_model_responses"] == 0 and trace["execution_kind"] == "scripted_mock")
         check(f"{row['case']}: expected_behavior", result["behavior_verified"], result)
@@ -134,9 +141,13 @@ def audit() -> dict:
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--require-live", action="store_true", help="Fail unless offline and all required live coverage pass")
+    args = parser.parse_args()
     try:
         report = audit()
     except Exception as exc:
         print(f"Audit could not complete: {type(exc).__name__}: {exc}")
         raise SystemExit(1)
-    raise SystemExit(0 if report["offline_checks_passed"] else 1)
+    passed = report["engineering_validation_complete"] if args.require_live else report["offline_checks_passed"]
+    raise SystemExit(0 if passed else 1)

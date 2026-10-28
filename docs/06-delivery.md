@@ -22,6 +22,8 @@ git status --short
 git check-ignore .env
 git check-ignore .venv/Scripts/python.exe
 .\.venv\Scripts\python.exe scripts/audit.py
+.\.venv\Scripts\python.exe scripts/audit.py --require-live
+.\.venv\Scripts\python.exe scripts/acceptance_audit.py
 git diff --check
 ```
 

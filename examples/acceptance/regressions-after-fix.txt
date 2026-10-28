@@ -1,0 +1,23 @@
+actual_exit_code=0
+============================= test session starts =============================
+platform win32 -- Python 3.13.12, pytest-9.2.0, pluggy-1.7.0 -- D:\Xiaoying\short-video-agent\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\Xiaoying\short-video-agent
+configfile: pyproject.toml
+plugins: anyio-4.15.1
+collecting ... collected 11 items
+
+tests/test_acceptance_regressions.py::test_result_cannot_remain_completed_after_verified_state_changes[script] PASSED [  9%]
+tests/test_acceptance_regressions.py::test_result_cannot_remain_completed_after_verified_state_changes[input] PASSED [ 18%]
+tests/test_acceptance_regressions.py::test_result_cannot_remain_completed_after_verified_state_changes[assets] PASSED [ 27%]
+tests/test_acceptance_regressions.py::test_result_cannot_remain_completed_after_verified_state_changes[direct_mutation] PASSED [ 36%]
+tests/test_acceptance_regressions.py::test_live_integrity_rejects_wrong_next_action PASSED [ 45%]
+tests/test_acceptance_regressions.py::test_live_integrity_rejects_explicit_mock_execution_kind PASSED [ 54%]
+tests/test_acceptance_regressions.py::test_overtime_evidence_requires_actual_changed_model_draft PASSED [ 63%]
+tests/test_evidence.py::test_record_integrity_checks_actions_and_feedback PASSED [ 72%]
+tests/test_evidence.py::test_http_success_alone_cannot_validate_tampered_action PASSED [ 81%]
+tests/test_evidence.py::test_missing_observation_feedback_is_detected PASSED [ 90%]
+tests/test_evidence.py::test_input_defaults_and_whitespace_normalization_are_not_tampering PASSED [100%]
+
+============================= 11 passed in 0.14s ==============================
+

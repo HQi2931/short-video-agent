@@ -41,7 +41,7 @@ python -m pytest tests/ -v
 将 `.env.example` 复制为 `.env`，在本地填写配置，勿将密钥提交到 Git：
 
 ```powershell
-Copy-Item .env.example .env
+if (-not (Test-Path .env)) { Copy-Item .env.example .env }
 ```
 
 ```dotenv
@@ -71,12 +71,15 @@ live 批量运行会产生真实 API 请求并消耗服务商额度。是否通�
 .\.venv\Scripts\python.exe scripts/verify.py
 .\.venv\Scripts\python.exe scripts/run_examples.py --mode mock
 .\.venv\Scripts\python.exe scripts/audit.py
+.\.venv\Scripts\python.exe scripts/audit.py --require-live
+.\.venv\Scripts\python.exe scripts/acceptance_audit.py
 .\.venv\Scripts\python.exe -m pip check
 ```
 
-- [测试实际输出](examples/test-results.txt) 与 [JUnit 报告](examples/test-results.xml)：本次116项通过。重跑时保留旧文本报告。
+- [测试实际输出](examples/test-results.txt) 与 [JUnit 报告](examples/test-results.xml)：严格验收修复后129项通过。重跑时保留旧文本报告。
 - [离线案例清单](examples/mock-manifest.json)：每组输入、输出、Trace、退出码和动作路径。
 - [最终审计](examples/audit.json)：分别报告离线检查、live 覆盖与人工待办；工程验证通过仍不代表候选人审核已完成。
+- 默认 `audit.py` 仅以离线检查决定退出码；完整交付使用 `--require-live`。严格的12项验收矩阵见[审计报告](docs/07-acceptance-audit.md)，由候选人发起、AI工具执行，包含修复前的失败证据。
 - [真实运行汇总](examples/live-summary.json)与[报告](examples/live-report.md)：10次运行全部保留，包括1条未触发预期修订的记录。
 - 两条真实动态路径：[无素材后改写查询并请求补充](examples/traces/live_no_assets_round1.json)；[超时后改稿并重新检查](examples/traces/live_overtime_tight_round1.json)。另有[注入工具错误后的模型重试](examples/traces/live_tool_failure_round1.json)及[引用规则修正](examples/traces/live_changed_assets_round1.json)。
 - 基准超时例的实际工具估时为 **43.43 → 7.64 秒**，目标 12 秒；两个脚本版本和重新检查记录见 [修订 Trace](examples/traces/mock_overtime_validated.json)。此路径为 **Mock 预设修订**。
@@ -96,6 +99,8 @@ Trace 自动生成 JSON 与追加式 JSONL。`run_id` 不覆盖已有日志；�
 
 脚本、用户目标、素材快照、检索素材或品牌规则任一变化，旧检查不能用于完成。任何业务工具错误会清空两项当前检查；不能跳过验证直接完成。
 
+已完成任务的 Python 状态若被修改，结果会降为 incomplete；导出结果时再次核验门禁，防止绕过更新方法直接编辑对象后仍返回 completed。继续生成应创建新的运行状态。
+
 ## 工程与交付文档
 
 - [需求与验收矩阵](docs/01-requirements.md)
@@ -104,5 +109,6 @@ Trace 自动生成 JSON 与追加式 JSONL。`run_id` 不覆盖已有日志；�
 - [AI 辅助开发记录](docs/04-ai-usage.md)
 - [复盘与待办](docs/05-retrospective.md)
 - [私有 GitHub 交付清单](docs/06-delivery.md)
+- [严格校招验收审计](docs/07-acceptance-audit.md)
 
 此仓库没有复制考核题目原文。仓库可见性已核实为 Private，实际提交以 GitHub 历史为准。候选人仍需完成本人代码审核、实际工时与评审访问权限确认；文档中的 TODO 不代表已经审核通过。

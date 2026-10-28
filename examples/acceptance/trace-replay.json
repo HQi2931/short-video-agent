@@ -1,0 +1,650 @@
+{
+  "method": "offline_replay_no_model_calls",
+  "runs": [
+    {
+      "trace": "examples/traces/live_changed_assets_round1.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 8,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 8
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/live_changed_duration_round1.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 7,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 7
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/live_missing_info_round1.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 1,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 1
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/live_no_assets_round1.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 3,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 3
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/live_normal_initial.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 8,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 8
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/live_normal_round1.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/live_overtime_round1.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 6,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 6
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/live_overtime_tight_round1.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 7,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 7
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/live_sparse_round1.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 8,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 8
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/live_tool_failure_round1.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 8,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 8
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_changed_assets.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_changed_assets_acceptance.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_changed_assets_validated.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_changed_duration.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_changed_duration_acceptance.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_changed_duration_validated.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_max_steps.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 3,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 3
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_max_steps_acceptance.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 3,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 3
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_max_steps_validated.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 3,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 3
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_missing_info.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 1,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 1
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_missing_info_acceptance.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 1,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 1
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_missing_info_validated.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 1,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 1
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_no_assets.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 3,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 3
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_no_assets_acceptance.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 3,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 3
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_no_assets_validated.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 3,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 3
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_normal.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_normal_acceptance.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_normal_validated.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_overtime.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 7,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 7
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_overtime_acceptance.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 7,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 7
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_overtime_validated.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 7,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 7
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_rule_repair.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 8,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 8
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_rule_repair_acceptance.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 8,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 8
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_rule_repair_validated.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 8,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 8
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_sparse.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_sparse_acceptance.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_sparse_validated.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_tool_failure.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 6,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 6
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_tool_failure_acceptance.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 6,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 6
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_tool_failure_validated.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 6,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 6
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_unsupported_claim.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 6,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 6
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_unsupported_claim_acceptance.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 6,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 6
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_unsupported_claim_validated.json",
+      "result": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 6,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 6
+        },
+        "issues": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "generated_at_utc": "2026-10-28T03:35:58.104483+00:00",
+  "mode": "mock",
+  "runs": [
+    {
+      "case": "normal",
+      "run_id": "mock_normal_validated",
+      "input": "examples/inputs/normal.json",
+      "output": "examples/outputs/mock_normal_validated.json",
+      "trace": "examples/traces/mock_normal_validated.json",
+      "events": "examples/traces/mock_normal_validated.jsonl",
+      "exit_code": 0,
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "status_matches": true,
+      "actions": [
+        "search_assets",
+        "draft_script",
+        "estimate_duration",
+        "check_brand_rules",
+        "finish"
+      ],
+      "real_model_responses": 0,
+      "stderr": "",
+      "stdout": "{\"run_id\": \"mock_normal_validated\", \"mode\": \"mock\", \"status\": \"completed\", \"reason\": \"Current script passed deterministic duration and conservative evidence/brand checks\", \"output\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\examples\\\\outputs\\\\mock_normal_validated.json\", \"trace\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\examples\\\\traces\\\\mock_normal_validated.json\"}\n",
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        7.64
+      ]
+    },
+    {
+      "case": "missing_info",
+      "run_id": "mock_missing_info_validated",
+      "input": "examples/inputs/missing_info.json",
+      "output": "examples/outputs/mock_missing_info_validated.json",
+      "trace": "examples/traces/mock_missing_info_validated.json",
+      "events": "examples/traces/mock_missing_info_validated.jsonl",
+      "exit_code": 2,
+      "expected_status": "needs_info",
+      "actual_status": "needs_info",
+      "status_matches": true,
+      "actions": [
+        "request_info"
+      ],
+      "real_model_responses": 0,
+      "stderr": "",
+      "stdout": "{\"run_id\": \"mock_missing_info_validated\", \"mode\": \"mock\", \"status\": \"needs_info\", \"reason\": \"User input or reliable evidence is required\", \"output\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\examples\\\\outputs\\\\mock_missing_info_validated.json\", \"trace\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\examples\\\\traces\\\\mock_missing_info_validated.json\"}\n",
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": []
+    },
+    {
+      "case": "no_assets",
+      "run_id": "mock_no_assets_validated",
+      "input": "examples/inputs/no_assets.json",
+      "output": "examples/outputs/mock_no_assets_validated.json",
+      "trace": "examples/traces/mock_no_assets_validated.json",
+      "events": "examples/traces/mock_no_assets_validated.jsonl",
+      "exit_code": 2,
+      "expected_status": "needs_info",
+      "actual_status": "needs_info",
+      "status_matches": true,
+      "actions": [
+        "search_assets",
+        "search_assets",
+        "request_info"
+      ],
+      "real_model_responses": 0,
+      "stderr": "",
+      "stdout": "{\"run_id\": \"mock_no_assets_validated\", \"mode\": \"mock\", \"status\": \"needs_info\", \"reason\": \"User input or reliable evidence is required\", \"output\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\examples\\\\outputs\\\\mock_no_assets_validated.json\", \"trace\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\examples\\\\traces\\\\mock_no_assets_validated.json\"}\n",
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "query_rewrite"
+      ],
+      "duration_estimates": []
+    },
+    {
+      "case": "tool_failure",
+      "run_id": "mock_tool_failure_validated",
+      "input": "examples/inputs/tool_failure.json",
+      "output": "examples/outputs/mock_tool_failure_validated.json",
+      "trace": "examples/traces/mock_tool_failure_validated.json",
+      "events": "examples/traces/mock_tool_failure_validated.jsonl",
+      "exit_code": 0,
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "status_matches": true,
+      "actions": [
+        "search_assets",
+        "draft_script",
+        "estimate_duration",
+        "estimate_duration",
+        "check_brand_rules",
+        "finish"
+      ],
+      "real_model_responses": 0,
+      "stderr": "",
+      "stdout": "{\"run_id\": \"mock_tool_failure_validated\", \"mode\": \"mock\", \"status\": \"completed\", \"reason\": \"Current script passed deterministic duration and conservative evidence/brand checks\", \"output\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\examples\\\\outputs\\\\mock_tool_failure_validated.json\", \"trace\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\examples\\\\traces\\\\mock_tool_failure_validated.json\"}\n",
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "tool_retry"
+      ],
+      "duration_estimates": [
+        7.64
+      ]
+    },
+    {
+      "case": "overtime",
+      "run_id": "mock_overtime_validated",
+      "input": "examples/inputs/overtime.json",
+      "output": "examples/outputs/mock_overtime_validated.json",
+      "trace": "examples/traces/mock_overtime_validated.json",
+      "events": "examples/traces/mock_overtime_validated.jsonl",
+      "exit_code": 0,
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "status_matches": true,
+      "actions": [
+        "search_assets",
+        "draft_script",
+        "estimate_duration",
+        "draft_script",
+        "estimate_duration",
+        "check_brand_rules",
+        "finish"
+      ],
+      "real_model_responses": 0,
+      "stderr": "",
+      "stdout": "{\"run_id\": \"mock_overtime_validated\", \"mode\": \"mock\", \"status\": \"completed\", \"reason\": \"Current script passed deterministic duration and conservative evidence/brand checks\", \"output\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\examples\\\\outputs\\\\mock_overtime_validated.json\", \"trace\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\examples\\\\traces\\\\mock_overtime_validated.json\"}\n",
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "duration_revision"
+      ],
+      "duration_estimates": [
+        43.43,
+        7.64
+      ]
+    },
+    {
+      "case": "unsupported_claim",
+      "run_id": "mock_unsupported_claim_validated",
+      "input": "examples/inputs/unsupported_claim.json",
+      "output": "examples/outputs/mock_unsupported_claim_validated.json",
+      "trace": "examples/traces/mock_unsupported_claim_validated.json",
+      "events": "examples/traces/mock_unsupported_claim_validated.jsonl",
+      "exit_code": 3,
+      "expected_status": "failed",
+      "actual_status": "failed",
+      "status_matches": true,
+      "actions": [
+        "search_assets",
+        "draft_script",
+        "estimate_duration",
+        "check_brand_rules",
+        "finish",
+        "stop"
+      ],
+      "real_model_responses": 0,
+      "stderr": "",
+      "stdout": "{\"run_id\": \"mock_unsupported_claim_validated\", \"mode\": \"mock\", \"status\": \"failed\", \"reason\": \"效果声明缺少事实依据，不能交付。\", \"output\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\examples\\\\outputs\\\\mock_unsupported_claim_validated.json\", \"trace\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\examples\\\\traces\\\\mock_unsupported_claim_validated.json\"}\n",
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        9.17
+      ]
+    },
+    {
+      "case": "max_steps",
+      "run_id": "mock_max_steps_validated",
+      "input": "examples/inputs/max_steps.json",
+      "output": "examples/outputs/mock_max_steps_validated.json",
+      "trace": "examples/traces/mock_max_steps_validated.json",
+      "events": "examples/traces/mock_max_steps_validated.jsonl",
+      "exit_code": 4,
+      "expected_status": "incomplete",
+      "actual_status": "incomplete",
+      "status_matches": true,
+      "actions": [
+        "search_assets",
+        "search_assets",
+        "search_assets"
+      ],
+      "real_model_responses": 0,
+      "stderr": "",
+      "stdout": "{\"run_id\": \"mock_max_steps_validated\", \"mode\": \"mock\", \"status\": \"incomplete\", \"reason\": \"Reached max_steps=3 without a verified result\", \"output\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\examples\\\\outputs\\\\mock_max_steps_validated.json\", \"trace\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\examples\\\\traces\\\\mock_max_steps_validated.json\"}\n",
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": []
+    },
+    {
+      "case": "changed_duration",
+      "run_id": "mock_changed_duration_validated",
+      "input": "examples/inputs/changed_duration.json",
+      "output": "examples/outputs/mock_changed_duration_validated.json",
+      "trace": "examples/traces/mock_changed_duration_validated.json",
+      "events": "examples/traces/mock_changed_duration_validated.jsonl",
+      "exit_code": 0,
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "status_matches": true,
+      "actions": [
+        "search_assets",
+        "draft_script",
+        "estimate_duration",
+        "check_brand_rules",
+        "finish"
+      ],
+      "real_model_responses": 0,
+      "stderr": "",
+      "stdout": "{\"run_id\": \"mock_changed_duration_validated\", \"mode\": \"mock\", \"status\": \"completed\", \"reason\": \"Current script passed deterministic duration and conservative evidence/brand checks\", \"output\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\examples\\\\outputs\\\\mock_changed_duration_validated.json\", \"trace\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\examples\\\\traces\\\\mock_changed_duration_validated.json\"}\n",
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        2.35
+      ]
+    },
+    {
+      "case": "changed_assets",
+      "run_id": "mock_changed_assets_validated",
+      "input": "examples/inputs/changed_assets.json",
+      "output": "examples/outputs/mock_changed_assets_validated.json",
+      "trace": "examples/traces/mock_changed_assets_validated.json",
+      "events": "examples/traces/mock_changed_assets_validated.jsonl",
+      "exit_code": 0,
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "status_matches": true,
+      "actions": [
+        "search_assets",
+        "draft_script",
+        "estimate_duration",
+        "check_brand_rules",
+        "finish"
+      ],
+      "real_model_responses": 0,
+      "stderr": "",
+      "stdout": "{\"run_id\": \"mock_changed_assets_validated\", \"mode\": \"mock\", \"status\": \"completed\", \"reason\": \"Current script passed deterministic duration and conservative evidence/brand checks\", \"output\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\examples\\\\outputs\\\\mock_changed_assets_validated.json\", \"trace\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\examples\\\\traces\\\\mock_changed_assets_validated.json\"}\n",
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        6.68
+      ]
+    },
+    {
+      "case": "sparse",
+      "run_id": "mock_sparse_validated",
+      "input": "examples/inputs/sparse.json",
+      "output": "examples/outputs/mock_sparse_validated.json",
+      "trace": "examples/traces/mock_sparse_validated.json",
+      "events": "examples/traces/mock_sparse_validated.jsonl",
+      "exit_code": 0,
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "status_matches": true,
+      "actions": [
+        "search_assets",
+        "draft_script",
+        "estimate_duration",
+        "check_brand_rules",
+        "finish"
+      ],
+      "real_model_responses": 0,
+      "stderr": "",
+      "stdout": "{\"run_id\": \"mock_sparse_validated\", \"mode\": \"mock\", \"status\": \"completed\", \"reason\": \"Current script passed deterministic duration and conservative evidence/brand checks\", \"output\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\examples\\\\outputs\\\\mock_sparse_validated.json\", \"trace\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\examples\\\\traces\\\\mock_sparse_validated.json\"}\n",
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        2.76
+      ]
+    },
+    {
+      "case": "rule_repair",
+      "run_id": "mock_rule_repair_validated",
+      "input": "examples/inputs/rule_repair.json",
+      "output": "examples/outputs/mock_rule_repair_validated.json",
+      "trace": "examples/traces/mock_rule_repair_validated.json",
+      "events": "examples/traces/mock_rule_repair_validated.jsonl",
+      "exit_code": 0,
+      "expected_status": "completed",
+      "actual_status": "completed",
+      "status_matches": true,
+      "actions": [
+        "search_assets",
+        "draft_script",
+        "estimate_duration",
+        "check_brand_rules",
+        "draft_script",
+        "estimate_duration",
+        "check_brand_rules",
+        "finish"
+      ],
+      "real_model_responses": 0,
+      "stderr": "",
+      "stdout": "{\"run_id\": \"mock_rule_repair_validated\", \"mode\": \"mock\", \"status\": \"completed\", \"reason\": \"Current script passed deterministic duration and conservative evidence/brand checks\", \"output\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\examples\\\\outputs\\\\mock_rule_repair_validated.json\", \"trace\": \"D:\\\\Xiaoying\\\\short-video-agent\\\\examples\\\\traces\\\\mock_rule_repair_validated.json\"}\n",
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "rule_revision"
+      ],
+      "duration_estimates": [
+        8.67,
+        7.64
+      ]
+    }
+  ],
+  "distinct_verified_live_paths": 0,
+  "live_requirement_verified": false,
+  "all_expected_statuses": true,
+  "all_expected_behaviors": true
+}

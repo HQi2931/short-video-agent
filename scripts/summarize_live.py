@@ -5,6 +5,7 @@ from pathlib import Path
 
 from evidence import inspect_behavior, inspect_live_calls
 from run_examples import CASES
+from replay import replay_files
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED_CASES = ("normal", "missing_info", "no_assets", "tool_failure", "overtime", "changed_duration", "changed_assets", "sparse")
@@ -25,6 +26,7 @@ def summarize_live(quiet: bool = False) -> dict:
         input_name = Path(row["input"]).stem if row else (matches[0] if len(matches) == 1 else "unclassified")
         case = row.get("case", "overtime" if input_name == "overtime_tight" else input_name)
         integrity = inspect_live_calls(trace)
+        execution_replay = replay_files(path)
         output_path = ROOT / "examples/outputs" / path.name
         output_matches = output_path.exists() and json.loads(output_path.read_text(encoding="utf-8")) == trace["final_result"]
         usage = sum((s.get("model_call", {}).get("response", {}).get("usage") or {}).get("total_tokens", 0)
@@ -40,10 +42,10 @@ def summarize_live(quiet: bool = False) -> dict:
             "actions": [s["action"] for s in trace.get("steps", [])],
             "target_seconds": trace["input"].get("duration_seconds"),
             "real_model_responses": trace.get("real_model_responses", 0), "recorded_total_tokens": usage,
-            "live_call_integrity": integrity, **inspect_behavior(case, trace),
+            "live_call_integrity": integrity, "execution_replay": execution_replay, **inspect_behavior(case, trace),
         })
     valid = [r for r in runs if r["behavior_verified"] and r["live_call_integrity"]["verified"]
-             and r["output_matches_trace"] and r["status_matches"]]
+             and r["execution_replay"]["verified"] and r["output_matches_trace"] and r["status_matches"]]
     coverage = {case: [r["run_id"] for r in valid if r["case"] == case] for case in REQUIRED_CASES}
     distinct = len({tuple(r["actions"]) for r in valid})
     adaptations = sorted({a for r in valid for a in r["observed_adaptations"]})

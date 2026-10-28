@@ -45,6 +45,9 @@ class AgentState:
     def invalidate(self):
         self.current_duration = None
         self.current_rules = None
+        if self.status == "completed":
+            self.status = "incomplete"
+            self.reason = "Previously completed result invalidated by state change; a fresh run is required"
 
     def update_script(self, script: Script):
         self.script = script.model_copy(deep=True)

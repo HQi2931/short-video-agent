@@ -1,5 +1,6 @@
 """Record actual pytest output and environment, preserving previous test reports."""
 import json
+import hashlib
 import platform
 import subprocess
 import sys
@@ -9,6 +10,11 @@ from pathlib import Path
 from uuid import uuid4
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def source_hashes():
+    return {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
+            for directory in ("src", "scripts", "tests") for p in sorted((ROOT / directory).glob("*.py"))}
 
 
 def verify() -> int:
@@ -21,6 +27,7 @@ def verify() -> int:
         stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ_") + uuid4().hex[:6]
         (history / f"test-results_{stamp}.txt").write_text(path.read_text(encoding="utf-8"), encoding="utf-8")
     command = [sys.executable, "-m", "pytest", "tests/", "-v", "--junitxml=examples/test-results.xml"]
+    before = source_hashes()
     process = subprocess.run(command, cwd=ROOT, capture_output=True, text=True, encoding="utf-8", errors="replace")
     metadata = {
         "recorded_at_utc": datetime.now(timezone.utc).isoformat(), "python": platform.python_version(),
@@ -28,6 +35,8 @@ def verify() -> int:
         "dependencies": {name: version(name) for name in ["pydantic", "httpx", "python-dotenv", "pytest"]},
         "command": ["python", "-m", "pytest", "tests/", "-v", "--junitxml=examples/test-results.xml"],
         "exit_code": process.returncode,
+        "tested_source_sha256": before,
+        "source_unchanged_during_tests": before == source_hashes(),
         "notice": "All model HTTP requests in pytest use transport doubles; no live LLM validation.",
     }
     path.write_text(json.dumps(metadata, ensure_ascii=False, indent=2) + "\n\nSTDOUT\n" + process.stdout

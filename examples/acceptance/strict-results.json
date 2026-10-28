@@ -1,0 +1,1214 @@
+{
+  "generated_at_utc": "2026-10-28T04:58:43.063005+00:00",
+  "review_method": "candidate_requested_AI_assisted_acceptance_audit",
+  "git_head_at_report": "70eb61f72633e5f8c59489cab875bfb82b86c94d",
+  "source_sha256": {
+    "src/__init__.py": "488d7e28a8668bd27fd1ed6382985f35018065c55872c1a84ee8f65a7da4bdca",
+    "src/agent.py": "0ddd6597d83bb5237a2bf173af9433590cbc4ccc33934d9ca0a40bec6bd5b553",
+    "src/llm_adapter.py": "9cb06583909fd1f38c51c507c3f3a3108a4481379fcad39a3765a2d7057f9173",
+    "src/main.py": "0e3a4624248a7766fa5ed67d5b86ae17722abf7adc5ab0f02c8fce3a3585007e",
+    "src/mock_fixtures.py": "5b2fd3c5a04d7a4c79cf6f70de09a0f216d507082893d3c2ee5ef524e4da21cf",
+    "src/schemas.py": "f7878d1fac634acccdb58689a2e7e9a098b02dfecc91be187edaebfc32af5222",
+    "src/state.py": "57af770f55ab037d1c951c4d5b780f030db57ecdec72a6ca68ebfcb7e9e605ef",
+    "src/tools.py": "ee5528446dd93af68a193b1331fbfdc9fc45ab09889b0b844c4b0858d76eced8",
+    "src/tracing.py": "a4058fc008cfa5812d2184613326d225021f38e0304cc8074afde6d675675a6c",
+    "scripts/acceptance_audit.py": "a2cc880745542e51410ea1a8f4555f2e513a8104e6234f70e66780ff839ee0d2",
+    "scripts/audit.py": "1c22e05880c2c137fe8d42528ce3eea5c6436b1320ad97599f831f9e3ccdfe8b",
+    "scripts/evidence.py": "1b530ecf6a9fd4e33bc66d45ac1f988868c67f58c1d8b5545e0f94fd8fdf3f66",
+    "scripts/replay.py": "ebd854d183d0fbde98350f5adaf7337667dd57a2fb95b6734d7f955e3fddda61",
+    "scripts/run_examples.py": "23356141566840d68bfb0147b634fce72cf50a840ccdb8205df2540f0f40402a",
+    "scripts/summarize_live.py": "6a764104ea8a5682af9d896d543877dfde82f093a953d2dde23b8ccf4acf9367",
+    "scripts/verify.py": "0702090e5e99e4bc6d9dfadf5ffb2335c2ec55e21d05604865d8026cac964709"
+  },
+  "pytest_cases": 129,
+  "pytest_passed": true,
+  "tested_source_matches_current": true,
+  "trace_files": 43,
+  "trace_replays": [
+    {
+      "trace": "examples/traces/live_changed_assets_round1.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 8,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 8
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/live_changed_duration_round1.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 7,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 7
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/live_missing_info_round1.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 1,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 1
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/live_no_assets_round1.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 3,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 3
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/live_normal_initial.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 8,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 8
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/live_normal_round1.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/live_overtime_round1.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 6,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 6
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/live_overtime_tight_round1.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 7,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 7
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/live_sparse_round1.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 8,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 8
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/live_tool_failure_round1.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 8,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 8
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_changed_assets.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_changed_assets_acceptance.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_changed_assets_validated.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_changed_duration.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_changed_duration_acceptance.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_changed_duration_validated.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_max_steps.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 3,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 3
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_max_steps_acceptance.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 3,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 3
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_max_steps_validated.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 3,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 3
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_missing_info.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 1,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 1
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_missing_info_acceptance.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 1,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 1
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_missing_info_validated.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 1,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 1
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_no_assets.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 3,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 3
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_no_assets_acceptance.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 3,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 3
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_no_assets_validated.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 3,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 3
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_normal.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_normal_acceptance.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_normal_validated.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_overtime.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 7,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 7
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_overtime_acceptance.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 7,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 7
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_overtime_validated.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 7,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 7
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_rule_repair.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 8,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 8
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_rule_repair_acceptance.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 8,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 8
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_rule_repair_validated.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 8,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 8
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_sparse.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_sparse_acceptance.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_sparse_validated.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_tool_failure.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 6,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 6
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_tool_failure_acceptance.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 6,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 6
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_tool_failure_validated.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 6,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 6
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_unsupported_claim.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 6,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 6
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_unsupported_claim_acceptance.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 6,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 6
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/mock_unsupported_claim_validated.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 6,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 6
+        },
+        "issues": []
+      }
+    }
+  ],
+  "all_replays_verified": true,
+  "new_live_api_calls_in_this_audit": 0,
+  "live_runs_reviewed": 10,
+  "live_responses_reviewed": 61,
+  "findings": [
+    {
+      "id": "P0-01",
+      "severity": "P0",
+      "status": "FIXED",
+      "title": "完成后编辑状态仍可导出completed",
+      "scope": "Python状态编辑/结果导出接口；既有CLI记录未观察到命中",
+      "proof": "examples/acceptance/regressions-before-fix.txt",
+      "fix": "src/state.py invalidate及src/agent.py result双重门禁"
+    },
+    {
+      "id": "P1-01",
+      "severity": "P1",
+      "status": "FIXED",
+      "title": "live证据核验遗漏next_action/执行类型，且未复算工具与JSONL",
+      "proof": "examples/acceptance/regressions-before-fix.txt",
+      "fix": "scripts/evidence.py、scripts/replay.py"
+    },
+    {
+      "id": "P1-02",
+      "severity": "P1",
+      "status": "FIXED",
+      "title": "仅凭版本号变化推断模型改稿，可能误判修订通过",
+      "proof": "examples/acceptance/regressions-before-fix.txt",
+      "fix": "比较实际draft内容、同一目标时长与后续重检"
+    },
+    {
+      "id": "P2-01",
+      "severity": "P2",
+      "status": "FIXED",
+      "title": "审计默认退出码只覆盖离线，完整验收命令范围不明确",
+      "proof": "tests/test_trace_replay.py",
+      "fix": "增加--require-live，并测试离线通过/live缺失时返回1"
+    },
+    {
+      "id": "P2-02",
+      "severity": "P2",
+      "status": "FIXED",
+      "title": "README重复复制模板可能覆盖已有.env",
+      "proof": "README.md",
+      "fix": "仅在.env不存在时复制模板；当前配置保持原样"
+    }
+  ],
+  "matrix": [
+    {
+      "id": 1,
+      "item": "真实模型选择动作与工具",
+      "status": "PASS",
+      "code": [
+        {
+          "file": "src/llm_adapter.py",
+          "symbol": "LiveAdapter.decide",
+          "line": 92
+        },
+        {
+          "file": "src/agent.py",
+          "symbol": "run",
+          "line": 20
+        }
+      ],
+      "tests": [
+        {
+          "file": "tests/test_adapter.py",
+          "symbol": "test_http_payload_and_structured_response_use_configured_model",
+          "line": 31
+        }
+      ],
+      "trace_files": [
+        "examples/traces/live_normal_round1.json",
+        "examples/traces/live_no_assets_round1.json"
+      ],
+      "note": "live分支使用HTTP Adapter，Runtime按模型动作分派；固定动作仅存在于明确的Mock模式。"
+    },
+    {
+      "id": 2,
+      "item": "工具观察回传下一轮模型请求",
+      "status": "PASS",
+      "code": [
+        {
+          "file": "src/agent.py",
+          "symbol": "run",
+          "line": 20
+        },
+        {
+          "file": "src/state.py",
+          "symbol": "context",
+          "line": 77
+        }
+      ],
+      "tests": [
+        {
+          "file": "tests/test_adapter.py",
+          "symbol": "test_tool_observation_reaches_model_request",
+          "line": 86
+        }
+      ],
+      "trace_files": [
+        "examples/traces/live_no_assets_round1.json",
+        "examples/traces/live_tool_failure_round1.json"
+      ],
+      "note": "逐轮比较完整请求state与重放状态，不仅比对上一观察。"
+    },
+    {
+      "id": 3,
+      "item": "超时后模型提供不同脚本并重新检查",
+      "status": "PASS",
+      "code": [
+        {
+          "file": "src/agent.py",
+          "symbol": "_execute_action",
+          "line": 74
+        },
+        {
+          "file": "src/tools.py",
+          "symbol": "estimate_duration",
+          "line": 65
+        }
+      ],
+      "tests": [
+        {
+          "file": "tests/test_agent.py",
+          "symbol": "test_overtime_has_actual_distinct_revisions_and_rechecks",
+          "line": 28
+        },
+        {
+          "file": "tests/test_acceptance_regressions.py",
+          "symbol": "test_overtime_evidence_requires_actual_changed_model_draft",
+          "line": 46
+        }
+      ],
+      "trace_files": [
+        "examples/traces/live_overtime_tight_round1.json"
+      ],
+      "note": "4秒目标：7.64→2.35秒，旁白/分镜内容实际不同；12秒未触发记录仍保留。"
+    },
+    {
+      "id": 4,
+      "item": "无素材时改写查询或请求补充",
+      "status": "PASS",
+      "code": [
+        {
+          "file": "src/tools.py",
+          "symbol": "search_assets",
+          "line": 24
+        },
+        {
+          "file": "src/agent.py",
+          "symbol": "run",
+          "line": 20
+        }
+      ],
+      "tests": [
+        {
+          "file": "tests/test_agent.py",
+          "symbol": "test_no_results_has_two_actual_queries_then_requests_evidence",
+          "line": 38
+        }
+      ],
+      "trace_files": [
+        "examples/traces/live_no_assets_round1.json"
+      ],
+      "note": "真实查询从月球采矿激光雷达改为激光雷达，两次无结果后needs_info。"
+    },
+    {
+      "id": 5,
+      "item": "工具失败记录与后续行动",
+      "status": "PASS",
+      "code": [
+        {
+          "file": "src/tools.py",
+          "symbol": "execute",
+          "line": 208
+        },
+        {
+          "file": "src/agent.py",
+          "symbol": "run",
+          "line": 20
+        }
+      ],
+      "tests": [
+        {
+          "file": "tests/test_failures.py",
+          "symbol": "test_tool_failure_is_observed_and_retry_is_recorded",
+          "line": 9
+        }
+      ],
+      "trace_files": [
+        "examples/traces/live_tool_failure_round1.json"
+      ],
+      "note": "一次业务工具异常是明确注入；真实模型选择重试，随后根据超时观察改稿。"
+    },
+    {
+      "id": 6,
+      "item": "已完成脚本的产品声明可追溯",
+      "status": "PASS",
+      "code": [
+        {
+          "file": "src/tools.py",
+          "symbol": "check_brand_rules",
+          "line": 96
+        }
+      ],
+      "tests": [
+        {
+          "file": "tests/test_tools.py",
+          "symbol": "test_fact_and_brand_adversarial_checks",
+          "line": 94
+        }
+      ],
+      "trace_files": [
+        "examples/traces/live_normal_round1.json",
+        "examples/traces/mock_unsupported_claim_acceptance.json"
+      ],
+      "note": "PASS范围为completed脚本及结构化原文约束；故意构造的failed负例仍含被标记的无据文本。完整自然语言语义为NOT VERIFIED。"
+    },
+    {
+      "id": 7,
+      "item": "脚本及依赖变化使旧检查失效",
+      "status": "PASS",
+      "code": [
+        {
+          "file": "src/state.py",
+          "symbol": "invalidate",
+          "line": 45
+        },
+        {
+          "file": "src/state.py",
+          "symbol": "script_version",
+          "line": 35
+        }
+      ],
+      "tests": [
+        {
+          "file": "tests/test_validation.py",
+          "symbol": "test_any_script_edit_invalidates_old_checks",
+          "line": 41
+        },
+        {
+          "file": "tests/test_acceptance_regressions.py",
+          "symbol": "test_result_cannot_remain_completed_after_verified_state_changes",
+          "line": 13
+        }
+      ],
+      "trace_files": [
+        "examples/traces/live_changed_assets_round1.json"
+      ],
+      "note": "脚本、输入、素材、规则指纹均参与门禁；完成后编辑也撤销成功状态。"
+    },
+    {
+      "id": 8,
+      "item": "不得跳过检查或导出过期成功",
+      "status": "PASS",
+      "code": [
+        {
+          "file": "src/state.py",
+          "symbol": "finish_errors",
+          "line": 66
+        },
+        {
+          "file": "src/agent.py",
+          "symbol": "result",
+          "line": 112
+        }
+      ],
+      "tests": [
+        {
+          "file": "tests/test_agent.py",
+          "symbol": "test_runtime_rejects_premature_finish_and_draft",
+          "line": 85
+        },
+        {
+          "file": "tests/test_acceptance_regressions.py",
+          "symbol": "test_result_cannot_remain_completed_after_verified_state_changes",
+          "line": 13
+        }
+      ],
+      "trace_files": [
+        "examples/traces/mock_unsupported_claim_acceptance.json"
+      ],
+      "note": "修复前完成后Python对象编辑可导出completed，已复现并修复；CLI既有Trace未发现命中此漏洞。"
+    },
+    {
+      "id": 9,
+      "item": "max_steps后明确incomplete",
+      "status": "PASS",
+      "code": [
+        {
+          "file": "src/agent.py",
+          "symbol": "run",
+          "line": 20
+        }
+      ],
+      "tests": [
+        {
+          "file": "tests/test_failures.py",
+          "symbol": "test_max_steps_returns_incomplete_and_last_observation",
+          "line": 74
+        }
+      ],
+      "trace_files": [
+        "examples/traces/mock_max_steps_acceptance.json"
+      ],
+      "note": "实际CLI为3步，状态incomplete、退出码4、含最后观察；未新增live上限采样。"
+    },
+    {
+      "id": 10,
+      "item": "自动Trace及next_action一致",
+      "status": "PASS",
+      "code": [
+        {
+          "file": "src/tracing.py",
+          "symbol": "step",
+          "line": 51
+        },
+        {
+          "file": "scripts/evidence.py",
+          "symbol": "inspect_trace_events",
+          "line": 115
+        }
+      ],
+      "tests": [
+        {
+          "file": "tests/test_trace_replay.py",
+          "symbol": "test_wrong_jsonl_next_action_is_rejected",
+          "line": 46
+        },
+        {
+          "file": "tests/test_acceptance_regressions.py",
+          "symbol": "test_live_integrity_rejects_wrong_next_action",
+          "line": 33
+        }
+      ],
+      "trace_files": [
+        "examples/traces/live_overtime_tight_round1.json",
+        "examples/traces/mock_normal_acceptance.json"
+      ],
+      "note": "全部JSONL重建JSON并复算工具/版本/结果；不将重放算作新的LLM执行。"
+    },
+    {
+      "id": 11,
+      "item": "两条不同观察驱动的真实LLM路径",
+      "status": "PASS",
+      "code": [
+        {
+          "file": "src/llm_adapter.py",
+          "symbol": "LiveAdapter.decide",
+          "line": 92
+        },
+        {
+          "file": "scripts/evidence.py",
+          "symbol": "inspect_live_calls",
+          "line": 5
+        }
+      ],
+      "tests": [
+        {
+          "file": "tests/test_adapter.py",
+          "symbol": "test_invalid_response_observation_reaches_next_call",
+          "line": 69
+        }
+      ],
+      "trace_files": [
+        "examples/traces/live_no_assets_round1.json",
+        "examples/traces/live_overtime_tight_round1.json",
+        "examples/traces/live_tool_failure_round1.json"
+      ],
+      "note": "复核10次live、61条响应；本轮新增API调用0次。"
+    },
+    {
+      "id": 12,
+      "item": "场景、文档与命令一致",
+      "status": "PASS",
+      "code": [
+        {
+          "file": "src/main.py",
+          "symbol": "build_parser",
+          "line": 21
+        },
+        {
+          "file": "scripts/audit.py",
+          "symbol": "audit",
+          "line": 26
+        }
+      ],
+      "tests": [
+        {
+          "file": "tests/test_trace_replay.py",
+          "symbol": "test_cli_audit_distinguishes_offline_pass_from_missing_live",
+          "line": 60
+        }
+      ],
+      "trace_files": [
+        "examples/mock-manifest.json",
+        "examples/live-manifest.json"
+      ],
+      "note": "核对文档CLI参数和输入文件、Markdown链接、当前测试数；默认离线与严格验收退出码明确区分。"
+    }
+  ],
+  "not_verified": [
+    {
+      "item": "服务商侧独立账单/签章及底层模型身份",
+      "status": "NOT VERIFIED"
+    },
+    {
+      "item": "任意自然语言的完整语义核验与真实产品效果",
+      "status": "NOT VERIFIED"
+    },
+    {
+      "item": "其他模型、Python3.11/3.12和其他操作系统",
+      "status": "NOT VERIFIED"
+    },
+    {
+      "item": "真实网络故障/限流恢复、真人口播、素材版权",
+      "status": "NOT VERIFIED"
+    },
+    {
+      "item": "候选人亲自操作/实际工时、评审访问及远程CI",
+      "status": "NOT VERIFIED"
+    }
+  ],
+  "document_commands": [
+    {
+      "document": "README.md",
+      "arguments": [
+        "--mode",
+        "mock",
+        "--input-file",
+        "examples/inputs/normal.json"
+      ],
+      "valid": true
+    },
+    {
+      "document": "README.md",
+      "arguments": [
+        "--mode",
+        "mock",
+        "--input-file",
+        "examples/inputs/normal.json"
+      ],
+      "valid": true
+    },
+    {
+      "document": "README.md",
+      "arguments": [
+        "--mode",
+        "mock",
+        "--scenario",
+        "overtime",
+        "--input-file",
+        "examples/inputs/overtime.json"
+      ],
+      "valid": true
+    },
+    {
+      "document": "README.md",
+      "arguments": [
+        "--mode",
+        "mock",
+        "--scenario",
+        "tool_failure",
+        "--input-file",
+        "examples/inputs/tool_failure.json"
+      ],
+      "valid": true
+    },
+    {
+      "document": "README.md",
+      "arguments": [
+        "--mode",
+        "mock",
+        "--scenario",
+        "no_assets",
+        "--input-file",
+        "examples/inputs/no_assets.json"
+      ],
+      "valid": true
+    },
+    {
+      "document": "README.md",
+      "arguments": [
+        "--mode",
+        "mock",
+        "--scenario",
+        "unsupported_claim",
+        "--input-file",
+        "examples/inputs/unsupported_claim.json"
+      ],
+      "valid": true
+    },
+    {
+      "document": "README.md",
+      "arguments": [
+        "--mode",
+        "mock",
+        "--scenario",
+        "max_steps",
+        "--input-file",
+        "examples/inputs/max_steps.json",
+        "--max-steps",
+        "3"
+      ],
+      "valid": true
+    },
+    {
+      "document": "README.md",
+      "arguments": [
+        "--mode",
+        "live",
+        "--input-file",
+        "examples/inputs/normal.json"
+      ],
+      "valid": true
+    },
+    {
+      "document": "README.md",
+      "arguments": [
+        "--mode",
+        "live",
+        "--input-file",
+        "examples/inputs/overtime.json"
+      ],
+      "valid": true
+    },
+    {
+      "document": "README.md",
+      "arguments": [
+        "--mode",
+        "live",
+        "--input-file",
+        "examples/inputs/overtime_tight.json"
+      ],
+      "valid": true
+    }
+  ],
+  "broken_local_links": [],
+  "all_12_items_pass": true
+}

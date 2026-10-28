@@ -7,7 +7,14 @@ def inspect_live_calls(trace: dict) -> dict:
     issues = []
     steps = trace.get("steps", [])
     response_models = set()
+    if trace.get("execution_kind") != "real_api":
+        issues.append({"step": None, "problem": "Trace execution_kind is not real_api"})
     for index, step in enumerate(steps):
+        expected_next = steps[index + 1]["action"] if index + 1 < len(steps) else None
+        if step.get("step") != index + 1:
+            issues.append({"step": step.get("step"), "problem": "Non-consecutive step number"})
+        if "next_action" not in step or step["next_action"] != expected_next:
+            issues.append({"step": step.get("step"), "problem": "next_action differs from actual following action"})
         record = step.get("model_call", {})
         response = record.get("response", {})
         if response.get("model"):
@@ -52,6 +59,14 @@ def inspect_behavior(case: str, trace: dict) -> dict:
         and result[name].get("script_version") == result.get("script_version")
         for name in ("duration_check", "brand_rule_check")
     )
+
+    def changed_draft_between(start: int, end: int) -> bool:
+        before = [s for s in steps[:start + 1] if s["action"] == "draft_script" and s["observation"].get("ok")]
+        revised = [s for s in steps[start + 1:end] if s["action"] == "draft_script" and s["observation"].get("ok")]
+        return bool(before and revised and before[-1]["observation"].get("script") is not None
+                    and revised[-1]["observation"].get("script") is not None
+                    and before[-1]["observation"]["script"] != revised[-1]["observation"]["script"])
+
     corrections = []
     for i, step in enumerate(steps):
         obs = step["observation"]
@@ -64,11 +79,14 @@ def inspect_behavior(case: str, trace: dict) -> dict:
                 corrections.append("tool_retry")
         if step["action"] == "estimate_duration" and obs.get("is_overtime"):
             if any(s["action"] == "estimate_duration" and s["observation"].get("passed")
-                   and s["observation"].get("script_version") != obs.get("script_version") for s in later):
+                   and s["observation"].get("target_duration_seconds") == obs.get("target_duration_seconds")
+                   and s["observation"].get("script_version") != obs.get("script_version")
+                   and changed_draft_between(i, j) for j, s in enumerate(steps[i + 1:], i + 1)):
                 corrections.append("duration_revision")
         if step["action"] == "check_brand_rules" and obs.get("ok") and not obs.get("passed"):
             if any(s["action"] == "check_brand_rules" and s["observation"].get("passed")
-                   and s["observation"].get("script_version") != obs.get("script_version") for s in later):
+                   and s["observation"].get("script_version") != obs.get("script_version")
+                   and changed_draft_between(i, j) for j, s in enumerate(steps[i + 1:], i + 1)):
                 corrections.append("rule_revision")
     corrections = sorted(set(corrections))
     if case == "missing_info":
@@ -92,3 +110,41 @@ def inspect_behavior(case: str, trace: dict) -> dict:
         verified = bool(completed)
     return {"behavior_verified": bool(verified), "observed_adaptations": corrections,
             "duration_estimates": [s["observation"]["total_estimated_seconds"] for s in estimates]}
+
+
+def inspect_trace_events(trace: dict, events: list[dict]) -> dict:
+    """Rebuild the JSON snapshot from the append-only event stream."""
+    issues, rebuilt = [], []
+    if not events or events[0].get("event") != "run_started" or events[-1].get("event") != "run_finished":
+        return {"verified": False, "issues": ["Missing run boundaries"]}
+    for entry in events:
+        if entry.get("run_id") != trace.get("run_id"):
+            issues.append("Event run_id mismatch")
+        kind = entry.get("event")
+        if kind == "run_started":
+            if any(entry.get(key) != trace.get(key) for key in ("input", "mode", "model", "execution_kind")):
+                issues.append("Run header differs from final snapshot")
+        elif kind == "configuration":
+            config = {k: v for k, v in entry.items() if k not in {"event", "timestamp_utc", "run_id"}}
+            if config != trace.get("configuration"):
+                issues.append("Configuration snapshot mismatch")
+        elif kind == "step_executed":
+            step = {k: v for k, v in entry.items() if k not in {"event", "timestamp_utc", "run_id"}}
+            if step.get("step") != len(rebuilt) + 1 or step.get("next_action") is not None:
+                issues.append("Invalid original step event")
+            rebuilt.append(step)
+        elif kind == "next_action_observed":
+            index = entry.get("step", 0) - 1
+            if index != len(rebuilt) - 1 or index < 0 or rebuilt[index].get("next_action") is not None:
+                issues.append("Invalid next-action event")
+            else:
+                rebuilt[index]["next_action"] = entry.get("next_action")
+    if rebuilt != trace.get("steps"):
+        issues.append("JSONL steps differ from final JSON")
+    for index, step in enumerate(rebuilt):
+        expected = rebuilt[index + 1]["action"] if index + 1 < len(rebuilt) else None
+        if step.get("next_action") != expected:
+            issues.append("next_action differs from following executed action")
+    if any(events[-1].get(key) != trace.get(key) for key in ("final_status", "final_result")):
+        issues.append("Final event differs from final JSON")
+    return {"verified": not issues, "issues": issues, "step_events": len(rebuilt)}

@@ -111,6 +111,12 @@ class AgentRunner:
 
     def result(self) -> dict:
         state = self.state
+        # Export is a second boundary: direct object edits must never retain success.
+        if state.status == "completed":
+            blockers = state.finish_errors()
+            if blockers:
+                state.status = "incomplete"
+                state.reason = "Completion invalidated before export: " + "; ".join(blockers)
         version = state.script_version
         duration = state.current_duration
         if duration and duration.get("script_version") != version:

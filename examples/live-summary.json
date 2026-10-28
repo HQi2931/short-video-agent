@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-28T04:29:04.413461+00:00",
+  "generated_at_utc": "2026-10-28T04:58:43.047631+00:00",
   "mode": "live",
   "source_batch_manifest": "examples/live-manifest.json",
   "runs": [
@@ -36,6 +36,18 @@
         ],
         "issues": [],
         "limitation": "Audit of local execution records; not independent provider attestation."
+      },
+      "execution_replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 8,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 8
+        },
+        "issues": []
       },
       "behavior_verified": true,
       "observed_adaptations": [
@@ -79,6 +91,18 @@
         "issues": [],
         "limitation": "Audit of local execution records; not independent provider attestation."
       },
+      "execution_replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 7,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 7
+        },
+        "issues": []
+      },
       "behavior_verified": true,
       "observed_adaptations": [
         "duration_revision"
@@ -115,6 +139,18 @@
         "issues": [],
         "limitation": "Audit of local execution records; not independent provider attestation."
       },
+      "execution_replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 1,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 1
+        },
+        "issues": []
+      },
       "behavior_verified": true,
       "observed_adaptations": [],
       "duration_estimates": []
@@ -147,6 +183,18 @@
         ],
         "issues": [],
         "limitation": "Audit of local execution records; not independent provider attestation."
+      },
+      "execution_replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 3,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 3
+        },
+        "issues": []
       },
       "behavior_verified": true,
       "observed_adaptations": [
@@ -188,6 +236,18 @@
         "issues": [],
         "limitation": "Audit of local execution records; not independent provider attestation."
       },
+      "execution_replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 8,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 8
+        },
+        "issues": []
+      },
       "behavior_verified": true,
       "observed_adaptations": [
         "duration_revision"
@@ -228,6 +288,18 @@
         "issues": [],
         "limitation": "Audit of local execution records; not independent provider attestation."
       },
+      "execution_replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      },
       "behavior_verified": true,
       "observed_adaptations": [],
       "duration_estimates": [
@@ -265,6 +337,18 @@
         ],
         "issues": [],
         "limitation": "Audit of local execution records; not independent provider attestation."
+      },
+      "execution_replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 6,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 6
+        },
+        "issues": []
       },
       "behavior_verified": false,
       "observed_adaptations": [],
@@ -304,6 +388,18 @@
         ],
         "issues": [],
         "limitation": "Audit of local execution records; not independent provider attestation."
+      },
+      "execution_replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 7,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 7
+        },
+        "issues": []
       },
       "behavior_verified": true,
       "observed_adaptations": [
@@ -348,6 +444,18 @@
         "issues": [],
         "limitation": "Audit of local execution records; not independent provider attestation."
       },
+      "execution_replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 8,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 8
+        },
+        "issues": []
+      },
       "behavior_verified": true,
       "observed_adaptations": [
         "duration_revision"
@@ -390,6 +498,18 @@
         ],
         "issues": [],
         "limitation": "Audit of local execution records; not independent provider attestation."
+      },
+      "execution_replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 8,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 8
+        },
+        "issues": []
       },
       "behavior_verified": true,
       "observed_adaptations": [
