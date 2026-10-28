@@ -7,7 +7,7 @@
 - 单元/集成：严格验收修复后执行 `python scripts/verify.py`，最终 **129项通过，0失败**，退出码0。原始 stdout、stderr、依赖版本见 `examples/test-results.txt`、`examples/test-environment.json`，JUnit 见 `examples/test-results.xml`。历次108、112、115、116项通过的报告已保留。
 - CLI：执行 `python scripts/run_examples.py --mode mock --tag validated`，逐个启动真实 Python CLI 进程，保存 11 组输出及 JSON/JSONL Trace，最新清单为 `examples/mock-manifest.json`。
 - 模型接口：pytest 中通过 httpx MockTransport 验证请求、返回解析、错误与观察反馈，没有远程模型参与。这是协议测试，不是 live 决策能力测试。
-- live：配置模型及响应返回模型均为 `deepseek-flash`。共10次真实运行、61条模型响应，覆盖8类输入，核验到7条不同有效动作路径。详见 `examples/live-summary.json`、`examples/live-report.md`；全部模型调用均由实际 CLI 运行产生。
+- live：配置模型及响应返回模型均为 `deepseek-flash`。初次AI实测为10次运行、61条模型响应；后续候选人亲自执行3次、16条响应。当前合计13次真实运行、77条响应，覆盖8类输入，核验到8条不同有效动作路径。详见 `examples/live-summary.json`、`examples/live-report.md`；全部模型调用均由实际 CLI 运行产生。
 
 ## 案例结果
 
@@ -84,3 +84,7 @@
 本轮重新运行原116项测试后，新增7条对抗回归全部失败，暴露完成后Python状态变更仍可导出completed、live核验忽略next_action/执行类型、仅凭版本变化推断改稿等问题。先修复P0完成门禁，再修复证据核验。失败原始输出为 `examples/acceptance/regressions-before-fix.txt`，P0专项复测为 `p0-after-fix.txt`。
 
 修复后完整129项通过，并重跑11组Mock CLI案例。对43份Trace（含10次live）逐项重新执行确定性工具、重算版本、比较最终结果，并从JSONL重建JSON；本轮不新增模型调用，不将离线重放计作新的live证据。最终矩阵、分级与未验证项见 `docs/07-acceptance-audit.md`。
+
+## 候选人亲自执行的三组验证
+
+2026-10-28，候选人明确告知亲自执行了三组真实API调用。核对本地新产生的JSON、JSONL和输出后，三组的动作/参数、上下文反馈、工具复算、最终版本检查均通过，合计16次HTTP 200响应。正常稿28.56秒（目标30秒）；无素材时三次检索后needs_info；4秒目标的超时稿7.64→2.35秒后completed。路径、时间和原始状态见 `docs/08-manual-live-review.md` 与 `examples/manual-live-review.json`。

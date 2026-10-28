@@ -144,7 +144,7 @@ def audit_acceptance():
     ]
     unverified = ["服务商侧独立账单/签章及底层模型身份", "任意自然语言的完整语义核验与真实产品效果",
                   "其他模型、Python3.11/3.12和其他操作系统", "真实网络故障/限流恢复、真人口播、素材版权",
-                  "候选人亲自操作/实际工时、评审访问及远程CI"]
+                  "候选人其他未确认的亲自操作/实际工时、评审访问及远程CI"]
     source_files = [*sorted((ROOT / "src").glob("*.py")), *sorted((ROOT / "scripts").glob("*.py"))]
     report = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(), "review_method": "candidate_requested_AI_assisted_acceptance_audit",
@@ -166,7 +166,7 @@ def audit_acceptance():
     lines = ["# 严格校招验收审计", "", f"生成时间（UTC）：{report['generated_at_utc']}。",
              "本次由候选人发起、AI工具实际执行，归档为候选人委托的AI辅助验收材料；不推断候选人亲自阅读或运行的事实。", "",
              f"原116项测试通过后新增7条对抗回归实际失败；优先修复P0后，完整{len(testcases)}项测试通过。重跑11组Mock CLI，复算{len(traces)}份Trace及对应输出。",
-             "本轮新增LLM调用0次，复核此前同会话的10次真实运行、61条响应。离线重放不是新的模型决策证据。", "",
+             f"本次核对新增LLM调用0次，复核已有{len(live['runs'])}次真实运行、{live['total_real_model_responses']}条响应。离线重放不是新的模型决策证据；候选人亲自执行的三组记录另见docs/08-manual-live-review.md。", "",
              "P0定义为可直接违反不得虚报成功的核心约束；P1为审计结果可误判；P2为命令/文档操作风险。", "",
              "## 发现及修复", "", "| 分级 | 问题 | 结果 |", "|---|---|---|"]
     lines.extend(f"| {r['id']} | {r['title']} | {r['status']}：{r['fix']} |" for r in findings)

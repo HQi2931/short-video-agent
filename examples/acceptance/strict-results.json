@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-10-28T04:58:43.063005+00:00",
+  "generated_at_utc": "2026-10-28T05:14:41.794625+00:00",
   "review_method": "candidate_requested_AI_assisted_acceptance_audit",
-  "git_head_at_report": "70eb61f72633e5f8c59489cab875bfb82b86c94d",
+  "git_head_at_report": "b1849ff70ebd1d519ed7e89082f10d4357dfb9fb",
   "source_sha256": {
     "src/__init__.py": "488d7e28a8668bd27fd1ed6382985f35018065c55872c1a84ee8f65a7da4bdca",
     "src/agent.py": "0ddd6597d83bb5237a2bf173af9433590cbc4ccc33934d9ca0a40bec6bd5b553",
@@ -12,7 +12,7 @@
     "src/state.py": "57af770f55ab037d1c951c4d5b780f030db57ecdec72a6ca68ebfcb7e9e605ef",
     "src/tools.py": "ee5528446dd93af68a193b1331fbfdc9fc45ab09889b0b844c4b0858d76eced8",
     "src/tracing.py": "a4058fc008cfa5812d2184613326d225021f38e0304cc8074afde6d675675a6c",
-    "scripts/acceptance_audit.py": "a2cc880745542e51410ea1a8f4555f2e513a8104e6234f70e66780ff839ee0d2",
+    "scripts/acceptance_audit.py": "c9234ce277676d46ebd7ded537b1d6676a8c2cc056e803b9ec451d8f08c8d5d7",
     "scripts/audit.py": "1c22e05880c2c137fe8d42528ce3eea5c6436b1320ad97599f831f9e3ccdfe8b",
     "scripts/evidence.py": "1b530ecf6a9fd4e33bc66d45ac1f988868c67f58c1d8b5545e0f94fd8fdf3f66",
     "scripts/replay.py": "ebd854d183d0fbde98350f5adaf7337667dd57a2fb95b6734d7f955e3fddda61",
@@ -23,7 +23,7 @@
   "pytest_cases": 129,
   "pytest_passed": true,
   "tested_source_matches_current": true,
-  "trace_files": 43,
+  "trace_files": 46,
   "trace_replays": [
     {
       "trace": "examples/traces/live_changed_assets_round1.json",
@@ -42,6 +42,51 @@
     },
     {
       "trace": "examples/traces/live_changed_duration_round1.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 7,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 7
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/live_manual_no_assets_20261028_130515.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 4,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 4
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/live_manual_normal_20261028_130515.json",
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      }
+    },
+    {
+      "trace": "examples/traces/live_manual_overtime_20261028_130515.json",
       "replay": {
         "verified": true,
         "method": "offline_replay_no_model_calls",
@@ -673,8 +718,8 @@
   ],
   "all_replays_verified": true,
   "new_live_api_calls_in_this_audit": 0,
-  "live_runs_reviewed": 10,
-  "live_responses_reviewed": 61,
+  "live_runs_reviewed": 13,
+  "live_responses_reviewed": 77,
   "findings": [
     {
       "id": "P0-01",
@@ -1041,7 +1086,7 @@
         "examples/traces/live_overtime_tight_round1.json",
         "examples/traces/live_tool_failure_round1.json"
       ],
-      "note": "复核10次live、61条响应；本轮新增API调用0次。"
+      "note": "复核13次live、77条响应；本轮新增API调用0次。"
     },
     {
       "id": 12,
@@ -1091,7 +1136,7 @@
       "status": "NOT VERIFIED"
     },
     {
-      "item": "候选人亲自操作/实际工时、评审访问及远程CI",
+      "item": "候选人其他未确认的亲自操作/实际工时、评审访问及远程CI",
       "status": "NOT VERIFIED"
     }
   ],

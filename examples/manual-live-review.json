@@ -1,0 +1,150 @@
+{
+  "operator_source": "User explicitly reported personally executing the three API runs; record integrity and results independently checked by AI tools.",
+  "verification_makes_new_api_calls": false,
+  "runs": [
+    {
+      "run_id": "live_manual_normal_20261028_130515",
+      "case": "normal",
+      "status": "completed",
+      "target_seconds": 30,
+      "trace": "examples/traces/live_manual_normal_20261028_130515.json",
+      "output": "examples/outputs/live_manual_normal_20261028_130515.json",
+      "http_responses": 5,
+      "started_at_utc": "2026-10-28T05:05:27.273736+00:00",
+      "finished_at_utc": "2026-10-28T05:05:43.319826+00:00",
+      "queries": [
+        "轻剪 字幕 竖屏 剪辑"
+      ],
+      "source_ids": [
+        "P01",
+        "P02"
+      ],
+      "latest_duration_passed": true,
+      "latest_rules_passed": true,
+      "integrity": {
+        "verified": true,
+        "recorded_decisions": 5,
+        "observation_feedback_checks": 4,
+        "response_models": [
+          "deepseek-flash"
+        ],
+        "issues": [],
+        "limitation": "Audit of local execution records; not independent provider attestation."
+      },
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      },
+      "behavior_verified": true,
+      "observed_adaptations": [],
+      "duration_estimates": [
+        28.56
+      ]
+    },
+    {
+      "run_id": "live_manual_no_assets_20261028_130515",
+      "case": "no_assets",
+      "status": "needs_info",
+      "target_seconds": 30,
+      "trace": "examples/traces/live_manual_no_assets_20261028_130515.json",
+      "output": "examples/outputs/live_manual_no_assets_20261028_130515.json",
+      "http_responses": 4,
+      "started_at_utc": "2026-10-28T05:07:57.079676+00:00",
+      "finished_at_utc": "2026-10-28T05:08:04.608220+00:00",
+      "queries": [
+        "月球采矿激光雷达",
+        "激光雷达",
+        "月球探测 月面 传感器"
+      ],
+      "source_ids": [],
+      "latest_duration_passed": null,
+      "latest_rules_passed": null,
+      "integrity": {
+        "verified": true,
+        "recorded_decisions": 4,
+        "observation_feedback_checks": 3,
+        "response_models": [
+          "deepseek-flash"
+        ],
+        "issues": [],
+        "limitation": "Audit of local execution records; not independent provider attestation."
+      },
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 4,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 4
+        },
+        "issues": []
+      },
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "query_rewrite"
+      ],
+      "duration_estimates": []
+    },
+    {
+      "run_id": "live_manual_overtime_20261028_130515",
+      "case": "overtime",
+      "status": "completed",
+      "target_seconds": 4,
+      "trace": "examples/traces/live_manual_overtime_20261028_130515.json",
+      "output": "examples/outputs/live_manual_overtime_20261028_130515.json",
+      "http_responses": 7,
+      "started_at_utc": "2026-10-28T05:08:57.373909+00:00",
+      "finished_at_utc": "2026-10-28T05:09:12.694948+00:00",
+      "queries": [
+        "轻剪 自动字幕 时间线剪辑 竖屏导出"
+      ],
+      "source_ids": [
+        "P01"
+      ],
+      "latest_duration_passed": true,
+      "latest_rules_passed": true,
+      "integrity": {
+        "verified": true,
+        "recorded_decisions": 7,
+        "observation_feedback_checks": 6,
+        "response_models": [
+          "deepseek-flash"
+        ],
+        "issues": [],
+        "limitation": "Audit of local execution records; not independent provider attestation."
+      },
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 7,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 7
+        },
+        "issues": []
+      },
+      "behavior_verified": true,
+      "observed_adaptations": [
+        "duration_revision"
+      ],
+      "duration_estimates": [
+        7.64,
+        2.35
+      ]
+    }
+  ],
+  "all_verified": true,
+  "model_responses_in_manual_runs": 16
+}

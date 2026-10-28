@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-10-28T04:57:52.168737+00:00",
+  "recorded_at_utc": "2026-10-28T05:14:19.360103+00:00",
   "python": "3.13.12",
   "platform": "Windows-11-10.0.26200-SP0",
   "dependencies": {
@@ -27,7 +27,7 @@
     "src/state.py": "57af770f55ab037d1c951c4d5b780f030db57ecdec72a6ca68ebfcb7e9e605ef",
     "src/tools.py": "ee5528446dd93af68a193b1331fbfdc9fc45ab09889b0b844c4b0858d76eced8",
     "src/tracing.py": "a4058fc008cfa5812d2184613326d225021f38e0304cc8074afde6d675675a6c",
-    "scripts/acceptance_audit.py": "a2cc880745542e51410ea1a8f4555f2e513a8104e6234f70e66780ff839ee0d2",
+    "scripts/acceptance_audit.py": "c9234ce277676d46ebd7ded537b1d6676a8c2cc056e803b9ec451d8f08c8d5d7",
     "scripts/audit.py": "1c22e05880c2c137fe8d42528ce3eea5c6436b1320ad97599f831f9e3ccdfe8b",
     "scripts/evidence.py": "1b530ecf6a9fd4e33bc66d45ac1f988868c67f58c1d8b5545e0f94fd8fdf3f66",
     "scripts/replay.py": "ebd854d183d0fbde98350f5adaf7337667dd57a2fb95b6734d7f955e3fddda61",

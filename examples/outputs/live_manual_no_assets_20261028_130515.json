@@ -1,0 +1,63 @@
+{
+  "run_id": "live_manual_no_assets_20261028_130515",
+  "mode": "live",
+  "model": "deepseek-flash",
+  "status": "needs_info",
+  "reason": "User input or reliable evidence is required",
+  "title": null,
+  "topic": "月球采矿激光雷达",
+  "audience": "航天爱好者",
+  "platform": "哔哩哔哩",
+  "style": "科普，仅依据产品素材",
+  "target_duration_seconds": 30.0,
+  "script_version": null,
+  "script_revision": 0,
+  "storyboard": [],
+  "total_estimated_seconds": null,
+  "used_asset_ids": [],
+  "sources": [],
+  "duration_check": null,
+  "brand_rule_check": null,
+  "risk_flags": [],
+  "missing_information": [
+    "产品/技术素材或事实依据（如激光雷达产品参数、月面探测资料）",
+    "是否调整主题以匹配现有素材"
+  ],
+  "question": "我在素材库中用“月球采矿激光雷达”“激光雷达”“月球探测 月面 传感器”等关键词检索了三次，都没有找到与该主题相关的任何素材或事实依据。当前品牌素材看起来与短视频创作相关，主题与素材目录也没有关键词关联。请问你能提供月球采矿激光雷达的产品资料/事实来源（链接或文档），还是希望更换主题到现有素材可支持的范围？",
+  "errors": [],
+  "completed_steps": [
+    {
+      "step": 1,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 4,
+      "action": "request_info",
+      "ok": true
+    }
+  ],
+  "last_observation": {
+    "ok": true,
+    "fields": [
+      "产品/技术素材或事实依据（如激光雷达产品参数、月面探测资料）",
+      "是否调整主题以匹配现有素材"
+    ],
+    "question": "我在素材库中用“月球采矿激光雷达”“激光雷达”“月球探测 月面 传感器”等关键词检索了三次，都没有找到与该主题相关的任何素材或事实依据。当前品牌素材看起来与短视频创作相关，主题与素材目录也没有关键词关联。请问你能提供月球采矿激光雷达的产品资料/事实来源（链接或文档），还是希望更换主题到现有素材可支持的范围？"
+  },
+  "limitations": [
+    "合成素材，仅用于工程验证。",
+    "时长是工程估算，需要真人口播复核。",
+    "仅通过原文和批准文案核验，未知改写会被阻断。"
+  ]
+}

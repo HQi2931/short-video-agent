@@ -2,7 +2,7 @@
 
 一个基于 Python 原生循环的、带证据和版本检查的短视频脚本 Agent。输入创作目标，输出可编辑的分镜 JSON、逐镜时长、素材 ID、事实原文和任务状态。产品与素材均为合成数据。
 
-**当前交付：离线验证及真实模型验证均已执行。** 使用配置的 `deepseek-flash` 完成10次真实运行，覆盖8类场景，保存61条模型响应；核验到7条不同的有效决策路径，见[真实验证报告](examples/live-report.md)。已配置[私有 GitHub 仓库](https://github.com/HQi2931/short-video-agent)。Mock 的修订路径仍是预设测试数据；live 每一步由远程模型返回动作，Runtime 负责校验、执行工具和完成门禁。
+**当前交付：离线验证及真实模型验证均已执行。** 使用配置的 `deepseek-flash` 累计完成13次真实运行，覆盖8类场景，保存77条模型响应；核验到8条不同的有效决策路径，见[真实验证报告](examples/live-report.md)。其中3次由候选人亲自执行，见[本人实测核对](docs/08-manual-live-review.md)。已配置[私有 GitHub 仓库](https://github.com/HQi2931/short-video-agent)。Mock 的修订路径仍是预设测试数据；live 每一步由远程模型返回动作，Runtime 负责校验、执行工具和完成门禁。
 
 ## 安装与运行
 
@@ -80,7 +80,7 @@ live 批量运行会产生真实 API 请求并消耗服务商额度。是否通�
 - [离线案例清单](examples/mock-manifest.json)：每组输入、输出、Trace、退出码和动作路径。
 - [最终审计](examples/audit.json)：分别报告离线检查、live 覆盖与人工待办；工程验证通过仍不代表候选人审核已完成。
 - 默认 `audit.py` 仅以离线检查决定退出码；完整交付使用 `--require-live`。严格的12项验收矩阵见[审计报告](docs/07-acceptance-audit.md)，由候选人发起、AI工具执行，包含修复前的失败证据。
-- [真实运行汇总](examples/live-summary.json)与[报告](examples/live-report.md)：10次运行全部保留，包括1条未触发预期修订的记录。
+- [真实运行汇总](examples/live-summary.json)与[报告](examples/live-report.md)：13次运行全部保留，包括1条未触发预期修订的记录。
 - 两条真实动态路径：[无素材后改写查询并请求补充](examples/traces/live_no_assets_round1.json)；[超时后改稿并重新检查](examples/traces/live_overtime_tight_round1.json)。另有[注入工具错误后的模型重试](examples/traces/live_tool_failure_round1.json)及[引用规则修正](examples/traces/live_changed_assets_round1.json)。
 - 基准超时例的实际工具估时为 **43.43 → 7.64 秒**，目标 12 秒；两个脚本版本和重新检查记录见 [修订 Trace](examples/traces/mock_overtime_validated.json)。此路径为 **Mock 预设修订**。
 - [正常例](examples/outputs/mock_normal_validated.json)、[工具失败例](examples/traces/mock_tool_failure_validated.json)、[拒绝无据效果例](examples/traces/mock_unsupported_claim_validated.json)。
@@ -110,5 +110,6 @@ Trace 自动生成 JSON 与追加式 JSONL。`run_id` 不覆盖已有日志；�
 - [复盘与待办](docs/05-retrospective.md)
 - [私有 GitHub 交付清单](docs/06-delivery.md)
 - [严格校招验收审计](docs/07-acceptance-audit.md)
+- [候选人亲自执行的API验证](docs/08-manual-live-review.md)
 
 此仓库没有复制考核题目原文。仓库可见性已核实为 Private，实际提交以 GitHub 历史为准。候选人仍需完成本人代码审核、实际工时与评审访问权限确认；文档中的 TODO 不代表已经审核通过。

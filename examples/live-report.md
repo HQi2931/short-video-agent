@@ -1,15 +1,18 @@
 # 真实模型验证报告
 
-生成时间（UTC）：2026-10-28T04:58:43.047631+00:00。以下结果由现有运行 Trace 汇总生成，不重新调用模型。
+生成时间（UTC）：2026-10-28T05:14:41.778710+00:00。以下结果由现有运行 Trace 汇总生成，不重新调用模型。
 
-共 10 次运行，61 条实际模型响应；覆盖 8/8 类场景，核验到 7 条不同的有效动作路径。
+共 13 次运行，77 条实际模型响应；覆盖 8/8 类场景，核验到 8 条不同的有效动作路径。
 
-响应 usage.total_tokens 累计：322992；未估算或声明实际账单金额。
+响应 usage.total_tokens 累计：388783；未估算或声明实际账单金额。
 
 | run_id | 状态 | 目标秒数 | 实际估时序列 | 行为证据 | Trace |
 |---|---|---:|---|---|---|
 | live_changed_assets_round1 | completed | 15 | 9.03 → 9.03 | rule_revision | [JSON](traces/live_changed_assets_round1.json) |
 | live_changed_duration_round1 | completed | 4 | 4.09 → 2.35 | duration_revision | [JSON](traces/live_changed_duration_round1.json) |
+| live_manual_no_assets_20261028_130515 | needs_info | 30 | — | query_rewrite | [JSON](traces/live_manual_no_assets_20261028_130515.json) |
+| live_manual_normal_20261028_130515 | completed | 30 | 28.56 | 预期状态与检查 | [JSON](traces/live_manual_normal_20261028_130515.json) |
+| live_manual_overtime_20261028_130515 | completed | 4 | 7.64 → 2.35 | duration_revision | [JSON](traces/live_manual_overtime_20261028_130515.json) |
 | live_missing_info_round1 | needs_info | 未提供 | — | 预期状态与检查 | [JSON](traces/live_missing_info_round1.json) |
 | live_no_assets_round1 | needs_info | 30 | — | query_rewrite | [JSON](traces/live_no_assets_round1.json) |
 | live_normal_initial | completed | 30 | 30.52 → 25.40 | duration_revision | [JSON](traces/live_normal_initial.json) |
