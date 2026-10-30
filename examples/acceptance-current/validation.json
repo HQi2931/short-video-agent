@@ -1,0 +1,164 @@
+{
+  "created_at_utc": "2026-10-30T02:54:26.409260+00:00",
+  "question_number": 4,
+  "content_version": "local-cff0fbfce3f8",
+  "scope": "Local acceptance against the complete official question4 and general delivery rules transcribed by the candidate",
+  "python": "3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "dependencies": {
+    "pytest": "9.2.0",
+    "pydantic": "2.14.1",
+    "httpx": "0.28.1",
+    "python-dotenv": "1.2.4"
+  },
+  "pytest": {
+    "command": [
+      "D:\\Xiaoying\\short-video-agent\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "pytest",
+      "tests/",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "D:\\Xiaoying\\short-video-agent\\runs\\publication-checks\\pytest-tmp",
+      "--junitxml=D:\\Xiaoying\\short-video-agent\\examples\\acceptance-current\\pytest.xml"
+    ],
+    "exit_code": 0,
+    "stdout": "........................................................................ [ 43%]\n........................................................................ [ 86%]\n.......................                                                  [100%]\n167 passed in 3.86s\n",
+    "stderr": ""
+  },
+  "tested_clean_copy": true,
+  "excluded_from_clean_copy": [
+    ".env",
+    ".git",
+    ".venv",
+    "runs",
+    "caches",
+    "old candidates"
+  ],
+  "dependencies_reused_from_existing_environment": true,
+  "evidence_exit_code": 0,
+  "audit_exit_code": 0,
+  "audit_verified": true,
+  "broken_document_links": [],
+  "pip_check": {
+    "command": [
+      "D:\\Xiaoying\\short-video-agent\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "exit_code": 0,
+    "stdout": "No broken requirements found.\n",
+    "stderr": ""
+  },
+  "diff_check": {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "source_sha256": {
+    "src/__init__.py": "488d7e28a8668bd27fd1ed6382985f35018065c55872c1a84ee8f65a7da4bdca",
+    "src/agent.py": "af23c2857683be8195102ed52da95a0836be39b4a22bab89d981fe5ba1ad871c",
+    "src/llm_adapter.py": "c1c5032a02bc15453903810028956829d3a39c752d430c36d1925cf0d5df59a8",
+    "src/main.py": "0e3a4624248a7766fa5ed67d5b86ae17722abf7adc5ab0f02c8fce3a3585007e",
+    "src/mock_fixtures.py": "5b2fd3c5a04d7a4c79cf6f70de09a0f216d507082893d3c2ee5ef524e4da21cf",
+    "src/schemas.py": "f7878d1fac634acccdb58689a2e7e9a098b02dfecc91be187edaebfc32af5222",
+    "src/state.py": "57af770f55ab037d1c951c4d5b780f030db57ecdec72a6ca68ebfcb7e9e605ef",
+    "src/tools.py": "ee5528446dd93af68a193b1331fbfdc9fc45ab09889b0b844c4b0858d76eced8",
+    "src/tracing.py": "a4058fc008cfa5812d2184613326d225021f38e0304cc8074afde6d675675a6c"
+  },
+  "model_calls_made": 0,
+  "official_exam_page": {
+    "requirements_status": "PASS",
+    "source": "Complete official text transcribed by the candidate in the conversation",
+    "direct_authenticated_page_access": false,
+    "personal_link_stored": false
+  },
+  "repository_observation": {
+    "date": "2026-10-30",
+    "private": false,
+    "default_branch": "main",
+    "remote_main_sha": "6ff258c0eef6c2d653ce15c022a35b1fd2f90832",
+    "source": "Read-only gh api and git ls-remote in this turn"
+  },
+  "verified": true,
+  "full_history_audit_requires_git_repository": true,
+  "formal_requirement_checks": [
+    {
+      "case": "normal",
+      "checks": {
+        "required_fields": true,
+        "current_passing_checks": true,
+        "scene_seconds_match": true,
+        "sum_matches_total": true,
+        "within_limit": true,
+        "asset_sets_match": true
+      },
+      "verified": true
+    },
+    {
+      "case": "no_assets",
+      "checks": {
+        "required_fields": true,
+        "not_falsely_completed": true
+      },
+      "verified": true
+    },
+    {
+      "case": "tool_failure",
+      "checks": {
+        "required_fields": true,
+        "current_passing_checks": true,
+        "scene_seconds_match": true,
+        "sum_matches_total": true,
+        "within_limit": true,
+        "asset_sets_match": true
+      },
+      "verified": true
+    },
+    {
+      "case": "overtime",
+      "checks": {
+        "required_fields": true,
+        "current_passing_checks": true,
+        "scene_seconds_match": true,
+        "sum_matches_total": true,
+        "within_limit": true,
+        "asset_sets_match": true
+      },
+      "verified": true
+    },
+    {
+      "case": "rule_repair",
+      "checks": {
+        "required_fields": true,
+        "current_passing_checks": true,
+        "scene_seconds_match": true,
+        "sum_matches_total": true,
+        "within_limit": true,
+        "asset_sets_match": true
+      },
+      "verified": true
+    },
+    {
+      "case": "missing_info",
+      "checks": {
+        "required_fields": true,
+        "not_falsely_completed": true
+      },
+      "verified": true
+    }
+  ],
+  "formal_requirements_verified": true,
+  "publication_authorized": true,
+  "publication_phase": "Precommit technical verification; actual commit and remote equality verified after publication",
+  "final_sha_resolution": "git rev-parse HEAD of the published delivery commit; see post-publication handoff"
+}

@@ -10,6 +10,23 @@ from src.mock_fixtures import mock_plan
 from src.tracing import TraceLogger
 
 
+def test_version_manifest_rejects_changed_sources(tmp_path):
+    import hashlib
+    from scripts.final_audit import check_runtime_sources
+    source = tmp_path / 'src/agent.py'
+    source.parent.mkdir()
+    source.write_text('original', encoding='utf-8')
+    files = {'src/agent.py': digest(source)}
+    content_id = hashlib.sha256(json.dumps(files, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
+    write_exclusive(tmp_path / 'VERSION.json', {'files': files, 'content_sha256': content_id})
+    assert check_runtime_sources(tmp_path)['verified']
+    source.write_text('changed', encoding='utf-8')
+    assert not check_runtime_sources(tmp_path)['verified']
+    source.write_text('original', encoding='utf-8')
+    (tmp_path / 'src/old-candidate.py').write_text('another version', encoding='utf-8')
+    assert not check_runtime_sources(tmp_path)['verified']
+
+
 def test_history_audit_detects_changed_and_missing_evidence(tmp_path):
     trace = tmp_path / "old-trace.json"
     removed = tmp_path / "old-output.json"

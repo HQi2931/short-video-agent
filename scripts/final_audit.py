@@ -1,6 +1,5 @@
 """Read-only delivery audit. Replays records; never calls a model or rewrites evidence."""
 import argparse
-import ast
 from collections import Counter
 from datetime import datetime, timezone
 import hashlib
@@ -147,20 +146,26 @@ def scan_secrets(root):
 
 
 def check_runtime_sources(root):
-    original = json.loads((root / "eval/final-v3/starting-worktree.json").read_text(encoding="utf-8-sig"))["source_sha256"]
-    protected = ["src/agent.py", "src/state.py", "src/tools.py", "src/schemas.py", "src/tracing.py"]
-    checks = {name: digest(root / name) == original[name] for name in protected}
-    before = root / "eval/final-v3/baseline-source/src/llm_adapter.py"
-    if before.is_file():
-        def without_prompt(path):
-            tree = ast.parse(path.read_text(encoding="utf-8-sig"))
-            for node in tree.body:
-                if isinstance(node, ast.Assign) and any(isinstance(t, ast.Name) and t.id == "SYSTEM_PROMPT" for t in node.targets):
-                    node.value = ast.Constant(value="PROMPT_OMITTED_FOR_CODE_COMPARISON")
-            return ast.dump(tree, include_attributes=False)
-        checks["src/llm_adapter.py code excluding SYSTEM_PROMPT"] = without_prompt(before) == without_prompt(root / "src/llm_adapter.py")
-    return {"verified": all(checks.values()), "checks": checks,
-            "meaning": "Runtime gates, estimators, reference validation, invalidation and max_steps code are byte-identical to this round's baseline."}
+    manifest = json.loads((root / "VERSION.json").read_text(encoding="utf-8"))
+    checks = {name: (root / name).is_file() and digest(root / name) == expected
+              for name, expected in manifest["files"].items()}
+    expected_id = hashlib.sha256(json.dumps(manifest["files"], sort_keys=True,
+                                          separators=(",", ":")).encode()).hexdigest()
+    checks["content_version_id"] = manifest.get("content_sha256") == expected_id
+    ignored_parts = {".git", ".venv", "__pycache__", ".pytest_cache", "runs"}
+    receipts = set(manifest.get("generated_receipts_excluded", []))
+    actual = set()
+    for path in root.rglob("*"):
+        if not path.is_file() or any(part in ignored_parts for part in path.relative_to(root).parts):
+            continue
+        if path.name == "VERSION.json" or path.name == ".env" or (path.name.startswith(".env.") and path.name != ".env.example"):
+            continue
+        if path.parent == root / "examples/acceptance-current" and path.name in receipts:
+            continue
+        actual.add(path.relative_to(root).as_posix())
+    checks["exact_delivery_inventory"] = actual == set(manifest["files"])
+    return {"verified": bool(checks) and all(checks.values()), "checks": checks,
+            "meaning": "The single delivered version matches its byte-level manifest."}
 
 
 def inspect_pytest(path):
@@ -224,7 +229,7 @@ def write_exclusive(path, value):
 def main(argv=None):
     parser = argparse.ArgumentParser(__doc__)
     parser.add_argument("--output", type=Path, required=True, help="New output path; existing files are rejected")
-    parser.add_argument("--history-manifest", type=Path, default=ROOT / "eval/final-v3/historical-evidence-sha256.json")
+    parser.add_argument("--history-manifest", type=Path, default=ROOT / "VERSION.json")
     parser.add_argument("--pytest-report", type=Path)
     args = parser.parse_args(argv)
     # Fail before scanning if the requested destination already exists.

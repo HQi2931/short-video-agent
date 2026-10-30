@@ -56,34 +56,24 @@ def test_max_steps_incomplete_can_be_recomputed(run_fixture, tmp_path):
     assert replay_trace(trace, event_records(tmp_path, trace), output)["verified"]
 
 
-@pytest.mark.parametrize(("require_live", "expected_code"), [(False, 0), (True, 1)])
-def test_cli_audit_distinguishes_offline_pass_from_missing_live(tmp_path, require_live, expected_code):
-    for name in ("src", "scripts", "tests", "docs", "data"):
+@pytest.mark.parametrize("tamper", [False, True])
+def test_current_audit_cli_checks_manifest_before_accepting(tmp_path, tamper):
+    import hashlib
+    for name in ("src", "scripts", "eval", "tests", "docs", "data"):
         shutil.copytree(ROOT / name, tmp_path / name, ignore=shutil.ignore_patterns("__pycache__"))
-    for name in ("README.md", "requirements.txt", ".env.example", ".gitignore"):
+    shutil.copytree(ROOT / "examples/acceptance-current", tmp_path / "examples/acceptance-current")
+    shutil.copy2(ROOT / "VERSION.json", tmp_path / "VERSION.json")
+    for name in ("README.md", "requirements.txt", "requirements-lock.txt", "pyproject.toml", ".env.example", ".gitignore", ".gitattributes"):
         shutil.copy2(ROOT / name, tmp_path / name)
-    names = {"examples/mock-manifest.json", "examples/test-environment.json", "examples/test-results.xml"}
-    manifest = json.loads((ROOT / "examples/mock-manifest.json").read_text(encoding="utf-8"))
-    for row in manifest["runs"]:
-        names.update(row[key] for key in ("input", "trace", "events", "output"))
-    for name in names:
-        target = tmp_path / name
-        target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(ROOT / name, target)
-    # Isolate CLI scope semantics from this project's previous, possibly stale test run.
-    # This is a clearly labelled temporary fixture, never exported as acceptance evidence.
-    (tmp_path / "examples/test-environment.json").write_text(json.dumps({
-        "exit_code": 0, "notice": "SYNTHETIC fixture for offline-versus-live exit-code testing only",
-    }), encoding="utf-8")
-    (tmp_path / "examples/test-results.xml").write_text(
-        '<testsuites><testsuite tests="1" failures="0" errors="0"><testcase name="synthetic_scope_fixture"/></testsuite></testsuites>',
-        encoding="utf-8",
-    )
+    shutil.copytree(ROOT / "delivery", tmp_path / "delivery")
+    shutil.copytree(ROOT / "examples/inputs", tmp_path / "examples/inputs")
+    if tamper:
+        with (tmp_path / "src/agent.py").open("a", encoding="utf-8") as stream:
+            stream.write("\n# test-only source change\n")
     subprocess.run(["git", "init", "-q"], cwd=tmp_path, check=True, capture_output=True)
-    command = [sys.executable, str(tmp_path / "scripts/audit.py")]
-    if require_live:
-        command.append("--require-live")
-    process = subprocess.run(command, cwd=tmp_path, capture_output=True, text=True, encoding="utf-8", errors="replace")
-    report = json.loads((tmp_path / "examples/audit.json").read_text(encoding="utf-8"))
-    assert report["offline_checks_passed"] and not report["live_validation"]["verified"]
-    assert process.returncode == expected_code, process.stdout + process.stderr
+    destination = tmp_path / "audit-result.json"
+    process = subprocess.run([sys.executable, str(tmp_path / "scripts/final_audit.py"), "--output", str(destination)],
+                             cwd=tmp_path, capture_output=True, text=True, encoding="utf-8", errors="replace")
+    report = json.loads(destination.read_text(encoding="utf-8"))
+    assert report["verified"] is (not tamper), process.stdout + process.stderr
+    assert process.returncode == (1 if tamper else 0)

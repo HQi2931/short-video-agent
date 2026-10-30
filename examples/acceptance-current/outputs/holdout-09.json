@@ -1,0 +1,63 @@
+{
+  "run_id": "holdout-09",
+  "mode": "live",
+  "model": "deepseek-flash",
+  "status": "needs_info",
+  "reason": "User input or reliable evidence is required",
+  "title": null,
+  "topic": "岚峰空气采样仪介绍",
+  "audience": "社区科普活动参与者",
+  "platform": "视频号",
+  "style": "找不到素材时尝试保持主题的另一种查询，仍无证据则明确请求素材。",
+  "target_duration_seconds": 18.0,
+  "script_version": null,
+  "script_revision": 0,
+  "storyboard": [],
+  "total_estimated_seconds": null,
+  "used_asset_ids": [],
+  "sources": [],
+  "duration_check": null,
+  "brand_rule_check": null,
+  "risk_flags": [],
+  "missing_information": [
+    "岚峰空气采样仪的可核实产品事实（功能、参数、适用场景）",
+    "岚峰空气采样仪的可用图片或视频素材"
+  ],
+  "question": "我已围绕“岚峰空气采样仪”及“空气采样器/采样仪/环境监测设备”等相近关键词检索三次，素材库均无结果，因此目前无法撰写有事实依据的脚本。请提供该产品的官方资料或可核实的事实要点（如功能、参数、使用场景），以及可用的产品图片/视频素材；收到后我会据此完成18秒视频号脚本。",
+  "errors": [],
+  "completed_steps": [
+    {
+      "step": 1,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 4,
+      "action": "request_info",
+      "ok": true
+    }
+  ],
+  "last_observation": {
+    "ok": true,
+    "fields": [
+      "岚峰空气采样仪的可核实产品事实（功能、参数、适用场景）",
+      "岚峰空气采样仪的可用图片或视频素材"
+    ],
+    "question": "我已围绕“岚峰空气采样仪”及“空气采样器/采样仪/环境监测设备”等相近关键词检索三次，素材库均无结果，因此目前无法撰写有事实依据的脚本。请提供该产品的官方资料或可核实的事实要点（如功能、参数、使用场景），以及可用的产品图片/视频素材；收到后我会据此完成18秒视频号脚本。"
+  },
+  "limitations": [
+    "合成素材，仅用于工程验证。",
+    "时长是工程估算，需要真人口播复核。",
+    "仅通过原文和批准文案核验，未知改写会被阻断。"
+  ]
+}

@@ -1,141 +1,54 @@
-# 短视频脚本 Agent
+# 第4题 · 短视频脚本 Agent
 
-一个基于 Python 原生循环的、带证据和版本检查的短视频脚本 Agent。输入创作目标，输出可编辑的分镜 JSON、逐镜时长、素材 ID、事实原文和任务状态。产品与素材均为合成数据。
+基于合成产品素材与品牌规则生成有事实依据、满足目标时长上限的可编辑分镜JSON。CLI运行，Python原生Agent循环，无Agent框架。真实模式每一步由LLM选择动作；Mock只验证预设工程流程。
 
-**当前交付：第三轮质量优化与交付审计。** 完整 pytest 为158项通过；本轮真实模型结果、失败与限制统一见 [final-evaluation.md](final-evaluation.md)。第一轮固定集20例、第二轮独立集10例及本轮两组新案例（15例、12例）分别归档；旧独立集已参与开发诊断，不能继续当作全新盲测。所有历史结果与Trace保留，本轮不提交、不推送，等待本人最终审核。
+## 唯一版本与评审入口
 
-当前候选B的[最终提交范围与人工审核清单](delivery/FINAL-HANDOFF.md)单独列出待stage文件、证据体积、最新离线检查和本人待确认事项。本轮交付准备没有新增真实模型调用，也没有改动候选B实现或Prompt。
+当前唯一实现位于 `src/`。`VERSION.json`记录本次本地内容版本及SHA256，不冒称Git commit SHA。仓库内不保留旧候选实现、旧版本压缩包或重复评估报告。
 
-使用配置的 `deepseek-flash`。最初13次真实运行、77条响应及8类场景是[早期真实验证](examples/live-report.md)的范围，不是当前累计总量。其中3次由候选人亲自执行，见[本人实测核对](docs/08-manual-live-review.md)。已配置[GitHub 仓库](https://github.com/HQi2931/short-video-agent)；早期核实为Private，本轮未查询远程状态。Mock 的修订路径是预设测试数据；live 每一步由远程模型返回动作，Runtime 负责校验、执行工具和完成门禁。
+- [需求](docs/01-requirements.md)、[方案](docs/02-solution.md)、[评估](docs/03-evaluation.md)、[AI使用](docs/04-ai-usage.md)、[复盘](docs/05-retrospective.md)
+- [验收报告](delivery/REQUIREMENTS-CHECK.md)、[提交状态](delivery/SUBMISSION.md)、[清理记录](delivery/CLEANUP.json)
+- [六组真实输入、输出、Trace索引](examples/acceptance-current/manifest.json) · [工具反馈与决策对照](examples/acceptance-current/DECISION-PATHS.md)
+- [测试输出](examples/acceptance-current/pytest.txt)、[版本及证据核验](examples/acceptance-current/verification.json)、[最终审计](examples/acceptance-current/audit.json)
 
 ## 安装与运行
 
-需要 Python 3.11+。在 Windows PowerShell 中：
+以下命令在仓库根目录执行，无需固定磁盘路径。Python 3.11+及Git（全套测试和历史扫描会调用Git），实际验证环境及依赖版本见 [validation.json](examples/acceptance-current/validation.json)。PowerShell：
 
 ```powershell
-cd D:\Xiaoying\short-video-agent
 python -m venv .venv
+New-Item -ItemType Directory -Force runs | Out-Null
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe -m src.main --mode mock --input-file examples/inputs/normal.json
+.\.venv\Scripts\python.exe -m src.main --mode mock --input-file examples/inputs/normal.json --trace-dir runs/traces --output-file runs/result.json
+.\.venv\Scripts\python.exe -m pytest tests/ -q -p no:cacheprovider --basetemp runs/pytest-tmp
+.\.venv\Scripts\python.exe scripts/check_submission.py
 ```
 
-若已激活虚拟环境或已安装依赖，也可直接使用：
+依赖范围在requirements.txt，实际锁定快照在requirements-lock.txt。输入JSON包含topic、audience、platform、duration_seconds、style；`--data-dir`目录中放assets.json和brand_rules.json，默认使用data/。data/production-demo是另一组合成输入资料，不是另一个代码版本。
 
-```bash
-python -m src.main --mode mock --input-file examples/inputs/normal.json
-python -m pytest tests/ -v
-```
+Mock的 `--scenario` 选择固定夹具，需搭配examples/inputs中同名输入，例如overtime。真实模式先复制.env.example为本地.env并填写LLM_API_KEY、LLM_BASE_URL和LLM_MODEL，然后将命令中的 `--mode mock` 改为 `--mode live`。真实调用产生费用；缺配置不会静默降级Mock。程序追加/chat/completions，API前缀必须完整。
 
-早期验证环境见 [环境记录](examples/test-environment.json)，依赖快照见 [requirements-lock.txt](requirements-lock.txt)；本轮环境与最新验证结果见[交付准备记录](delivery/review/validation.json)。Python 3.11/3.12尚未单独执行兼容性测试。
+默认12步，可通过--max-steps调整至1–100。退出码：0完成，2需补信息，3失败，4未完成，5启动错误。新增运行使用runs/，已验收的examples记录不会被默认命令覆盖。
 
-## 运行其他离线案例
+## 校验与边界
+
+check_submission.py在零模型调用下核对版本摘要、六组记录的输入/输出/JSONL、当前Prompt及实际反馈行为。Git属性保留交付文件原始字节，避免跨平台换行转换破坏摘要。改变已冻结内容会失败；只有审核新修改并重新验证后才应更新VERSION.json。
+
+完整审计还会扫描Git历史，需要安装Git且当前目录是含.git的仓库。ZIP解压目录使用check_submission.py并查看已保存的audit.json；正式提交前在真实Git仓库中执行完整审计。报告须另存新路径，已有路径会被拒绝覆盖：
 
 ```powershell
-.\.venv\Scripts\python.exe -m src.main --mode mock --scenario overtime --input-file examples/inputs/overtime.json
-.\.venv\Scripts\python.exe -m src.main --mode mock --scenario tool_failure --input-file examples/inputs/tool_failure.json
-.\.venv\Scripts\python.exe -m src.main --mode mock --scenario no_assets --input-file examples/inputs/no_assets.json
-.\.venv\Scripts\python.exe -m src.main --mode mock --scenario unsupported_claim --input-file examples/inputs/unsupported_claim.json
-.\.venv\Scripts\python.exe -m src.main --mode mock --scenario max_steps --input-file examples/inputs/max_steps.json --max-steps 3
+.\.venv\Scripts\python.exe scripts/final_audit.py --output runs/audit.json --pytest-report examples/acceptance-current/pytest.xml
 ```
 
-`--scenario` 仅选择 Mock 预设动作。输入与情景应搭配；默认 `normal` 不会替所有输入自动规划。CLI 日志会显示本次输出与 Trace 路径。
+事实检查采用完整原文与批准非事实文案覆盖；未知改写会阻断。时长是包含字幕阅读和转场的工程估算，不能代替真人口播。编辑脚本必须重检。素材为合成资料，不证明真实产品效果或完整创作质量。
 
-## 真实模型模式
+本人现已明确授权提交并推送本版本。实际投入约10小时，详见AI使用文档。题号已由本人确认为4；最终提交SHA必须在实际提交后生成，不能用本地内容ID或旧HEAD代替。仓库地址及提交前条件见提交状态页。
 
-将 `.env.example` 复制为 `.env`，在本地填写配置，勿将密钥提交到 Git：
 
-```powershell
-if (-not (Test-Path .env)) { Copy-Item .env.example .env }
-```
+## 正式题面核对状态
 
-```dotenv
-LLM_API_KEY=在本地填写
-LLM_BASE_URL=服务商的完整API前缀
-LLM_MODEL=服务商实际支持的模型名
-MAX_AGENT_STEPS=12
-LLM_TIMEOUT_SECONDS=60
-LLM_RESPONSE_FORMAT=json_object
-```
+第4题正文、通用考核规则和GitHub交付规范已由本人于2026-10-30从正式页面转录提供，本轮按该转录完成逐项核对。审查来源是本人提供的正式文本，并非助手直接读取了验证后的网页；个人考试链接、手机号和验证码不进入仓库。
 
-`LLM_BASE_URL` 应包含服务商 API 前缀，例如 `https://api.openai.com/v1`。程序追加 `/chat/completions`。远程地址使用 HTTPS，HTTP 只支持本机回环。兼容服务若不支持 `response_format`，显式设置为 `none`；程序仍验证返回的 JSON 动作。没有默认密钥或默认模型，也不会自动降级为 Mock。
+本地功能、五场景、事实追溯、动态路径和必需材料均有实际证据。发布按本人本轮明确授权执行。最终commit SHA以本版本实际Git提交为准，可运行 `git rev-parse HEAD` 获取，交付时再与远程main核对；不能以本地内容ID或旧HEAD代替。
 
-```powershell
-.\.venv\Scripts\python.exe -m src.main --mode live --input-file examples/inputs/normal.json
-.\.venv\Scripts\python.exe -m src.main --mode live --input-file examples/inputs/overtime.json
-.\.venv\Scripts\python.exe -m src.main --mode live --input-file examples/inputs/overtime_tight.json
-.\.venv\Scripts\python.exe scripts/run_examples.py --mode live
-.\.venv\Scripts\python.exe scripts/summarize_live.py
-```
-
-live 批量运行会产生真实 API 请求并消耗服务商额度。是否通过具体行为验证，取决于真实模型返回；未观察到工具超时反馈后的修订，不能记为“超时后修订已验证”。早期12秒用例首次工具估时10.41秒，未触发该行为；此前未经工具反馈的草稿修改不能冒充反馈驱动修订。原批次 `all_expected_behaviors=false` 与退出码1如实保留；随后4秒补充用例实际出现7.64→2.35秒修订。`summarize_live.py` 汇总早期已有证据，不新增模型调用。
-
-上面的`run_examples.py --mode live`会覆盖`examples/live-manifest.json`，`summarize_live.py`会覆盖早期`live-summary.json`和`live-report.md`；本轮保留历史时不要执行这些汇总命令。新增评测使用`python -m eval.run --live --output-root <新的目录>`，每次生成独立运行目录；实际完整参数见最终评估报告。
-
-## 检查与实际证据
-
-本轮验证与零模型调用审计（输出文件须使用新名字）：
-
-```powershell
-.\.venv\Scripts\python.exe -m pytest -v --junitxml=eval/final-v3/recheck-pytest.xml
-.\.venv\Scripts\python.exe scripts/final_audit.py --output eval/final-v3/recheck-audit.json --pytest-report eval/final-v3/recheck-pytest.xml
-.\.venv\Scripts\python.exe -m pip check
-git diff --check
-```
-
-实际结果保存在 [最终pytest记录](eval/final-v3/final-regression-b.txt) 和 [最终审计](eval/final-v3/final-audit.json)。[首组新集计划](eval/final-v3/frozen-test-plan-contracts.md)、[最终确认集计划](eval/final-v3/confirmation-v4/plan.md)及其补充验收器在相应测试前固定，要求完整事实实际进入旁白或字幕，并核验指定首稿结构、多素材使用及长旁白；通过口径详见最终报告。重复运行须另存，不覆盖本轮证据。
-
-下列是早期命令，会更新 `examples/` 的派生汇总；本轮为保留历史未重新运行它们：
-
-```powershell
-.\.venv\Scripts\python.exe scripts/verify.py
-.\.venv\Scripts\python.exe scripts/run_examples.py --mode mock
-.\.venv\Scripts\python.exe scripts/audit.py
-.\.venv\Scripts\python.exe scripts/audit.py --require-live
-.\.venv\Scripts\python.exe scripts/acceptance_audit.py
-.\.venv\Scripts\python.exe -m pip check
-```
-
-- [测试实际输出](examples/test-results.txt) 与 [JUnit 报告](examples/test-results.xml)：严格验收修复后129项通过。重跑时保留旧文本报告。
-- [离线案例清单](examples/mock-manifest.json)：每组输入、输出、Trace、退出码和动作路径。
-- [最终审计](examples/audit.json)：分别报告离线检查、live 覆盖与人工待办；工程验证通过仍不代表候选人审核已完成。
-- 默认 `audit.py` 仅以离线检查决定退出码；完整交付使用 `--require-live`。严格的12项验收矩阵见[审计报告](docs/07-acceptance-audit.md)，由候选人发起、AI工具执行，包含修复前的失败证据。
-- [真实运行汇总](examples/live-summary.json)与[报告](examples/live-report.md)：13次运行全部保留，包括1条未触发预期修订的记录。
-- 两条真实动态路径：[无素材后改写查询并请求补充](examples/traces/live_no_assets_round1.json)；[超时后改稿并重新检查](examples/traces/live_overtime_tight_round1.json)。另有[注入工具错误后的模型重试](examples/traces/live_tool_failure_round1.json)及[引用规则修正](examples/traces/live_changed_assets_round1.json)。
-- 基准超时例的实际工具估时为 **43.43 → 7.64 秒**，目标 12 秒；两个脚本版本和重新检查记录见 [修订 Trace](examples/traces/mock_overtime_validated.json)。此路径为 **Mock 预设修订**。
-- [正常例](examples/outputs/mock_normal_validated.json)、[工具失败例](examples/traces/mock_tool_failure_validated.json)、[拒绝无据效果例](examples/traces/mock_unsupported_claim_validated.json)。
-
-Trace 自动生成 JSON 与追加式 JSONL。`run_id` 不覆盖已有日志；批量重跑产生新的 ID，最新关联以 manifest 为准。末步的 `next_action=null` 表示没有下一动作，前面步骤的下一动作来自后续真实执行，并非预先猜测。
-
-退出码：`0 completed`，`2 needs_info`，`3 failed`，`4 incomplete`，`5 输入/配置/启动错误`。非零退出码可能是负向测试的预期结果。
-
-## 事实约束与时长限制
-
-所有产品事实必须通过素材 ID、事实 ID、事实原文和 `claim_text` 四项核对。旁白、字幕、画面描述、标题都进行检查。当前采用保守策略：文本由完整事实原文与品牌批准的非事实短语组合；无法解释的自由改写标记待确认并阻止完成。原主题与素材没有目录关键词联系时，也要求确认，避免改写检索时换成无关产品。
-
-这会限制自由创作，可能误拒合理同义改写。批准文案和素材属于可信配置，应人工审核；程序不声称完成所有语义核查、真实产品效果验证或素材版权审核。编辑输出后，需作为新稿调用 Runner 的 `draft_script` 动作并重新检查，直接编辑 JSON 不会保留“已验证”保证。
-
-估时考虑中文字符、英文单词、数字组、标点停顿、字幕阅读、最短镜头和转场。旁白与字幕同时出现时取较长值；标题仅作元数据，不另外计算口播。实际语速、画面节奏仍需真人复核。
-
-脚本、用户目标、素材快照、检索素材或品牌规则任一变化，旧检查不能用于完成。任何业务工具错误会清空两项当前检查；不能跳过验证直接完成。
-
-已完成任务的 Python 状态若被修改，结果会降为 incomplete；导出结果时再次核验门禁，防止绕过更新方法直接编辑对象后仍返回 completed。继续生成应创建新的运行状态。
-
-## 工程与交付文档
-
-现有 Runtime Harness 与 Evaluation Harness 的职责、代码映射、Mermaid 架构和执行流程，以及两条真实模型修订/恢复路径，见[Agent Harness 架构说明](docs/12-agent-harness.md)。该文档整理已有实现，并明确未实现的能力。
-
-- [需求与验收矩阵](docs/01-requirements.md)
-- [方案与技术取舍](docs/02-solution.md)
-- [实际评估与限制](docs/03-evaluation.md)
-- [AI 辅助开发记录](docs/04-ai-usage.md)
-- [复盘与待办](docs/05-retrospective.md)
-- [私有 GitHub 交付清单](docs/06-delivery.md)
-- [严格校招验收审计](docs/07-acceptance-audit.md)
-- [候选人亲自执行的API验证](docs/08-manual-live-review.md)
-- [第一轮效果基线](docs/08-agent-evaluation.md)
-- [第二轮决策优化](docs/09-decision-optimization.md)
-- [独立集两例失败分析](docs/10-independent-failure-analysis.md)
-- [历史真实失败台账](docs/11-live-failure-ledger.md)
-- [第三轮最终评估与审核待办](final-evaluation.md)
-
-此仓库没有复制考核题目原文。仓库早期核实为Private，本轮未重新查询，实际提交以GitHub历史为准。候选人仍需完成本人代码审核、实际工时与评审访问权限确认；文档中的TODO不代表已经审核通过。
+pytest临时目录在受限环境中可能不可写，上述命令先创建runs/，再将临时文件放到该忽略目录下；若单独运行测试，也要先执行该创建目录命令。默认临时目录的setup错误不作为业务断言失败；本次使用上述方式全套通过。

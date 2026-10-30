@@ -49,7 +49,10 @@ def test_no_executions_never_becomes_perfect_score():
 
 
 def historical_case(name, scenario):
-    path=ROOT/'examples/traces'/name
+    mapped = {'live_overtime_round1.json': 'production-02.json',
+              'live_overtime_tight_round1.json': 'holdout-07.json',
+              'live_normal_round1.json': 'production-02.json'}
+    path=ROOT/'examples/acceptance-current/traces'/mapped[name]
     trace=json.loads(path.read_text(encoding='utf-8'))
     events=[json.loads(line) for line in path.with_suffix('.jsonl').read_text(encoding='utf-8').splitlines()]
     return evaluate(dict(id='offline-audit-fixture',scenario=scenario),trace,events),trace,events

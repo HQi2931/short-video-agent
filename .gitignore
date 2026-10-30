@@ -10,3 +10,6 @@ htmlcov/
 dist/
 *.egg-info/
 # Reviewed example evidence is deliberately versioned.
+
+# New local runs are separate from frozen acceptance evidence.
+runs/

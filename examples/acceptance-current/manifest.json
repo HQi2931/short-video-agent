@@ -1,0 +1,50 @@
+[
+  {
+    "case": "normal",
+    "trace": "examples/acceptance-current/traces/production-02.json",
+    "input": "examples/acceptance-current/inputs/normal.json",
+    "output": "examples/acceptance-current/outputs/production-02.json",
+    "origin": "eval/creative-v4/candidate-c-production/20261028T154409Z_41e41b59/traces/production-02.json",
+    "trace_sha256": "18d2a95f8003d7148f4299471716f2a08aa7b99e2af956827436ee01dedbe5e0"
+  },
+  {
+    "case": "no_assets",
+    "trace": "examples/acceptance-current/traces/holdout-09.json",
+    "input": "examples/acceptance-current/inputs/no_assets.json",
+    "output": "examples/acceptance-current/outputs/holdout-09.json",
+    "origin": "eval/creative-v4/candidate-c-fixed/20261028T155049Z_ea3d9330/traces/holdout-09.json",
+    "trace_sha256": "2f0db1e2605d0d605e62aa4be6a7bff85c0d37ecf237ca935fe8a07d05872418"
+  },
+  {
+    "case": "tool_failure",
+    "trace": "examples/acceptance-current/traces/holdout-13.json",
+    "input": "examples/acceptance-current/inputs/tool_failure.json",
+    "output": "examples/acceptance-current/outputs/holdout-13.json",
+    "origin": "eval/creative-v4/candidate-c-fixed/20261028T155049Z_ea3d9330/traces/holdout-13.json",
+    "trace_sha256": "cf1b0fbb9d144e64f9b4f63dbe3e3a8ffcf755919479c39f12703ad6134a3d3f"
+  },
+  {
+    "case": "overtime",
+    "trace": "examples/acceptance-current/traces/holdout-07.json",
+    "input": "examples/acceptance-current/inputs/overtime.json",
+    "output": "examples/acceptance-current/outputs/holdout-07.json",
+    "origin": "eval/creative-v4/candidate-c-fixed/20261028T155049Z_ea3d9330/traces/holdout-07.json",
+    "trace_sha256": "364c2ac83b645265bf4f1a49b026a12c3548e2c02737453ae55224b897be9718"
+  },
+  {
+    "case": "rule_repair",
+    "trace": "examples/acceptance-current/traces/holdout-17.json",
+    "input": "examples/acceptance-current/inputs/rule_repair.json",
+    "output": "examples/acceptance-current/outputs/holdout-17.json",
+    "origin": "eval/creative-v4/candidate-c-fixed/20261028T155049Z_ea3d9330/traces/holdout-17.json",
+    "trace_sha256": "021babca87d257b0371cb548917be0c4f0edd5722288e697bc217ed933187a90"
+  },
+  {
+    "case": "missing_info",
+    "trace": "examples/acceptance-current/traces/missing-info-20261030.json",
+    "input": "examples/acceptance-current/inputs/missing_info.json",
+    "output": "examples/acceptance-current/outputs/missing-info-20261030.json",
+    "origin": "examples/acceptance-current/traces/missing-info-20261030.json",
+    "trace_sha256": "a391f8b19312b819428fc063470168a154614dd33d25493eca31bbe2727f7de6"
+  }
+]

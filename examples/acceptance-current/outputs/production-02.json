@@ -1,0 +1,401 @@
+{
+  "run_id": "production-02",
+  "mode": "live",
+  "model": "deepseek-flash",
+  "status": "completed",
+  "reason": "Current script passed deterministic duration and conservative evidence/brand checks",
+  "title": "桌面开箱记录",
+  "topic": "帧匣口袋灯桌面介绍：给刚开始拍短视频的新手展示接口、旋钮与随附配件，不做亮度或肤色效果对比。",
+  "audience": "只有手机拍摄设备的新手",
+  "platform": "哔哩哔哩",
+  "style": "场地为一张素色桌面，器材只有手机和固定支架，无演员口播出镜。拍摄方案是待执行计划，素材均为合成说明，没有真实照片、视频或用户证言。请交付可以交给拍摄和剪辑同学的分镜方案。每镜visual使用批准的完整制作短语，至少包含景别、机位、动作、字幕位置、剪辑和声音六项；旁白或字幕完整表达所选事实，引用对应素材。不得把制作指令写成产品能力。最终至少4镜，R21和R22均有完整事实进入旁白或字幕；至少4条不同事实。色温事实可选，不要求全部规格。",
+  "target_duration_seconds": 50.0,
+  "script_version": "59831d16230d3934930282f32c908182f146048ce7921eaa00f26e2ed654f043",
+  "script_revision": 1,
+  "storyboard": [
+    {
+      "scene_id": "S1",
+      "visual": "景别：近景。机位：桌面俯拍。动作：双手将产品放到桌面中央。画面：用画面箭头标出本镜对应文字。字幕：下方居中，避开产品文字。剪辑：保持同一桌面背景，使用硬切。声音：保留现场轻触声，音乐压低，旁白优先。",
+      "narration": "帧匣口袋灯使用USB-C接口供电。",
+      "subtitle": "帧匣口袋灯使用USB-C接口供电。",
+      "source_ids": [
+        "R21"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "R21",
+          "fact_id": "F2",
+          "evidence_text": "帧匣口袋灯使用USB-C接口供电。",
+          "claim_text": "帧匣口袋灯使用USB-C接口供电。"
+        }
+      ],
+      "estimated_seconds": 3.38
+    },
+    {
+      "scene_id": "S2",
+      "visual": "景别：特写。机位：侧面固定。动作：手持产品缓慢转向镜头。字幕：靠右排列，避开手部动作。剪辑：动作结束后切到下一镜。声音：保留现场轻触声，音乐压低，旁白优先。",
+      "narration": "帧匣口袋灯配有亮度调节旋钮。",
+      "subtitle": "帧匣口袋灯配有亮度调节旋钮。",
+      "source_ids": [
+        "R21"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "R21",
+          "fact_id": "F3",
+          "evidence_text": "帧匣口袋灯配有亮度调节旋钮。",
+          "claim_text": "帧匣口袋灯配有亮度调节旋钮。"
+        }
+      ],
+      "estimated_seconds": 3.42
+    },
+    {
+      "scene_id": "S3",
+      "visual": "景别：中景。机位：桌面俯拍。动作：将产品与随附物品逐一摆开。字幕：下方居中，避开产品文字。剪辑：保持同一桌面背景，使用硬切。声音：保留现场轻触声，音乐压低，旁白优先。",
+      "narration": "帧匣口袋灯包装内含一条供电线。",
+      "subtitle": "帧匣口袋灯包装内含一条供电线。",
+      "source_ids": [
+        "R22"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "R22",
+          "fact_id": "F1",
+          "evidence_text": "帧匣口袋灯包装内含一条供电线。",
+          "claim_text": "帧匣口袋灯包装内含一条供电线。"
+        }
+      ],
+      "estimated_seconds": 3.65
+    },
+    {
+      "scene_id": "S4",
+      "visual": "景别：近景。机位：桌面俯拍。动作：将产品与随附物品逐一摆开。画面：用画面箭头标出本镜对应文字。字幕：下方居中，避开产品文字。剪辑：末镜停留后淡出。声音：保留现场轻触声，音乐压低，旁白优先。",
+      "narration": "帧匣口袋灯包装内含一个收纳袋。",
+      "subtitle": "帧匣口袋灯包装内含一个收纳袋。",
+      "source_ids": [
+        "R22"
+      ],
+      "fact_refs": [
+        {
+          "asset_id": "R22",
+          "fact_id": "F2",
+          "evidence_text": "帧匣口袋灯包装内含一个收纳袋。",
+          "claim_text": "帧匣口袋灯包装内含一个收纳袋。"
+        }
+      ],
+      "estimated_seconds": 3.65
+    }
+  ],
+  "total_estimated_seconds": 14.1,
+  "used_asset_ids": [
+    "R21",
+    "R22"
+  ],
+  "sources": [
+    {
+      "asset_id": "R21",
+      "name": "帧匣口袋灯规格页（合成）",
+      "keywords": [
+        "帧匣",
+        "口袋灯"
+      ],
+      "facts": [
+        {
+          "fact_id": "F1",
+          "text": "帧匣口袋灯色温可在3200K至5600K之间调整。"
+        },
+        {
+          "fact_id": "F2",
+          "text": "帧匣口袋灯使用USB-C接口供电。"
+        },
+        {
+          "fact_id": "F3",
+          "text": "帧匣口袋灯配有亮度调节旋钮。"
+        }
+      ],
+      "source_text": "帧匣口袋灯色温可在3200K至5600K之间调整。帧匣口袋灯使用USB-C接口供电。帧匣口袋灯配有亮度调节旋钮。【合成拍摄资料】可规划接口、旋钮、产品正面的近景；没有亮度测试、续航、人像肤色或专业认证数据。"
+    },
+    {
+      "asset_id": "R22",
+      "name": "帧匣口袋灯配件清单（合成）",
+      "keywords": [
+        "帧匣",
+        "口袋灯",
+        "配件"
+      ],
+      "facts": [
+        {
+          "fact_id": "F1",
+          "text": "帧匣口袋灯包装内含一条供电线。"
+        },
+        {
+          "fact_id": "F2",
+          "text": "帧匣口袋灯包装内含一个收纳袋。"
+        }
+      ],
+      "source_text": "帧匣口袋灯包装内含一条供电线。帧匣口袋灯包装内含一个收纳袋。【合成拍摄资料】可规划线材与收纳袋的桌面平铺；未提供电源适配器或三脚架。"
+    }
+  ],
+  "duration_check": {
+    "ok": true,
+    "script_version": "59831d16230d3934930282f32c908182f146048ce7921eaa00f26e2ed654f043",
+    "scenes": [
+      {
+        "scene_id": "S1",
+        "narration_seconds": 3.03,
+        "subtitle_reading_seconds": 3.03,
+        "estimated_seconds": 3.38
+      },
+      {
+        "scene_id": "S2",
+        "narration_seconds": 3.07,
+        "subtitle_reading_seconds": 3.07,
+        "estimated_seconds": 3.42
+      },
+      {
+        "scene_id": "S3",
+        "narration_seconds": 3.3,
+        "subtitle_reading_seconds": 3.3,
+        "estimated_seconds": 3.65
+      },
+      {
+        "scene_id": "S4",
+        "narration_seconds": 3.3,
+        "subtitle_reading_seconds": 3.3,
+        "estimated_seconds": 3.65
+      }
+    ],
+    "total_estimated_seconds": 14.1,
+    "target_duration_seconds": 50.0,
+    "is_overtime": false,
+    "passed": true,
+    "exceeded_seconds": 0,
+    "formula": "sum(ceil_0.01(max(narration, subtitle reading, minimum shot) + transition))",
+    "timing": {
+      "chinese_chars_per_second": 4.5,
+      "english_words_per_second": 2.5,
+      "number_groups_per_second": 2.0,
+      "punctuation_pause_seconds": 0.18,
+      "minimum_scene_seconds": 2.0,
+      "transition_seconds": 0.35
+    },
+    "limitation": "Engineering estimate only; actual speech, pacing and simultaneous captions differ.",
+    "revision_feedback": {
+      "script_version": "59831d16230d3934930282f32c908182f146048ce7921eaa00f26e2ed654f043",
+      "current_seconds": 14.1,
+      "target_seconds": 50.0,
+      "exceeded_seconds": 0,
+      "violations": [],
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "景别：近景。机位：桌面俯拍。动作：双手将产品放到桌面中央。画面：用画面箭头标出本镜对应文字。字幕：下方居中，避开产品文字。剪辑：保持同一桌面背景，使用硬切。声音：保留现场轻触声，音乐压低，旁白优先。",
+          "narration": "帧匣口袋灯使用USB-C接口供电。",
+          "subtitle": "帧匣口袋灯使用USB-C接口供电。",
+          "source_ids": [
+            "R21"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "R21",
+              "fact_id": "F2",
+              "evidence_text": "帧匣口袋灯使用USB-C接口供电。",
+              "claim_text": "帧匣口袋灯使用USB-C接口供电。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S2",
+          "visual": "景别：特写。机位：侧面固定。动作：手持产品缓慢转向镜头。字幕：靠右排列，避开手部动作。剪辑：动作结束后切到下一镜。声音：保留现场轻触声，音乐压低，旁白优先。",
+          "narration": "帧匣口袋灯配有亮度调节旋钮。",
+          "subtitle": "帧匣口袋灯配有亮度调节旋钮。",
+          "source_ids": [
+            "R21"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "R21",
+              "fact_id": "F3",
+              "evidence_text": "帧匣口袋灯配有亮度调节旋钮。",
+              "claim_text": "帧匣口袋灯配有亮度调节旋钮。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S3",
+          "visual": "景别：中景。机位：桌面俯拍。动作：将产品与随附物品逐一摆开。字幕：下方居中，避开产品文字。剪辑：保持同一桌面背景，使用硬切。声音：保留现场轻触声，音乐压低，旁白优先。",
+          "narration": "帧匣口袋灯包装内含一条供电线。",
+          "subtitle": "帧匣口袋灯包装内含一条供电线。",
+          "source_ids": [
+            "R22"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "R22",
+              "fact_id": "F1",
+              "evidence_text": "帧匣口袋灯包装内含一条供电线。",
+              "claim_text": "帧匣口袋灯包装内含一条供电线。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S4",
+          "visual": "景别：近景。机位：桌面俯拍。动作：将产品与随附物品逐一摆开。画面：用画面箭头标出本镜对应文字。字幕：下方居中，避开产品文字。剪辑：末镜停留后淡出。声音：保留现场轻触声，音乐压低，旁白优先。",
+          "narration": "帧匣口袋灯包装内含一个收纳袋。",
+          "subtitle": "帧匣口袋灯包装内含一个收纳袋。",
+          "source_ids": [
+            "R22"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "R22",
+              "fact_id": "F2",
+              "evidence_text": "帧匣口袋灯包装内含一个收纳袋。",
+              "claim_text": "帧匣口袋灯包装内含一个收纳袋。"
+            }
+          ]
+        }
+      ],
+      "revalidate_after_edit": [
+        "estimate_duration",
+        "check_brand_rules"
+      ],
+      "guidance": "Fix reported scenes; preserve supported facts/source IDs. Check the new version before further edits."
+    }
+  },
+  "brand_rule_check": {
+    "ok": true,
+    "script_version": "59831d16230d3934930282f32c908182f146048ce7921eaa00f26e2ed654f043",
+    "passed": true,
+    "violations": [],
+    "unsupported_claims": [],
+    "missing_references": [],
+    "risk_reasons": [],
+    "needs_confirmation": false,
+    "policy": "Exact evidence and brand-approved nonfactual copy only; unknown paraphrases block completion.",
+    "limitation": "String verification does not establish full natural-language semantic entailment.",
+    "revision_feedback": {
+      "script_version": "59831d16230d3934930282f32c908182f146048ce7921eaa00f26e2ed654f043",
+      "current_seconds": 14.1,
+      "target_seconds": 50.0,
+      "exceeded_seconds": 0,
+      "violations": [],
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "景别：近景。机位：桌面俯拍。动作：双手将产品放到桌面中央。画面：用画面箭头标出本镜对应文字。字幕：下方居中，避开产品文字。剪辑：保持同一桌面背景，使用硬切。声音：保留现场轻触声，音乐压低，旁白优先。",
+          "narration": "帧匣口袋灯使用USB-C接口供电。",
+          "subtitle": "帧匣口袋灯使用USB-C接口供电。",
+          "source_ids": [
+            "R21"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "R21",
+              "fact_id": "F2",
+              "evidence_text": "帧匣口袋灯使用USB-C接口供电。",
+              "claim_text": "帧匣口袋灯使用USB-C接口供电。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S2",
+          "visual": "景别：特写。机位：侧面固定。动作：手持产品缓慢转向镜头。字幕：靠右排列，避开手部动作。剪辑：动作结束后切到下一镜。声音：保留现场轻触声，音乐压低，旁白优先。",
+          "narration": "帧匣口袋灯配有亮度调节旋钮。",
+          "subtitle": "帧匣口袋灯配有亮度调节旋钮。",
+          "source_ids": [
+            "R21"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "R21",
+              "fact_id": "F3",
+              "evidence_text": "帧匣口袋灯配有亮度调节旋钮。",
+              "claim_text": "帧匣口袋灯配有亮度调节旋钮。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S3",
+          "visual": "景别：中景。机位：桌面俯拍。动作：将产品与随附物品逐一摆开。字幕：下方居中，避开产品文字。剪辑：保持同一桌面背景，使用硬切。声音：保留现场轻触声，音乐压低，旁白优先。",
+          "narration": "帧匣口袋灯包装内含一条供电线。",
+          "subtitle": "帧匣口袋灯包装内含一条供电线。",
+          "source_ids": [
+            "R22"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "R22",
+              "fact_id": "F1",
+              "evidence_text": "帧匣口袋灯包装内含一条供电线。",
+              "claim_text": "帧匣口袋灯包装内含一条供电线。"
+            }
+          ]
+        },
+        {
+          "scene_id": "S4",
+          "visual": "景别：近景。机位：桌面俯拍。动作：将产品与随附物品逐一摆开。画面：用画面箭头标出本镜对应文字。字幕：下方居中，避开产品文字。剪辑：末镜停留后淡出。声音：保留现场轻触声，音乐压低，旁白优先。",
+          "narration": "帧匣口袋灯包装内含一个收纳袋。",
+          "subtitle": "帧匣口袋灯包装内含一个收纳袋。",
+          "source_ids": [
+            "R22"
+          ],
+          "fact_refs": [
+            {
+              "asset_id": "R22",
+              "fact_id": "F2",
+              "evidence_text": "帧匣口袋灯包装内含一个收纳袋。",
+              "claim_text": "帧匣口袋灯包装内含一个收纳袋。"
+            }
+          ]
+        }
+      ],
+      "revalidate_after_edit": [
+        "estimate_duration",
+        "check_brand_rules"
+      ],
+      "guidance": "Fix reported scenes; preserve supported facts/source IDs. Check the new version before further edits."
+    }
+  },
+  "risk_flags": [],
+  "missing_information": [],
+  "question": null,
+  "errors": [],
+  "completed_steps": [
+    {
+      "step": 1,
+      "action": "search_assets",
+      "ok": true
+    },
+    {
+      "step": 2,
+      "action": "draft_script",
+      "ok": true
+    },
+    {
+      "step": 3,
+      "action": "estimate_duration",
+      "ok": true
+    },
+    {
+      "step": 4,
+      "action": "check_brand_rules",
+      "ok": true
+    },
+    {
+      "step": 5,
+      "action": "finish",
+      "ok": true
+    }
+  ],
+  "last_observation": {
+    "ok": true,
+    "status": "completed",
+    "script_version": "59831d16230d3934930282f32c908182f146048ce7921eaa00f26e2ed654f043"
+  },
+  "limitations": [
+    "合成素材，仅用于工程验证。",
+    "时长是工程估算，需要真人口播复核。",
+    "仅通过原文和批准文案核验，未知改写会被阻断。"
+  ]
+}

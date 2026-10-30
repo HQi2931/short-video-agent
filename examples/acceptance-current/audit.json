@@ -1,0 +1,349 @@
+{
+  "created_at_utc": "2026-10-30T02:54:26.303174+00:00",
+  "model_calls_made": 0,
+  "verified": true,
+  "traces_discovered": 6,
+  "traces_verified": 6,
+  "executable_replays": 6,
+  "trace_counts": [
+    {
+      "mode": "live",
+      "execution_kind": "real_api",
+      "count": 6
+    }
+  ],
+  "orphan_event_logs": [],
+  "historical_evidence": {
+    "verified": true,
+    "files_checked": 94,
+    "changed": [],
+    "missing": [],
+    "manifest": "VERSION.json"
+  },
+  "runtime_sources": {
+    "verified": true,
+    "checks": {
+      ".env.example": true,
+      ".gitattributes": true,
+      ".gitignore": true,
+      "data/assets.json": true,
+      "data/brand_rules.json": true,
+      "data/production-demo/assets.json": true,
+      "data/production-demo/brand_rules.json": true,
+      "data/production-demo/README.md": true,
+      "delivery/CLEANUP.json": true,
+      "delivery/REQUIREMENTS-CHECK.md": true,
+      "delivery/SUBMISSION.md": true,
+      "docs/01-requirements.md": true,
+      "docs/02-solution.md": true,
+      "docs/03-evaluation.md": true,
+      "docs/04-ai-usage.md": true,
+      "docs/05-retrospective.md": true,
+      "eval/__init__.py": true,
+      "eval/audit.py": true,
+      "eval/dataset-v1.json": true,
+      "eval/dataset.py": true,
+      "eval/metrics.py": true,
+      "eval/production_contracts.py": true,
+      "eval/report.py": true,
+      "eval/run.py": true,
+      "examples/acceptance-current/DECISION-PATHS.md": true,
+      "examples/acceptance-current/inputs/missing_info.json": true,
+      "examples/acceptance-current/inputs/no_assets.json": true,
+      "examples/acceptance-current/inputs/normal.json": true,
+      "examples/acceptance-current/inputs/overtime.json": true,
+      "examples/acceptance-current/inputs/rule_repair.json": true,
+      "examples/acceptance-current/inputs/tool_failure.json": true,
+      "examples/acceptance-current/manifest.json": true,
+      "examples/acceptance-current/outputs/holdout-07.json": true,
+      "examples/acceptance-current/outputs/holdout-09.json": true,
+      "examples/acceptance-current/outputs/holdout-13.json": true,
+      "examples/acceptance-current/outputs/holdout-17.json": true,
+      "examples/acceptance-current/outputs/missing-info-20261030.json": true,
+      "examples/acceptance-current/outputs/production-02.json": true,
+      "examples/acceptance-current/traces/holdout-07.json": true,
+      "examples/acceptance-current/traces/holdout-07.jsonl": true,
+      "examples/acceptance-current/traces/holdout-09.json": true,
+      "examples/acceptance-current/traces/holdout-09.jsonl": true,
+      "examples/acceptance-current/traces/holdout-13.json": true,
+      "examples/acceptance-current/traces/holdout-13.jsonl": true,
+      "examples/acceptance-current/traces/holdout-17.json": true,
+      "examples/acceptance-current/traces/holdout-17.jsonl": true,
+      "examples/acceptance-current/traces/missing-info-20261030.json": true,
+      "examples/acceptance-current/traces/missing-info-20261030.jsonl": true,
+      "examples/acceptance-current/traces/production-02.json": true,
+      "examples/acceptance-current/traces/production-02.jsonl": true,
+      "examples/inputs/changed_assets.json": true,
+      "examples/inputs/changed_duration.json": true,
+      "examples/inputs/max_steps.json": true,
+      "examples/inputs/missing_info.json": true,
+      "examples/inputs/no_assets.json": true,
+      "examples/inputs/normal.json": true,
+      "examples/inputs/overtime.json": true,
+      "examples/inputs/overtime_tight.json": true,
+      "examples/inputs/rule_repair.json": true,
+      "examples/inputs/sparse.json": true,
+      "examples/inputs/tool_failure.json": true,
+      "examples/inputs/unsupported_claim.json": true,
+      "pyproject.toml": true,
+      "README.md": true,
+      "requirements-lock.txt": true,
+      "requirements.txt": true,
+      "scripts/check_submission.py": true,
+      "scripts/evidence.py": true,
+      "scripts/final_audit.py": true,
+      "scripts/replay.py": true,
+      "src/__init__.py": true,
+      "src/agent.py": true,
+      "src/llm_adapter.py": true,
+      "src/main.py": true,
+      "src/mock_fixtures.py": true,
+      "src/schemas.py": true,
+      "src/state.py": true,
+      "src/tools.py": true,
+      "src/tracing.py": true,
+      "tests/conftest.py": true,
+      "tests/test_acceptance_regressions.py": true,
+      "tests/test_adapter.py": true,
+      "tests/test_agent.py": true,
+      "tests/test_cli.py": true,
+      "tests/test_decision_optimization.py": true,
+      "tests/test_eval.py": true,
+      "tests/test_evidence.py": true,
+      "tests/test_failures.py": true,
+      "tests/test_final_audit.py": true,
+      "tests/test_production_briefs.py": true,
+      "tests/test_submission.py": true,
+      "tests/test_tools.py": true,
+      "tests/test_trace_replay.py": true,
+      "tests/test_validation.py": true,
+      "content_version_id": true,
+      "exact_delivery_inventory": true
+    },
+    "meaning": "The single delivered version matches its byte-level manifest."
+  },
+  "secret_scan": {
+    "verified": true,
+    "working_files_checked": 1135,
+    "reachable_git_blobs_checked": 1130,
+    "exact_configured_credential_available": true,
+    "dotenv_ignored": true,
+    "tracked_private_env": [],
+    "working_tree_findings": [],
+    "git_findings": [],
+    "limitations": "Checks configured current credentials and common token shapes; revoked or unknown credential formats require separate review."
+  },
+  "pytest": {
+    "verified": true,
+    "tests": 167,
+    "passed": 167,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "traces": [
+    {
+      "trace": "examples/acceptance-current/traces/holdout-07.json",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "steps": 7,
+      "output": "examples/acceptance-current/outputs/holdout-07.json",
+      "output_matches": true,
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 7,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 7
+        },
+        "issues": []
+      },
+      "live_record_consistency": {
+        "verified": true,
+        "recorded_decisions": 7,
+        "observation_feedback_checks": 6,
+        "response_models": [
+          "deepseek-flash"
+        ],
+        "issues": [],
+        "limitation": "Audit of local execution records; not independent provider attestation."
+      },
+      "executable_replay": true,
+      "verified": true
+    },
+    {
+      "trace": "examples/acceptance-current/traces/holdout-09.json",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "needs_info",
+      "steps": 4,
+      "output": "examples/acceptance-current/outputs/holdout-09.json",
+      "output_matches": true,
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 4,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 4
+        },
+        "issues": []
+      },
+      "live_record_consistency": {
+        "verified": true,
+        "recorded_decisions": 4,
+        "observation_feedback_checks": 3,
+        "response_models": [
+          "deepseek-flash"
+        ],
+        "issues": [],
+        "limitation": "Audit of local execution records; not independent provider attestation."
+      },
+      "executable_replay": true,
+      "verified": true
+    },
+    {
+      "trace": "examples/acceptance-current/traces/holdout-13.json",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "steps": 6,
+      "output": "examples/acceptance-current/outputs/holdout-13.json",
+      "output_matches": true,
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 6,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 6
+        },
+        "issues": []
+      },
+      "live_record_consistency": {
+        "verified": true,
+        "recorded_decisions": 6,
+        "observation_feedback_checks": 5,
+        "response_models": [
+          "deepseek-flash"
+        ],
+        "issues": [],
+        "limitation": "Audit of local execution records; not independent provider attestation."
+      },
+      "executable_replay": true,
+      "verified": true
+    },
+    {
+      "trace": "examples/acceptance-current/traces/holdout-17.json",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "steps": 8,
+      "output": "examples/acceptance-current/outputs/holdout-17.json",
+      "output_matches": true,
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 8,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 8
+        },
+        "issues": []
+      },
+      "live_record_consistency": {
+        "verified": true,
+        "recorded_decisions": 8,
+        "observation_feedback_checks": 7,
+        "response_models": [
+          "deepseek-flash"
+        ],
+        "issues": [],
+        "limitation": "Audit of local execution records; not independent provider attestation."
+      },
+      "executable_replay": true,
+      "verified": true
+    },
+    {
+      "trace": "examples/acceptance-current/traces/missing-info-20261030.json",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "needs_info",
+      "steps": 1,
+      "output": "examples/acceptance-current/outputs/missing-info-20261030.json",
+      "output_matches": true,
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 1,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 1
+        },
+        "issues": []
+      },
+      "live_record_consistency": {
+        "verified": true,
+        "recorded_decisions": 1,
+        "observation_feedback_checks": 0,
+        "response_models": [
+          "deepseek-flash"
+        ],
+        "issues": [],
+        "limitation": "Audit of local execution records; not independent provider attestation."
+      },
+      "executable_replay": true,
+      "verified": true
+    },
+    {
+      "trace": "examples/acceptance-current/traces/production-02.json",
+      "mode": "live",
+      "execution_kind": "real_api",
+      "status": "completed",
+      "steps": 5,
+      "output": "examples/acceptance-current/outputs/production-02.json",
+      "output_matches": true,
+      "replay": {
+        "verified": true,
+        "method": "offline_replay_no_model_calls",
+        "model_calls_made": 0,
+        "recomputed_steps": 5,
+        "event_log": {
+          "verified": true,
+          "issues": [],
+          "step_events": 5
+        },
+        "issues": []
+      },
+      "live_record_consistency": {
+        "verified": true,
+        "recorded_decisions": 5,
+        "observation_feedback_checks": 4,
+        "response_models": [
+          "deepseek-flash"
+        ],
+        "issues": [],
+        "limitation": "Audit of local execution records; not independent provider attestation."
+      },
+      "executable_replay": true,
+      "verified": true
+    }
+  ],
+  "limitations": [
+    "Local live HTTP records are consistent; this is not independent provider attestation.",
+    "A replay verifies recorded decisions and deterministic checks, not creative quality or real spoken duration.",
+    "Mock records are scripted engineering evidence and never count as live evaluation."
+  ]
+}
